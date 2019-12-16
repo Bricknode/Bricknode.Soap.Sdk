@@ -42,7 +42,7 @@ steps:
 - task: NuGetCommand@2
   inputs:
     command: 'custom'
-    arguments: 'push -Source https://api.nuget.org/v3/index.json -ApiKey $(bricknode-soap-sdk-nuget-org-api-key) $(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg --skip-duplicate'
+    arguments: 'push -Source https://api.nuget.org/v3/index.json -ApiKey $(bricknode-soap-sdk-nuget-org-api-key) $(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg -SkipDuplicate'
 
 
 
