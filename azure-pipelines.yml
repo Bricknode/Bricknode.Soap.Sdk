@@ -40,10 +40,17 @@ steps:
     versioningScheme: 'off'
     packDirectory: '$(Build.ArtifactStagingDirectory)'
 
+# - task: NuGetCommand@2
+#   inputs:
+#     command: 'custom'
+#     arguments: 'push -Source https://api.nuget.org/v3/index.json -ApiKey $(bricknode-soap-sdk-nuget-org-api-key) $(System.ArtifactsDirectory)/**/*.nupkg -SkipDuplicate'
+
 - task: NuGetCommand@2
   inputs:
-    command: 'custom'
-    arguments: 'push -Source https://api.nuget.org/v3/index.json -ApiKey $(bricknode-soap-sdk-nuget-org-api-key) $(System.ArtifactsDirectory)/**/*.nupkg -SkipDuplicate'
+    command: 'push'
+    packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg'
+    nuGetFeedType: 'external'
+    publishFeedCredentials: 'bricknode-soap-sdk-sc'
 
 
 
