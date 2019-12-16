@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Bricknode.Soap.Sdk</RootNamespace>
+    <AssemblyName>Bricknode.Soap.Sdk</AssemblyName>
+    <ApplicationIcon />
+
+    <!--Nuget metadata starts here-->
+    <PackageVersion>1.0.0-prerelease-a</PackageVersion>
+    <PackageId>Bricknode.Soap.Sdk</PackageId>
+    <Title>Bricknode SOAP SDK</Title>
+    <Authors>Bricknode</Authors>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <Description>A wrapper around the BFS API described at http://api.bricknode.com with additional documentation for Bricknode Financial Systems.</Description>
+    <Copyright>Copyright 2019</Copyright>
+    <PackageTags>BricknodeSoapSdk</PackageTags>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <IsPackable>true</IsPackable>
+    <!--Nuget metadata ends here-->
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
+    <None Include="readme.txt" Pack="true" PackagePath="." />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="3.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="3.1.0" />
+    <PackageReference Include="System.ServiceModel.Duplex" Version="4.4.*" />
+    <PackageReference Include="System.ServiceModel.Http" Version="4.4.*" />
+    <PackageReference Include="System.ServiceModel.NetTcp" Version="4.4.*" />
+    <PackageReference Include="System.ServiceModel.Security" Version="4.4.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services" />
+  </ItemGroup>
+
+</Project>
