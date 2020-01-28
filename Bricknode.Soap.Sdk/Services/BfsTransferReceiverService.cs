@@ -20,6 +20,7 @@ namespace Bricknode.Soap.Sdk.Services
 
         /// <summary>
         ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/60031203/GetTransferReceiver
+        ///     Use BfsLookups.TransferReceiverTypeKey to get the options for the TransferReceiverTypeKeys property
         /// </summary>
         /// <param name="filters"></param>
         /// <returns></returns>
