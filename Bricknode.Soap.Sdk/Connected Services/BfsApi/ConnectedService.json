@@ -1,6 +1,6 @@
 ﻿{
   "ProviderId": "Microsoft.VisualStudio.ConnectedService.Wcf",
-  "Version": "15.0.30730.948",
+  "Version": "15.0.31022.994",
   "ExtendedData": {
     "inputs": [
       "https://stage.bricknode.com/preview1/api/bfsapi.asmx"
