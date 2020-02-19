@@ -27,8 +27,8 @@ namespace Bricknode.Soap.Sdk.Extensions
             services.AddSingleton(bfsApiConfiguration);
             services.AddTransient<IBfsLegalEntitiesService, BfsLegalEntitiesService>();
             services.AddTransient<IBfsAccountService, BfsAccountService>();
+            services.AddTransient<IBfsAssetService, BfsAssetService>();
             services.AddTransient<IBfsAllocationProfileService, BfsAllocationProfileService>();
-            services.AddTransient<IBfsAccountService, BfsAccountService>();
             services.AddTransient<IBfsAuthenticationService, BfsAuthenticationService>();
             services.AddTransient<IBfsBankIdService, BfsBankIdService>();
             services.AddTransient<IBfsCurrencyService, BfsCurrencyService>();
