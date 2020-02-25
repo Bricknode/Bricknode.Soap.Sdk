@@ -12,11 +12,20 @@ namespace Bricknode.Soap.Sdk.Services
         /// <returns></returns>
         Task<GetHistoricPricesResponse> GetHistoricPricesAsync(GetHistoricPricesArgs filters);
 
+
         /// <summary>
         /// https://bricknode.atlassian.net/wiki/spaces/API/pages/58261735/SetHistoricPrices
         /// </summary>
         /// <param name="priceDateEntries"></param>
+        /// <param name="clearAllPreviousData"></param>
+        /// <param name="clearPreviousDataByRange"></param>
+        /// <param name="updateCurrentPriceFromLastPrice"></param>
+        /// <param name="clearAllsubsequentData"></param>
         /// <returns></returns>
-        Task<SetHistoricPricesResponse> SetHistoricPricesAsync(PriceDateEntry[] priceDateEntries);
+        Task<SetHistoricPricesResponse> SetHistoricPricesAsync(PriceDateEntry[] priceDateEntries,
+            bool clearAllPreviousData,
+            bool clearPreviousDataByRange,
+            bool updateCurrentPriceFromLastPrice,
+            bool clearAllsubsequentData);
     }
 }

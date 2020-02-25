@@ -41,15 +41,27 @@ namespace Bricknode.Soap.Sdk.Services
         }
 
         /// <summary>
-        ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/58261735/SetHistoricPrices
+        /// https://bricknode.atlassian.net/wiki/spaces/API/pages/58261735/SetHistoricPrices
         /// </summary>
         /// <param name="priceDateEntries"></param>
+        /// <param name="clearAllPreviousData"></param>
+        /// <param name="clearPreviousDataByRange"></param>
+        /// <param name="updateCurrentPriceFromLastPrice"></param>
+        /// <param name="clearAllsubsequentData"></param>
         /// <returns></returns>
-        public async Task<SetHistoricPricesResponse> SetHistoricPricesAsync(PriceDateEntry[] priceDateEntries)
+        public async Task<SetHistoricPricesResponse> SetHistoricPricesAsync(PriceDateEntry[] priceDateEntries,
+            bool clearAllPreviousData,
+            bool clearPreviousDataByRange,
+            bool updateCurrentPriceFromLastPrice,
+            bool clearAllsubsequentData)
         {
             var request = GetRequest<SetHistoricPricesRequest>();
 
             request.PriceDateEntries = priceDateEntries;
+            request.ClearAllPreviousData = clearAllPreviousData;
+            request.ClearPreviousDataByRange = clearPreviousDataByRange;
+            request.UpdateCurrentPriceFromLastPrice = updateCurrentPriceFromLastPrice;
+            request.ClearAllsubsequentData = clearAllsubsequentData;
 
             var response = await _client.SetHistoricPricesAsync(request);
 
