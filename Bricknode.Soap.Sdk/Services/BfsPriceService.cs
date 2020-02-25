@@ -50,10 +50,10 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="clearAllsubsequentData"></param>
         /// <returns></returns>
         public async Task<SetHistoricPricesResponse> SetHistoricPricesAsync(PriceDateEntry[] priceDateEntries,
-            bool clearAllPreviousData,
-            bool clearPreviousDataByRange,
-            bool updateCurrentPriceFromLastPrice,
-            bool clearAllsubsequentData)
+            bool clearAllPreviousData = false,
+            bool clearPreviousDataByRange = false,
+            bool updateCurrentPriceFromLastPrice = false,
+            bool clearAllsubsequentData = false)
         {
             var request = GetRequest<SetHistoricPricesRequest>();
 
