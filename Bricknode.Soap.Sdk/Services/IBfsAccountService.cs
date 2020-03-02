@@ -10,7 +10,7 @@ namespace Bricknode.Soap.Sdk.Services
         /// </summary>
         /// <param name="filters"></param>
         /// <returns></returns>
-        Task<GetAccountsResponse> GetAccountsAsync(GetAccountsArgs filters);
+        Task<GetAccountsResponse> GetAccountsAsync(GetAccountsArgs filters, string bfsApiClientName = null);
 
         /// <summary>
         /// https://bricknode.atlassian.net/wiki/spaces/API/pages/52003249/CreateAccounts

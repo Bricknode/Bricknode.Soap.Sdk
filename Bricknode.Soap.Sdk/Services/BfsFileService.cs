@@ -7,12 +7,14 @@ using Microsoft.Extensions.Options;
 
 namespace Bricknode.Soap.Sdk.Services
 {
+    using Factories;
+
     public class BfsFileService : BfsServiceBase, IBfsFileService
     {
         private readonly bfsapiSoap _client;
 
-        public BfsFileService(IOptions<BfsApiConfiguration> bfsApiConfiguration, ILogger logger, bfsapiSoap client) :
-            base(bfsApiConfiguration, logger)
+        public BfsFileService(IOptions<BfsApiConfiguration> bfsApiConfiguration, ILogger logger, bfsapiSoap client, IBfsApiClientFactory bfsApiClientFactory) :
+            base(bfsApiConfiguration, logger, bfsApiClientFactory, client)
         {
             _client = client;
         }

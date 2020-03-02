@@ -9,12 +9,15 @@ using Microsoft.Extensions.Options;
 
 namespace Bricknode.Soap.Sdk.Services
 {
+    using Factories;
+
     public class BfsPowerOfAttorneyService : BfsServiceBase, IBfsPowerOfAttorneyService
     {
         private readonly bfsapiSoap _client;
 
         public BfsPowerOfAttorneyService(IOptions<BfsApiConfiguration> bfsApiConfiguration, ILogger logger,
-            bfsapiSoap client) : base(bfsApiConfiguration, logger)
+            bfsapiSoap client, IBfsApiClientFactory bfsApiClientFactory) :
+            base(bfsApiConfiguration, logger, bfsApiClientFactory, client)
         {
             _client = client;
         }

@@ -8,12 +8,14 @@ using Microsoft.Extensions.Options;
 
 namespace Bricknode.Soap.Sdk.Services
 {
+    using Factories;
+
     public class BfsAccountService : BfsServiceBase, IBfsAccountService
     {
         private readonly bfsapiSoap _client;
 
-        public BfsAccountService(IOptions<BfsApiConfiguration> bfsApiConfiguration, ILogger logger, bfsapiSoap client) :
-            base(bfsApiConfiguration, logger)
+        public BfsAccountService(IOptions<BfsApiConfiguration> bfsApiConfiguration, ILogger logger, bfsapiSoap client, IBfsApiClientFactory bfsApiClientFactory) :
+            base(bfsApiConfiguration, logger, bfsApiClientFactory, client)
         {
             _client = client;
         }
@@ -23,15 +25,15 @@ namespace Bricknode.Soap.Sdk.Services
         /// </summary>
         /// <param name="filters"></param>
         /// <returns></returns>
-        public async Task<GetAccountsResponse> GetAccountsAsync(GetAccountsArgs filters)
+        public async Task<GetAccountsResponse> GetAccountsAsync(GetAccountsArgs filters, string bfsApiClientName = null)
         {
-            var request = GetRequest<GetAccountsRequest>();
+            var request = GetRequest<GetAccountsRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetAccountFields>();
 
-            var response = await _client.GetAccountsAsync(request);
+            var response = await GetClient(bfsApiClientName).GetAccountsAsync(request);
 
             if (ValidateResponse(response)) return response;
 

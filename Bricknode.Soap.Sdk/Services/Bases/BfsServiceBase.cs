@@ -10,23 +10,46 @@ using Microsoft.Extensions.Options;
 
 namespace Bricknode.Soap.Sdk.Services.Bases
 {
+    using Factories;
+
     public abstract class BfsServiceBase
     {
         protected static BfsApiConfiguration _bfsApiConfiguration;
         protected ILogger _logger;
+        protected IBfsApiClientFactory _bfsApiClientFactory;
+        protected bfsapiSoap Client;
 
-        protected BfsServiceBase(IOptions<BfsApiConfiguration> bfsApiConfiguration, ILogger logger)
+        protected BfsServiceBase(IOptions<BfsApiConfiguration> bfsApiConfiguration, ILogger logger, IBfsApiClientFactory bfsApiClientFactory, bfsapiSoap client)
         {
             _bfsApiConfiguration = bfsApiConfiguration.Value;
             _logger = logger ?? NullLogger.Instance;
+            _bfsApiClientFactory = bfsApiClientFactory;
+            Client = client;
         }
 
-        protected static T GetRequest<T>() where T : Request
+        protected bfsapiSoap GetClient(string bfsApiClientName = null)
+        {
+            if (string.IsNullOrWhiteSpace(bfsApiClientName))
+                return Client;
+
+            return _bfsApiClientFactory.CreateClient(bfsApiClientName).Client;
+        }
+
+        protected T GetRequest<T>(string bfsApiClientName = null) where T : Request
         {
             var request = Activator.CreateInstance<T>();
 
-            request.identify = _bfsApiConfiguration.Identifier;
-            request.Credentials = _bfsApiConfiguration.Credentials;
+            if (string.IsNullOrWhiteSpace(bfsApiClientName))
+            {
+                request.identify = _bfsApiConfiguration.Identifier;
+                request.Credentials = _bfsApiConfiguration.Credentials;
+            }
+            else
+            {
+                var bfsApiConfiguration = _bfsApiClientFactory.CreateClient(bfsApiClientName).BfsApiConfiguration;
+                request.identify = bfsApiConfiguration.Identifier;
+                request.Credentials = bfsApiConfiguration.Credentials;
+            }
 
             return request;
         }
