@@ -24,16 +24,17 @@ namespace Bricknode.Soap.Sdk.Services
         ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/56328392/GetCurrencies
         /// </summary>
         /// <param name="filters"></param>
+        /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<GetCurrencyResponse> GetCurrenciesAsync(GetCurrencyArgs filters)
+        public async Task<GetCurrencyResponse> GetCurrenciesAsync(GetCurrencyArgs filters, string bfsApiClientName = null)
         {
-            var request = GetRequest<GetCurrencyRequest>();
+            var request = GetRequest<GetCurrencyRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetCurrencyFields>();
 
-            var response = await _client.GetCurrenciesAsync(request);
+            var response = await GetClient(bfsApiClientName).GetCurrenciesAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -46,16 +47,17 @@ namespace Bricknode.Soap.Sdk.Services
         ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/458817672/GetCurrencyValues
         /// </summary>
         /// <param name="filters"></param>
+        /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<GetCurrencyValueResponse> GetCurrencyValuesAsync(GetCurrencyValuesArgs filters)
+        public async Task<GetCurrencyValueResponse> GetCurrencyValuesAsync(GetCurrencyValuesArgs filters, string bfsApiClientName = null)
         {
-            var request = GetRequest<GetCurrencyValueRequest>();
+            var request = GetRequest<GetCurrencyValueRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetCurrencyValuesFields>();
 
-            var response = await _client.GetCurrencyValuesAsync(request);
+            var response = await GetClient(bfsApiClientName).GetCurrencyValuesAsync(request);
 
             if (ValidateResponse(response)) return response;
 

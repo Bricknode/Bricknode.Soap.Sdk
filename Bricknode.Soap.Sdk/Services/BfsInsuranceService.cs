@@ -26,16 +26,17 @@ namespace Bricknode.Soap.Sdk.Services
         ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/128942686/GetInsuranceCovers
         /// </summary>
         /// <param name="filters"></param>
+        /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<GetInsuranceCoversResponse> GetInsuranceCoversAsync(GetInsuranceCoversArgs filters)
+        public async Task<GetInsuranceCoversResponse> GetInsuranceCoversAsync(GetInsuranceCoversArgs filters, string bfsApiClientName = null)
         {
-            var request = GetRequest<GetInsuranceCoversRequest>();
+            var request = GetRequest<GetInsuranceCoversRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetInsuranceCoversFields>();
 
-            var response = await _client.GetInsuranceCoversAsync(request);
+            var response = await GetClient(bfsApiClientName).GetInsuranceCoversAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -52,16 +53,17 @@ namespace Bricknode.Soap.Sdk.Services
         ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/126910487/GetInsuranceProducts
         /// </summary>
         /// <param name="filters"></param>
+        /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<GetInsuranceProductsResponse> GetInsuranceProductsAsync(GetInsuranceProductsArgs filters)
+        public async Task<GetInsuranceProductsResponse> GetInsuranceProductsAsync(GetInsuranceProductsArgs filters, string bfsApiClientName = null)
         {
-            var request = GetRequest<GetInsuranceProductsRequest>();
+            var request = GetRequest<GetInsuranceProductsRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetInsuranceProductsFields>();
 
-            var response = await _client.GetInsuranceProductsAsync(request);
+            var response = await GetClient(bfsApiClientName).GetInsuranceProductsAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -74,15 +76,16 @@ namespace Bricknode.Soap.Sdk.Services
         ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/126189659/CreateInsuranceProducts
         /// </summary>
         /// <param name="insuranceProducts"></param>
+        /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<CreateInsuranceProductsResponse> CreateInsuranceProductsAsync(
-            InsuranceProduct[] insuranceProducts)
+            InsuranceProduct[] insuranceProducts, string bfsApiClientName = null)
         {
-            var request = GetRequest<CreateInsuranceProductsRequest>();
+            var request = GetRequest<CreateInsuranceProductsRequest>(bfsApiClientName);
 
             request.Entities = insuranceProducts;
 
-            var response = await _client.CreateInsuranceProductsAsync(request);
+            var response = await GetClient(bfsApiClientName).CreateInsuranceProductsAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -96,17 +99,18 @@ namespace Bricknode.Soap.Sdk.Services
         /// </summary>
         /// <param name="insuranceProducts"></param>
         /// <param name="fieldsToUpdate"></param>
+        /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<UpdateInsuranceProductsResponse> UpdateInsuranceProductsAsync(
-            UpdateInsuranceProduct[] insuranceProducts, UpdateInsuranceProductFields fieldsToUpdate)
+            UpdateInsuranceProduct[] insuranceProducts, UpdateInsuranceProductFields fieldsToUpdate, string bfsApiClientName = null)
         {
-            var request = GetRequest<UpdateInsuranceProductsRequest>();
+            var request = GetRequest<UpdateInsuranceProductsRequest>(bfsApiClientName);
 
             request.Entities = insuranceProducts;
 
             request.Fields = fieldsToUpdate;
 
-            var response = await _client.UpdateInsuranceProductsAsync(request);
+            var response = await GetClient(bfsApiClientName).UpdateInsuranceProductsAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -123,16 +127,17 @@ namespace Bricknode.Soap.Sdk.Services
         ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/90177627/GetInsurancePolicies
         /// </summary>
         /// <param name="filters"></param>
+        /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<GetInsurancePolicyResponse> GetInsurancePoliciesAsync(GetInsurancePolicyArgs filters)
+        public async Task<GetInsurancePolicyResponse> GetInsurancePoliciesAsync(GetInsurancePolicyArgs filters, string bfsApiClientName = null)
         {
-            var request = GetRequest<GetInsurancePolicyRequest>();
+            var request = GetRequest<GetInsurancePolicyRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetInsurancePolicyFields>();
 
-            var response = await _client.GetInsurancePoliciesAsync(request);
+            var response = await GetClient(bfsApiClientName).GetInsurancePoliciesAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -145,15 +150,16 @@ namespace Bricknode.Soap.Sdk.Services
         ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/90767592/CreateInsurancePolicies
         /// </summary>
         /// <param name="insurancePolicies"></param>
+        /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<CreateInsurancePolicyResponse> CreateInsurancePoliciesAsync(
-            InsurancePolicy[] insurancePolicies)
+            InsurancePolicy[] insurancePolicies, string bfsApiClientName = null)
         {
-            var request = GetRequest<CreateInsurancePolicyRequest>();
+            var request = GetRequest<CreateInsurancePolicyRequest>(bfsApiClientName);
 
             request.Entities = insurancePolicies;
 
-            var response = await _client.CreateInsurancePolicyAsync(request);
+            var response = await GetClient(bfsApiClientName).CreateInsurancePolicyAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -167,17 +173,18 @@ namespace Bricknode.Soap.Sdk.Services
         /// </summary>
         /// <param name="insurancePolicies"></param>
         /// <param name="fieldsToUpdate"></param>
+        /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<UpdateInsurancePoliciesResponse> UpdateInsurancePoliciesAsync(
-            UpdateInsurancePolicy[] insurancePolicies, UpdateInsurancePolicyFields fieldsToUpdate)
+            UpdateInsurancePolicy[] insurancePolicies, UpdateInsurancePolicyFields fieldsToUpdate, string bfsApiClientName = null)
         {
-            var request = GetRequest<UpdateInsurancePoliciesRequest>();
+            var request = GetRequest<UpdateInsurancePoliciesRequest>(bfsApiClientName);
 
             request.Entities = insurancePolicies;
 
             request.Fields = fieldsToUpdate;
 
-            var response = await _client.UpdateInsurancePoliciesAsync(request);
+            var response = await GetClient(bfsApiClientName).UpdateInsurancePoliciesAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -194,16 +201,17 @@ namespace Bricknode.Soap.Sdk.Services
         ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/128942312/GetInsuranceClaims
         /// </summary>
         /// <param name="filters"></param>
+        /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<GetInsuranceClaimsResponse> GetInsuranceClaimsAsync(GetInsuranceClaimsArgs filters)
+        public async Task<GetInsuranceClaimsResponse> GetInsuranceClaimsAsync(GetInsuranceClaimsArgs filters, string bfsApiClientName = null)
         {
-            var request = GetRequest<GetInsuranceClaimsRequest>();
+            var request = GetRequest<GetInsuranceClaimsRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetInsuranceClaimsFields>();
 
-            var response = await _client.GetInsuranceClaimsAsync(request);
+            var response = await GetClient(bfsApiClientName).GetInsuranceClaimsAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -216,14 +224,15 @@ namespace Bricknode.Soap.Sdk.Services
         ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/128942296/CreateInsuranceClaims
         /// </summary>
         /// <param name="insuranceClaims"></param>
+        /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<CreateInsuranceClaimsResponse> CreateInsuranceClaimsAsync(InsuranceClaim[] insuranceClaims)
+        public async Task<CreateInsuranceClaimsResponse> CreateInsuranceClaimsAsync(InsuranceClaim[] insuranceClaims, string bfsApiClientName = null)
         {
-            var request = GetRequest<CreateInsuranceClaimsRequest>();
+            var request = GetRequest<CreateInsuranceClaimsRequest>(bfsApiClientName);
 
             request.Entities = insuranceClaims;
 
-            var response = await _client.CreateInsuranceClaimsAsync(request);
+            var response = await GetClient(bfsApiClientName).CreateInsuranceClaimsAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -237,17 +246,18 @@ namespace Bricknode.Soap.Sdk.Services
         /// </summary>
         /// <param name="insuranceClaims"></param>
         /// <param name="fieldsToUpdate"></param>
+        /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<UpdateInsuranceClaimsResponse> UpdateInsuranceClaimsAsync(
-            UpdateInsuranceClaim[] insuranceClaims, UpdateInsuranceClaimsFields fieldsToUpdate)
+            UpdateInsuranceClaim[] insuranceClaims, UpdateInsuranceClaimsFields fieldsToUpdate, string bfsApiClientName = null)
         {
-            var request = GetRequest<UpdateInsuranceClaimsRequest>();
+            var request = GetRequest<UpdateInsuranceClaimsRequest>(bfsApiClientName);
 
             request.Entities = insuranceClaims;
 
             request.Fields = fieldsToUpdate;
 
-            var response = await _client.UpdateInsuranceClaimsAsync(request);
+            var response = await GetClient(bfsApiClientName).UpdateInsuranceClaimsAsync(request);
 
             if (ValidateResponse(response)) return response;
 

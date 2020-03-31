@@ -27,16 +27,17 @@ namespace Bricknode.Soap.Sdk.Services
         ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/83132947/GetFundInstructions
         /// </summary>
         /// <param name="filters"></param>
+        /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<GetFundInstructionResponse> GetFundInstructionsAsync(GetFundInstructionArgs filters)
+        public async Task<GetFundInstructionResponse> GetFundInstructionsAsync(GetFundInstructionArgs filters, string bfsApiClientName = null)
         {
-            var request = GetRequest<GetFundInstructionRequest>();
+            var request = GetRequest<GetFundInstructionRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetFundInstructionFields>();
 
-            var response = await _client.GetFundInstructionsAsync(request);
+            var response = await GetClient(bfsApiClientName).GetFundInstructionsAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -49,17 +50,18 @@ namespace Bricknode.Soap.Sdk.Services
         ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/147881428/GetFundInstructionStatusLogs
         /// </summary>
         /// <param name="filters"></param>
+        /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<GetFundInstructionStatusLogResponse> GetFundInstructionStatusLogsAsync(
-            GetFundInstructionStatusLogArgs filters)
+            GetFundInstructionStatusLogArgs filters, string bfsApiClientName = null)
         {
-            var request = GetRequest<GetFundInstructionStatusLogRequest>();
+            var request = GetRequest<GetFundInstructionStatusLogRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetFundInstructionStatusLogFields>();
 
-            var response = await _client.GetFundInstructionStatusLogsAsync(request);
+            var response = await GetClient(bfsApiClientName).GetFundInstructionStatusLogsAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -72,17 +74,18 @@ namespace Bricknode.Soap.Sdk.Services
         ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/147881601/GetFundInstructionExecutions
         /// </summary>
         /// <param name="filters"></param>
+        /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<GetFundInstructionExecutionResponse> GetFundInstructionExecutionsAsync(
-            GetFundInstructionExecutionArgs filters)
+            GetFundInstructionExecutionArgs filters, string bfsApiClientName = null)
         {
-            var request = GetRequest<GetFundInstructionExecutionRequest>();
+            var request = GetRequest<GetFundInstructionExecutionRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetFundInstructionExecutionFields>();
 
-            var response = await _client.GetFundInstructionExecutionsAsync(request);
+            var response = await GetClient(bfsApiClientName).GetFundInstructionExecutionsAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -95,15 +98,16 @@ namespace Bricknode.Soap.Sdk.Services
         ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/83132952/FundInstructions+Settle
         /// </summary>
         /// <param name="fundInstruction"></param>
+        /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<FundInstructions_SettleResponse> SettleFundInstructionAsync(
-            FundInstructions_Settle fundInstruction)
+            FundInstructions_Settle fundInstruction, string bfsApiClientName = null)
         {
-            var request = GetRequest<FundInstructions_SettleRequest>();
+            var request = GetRequest<FundInstructions_SettleRequest>(bfsApiClientName);
 
             request.ActionTriggerDataEntity = fundInstruction;
 
-            var response = await _client.FundInstruction_SettleAsync(request);
+            var response = await GetClient(bfsApiClientName).FundInstruction_SettleAsync(request);
 
             if (ValidateResponse(response)) return response;
 

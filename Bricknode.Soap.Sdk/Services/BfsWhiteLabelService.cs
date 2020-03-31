@@ -25,16 +25,17 @@ namespace Bricknode.Soap.Sdk.Services
         ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/435552259/GetWhiteLabels
         /// </summary>
         /// <param name="filters"></param>
+        /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<GetWhiteLabelResponse> GetWhiteLabelsAsync(GetWhiteLabelArgs filters)
+        public async Task<GetWhiteLabelResponse> GetWhiteLabelsAsync(GetWhiteLabelArgs filters, string bfsApiClientName = null)
         {
-            var request = GetRequest<GetWhiteLabelRequest>();
+            var request = GetRequest<GetWhiteLabelRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetWhiteLabelFields>();
 
-            var response = await _client.GetWhiteLabelsAsync(request);
+            var response = await GetClient(bfsApiClientName).GetWhiteLabelsAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -47,14 +48,15 @@ namespace Bricknode.Soap.Sdk.Services
         ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/435585030/CreateWhiteLabels
         /// </summary>
         /// <param name="whiteLabels"></param>
+        /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<CreateWhiteLabelResponse> CreateWhiteLabelsAsync(WhiteLabel[] whiteLabels)
+        public async Task<CreateWhiteLabelResponse> CreateWhiteLabelsAsync(WhiteLabel[] whiteLabels, string bfsApiClientName = null)
         {
-            var request = GetRequest<CreateWhiteLabelRequest>();
+            var request = GetRequest<CreateWhiteLabelRequest>(bfsApiClientName);
 
             request.Entities = whiteLabels;
 
-            var response = await _client.CreateWhiteLabelsAsync(request);
+            var response = await GetClient(bfsApiClientName).CreateWhiteLabelsAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -68,17 +70,18 @@ namespace Bricknode.Soap.Sdk.Services
         /// </summary>
         /// <param name="updateWhiteLabels"></param>
         /// <param name="fieldsToUpdate"></param>
+        /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<UpdateWhiteLabelResponse> UpdateWhiteLabelsAsync(UpdateWhiteLabel[] updateWhiteLabels,
-            UpdateWhiteLabelFields fieldsToUpdate)
+            UpdateWhiteLabelFields fieldsToUpdate, string bfsApiClientName = null)
         {
-            var request = GetRequest<UpdateWhiteLabelsRequest>();
+            var request = GetRequest<UpdateWhiteLabelsRequest>(bfsApiClientName);
 
             request.Entities = updateWhiteLabels;
 
             request.Fields = fieldsToUpdate;
 
-            var response = await _client.UpdateWhiteLabelAsync(request);
+            var response = await GetClient(bfsApiClientName).UpdateWhiteLabelAsync(request);
 
             if (ValidateResponse(response)) return response;
 

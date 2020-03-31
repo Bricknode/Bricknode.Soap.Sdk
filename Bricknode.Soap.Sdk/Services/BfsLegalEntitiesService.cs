@@ -26,16 +26,17 @@ namespace Bricknode.Soap.Sdk.Services
         ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/57639002/GetPersons
         /// </summary>
         /// <param name="filters"></param>
+        /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<GetPersonResponse> GetLegalEntitiesAsync(GetPersonArgs filters)
+        public async Task<GetPersonResponse> GetLegalEntitiesAsync(GetPersonArgs filters, string bfsApiClientName = null)
         {
-            var request = GetRequest<GetPersonRequest>();
+            var request = GetRequest<GetPersonRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetPersonFields>();
 
-            var response = await _client.GetPersonsAsync(request);
+            var response = await GetClient(bfsApiClientName).GetPersonsAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -48,14 +49,15 @@ namespace Bricknode.Soap.Sdk.Services
         ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/57639004/CreatePersons
         /// </summary>
         /// <param name="legalEntities"></param>
+        /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<CreatePersonResponse> CreateLegalEntitiesAsync(Person[] legalEntities)
+        public async Task<CreatePersonResponse> CreateLegalEntitiesAsync(Person[] legalEntities, string bfsApiClientName = null)
         {
-            var request = GetRequest<CreatePersonRequest>();
+            var request = GetRequest<CreatePersonRequest>(bfsApiClientName);
 
             request.Entities = legalEntities;
 
-            var response = await _client.CreatePersonsAsync(request);
+            var response = await GetClient(bfsApiClientName).CreatePersonsAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -69,17 +71,18 @@ namespace Bricknode.Soap.Sdk.Services
         /// </summary>
         /// <param name="legalEntities"></param>
         /// <param name="fieldsToUpdate"></param>
+        /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<UpdatePersonsResponse> UpdateLegalEntitiesAsync(UpdatePerson[] legalEntities,
-            UpdatePersonFields fieldsToUpdate)
+            UpdatePersonFields fieldsToUpdate, string bfsApiClientName = null)
         {
-            var request = GetRequest<UpdatePersonsRequest>();
+            var request = GetRequest<UpdatePersonsRequest>(bfsApiClientName);
 
             request.Entities = legalEntities;
 
             request.Fields = fieldsToUpdate;
 
-            var response = await _client.UpdatePersonsAsync(request);
+            var response = await GetClient(bfsApiClientName).UpdatePersonsAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -92,14 +95,15 @@ namespace Bricknode.Soap.Sdk.Services
         ///     Get information about the house entity.
         ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/123666446/GetHouseInformation
         /// </summary>
+        /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<GetHouseInformationResponse> GetHouseInformationAsync()
+        public async Task<GetHouseInformationResponse> GetHouseInformationAsync(string bfsApiClientName = null)
         {
-            var request = GetRequest<GetHouseInformationRequest>();
+            var request = GetRequest<GetHouseInformationRequest>(bfsApiClientName);
 
             request.Fields = GetFields<GetHouseInformationFields>();
 
-            var response = await _client.GetHouseInformationAsync(request);
+            var response = await GetClient(bfsApiClientName).GetHouseInformationAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -112,16 +116,17 @@ namespace Bricknode.Soap.Sdk.Services
         ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/182911013/GetDecisionMakers
         /// </summary>
         /// <param name="filters"></param>
+        /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<GetDecisionMakerResponse> GetDecisionMakersAsync(GetDecisionMakerArgs filters)
+        public async Task<GetDecisionMakerResponse> GetDecisionMakersAsync(GetDecisionMakerArgs filters, string bfsApiClientName = null)
         {
-            var request = GetRequest<GetDecisionMakerRequest>();
+            var request = GetRequest<GetDecisionMakerRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetDecisionMakerFields>();
 
-            var response = await _client.GetDecisionMakersAsync(request);
+            var response = await GetClient(bfsApiClientName).GetDecisionMakersAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -134,16 +139,17 @@ namespace Bricknode.Soap.Sdk.Services
         ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/86507555/GetFundCompanies
         /// </summary>
         /// <param name="filters"></param>
+        /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<GetFundCompaniesResponse> GetFundCompaniesAsync(GetFundCompaniesArgs filters)
+        public async Task<GetFundCompaniesResponse> GetFundCompaniesAsync(GetFundCompaniesArgs filters, string bfsApiClientName = null)
         {
-            var request = GetRequest<GetFundCompaniesRequest>();
+            var request = GetRequest<GetFundCompaniesRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetFundCompaniesFields>();
 
-            var response = await _client.GetFundCompaniesAsync(request);
+            var response = await GetClient(bfsApiClientName).GetFundCompaniesAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -156,16 +162,17 @@ namespace Bricknode.Soap.Sdk.Services
         ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/86507559/GetFundEntity
         /// </summary>
         /// <param name="filters"></param>
+        /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<GetFundEntityResponse> GetFundEntitiesAsync(GetFundEntityArgs filters)
+        public async Task<GetFundEntityResponse> GetFundEntitiesAsync(GetFundEntityArgs filters, string bfsApiClientName = null)
         {
-            var request = GetRequest<GetFundEntityRequest>();
+            var request = GetRequest<GetFundEntityRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetFundEntityFields>();
 
-            var response = await _client.GetFundEntityAsync(request);
+            var response = await GetClient(bfsApiClientName).GetFundEntityAsync(request);
 
             if (ValidateResponse(response)) return response;
 

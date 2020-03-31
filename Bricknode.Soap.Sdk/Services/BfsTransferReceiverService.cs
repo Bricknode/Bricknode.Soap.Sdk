@@ -26,16 +26,17 @@ namespace Bricknode.Soap.Sdk.Services
         ///     Use BfsLookups.TransferReceiverTypeKey to get the options for the TransferReceiverTypeKeys property
         /// </summary>
         /// <param name="filters"></param>
+        /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<GetTransferReceiversResponse> GetTransferReceiversAsync(GetTransferReceiversArgs filters)
+        public async Task<GetTransferReceiversResponse> GetTransferReceiversAsync(GetTransferReceiversArgs filters, string bfsApiClientName = null)
         {
-            var request = GetRequest<GetTransferReceiversRequest>();
+            var request = GetRequest<GetTransferReceiversRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetTransferReceiverFields>();
 
-            var response = await _client.GetTransferReceiversAsync(request);
+            var response = await GetClient(bfsApiClientName).GetTransferReceiversAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -48,15 +49,16 @@ namespace Bricknode.Soap.Sdk.Services
         ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/175177771/CreateTransferReceivers
         /// </summary>
         /// <param name="transferReceivers"></param>
+        /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<CreateTransferReceiversResponse> CreateTransferReceiversAsync(
-            TransferReceiver[] transferReceivers)
+            TransferReceiver[] transferReceivers, string bfsApiClientName = null)
         {
-            var request = GetRequest<CreateTransferReceiversRequest>();
+            var request = GetRequest<CreateTransferReceiversRequest>(bfsApiClientName);
 
             request.Entities = transferReceivers;
 
-            var response = await _client.CreateTransferReceiversAsync(request);
+            var response = await GetClient(bfsApiClientName).CreateTransferReceiversAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -70,17 +72,18 @@ namespace Bricknode.Soap.Sdk.Services
         /// </summary>
         /// <param name="updateTransferReceivers"></param>
         /// <param name="fieldsToUpdate"></param>
+        /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<UpdateTransferReceiversResponse> UpdateTransferReceiversAsync(
-            UpdateTransferReceiver[] updateTransferReceivers, UpdateTransferReceiverFields fieldsToUpdate)
+            UpdateTransferReceiver[] updateTransferReceivers, UpdateTransferReceiverFields fieldsToUpdate, string bfsApiClientName = null)
         {
-            var request = GetRequest<UpdateTransferReceiversRequest>();
+            var request = GetRequest<UpdateTransferReceiversRequest>(bfsApiClientName);
 
             request.Entities = updateTransferReceivers;
 
             request.Fields = fieldsToUpdate;
 
-            var response = await _client.UpdateTransferReceiversAsync(request);
+            var response = await GetClient(bfsApiClientName).UpdateTransferReceiversAsync(request);
 
             if (ValidateResponse(response)) return response;
 

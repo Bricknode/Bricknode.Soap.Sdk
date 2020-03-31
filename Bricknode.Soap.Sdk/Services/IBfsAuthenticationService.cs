@@ -11,8 +11,9 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="domain"></param>
         /// <param name="username"></param>
         /// <param name="password"></param>
+        /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         Task<UsernamePasswordAuthenticateResponse> UsernamePasswordAuthenticationAsync(Domain domain,
-            string username, string password);
+            string username, string password, string bfsApiClientName = null);
     }
 }
