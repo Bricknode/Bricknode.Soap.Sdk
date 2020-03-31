@@ -23,6 +23,7 @@ namespace ConsoleApp1
                 .AddNamedBfsApiClient("name1", configuration =>
                 {
                     configuration.EndpointAddress = "https://bfs1.bricknode.com/test/api/bfsapi.asmx";
+                    configuration.Identifier = "4324324";
                     configuration.Credentials = new Credentials
                     {
                         UserName = "test1",
@@ -31,6 +32,7 @@ namespace ConsoleApp1
                 }).AddNamedBfsApiClient("name2", configuration =>
                 {
                     configuration.EndpointAddress = "https://bfs1.bricknode.com/test/api/bfsapi.asmx";
+                    configuration.Identifier = "4324324";
                     configuration.Credentials = new Credentials
                     {
                         UserName = "test2",
