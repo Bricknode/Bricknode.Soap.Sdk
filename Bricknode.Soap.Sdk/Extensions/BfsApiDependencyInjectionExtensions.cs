@@ -1,19 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ServiceModel;
-using System.Text;
-using BfsApi;
-using Bricknode.Soap.Sdk.Configuration;
-using Bricknode.Soap.Sdk.Helpers;
-using Bricknode.Soap.Sdk.Services;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Options;
-
-namespace Bricknode.Soap.Sdk.Extensions
+﻿namespace Bricknode.Soap.Sdk.Extensions
 {
+    using System;
+    using System.ServiceModel;
+    using BfsApi;
+    using Builders;
+    using Configuration;
+    using Factories;
+    using Helpers;
+    using Microsoft.Extensions.DependencyInjection;
+    using Microsoft.Extensions.Options;
+    using Services;
+
     public static class BfsApiDependencyInjectionExtensions
     {
-        public static IServiceCollection AddBfsApiClient(this IServiceCollection services, Action<BfsApiConfiguration> bfsApiConfiguration)
+        public static IServiceCollection AddBfsApiClient(this IServiceCollection services,
+            Action<BfsApiConfiguration> bfsApiConfiguration)
         {
             services.AddTransient<bfsapiSoap, bfsapiSoapClient>(
                 serviceProvider => new bfsapiSoapClient(
@@ -23,8 +24,29 @@ namespace Bricknode.Soap.Sdk.Extensions
                 )
             );
 
+            services.AddScoped<IBfsApiClientFactory, BfsApiClientFactory>();
+
             services.Configure(bfsApiConfiguration);
             services.AddSingleton(bfsApiConfiguration);
+
+            AddBfsServices(services);
+
+            return services;
+        }
+
+        public static IMultiBfsApiClientBuilder AddMultiBfsApiClient(this IServiceCollection services)
+        {
+            var builder = new MultiBfsApiClientBuilder(services);
+
+            services.AddTransient<bfsapiSoap, bfsapiSoapClient>(provider => new bfsapiSoapClient(bfsapiSoapClient.EndpointConfiguration.bfsapiSoap));
+            services.AddOptions();
+            AddBfsServices(services);
+
+            return builder;
+        }
+
+        private static void AddBfsServices(IServiceCollection services)
+        {
             services.AddTransient<IBfsLegalEntitiesService, BfsLegalEntitiesService>();
             services.AddTransient<IBfsAccountService, BfsAccountService>();
             services.AddTransient<IBfsAssetService, BfsAssetService>();
@@ -45,8 +67,6 @@ namespace Bricknode.Soap.Sdk.Extensions
             services.AddTransient<IBfsBusinessEventService, BfsBusinessEventService>();
             services.AddTransient<IBfsTransferReceiverService, BfsTransferReceiverService>();
             services.AddTransient<IBfsWhiteLabelService, BfsWhiteLabelService>();
-
-            return services;
         }
     }
 }

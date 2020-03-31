@@ -7,12 +7,14 @@ using Microsoft.Extensions.Options;
 
 namespace Bricknode.Soap.Sdk.Services
 {
+    using Factories;
+
     public class BfsBankIdService : BfsServiceBase, IBfsBankIdService
     {
         private readonly bfsapiSoap _client;
 
-        public BfsBankIdService(IOptions<BfsApiConfiguration> bfsApiConfiguration, ILogger logger, bfsapiSoap client) :
-            base(bfsApiConfiguration, logger)
+        public BfsBankIdService(IOptions<BfsApiConfiguration> bfsApiConfiguration, ILogger logger, bfsapiSoap client, IBfsApiClientFactory bfsApiClientFactory) :
+            base(bfsApiConfiguration, logger, bfsApiClientFactory, client)
         {
             _client = client;
         }
@@ -24,19 +26,20 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bankIdType"></param>
         /// <param name="domain"></param>
         /// <param name="authenticatePerson"></param>
+        /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<BankIdAuthenticateResponse> InitiateBankIdAuthenticationAsync(string ssn,
             BankIdType bankIdType,
-            Domain domain, bool authenticatePerson = false)
+            Domain domain, bool authenticatePerson = false, string bfsApiClientName = null)
         {
-            var request = GetRequest<BankIdAuthenticateRequest>();
+            var request = GetRequest<BankIdAuthenticateRequest>(bfsApiClientName);
 
             request.Domain = domain;
             request.AuthenticatePerson = authenticatePerson;
             request.BankIdType = bankIdType;
             request.PersonalNumber = ssn.Replace("-", "");
 
-            var response = await _client.BankIdAuthenticationAsync(request);
+            var response = await GetClient(bfsApiClientName).BankIdAuthenticationAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -53,11 +56,12 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="ssn"></param>
         /// <param name="signingText"></param>
         /// <param name="authenticatePerson"></param>
+        /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<BankIdSignResponse> InitiateBankIdSignature(BankIdType bankIdType, Domain domain, string ssn,
-            string signingText, bool authenticatePerson = false)
+            string signingText, bool authenticatePerson = false, string bfsApiClientName = null)
         {
-            var request = GetRequest<BankIdSignRequest>();
+            var request = GetRequest<BankIdSignRequest>(bfsApiClientName);
 
             request.Domain = domain;
             request.AuthenticatePerson = authenticatePerson;
@@ -65,7 +69,7 @@ namespace Bricknode.Soap.Sdk.Services
             request.PersonalNumber = ssn.Replace("-", "");
             request.SigningText = signingText;
 
-            var response = await _client.BankIdSignAsync(request);
+            var response = await GetClient(bfsApiClientName).BankIdSignAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -79,15 +83,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// </summary>
         /// <param name="orderReference"></param>
         /// <param name="bankIdType"></param>
+        /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<GetBankIdStatusResponse> GetBankIdStatus(string orderReference, BankIdType bankIdType)
+        public async Task<GetBankIdStatusResponse> GetBankIdStatus(string orderReference, BankIdType bankIdType, string bfsApiClientName = null)
         {
-            var request = GetRequest<GetBankIdStatusRequest>();
+            var request = GetRequest<GetBankIdStatusRequest>(bfsApiClientName);
 
             request.BankIdType = bankIdType;
             request.OrderReference = orderReference;
 
-            var response = await _client.GetBankIdStatusAsync(request);
+            var response = await GetClient(bfsApiClientName).GetBankIdStatusAsync(request);
 
             if (ValidateResponse(response)) return response;
 

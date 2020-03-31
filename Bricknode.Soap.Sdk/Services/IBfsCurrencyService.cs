@@ -9,14 +9,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// https://bricknode.atlassian.net/wiki/spaces/API/pages/56328392/GetCurrencies
         /// </summary>
         /// <param name="filters"></param>
+        /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        Task<GetCurrencyResponse> GetCurrenciesAsync(GetCurrencyArgs filters);
+        Task<GetCurrencyResponse> GetCurrenciesAsync(GetCurrencyArgs filters, string bfsApiClientName = null);
 
         /// <summary>
         /// https://bricknode.atlassian.net/wiki/spaces/API/pages/458817672/GetCurrencyValues
         /// </summary>
         /// <param name="filters"></param>
+        /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        Task<GetCurrencyValueResponse> GetCurrencyValuesAsync(GetCurrencyValuesArgs filters);
+        Task<GetCurrencyValueResponse> GetCurrencyValuesAsync(GetCurrencyValuesArgs filters, string bfsApiClientName = null);
     }
 }

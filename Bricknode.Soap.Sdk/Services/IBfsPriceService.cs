@@ -9,8 +9,9 @@ namespace Bricknode.Soap.Sdk.Services
         /// https://bricknode.atlassian.net/wiki/spaces/API/pages/149133779/GetHistoricPrices
         /// </summary>
         /// <param name="filters"></param>
+        /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        Task<GetHistoricPricesResponse> GetHistoricPricesAsync(GetHistoricPricesArgs filters);
+        Task<GetHistoricPricesResponse> GetHistoricPricesAsync(GetHistoricPricesArgs filters, string bfsApiClientName = null);
 
 
         /// <summary>
@@ -21,11 +22,13 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="clearPreviousDataByRange"></param>
         /// <param name="updateCurrentPriceFromLastPrice"></param>
         /// <param name="clearAllsubsequentData"></param>
+        /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         Task<SetHistoricPricesResponse> SetHistoricPricesAsync(PriceDateEntry[] priceDateEntries,
             bool clearAllPreviousData = false,
             bool clearPreviousDataByRange = false,
             bool updateCurrentPriceFromLastPrice = false,
-            bool clearAllsubsequentData = false);
+            bool clearAllsubsequentData = false,
+            string bfsApiClientName = null);
     }
 }
