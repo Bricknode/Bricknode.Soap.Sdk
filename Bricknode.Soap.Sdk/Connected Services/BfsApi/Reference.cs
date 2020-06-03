@@ -826,6 +826,26 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
         System.Threading.Tasks.Task<BfsApi.UpdateWorkflowInstanceResponse> UpdateWorkflowInstancesAsync(BfsApi.UpdateWorkflowInstanceRequest req);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateRecurringOrderTemplatesAutogiro", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
+        System.Threading.Tasks.Task<BfsApi.CreateRecurringOrderTemplateAutoGiroResponse> CreateRecurringOrderTemplatesAutogiroAsync(BfsApi.CreateRecurringOrderTemplateAutoGiroRequest req);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateRecurringOrderTemplateAutoGiro", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
+        System.Threading.Tasks.Task<BfsApi.UpdateRecurringOrderTemplateAutoGiroResponse> UpdateRecurringOrderTemplateAutoGiroAsync(BfsApi.UpdateRecurringOrderTemplateAutoGiroRequest req);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetRecurringOrderTemplates", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
@@ -1035,6 +1055,96 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
         System.Threading.Tasks.Task<BfsApi.GetHoldingsOverTimeResponse> GetHoldingsOverTimeAsync(BfsApi.GetHoldingsOverTimeRequest req);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetMessages", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
+        System.Threading.Tasks.Task<BfsApi.GetMessagesResponse> GetMessagesAsync(BfsApi.GetMessagesRequest req);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateMessages", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
+        System.Threading.Tasks.Task<BfsApi.CreateMessagesResponse> CreateMessagesAsync(BfsApi.CreateMessagesRequest req);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateMessages", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
+        System.Threading.Tasks.Task<BfsApi.UpdateMessageResponse> UpdateMessagesAsync(BfsApi.UpdateMessageRequest req);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetNotes", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
+        System.Threading.Tasks.Task<BfsApi.GetNotesResponse> GetNotesAsync(BfsApi.GetNotesRequest req);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateNotes", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
+        System.Threading.Tasks.Task<BfsApi.CreateNotesResponse> CreateNotesAsync(BfsApi.CreateNotesRequest req);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateNotes", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
+        System.Threading.Tasks.Task<BfsApi.UpdateNoteResponse> UpdateNotesAsync(BfsApi.UpdateNoteRequest req);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetTasks", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
+        System.Threading.Tasks.Task<BfsApi.GetTasksResponse> GetTasksAsync(BfsApi.GetTasksRequest req);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateTasks", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
+        System.Threading.Tasks.Task<BfsApi.CreateTasksResponse> CreateTasksAsync(BfsApi.CreateTasksRequest req);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateTasks", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
+        System.Threading.Tasks.Task<BfsApi.UpdateTaskResponse> UpdateTasksAsync(BfsApi.UpdateTaskRequest req);
     }
     
     /// <remarks/>
@@ -2575,6 +2685,24 @@ namespace BfsApi
     }
     
     /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APIUpdateResponseOfUpdateTask))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateTaskResponse))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APICreateResponseOfCreateTask))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateTasksResponse))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchResponseOfGetTasksResponseRowGetTasksFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetTasksResponse))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APIUpdateResponseOfUpdateNote))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateNoteResponse))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APICreateResponseOfCreateNote))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateNotesResponse))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchResponseOfGetNotesResponseRowGetNotesFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetNotesResponse))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APIUpdateResponseOfUpdateMessage))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateMessageResponse))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APICreateResponseOfCreateMessage))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateMessagesResponse))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchResponseOfGetMessagesResponseRowGetMessagesFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetMessagesResponse))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchResponseOfGetHoldingsOverTimeResponseRowGetHoldingsOverTimeResponseFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetHoldingsOverTimeResponse))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchResponseOfGetTRSCountriesResponseRowGetTRSCountriesFields))]
@@ -2614,6 +2742,10 @@ namespace BfsApi
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetHistoricPricesResponse))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchResponseOfGetRecurringOrderTemplatesResponseRowGetRecurringOrderTemplatesFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetRecurringOrderTemplatesResponse))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APIUpdateResponseOfUpdateRecurringOrderTemplateAutoGiro))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateRecurringOrderTemplateAutoGiroResponse))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APICreateResponseOfRecurringOrderTemplateAutoGiro))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateRecurringOrderTemplateAutoGiroResponse))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APIUpdateResponseOfUpdateWorkflowInstance))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateWorkflowInstanceResponse))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APIUpdateResponseOfUpdateTransferReceiver))]
@@ -2790,42 +2922,26 @@ namespace BfsApi
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetHoldingsOverTimeResponse))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateTaskResponse))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public abstract partial class APISearchResponseOfGetHoldingsOverTimeResponseRowGetHoldingsOverTimeResponseFields : Response
+    public abstract partial class APIUpdateResponseOfUpdateTask : Response
     {
         
-        private GetHoldingsOverTimeResponseRow[] resultField;
-        
-        private GetHoldingsOverTimeResponseFields fieldsField;
+        private UpdateTask[] entitiesField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
-        public GetHoldingsOverTimeResponseRow[] Result
+        public UpdateTask[] Entities
         {
             get
             {
-                return this.resultField;
+                return this.entitiesField;
             }
             set
             {
-                this.resultField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public GetHoldingsOverTimeResponseFields Fields
-        {
-            get
-            {
-                return this.fieldsField;
-            }
-            set
-            {
-                this.fieldsField = value;
+                this.entitiesField = value;
             }
         }
     }
@@ -2834,164 +2950,148 @@ namespace BfsApi
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class GetHoldingsOverTimeResponseFields
+    public partial class UpdateTask : EntityBase
     {
         
-        private bool dateField;
+        private System.Guid userField;
         
-        private bool valueField;
+        private System.Nullable<System.Guid> administratorField;
+        
+        private string headingField;
+        
+        private string textField;
+        
+        private System.DateTime dueDateField;
+        
+        private bool isHTMLField;
+        
+        private string priorityField;
+        
+        private string statusField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public bool Date
+        public System.Guid User
         {
             get
             {
-                return this.dateField;
+                return this.userField;
             }
             set
             {
-                this.dateField = value;
+                this.userField = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public bool Value
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
+        public System.Nullable<System.Guid> Administrator
         {
             get
             {
-                return this.valueField;
+                return this.administratorField;
             }
             set
             {
-                this.valueField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class GetHoldingsOverTimeResponse : APISearchResponseOfGetHoldingsOverTimeResponseRowGetHoldingsOverTimeResponseFields
-    {
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetTRSCountriesResponse))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public abstract partial class APISearchResponseOfGetTRSCountriesResponseRowGetTRSCountriesFields : Response
-    {
-        
-        private GetTRSCountriesResponseRow[] resultField;
-        
-        private GetTRSCountriesFields fieldsField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
-        public GetTRSCountriesResponseRow[] Result
-        {
-            get
-            {
-                return this.resultField;
-            }
-            set
-            {
-                this.resultField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public GetTRSCountriesFields Fields
-        {
-            get
-            {
-                return this.fieldsField;
-            }
-            set
-            {
-                this.fieldsField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class GetTRSCountriesResponseRow : EntityBase
-    {
-        
-        private string tRSIdTypePrio1Field;
-        
-        private string tRSIdTypePrio2Field;
-        
-        private string tRSIdTypePrio3Field;
-        
-        private string countryCodeField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string TRSIdTypePrio1
-        {
-            get
-            {
-                return this.tRSIdTypePrio1Field;
-            }
-            set
-            {
-                this.tRSIdTypePrio1Field = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public string TRSIdTypePrio2
-        {
-            get
-            {
-                return this.tRSIdTypePrio2Field;
-            }
-            set
-            {
-                this.tRSIdTypePrio2Field = value;
+                this.administratorField = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public string TRSIdTypePrio3
+        public string Heading
         {
             get
             {
-                return this.tRSIdTypePrio3Field;
+                return this.headingField;
             }
             set
             {
-                this.tRSIdTypePrio3Field = value;
+                this.headingField = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=3)]
-        public string CountryCode
+        public string Text
         {
             get
             {
-                return this.countryCodeField;
+                return this.textField;
             }
             set
             {
-                this.countryCodeField = value;
+                this.textField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public System.DateTime DueDate
+        {
+            get
+            {
+                return this.dueDateField;
+            }
+            set
+            {
+                this.dueDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public bool IsHTML
+        {
+            get
+            {
+                return this.isHTMLField;
+            }
+            set
+            {
+                this.isHTMLField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public string Priority
+        {
+            get
+            {
+                return this.priorityField;
+            }
+            set
+            {
+                this.priorityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public string Status
+        {
+            get
+            {
+                return this.statusField;
+            }
+            set
+            {
+                this.statusField = value;
             }
         }
     }
     
     /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateTask))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateTask))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetTasksResponseRow))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateNote))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateNote))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetNotesResponseRow))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateMessage))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateMessage))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetMessagesResponseRow))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetTRSCountriesResponseRow))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateInsurancePolicy))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(InsurancePolicy))]
@@ -3008,6 +3108,8 @@ namespace BfsApi
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetFileInfoResponseRow))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetHistoricPricesResponseRow))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetRecurringOrderTemplatesResponseRow))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateRecurringOrderTemplateAutoGiro))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RecurringOrderTemplateAutoGiro))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateWorkflowInstance))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateTransferReceiver))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TransferReceiver))]
@@ -3202,6 +3304,1118 @@ namespace BfsApi
             set
             {
                 this.valueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class CreateTask : EntityBase
+    {
+        
+        private System.Guid userField;
+        
+        private System.Nullable<System.Guid> administratorField;
+        
+        private string headingField;
+        
+        private string textField;
+        
+        private System.Nullable<System.DateTime> dueDateField;
+        
+        private bool isHTMLField;
+        
+        private string priorityField;
+        
+        private string statusField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public System.Guid User
+        {
+            get
+            {
+                return this.userField;
+            }
+            set
+            {
+                this.userField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
+        public System.Nullable<System.Guid> Administrator
+        {
+            get
+            {
+                return this.administratorField;
+            }
+            set
+            {
+                this.administratorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string Heading
+        {
+            get
+            {
+                return this.headingField;
+            }
+            set
+            {
+                this.headingField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public string Text
+        {
+            get
+            {
+                return this.textField;
+            }
+            set
+            {
+                this.textField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=4)]
+        public System.Nullable<System.DateTime> DueDate
+        {
+            get
+            {
+                return this.dueDateField;
+            }
+            set
+            {
+                this.dueDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public bool IsHTML
+        {
+            get
+            {
+                return this.isHTMLField;
+            }
+            set
+            {
+                this.isHTMLField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public string Priority
+        {
+            get
+            {
+                return this.priorityField;
+            }
+            set
+            {
+                this.priorityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public string Status
+        {
+            get
+            {
+                return this.statusField;
+            }
+            set
+            {
+                this.statusField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetTasksResponseRow : EntityBase
+    {
+        
+        private System.Guid userField;
+        
+        private System.Guid administratorField;
+        
+        private string headingField;
+        
+        private string textField;
+        
+        private System.DateTime dueDateField;
+        
+        private bool isHTMLField;
+        
+        private string statusField;
+        
+        private string priorityField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public System.Guid User
+        {
+            get
+            {
+                return this.userField;
+            }
+            set
+            {
+                this.userField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public System.Guid Administrator
+        {
+            get
+            {
+                return this.administratorField;
+            }
+            set
+            {
+                this.administratorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string Heading
+        {
+            get
+            {
+                return this.headingField;
+            }
+            set
+            {
+                this.headingField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public string Text
+        {
+            get
+            {
+                return this.textField;
+            }
+            set
+            {
+                this.textField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public System.DateTime DueDate
+        {
+            get
+            {
+                return this.dueDateField;
+            }
+            set
+            {
+                this.dueDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public bool IsHTML
+        {
+            get
+            {
+                return this.isHTMLField;
+            }
+            set
+            {
+                this.isHTMLField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public string Status
+        {
+            get
+            {
+                return this.statusField;
+            }
+            set
+            {
+                this.statusField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public string Priority
+        {
+            get
+            {
+                return this.priorityField;
+            }
+            set
+            {
+                this.priorityField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class UpdateNote : EntityBase
+    {
+        
+        private System.Guid userField;
+        
+        private string headingField;
+        
+        private string textField;
+        
+        private System.DateTime eventDateField;
+        
+        private bool isHTMLField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public System.Guid User
+        {
+            get
+            {
+                return this.userField;
+            }
+            set
+            {
+                this.userField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string Heading
+        {
+            get
+            {
+                return this.headingField;
+            }
+            set
+            {
+                this.headingField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string Text
+        {
+            get
+            {
+                return this.textField;
+            }
+            set
+            {
+                this.textField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public System.DateTime EventDate
+        {
+            get
+            {
+                return this.eventDateField;
+            }
+            set
+            {
+                this.eventDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public bool IsHTML
+        {
+            get
+            {
+                return this.isHTMLField;
+            }
+            set
+            {
+                this.isHTMLField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class CreateNote : EntityBase
+    {
+        
+        private System.Guid userField;
+        
+        private string headingField;
+        
+        private string textField;
+        
+        private System.Nullable<System.DateTime> eventDateField;
+        
+        private bool isHTMLField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public System.Guid User
+        {
+            get
+            {
+                return this.userField;
+            }
+            set
+            {
+                this.userField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string Heading
+        {
+            get
+            {
+                return this.headingField;
+            }
+            set
+            {
+                this.headingField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string Text
+        {
+            get
+            {
+                return this.textField;
+            }
+            set
+            {
+                this.textField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
+        public System.Nullable<System.DateTime> EventDate
+        {
+            get
+            {
+                return this.eventDateField;
+            }
+            set
+            {
+                this.eventDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public bool IsHTML
+        {
+            get
+            {
+                return this.isHTMLField;
+            }
+            set
+            {
+                this.isHTMLField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetNotesResponseRow : EntityBase
+    {
+        
+        private System.Guid userField;
+        
+        private string headingField;
+        
+        private string textField;
+        
+        private System.DateTime eventDateField;
+        
+        private bool isHTMLField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public System.Guid User
+        {
+            get
+            {
+                return this.userField;
+            }
+            set
+            {
+                this.userField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string Heading
+        {
+            get
+            {
+                return this.headingField;
+            }
+            set
+            {
+                this.headingField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string Text
+        {
+            get
+            {
+                return this.textField;
+            }
+            set
+            {
+                this.textField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public System.DateTime EventDate
+        {
+            get
+            {
+                return this.eventDateField;
+            }
+            set
+            {
+                this.eventDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public bool IsHTML
+        {
+            get
+            {
+                return this.isHTMLField;
+            }
+            set
+            {
+                this.isHTMLField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class UpdateMessage : EntityBase
+    {
+        
+        private System.Guid receiverField;
+        
+        private string subjectField;
+        
+        private string bodyField;
+        
+        private bool isReadField;
+        
+        private bool isPublicField;
+        
+        private bool isPromotedField;
+        
+        private System.DateTime eventDateField;
+        
+        private bool isHTMLField;
+        
+        private string priorityField;
+        
+        private string statusField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public System.Guid Receiver
+        {
+            get
+            {
+                return this.receiverField;
+            }
+            set
+            {
+                this.receiverField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string Subject
+        {
+            get
+            {
+                return this.subjectField;
+            }
+            set
+            {
+                this.subjectField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string Body
+        {
+            get
+            {
+                return this.bodyField;
+            }
+            set
+            {
+                this.bodyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public bool IsRead
+        {
+            get
+            {
+                return this.isReadField;
+            }
+            set
+            {
+                this.isReadField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public bool IsPublic
+        {
+            get
+            {
+                return this.isPublicField;
+            }
+            set
+            {
+                this.isPublicField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public bool IsPromoted
+        {
+            get
+            {
+                return this.isPromotedField;
+            }
+            set
+            {
+                this.isPromotedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public System.DateTime EventDate
+        {
+            get
+            {
+                return this.eventDateField;
+            }
+            set
+            {
+                this.eventDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public bool IsHTML
+        {
+            get
+            {
+                return this.isHTMLField;
+            }
+            set
+            {
+                this.isHTMLField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+        public string Priority
+        {
+            get
+            {
+                return this.priorityField;
+            }
+            set
+            {
+                this.priorityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
+        public string Status
+        {
+            get
+            {
+                return this.statusField;
+            }
+            set
+            {
+                this.statusField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class CreateMessage : EntityBase
+    {
+        
+        private System.Guid receiverField;
+        
+        private string subjectField;
+        
+        private string bodyField;
+        
+        private bool isReadField;
+        
+        private bool isPublicField;
+        
+        private bool isPromotedField;
+        
+        private System.Nullable<System.DateTime> eventDateField;
+        
+        private bool isHTMLField;
+        
+        private string priorityField;
+        
+        private string statusField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public System.Guid Receiver
+        {
+            get
+            {
+                return this.receiverField;
+            }
+            set
+            {
+                this.receiverField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string Subject
+        {
+            get
+            {
+                return this.subjectField;
+            }
+            set
+            {
+                this.subjectField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string Body
+        {
+            get
+            {
+                return this.bodyField;
+            }
+            set
+            {
+                this.bodyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public bool IsRead
+        {
+            get
+            {
+                return this.isReadField;
+            }
+            set
+            {
+                this.isReadField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public bool IsPublic
+        {
+            get
+            {
+                return this.isPublicField;
+            }
+            set
+            {
+                this.isPublicField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public bool IsPromoted
+        {
+            get
+            {
+                return this.isPromotedField;
+            }
+            set
+            {
+                this.isPromotedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=6)]
+        public System.Nullable<System.DateTime> EventDate
+        {
+            get
+            {
+                return this.eventDateField;
+            }
+            set
+            {
+                this.eventDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public bool IsHTML
+        {
+            get
+            {
+                return this.isHTMLField;
+            }
+            set
+            {
+                this.isHTMLField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+        public string Priority
+        {
+            get
+            {
+                return this.priorityField;
+            }
+            set
+            {
+                this.priorityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
+        public string Status
+        {
+            get
+            {
+                return this.statusField;
+            }
+            set
+            {
+                this.statusField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetMessagesResponseRow : EntityBase
+    {
+        
+        private System.Guid receiverField;
+        
+        private string subjectField;
+        
+        private string bodyField;
+        
+        private bool isReadField;
+        
+        private bool isPublicField;
+        
+        private bool isPromotedField;
+        
+        private System.DateTime eventDateField;
+        
+        private bool isHTMLField;
+        
+        private string priorityField;
+        
+        private string statusField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public System.Guid Receiver
+        {
+            get
+            {
+                return this.receiverField;
+            }
+            set
+            {
+                this.receiverField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string Subject
+        {
+            get
+            {
+                return this.subjectField;
+            }
+            set
+            {
+                this.subjectField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string Body
+        {
+            get
+            {
+                return this.bodyField;
+            }
+            set
+            {
+                this.bodyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public bool IsRead
+        {
+            get
+            {
+                return this.isReadField;
+            }
+            set
+            {
+                this.isReadField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public bool IsPublic
+        {
+            get
+            {
+                return this.isPublicField;
+            }
+            set
+            {
+                this.isPublicField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public bool IsPromoted
+        {
+            get
+            {
+                return this.isPromotedField;
+            }
+            set
+            {
+                this.isPromotedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public System.DateTime EventDate
+        {
+            get
+            {
+                return this.eventDateField;
+            }
+            set
+            {
+                this.eventDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public bool IsHTML
+        {
+            get
+            {
+                return this.isHTMLField;
+            }
+            set
+            {
+                this.isHTMLField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+        public string Priority
+        {
+            get
+            {
+                return this.priorityField;
+            }
+            set
+            {
+                this.priorityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
+        public string Status
+        {
+            get
+            {
+                return this.statusField;
+            }
+            set
+            {
+                this.statusField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetTRSCountriesResponseRow : EntityBase
+    {
+        
+        private string tRSIdTypePrio1Field;
+        
+        private string tRSIdTypePrio2Field;
+        
+        private string tRSIdTypePrio3Field;
+        
+        private string countryCodeField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string TRSIdTypePrio1
+        {
+            get
+            {
+                return this.tRSIdTypePrio1Field;
+            }
+            set
+            {
+                this.tRSIdTypePrio1Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string TRSIdTypePrio2
+        {
+            get
+            {
+                return this.tRSIdTypePrio2Field;
+            }
+            set
+            {
+                this.tRSIdTypePrio2Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string TRSIdTypePrio3
+        {
+            get
+            {
+                return this.tRSIdTypePrio3Field;
+            }
+            set
+            {
+                this.tRSIdTypePrio3Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public string CountryCode
+        {
+            get
+            {
+                return this.countryCodeField;
+            }
+            set
+            {
+                this.countryCodeField = value;
             }
         }
     }
@@ -7283,6 +8497,8 @@ namespace BfsApi
         
         private System.Guid instrumentField;
         
+        private string commentField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public string PeriodicityCode
@@ -7434,6 +8650,228 @@ namespace BfsApi
             set
             {
                 this.instrumentField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
+        public string Comment
+        {
+            get
+            {
+                return this.commentField;
+            }
+            set
+            {
+                this.commentField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class UpdateRecurringOrderTemplateAutoGiro : EntityBase
+    {
+        
+        private System.DateTime businessDateField;
+        
+        private System.Nullable<decimal> cashAmountField;
+        
+        private System.Guid transferReceiverField;
+        
+        private string commentField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public System.DateTime BusinessDate
+        {
+            get
+            {
+                return this.businessDateField;
+            }
+            set
+            {
+                this.businessDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
+        public System.Nullable<decimal> CashAmount
+        {
+            get
+            {
+                return this.cashAmountField;
+            }
+            set
+            {
+                this.cashAmountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public System.Guid TransferReceiver
+        {
+            get
+            {
+                return this.transferReceiverField;
+            }
+            set
+            {
+                this.transferReceiverField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public string Comment
+        {
+            get
+            {
+                return this.commentField;
+            }
+            set
+            {
+                this.commentField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class RecurringOrderTemplateAutoGiro : EntityBase
+    {
+        
+        private System.Guid accountField;
+        
+        private System.Nullable<decimal> cashAmountField;
+        
+        private System.Guid transferReceiverField;
+        
+        private int autoGiroPaymentPeriodField;
+        
+        private System.DateTime businessDateField;
+        
+        private string commentField;
+        
+        private System.Guid instrumentField;
+        
+        private int dayField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public System.Guid Account
+        {
+            get
+            {
+                return this.accountField;
+            }
+            set
+            {
+                this.accountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
+        public System.Nullable<decimal> CashAmount
+        {
+            get
+            {
+                return this.cashAmountField;
+            }
+            set
+            {
+                this.cashAmountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public System.Guid TransferReceiver
+        {
+            get
+            {
+                return this.transferReceiverField;
+            }
+            set
+            {
+                this.transferReceiverField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public int AutoGiroPaymentPeriod
+        {
+            get
+            {
+                return this.autoGiroPaymentPeriodField;
+            }
+            set
+            {
+                this.autoGiroPaymentPeriodField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public System.DateTime BusinessDate
+        {
+            get
+            {
+                return this.businessDateField;
+            }
+            set
+            {
+                this.businessDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public string Comment
+        {
+            get
+            {
+                return this.commentField;
+            }
+            set
+            {
+                this.commentField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public System.Guid Instrument
+        {
+            get
+            {
+                return this.instrumentField;
+            }
+            set
+            {
+                this.instrumentField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public int Day
+        {
+            get
+            {
+                return this.dayField;
+            }
+            set
+            {
+                this.dayField = value;
             }
         }
     }
@@ -8337,6 +9775,8 @@ namespace BfsApi
         
         private bool tx_AcquisitionValueAccountCurrencyIncludedField;
         
+        private string reportingTypeKeyField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public string Key
@@ -8726,6 +10166,20 @@ namespace BfsApi
             set
             {
                 this.tx_AcquisitionValueAccountCurrencyIncludedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=28)]
+        public string ReportingTypeKey
+        {
+            get
+            {
+                return this.reportingTypeKeyField;
+            }
+            set
+            {
+                this.reportingTypeKeyField = value;
             }
         }
     }
@@ -17247,6 +18701,8 @@ namespace BfsApi
         
         private string keyField;
         
+        private string commentField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public System.Guid AccountId
@@ -17288,6 +18744,20 @@ namespace BfsApi
                 this.keyField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public string Comment
+        {
+            get
+            {
+                return this.commentField;
+            }
+            set
+            {
+                this.commentField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -17306,6 +18776,8 @@ namespace BfsApi
         private string keyField;
         
         private System.Guid powerOfAttorneyTypeIdField;
+        
+        private string commentField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -17374,6 +18846,20 @@ namespace BfsApi
             set
             {
                 this.powerOfAttorneyTypeIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public string Comment
+        {
+            get
+            {
+                return this.commentField;
+            }
+            set
+            {
+                this.commentField = value;
             }
         }
     }
@@ -17454,6 +18940,10 @@ namespace BfsApi
         private System.Guid fundCompanyField;
         
         private string feeGroupField;
+        
+        private string datasheetURLField;
+        
+        private bool enableMifidIITenPercentAlertField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -17944,6 +19434,34 @@ namespace BfsApi
                 this.feeGroupField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=35)]
+        public string DatasheetURL
+        {
+            get
+            {
+                return this.datasheetURLField;
+            }
+            set
+            {
+                this.datasheetURLField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=36)]
+        public bool EnableMifidIITenPercentAlert
+        {
+            get
+            {
+                return this.enableMifidIITenPercentAlertField;
+            }
+            set
+            {
+                this.enableMifidIITenPercentAlertField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -18204,6 +19722,8 @@ namespace BfsApi
         private System.Guid fundCompanyField;
         
         private string feeGroupField;
+        
+        private bool enableMifidIITenPercentAlertField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -18848,6 +20368,20 @@ namespace BfsApi
                 this.feeGroupField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=46)]
+        public bool EnableMifidIITenPercentAlert
+        {
+            get
+            {
+                return this.enableMifidIITenPercentAlertField;
+            }
+            set
+            {
+                this.enableMifidIITenPercentAlertField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -18952,6 +20486,8 @@ namespace BfsApi
         private System.Guid fundCompanyField;
         
         private string feeGroupField;
+        
+        private bool enableMifidIITenPercentAlertField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -19624,6 +21160,20 @@ namespace BfsApi
                 this.feeGroupField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=48)]
+        public bool EnableMifidIITenPercentAlert
+        {
+            get
+            {
+                return this.enableMifidIITenPercentAlertField;
+            }
+            set
+            {
+                this.enableMifidIITenPercentAlertField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -19750,6 +21300,8 @@ namespace BfsApi
         private System.Guid fundCompanyField;
         
         private System.DateTime kycDateField;
+        
+        private string gIINField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -20520,6 +22072,20 @@ namespace BfsApi
                 this.kycDateField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=55)]
+        public string GIIN
+        {
+            get
+            {
+                return this.gIINField;
+            }
+            set
+            {
+                this.gIINField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -20652,6 +22218,8 @@ namespace BfsApi
         private System.Guid fundCompanyField;
         
         private System.DateTime kycDateField;
+        
+        private string gIINField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -21518,6 +23086,20 @@ namespace BfsApi
             set
             {
                 this.kycDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=62)]
+        public string GIIN
+        {
+            get
+            {
+                return this.gIINField;
+            }
+            set
+            {
+                this.gIINField = value;
             }
         }
     }
@@ -22806,6 +24388,8 @@ namespace BfsApi
         
         private System.DateTime kycDateField;
         
+        private string gIINField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public string FirstName
@@ -23729,6 +25313,20 @@ namespace BfsApi
                 this.kycDateField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=66)]
+        public string GIIN
+        {
+            get
+            {
+                return this.gIINField;
+            }
+            set
+            {
+                this.gIINField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -24031,6 +25629,8 @@ namespace BfsApi
         
         private string taxCountryField;
         
+        private string gIINField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public string OrganizationNo
@@ -24114,24 +25714,130 @@ namespace BfsApi
                 this.taxCountryField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public string GIIN
+        {
+            get
+            {
+                return this.gIINField;
+            }
+            set
+            {
+                this.gIINField = value;
+            }
+        }
     }
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class GetTRSCountriesFields
+    public partial class UpdateTaskResponse : APIUpdateResponseOfUpdateTask
+    {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateTasksResponse))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class APICreateResponseOfCreateTask : Response
+    {
+        
+        private CreateTask[] entitiesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public CreateTask[] Entities
+        {
+            get
+            {
+                return this.entitiesField;
+            }
+            set
+            {
+                this.entitiesField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class CreateTasksResponse : APICreateResponseOfCreateTask
+    {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetTasksResponse))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class APISearchResponseOfGetTasksResponseRowGetTasksFields : Response
+    {
+        
+        private GetTasksResponseRow[] resultField;
+        
+        private GetTasksFields fieldsField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public GetTasksResponseRow[] Result
+        {
+            get
+            {
+                return this.resultField;
+            }
+            set
+            {
+                this.resultField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public GetTasksFields Fields
+        {
+            get
+            {
+                return this.fieldsField;
+            }
+            set
+            {
+                this.fieldsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetTasksFields : FieldBase
     {
         
         private bool brickIdField;
         
-        private bool tRSIdTypePrio1Field;
+        private bool createdDateField;
         
-        private bool tRSIdTypePrio2Field;
+        private bool userField;
         
-        private bool tRSIdTypePrio3Field;
+        private bool administratorField;
         
-        private bool countryCodeField;
+        private bool headingField;
+        
+        private bool textField;
+        
+        private bool dueDateField;
+        
+        private bool isHTMLField;
+        
+        private bool statusField;
+        
+        private bool priorityField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -24149,57 +25855,186 @@ namespace BfsApi
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public bool TRSIdTypePrio1
+        public bool CreatedDate
         {
             get
             {
-                return this.tRSIdTypePrio1Field;
+                return this.createdDateField;
             }
             set
             {
-                this.tRSIdTypePrio1Field = value;
+                this.createdDateField = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public bool TRSIdTypePrio2
+        public bool User
         {
             get
             {
-                return this.tRSIdTypePrio2Field;
+                return this.userField;
             }
             set
             {
-                this.tRSIdTypePrio2Field = value;
+                this.userField = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=3)]
-        public bool TRSIdTypePrio3
+        public bool Administrator
         {
             get
             {
-                return this.tRSIdTypePrio3Field;
+                return this.administratorField;
             }
             set
             {
-                this.tRSIdTypePrio3Field = value;
+                this.administratorField = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=4)]
-        public bool CountryCode
+        public bool Heading
         {
             get
             {
-                return this.countryCodeField;
+                return this.headingField;
             }
             set
             {
-                this.countryCodeField = value;
+                this.headingField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public bool Text
+        {
+            get
+            {
+                return this.textField;
+            }
+            set
+            {
+                this.textField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public bool DueDate
+        {
+            get
+            {
+                return this.dueDateField;
+            }
+            set
+            {
+                this.dueDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public bool IsHTML
+        {
+            get
+            {
+                return this.isHTMLField;
+            }
+            set
+            {
+                this.isHTMLField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+        public bool Status
+        {
+            get
+            {
+                return this.statusField;
+            }
+            set
+            {
+                this.statusField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
+        public bool Priority
+        {
+            get
+            {
+                return this.priorityField;
+            }
+            set
+            {
+                this.priorityField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateTaskFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetTasksFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateNoteFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetNotesFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateMessageFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetMessagesFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetInsurancePolicyFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetTradingVenueFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetRecurringOrderTemplatesFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateRecurringOrderTemplateAutoGiroFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateWorkflowInstanceFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateTransferReceiverFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetTransferReceiverFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateAccountFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetAccountFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetDecisionMakerFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetBusinessEventFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetDepositTransferOrdersFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetWithdrawalTransferOrdersFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetTradeOrderFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetSubscriptionOrderFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateSubscriptionOrderFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetAlgorithmFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateAllocationProfileFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetAllocationProfileFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetPOAFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateInstrumentFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetInstrumentsFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdatePersonFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateFundEntityFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateFundCompanyFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetPersonFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetFundEntityFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetFundCompaniesFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetHouseInformationFields))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class FieldBase
+    {
+        
+        private bool customFieldsField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public bool CustomFields
+        {
+            get
+            {
+                return this.customFieldsField;
+            }
+            set
+            {
+                this.customFieldsField = value;
             }
         }
     }
@@ -24208,113 +26043,710 @@ namespace BfsApi
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class GetTRSCountriesResponse : APISearchResponseOfGetTRSCountriesResponseRowGetTRSCountriesFields
-    {
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateInsurancePoliciesResponse))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public abstract partial class APIUpdateResponseOfUpdateInsurancePolicy : Response
+    public partial class UpdateTaskFields : FieldBase
     {
         
-        private UpdateInsurancePolicy[] entitiesField;
+        private bool userField;
+        
+        private bool administratorField;
+        
+        private bool headingField;
+        
+        private bool textField;
+        
+        private bool dueDateField;
+        
+        private bool isHTMLField;
+        
+        private bool priorityField;
+        
+        private bool statusField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
-        public UpdateInsurancePolicy[] Entities
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public bool User
         {
             get
             {
-                return this.entitiesField;
+                return this.userField;
             }
             set
             {
-                this.entitiesField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class UpdateInsurancePoliciesResponse : APIUpdateResponseOfUpdateInsurancePolicy
-    {
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateInsurancePolicyResponse))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public abstract partial class APICreateResponseOfInsurancePolicy : Response
-    {
-        
-        private InsurancePolicy[] entitiesField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
-        public InsurancePolicy[] Entities
-        {
-            get
-            {
-                return this.entitiesField;
-            }
-            set
-            {
-                this.entitiesField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class CreateInsurancePolicyResponse : APICreateResponseOfInsurancePolicy
-    {
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetInsurancePolicyResponse))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public abstract partial class APISearchResponseOfGetInsurancePolicyResponseRowGetInsurancePolicyFields : Response
-    {
-        
-        private GetInsurancePolicyResponseRow[] resultField;
-        
-        private GetInsurancePolicyFields fieldsField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
-        public GetInsurancePolicyResponseRow[] Result
-        {
-            get
-            {
-                return this.resultField;
-            }
-            set
-            {
-                this.resultField = value;
+                this.userField = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public GetInsurancePolicyFields Fields
+        public bool Administrator
         {
             get
             {
-                return this.fieldsField;
+                return this.administratorField;
             }
             set
             {
-                this.fieldsField = value;
+                this.administratorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public bool Heading
+        {
+            get
+            {
+                return this.headingField;
+            }
+            set
+            {
+                this.headingField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public bool Text
+        {
+            get
+            {
+                return this.textField;
+            }
+            set
+            {
+                this.textField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public bool DueDate
+        {
+            get
+            {
+                return this.dueDateField;
+            }
+            set
+            {
+                this.dueDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public bool IsHTML
+        {
+            get
+            {
+                return this.isHTMLField;
+            }
+            set
+            {
+                this.isHTMLField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public bool Priority
+        {
+            get
+            {
+                return this.priorityField;
+            }
+            set
+            {
+                this.priorityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public bool Status
+        {
+            get
+            {
+                return this.statusField;
+            }
+            set
+            {
+                this.statusField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class UpdateNoteFields : FieldBase
+    {
+        
+        private bool userField;
+        
+        private bool headingField;
+        
+        private bool textField;
+        
+        private bool eventDateField;
+        
+        private bool isHTMLField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public bool User
+        {
+            get
+            {
+                return this.userField;
+            }
+            set
+            {
+                this.userField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public bool Heading
+        {
+            get
+            {
+                return this.headingField;
+            }
+            set
+            {
+                this.headingField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public bool Text
+        {
+            get
+            {
+                return this.textField;
+            }
+            set
+            {
+                this.textField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public bool EventDate
+        {
+            get
+            {
+                return this.eventDateField;
+            }
+            set
+            {
+                this.eventDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public bool IsHTML
+        {
+            get
+            {
+                return this.isHTMLField;
+            }
+            set
+            {
+                this.isHTMLField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetNotesFields : FieldBase
+    {
+        
+        private bool brickIdField;
+        
+        private bool createdDateField;
+        
+        private bool userField;
+        
+        private bool headingField;
+        
+        private bool textField;
+        
+        private bool eventDateField;
+        
+        private bool isHTMLField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public bool BrickId
+        {
+            get
+            {
+                return this.brickIdField;
+            }
+            set
+            {
+                this.brickIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public bool CreatedDate
+        {
+            get
+            {
+                return this.createdDateField;
+            }
+            set
+            {
+                this.createdDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public bool User
+        {
+            get
+            {
+                return this.userField;
+            }
+            set
+            {
+                this.userField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public bool Heading
+        {
+            get
+            {
+                return this.headingField;
+            }
+            set
+            {
+                this.headingField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public bool Text
+        {
+            get
+            {
+                return this.textField;
+            }
+            set
+            {
+                this.textField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public bool EventDate
+        {
+            get
+            {
+                return this.eventDateField;
+            }
+            set
+            {
+                this.eventDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public bool IsHTML
+        {
+            get
+            {
+                return this.isHTMLField;
+            }
+            set
+            {
+                this.isHTMLField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class UpdateMessageFields : FieldBase
+    {
+        
+        private bool receiverField;
+        
+        private bool subjectField;
+        
+        private bool bodyField;
+        
+        private bool isReadField;
+        
+        private bool isPublicField;
+        
+        private bool isPromotedField;
+        
+        private bool eventDateField;
+        
+        private bool isHTMLField;
+        
+        private bool priorityField;
+        
+        private bool statusField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public bool Receiver
+        {
+            get
+            {
+                return this.receiverField;
+            }
+            set
+            {
+                this.receiverField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public bool Subject
+        {
+            get
+            {
+                return this.subjectField;
+            }
+            set
+            {
+                this.subjectField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public bool Body
+        {
+            get
+            {
+                return this.bodyField;
+            }
+            set
+            {
+                this.bodyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public bool IsRead
+        {
+            get
+            {
+                return this.isReadField;
+            }
+            set
+            {
+                this.isReadField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public bool IsPublic
+        {
+            get
+            {
+                return this.isPublicField;
+            }
+            set
+            {
+                this.isPublicField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public bool IsPromoted
+        {
+            get
+            {
+                return this.isPromotedField;
+            }
+            set
+            {
+                this.isPromotedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public bool EventDate
+        {
+            get
+            {
+                return this.eventDateField;
+            }
+            set
+            {
+                this.eventDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public bool IsHTML
+        {
+            get
+            {
+                return this.isHTMLField;
+            }
+            set
+            {
+                this.isHTMLField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+        public bool Priority
+        {
+            get
+            {
+                return this.priorityField;
+            }
+            set
+            {
+                this.priorityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
+        public bool Status
+        {
+            get
+            {
+                return this.statusField;
+            }
+            set
+            {
+                this.statusField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetMessagesFields : FieldBase
+    {
+        
+        private bool brickIdField;
+        
+        private bool createdDateField;
+        
+        private bool receiverField;
+        
+        private bool subjectField;
+        
+        private bool bodyField;
+        
+        private bool isReadField;
+        
+        private bool isPublicField;
+        
+        private bool isPromotedField;
+        
+        private bool eventDateField;
+        
+        private bool isHTMLField;
+        
+        private bool priorityField;
+        
+        private bool statusField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public bool BrickId
+        {
+            get
+            {
+                return this.brickIdField;
+            }
+            set
+            {
+                this.brickIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public bool CreatedDate
+        {
+            get
+            {
+                return this.createdDateField;
+            }
+            set
+            {
+                this.createdDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public bool Receiver
+        {
+            get
+            {
+                return this.receiverField;
+            }
+            set
+            {
+                this.receiverField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public bool Subject
+        {
+            get
+            {
+                return this.subjectField;
+            }
+            set
+            {
+                this.subjectField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public bool Body
+        {
+            get
+            {
+                return this.bodyField;
+            }
+            set
+            {
+                this.bodyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public bool IsRead
+        {
+            get
+            {
+                return this.isReadField;
+            }
+            set
+            {
+                this.isReadField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public bool IsPublic
+        {
+            get
+            {
+                return this.isPublicField;
+            }
+            set
+            {
+                this.isPublicField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public bool IsPromoted
+        {
+            get
+            {
+                return this.isPromotedField;
+            }
+            set
+            {
+                this.isPromotedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+        public bool EventDate
+        {
+            get
+            {
+                return this.eventDateField;
+            }
+            set
+            {
+                this.eventDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
+        public bool IsHTML
+        {
+            get
+            {
+                return this.isHTMLField;
+            }
+            set
+            {
+                this.isHTMLField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
+        public bool Priority
+        {
+            get
+            {
+                return this.priorityField;
+            }
+            set
+            {
+                this.priorityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
+        public bool Status
+        {
+            get
+            {
+                return this.statusField;
+            }
+            set
+            {
+                this.statusField = value;
             }
         }
     }
@@ -24648,58 +27080,6 @@ namespace BfsApi
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetInsurancePolicyFields))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetTradingVenueFields))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetRecurringOrderTemplatesFields))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateWorkflowInstanceFields))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateTransferReceiverFields))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetTransferReceiverFields))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateAccountFields))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetAccountFields))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetDecisionMakerFields))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetBusinessEventFields))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetDepositTransferOrdersFields))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetWithdrawalTransferOrdersFields))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetTradeOrderFields))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetSubscriptionOrderFields))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateSubscriptionOrderFields))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetAlgorithmFields))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateAllocationProfileFields))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetAllocationProfileFields))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetPOAFields))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateInstrumentFields))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetInstrumentsFields))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdatePersonFields))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateFundEntityFields))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateFundCompanyFields))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetPersonFields))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetFundEntityFields))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetFundCompaniesFields))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetHouseInformationFields))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public abstract partial class FieldBase
-    {
-        
-        private bool customFieldsField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public bool CustomFields
-        {
-            get
-            {
-                return this.customFieldsField;
-            }
-            set
-            {
-                this.customFieldsField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
@@ -24884,6 +27264,8 @@ namespace BfsApi
         
         private bool instrumentField;
         
+        private bool commentField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public bool BrickId
@@ -25063,6 +27445,92 @@ namespace BfsApi
             set
             {
                 this.instrumentField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=13)]
+        public bool Comment
+        {
+            get
+            {
+                return this.commentField;
+            }
+            set
+            {
+                this.commentField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class UpdateRecurringOrderTemplateAutoGiroFields : FieldBase
+    {
+        
+        private bool businessDateField;
+        
+        private bool cashAmountField;
+        
+        private bool transferReceiverField;
+        
+        private bool commentField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public bool BusinessDate
+        {
+            get
+            {
+                return this.businessDateField;
+            }
+            set
+            {
+                this.businessDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public bool CashAmount
+        {
+            get
+            {
+                return this.cashAmountField;
+            }
+            set
+            {
+                this.cashAmountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public bool TransferReceiver
+        {
+            get
+            {
+                return this.transferReceiverField;
+            }
+            set
+            {
+                this.transferReceiverField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public bool Comment
+        {
+            get
+            {
+                return this.commentField;
+            }
+            set
+            {
+                this.commentField = value;
             }
         }
     }
@@ -28712,6 +31180,8 @@ namespace BfsApi
         
         private bool powerOfAttorneyTypeIdField;
         
+        private bool commentField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public bool BrickId
@@ -28809,6 +31279,20 @@ namespace BfsApi
                 this.powerOfAttorneyTypeIdField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public bool Comment
+        {
+            get
+            {
+                return this.commentField;
+            }
+            set
+            {
+                this.commentField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -28889,6 +31373,10 @@ namespace BfsApi
         private bool fundCompanyField;
         
         private bool feeGroupField;
+        
+        private bool datasheetURLField;
+        
+        private bool enableMifidIITenPercentAlertField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -29393,6 +31881,34 @@ namespace BfsApi
                 this.feeGroupField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=36)]
+        public bool DatasheetURL
+        {
+            get
+            {
+                return this.datasheetURLField;
+            }
+            set
+            {
+                this.datasheetURLField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=37)]
+        public bool EnableMifidIITenPercentAlert
+        {
+            get
+            {
+                return this.enableMifidIITenPercentAlertField;
+            }
+            set
+            {
+                this.enableMifidIITenPercentAlertField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -29501,6 +32017,8 @@ namespace BfsApi
         private bool fundCompanyField;
         
         private bool feeGroupField;
+        
+        private bool enableMifidIITenPercentAlertField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -30201,6 +32719,20 @@ namespace BfsApi
                 this.feeGroupField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=50)]
+        public bool EnableMifidIITenPercentAlert
+        {
+            get
+            {
+                return this.enableMifidIITenPercentAlertField;
+            }
+            set
+            {
+                this.enableMifidIITenPercentAlertField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -30319,6 +32851,8 @@ namespace BfsApi
         private bool fundCompanyField;
         
         private bool kycDateField;
+        
+        private bool gIINField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -31089,6 +33623,20 @@ namespace BfsApi
                 this.kycDateField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=55)]
+        public bool GIIN
+        {
+            get
+            {
+                return this.gIINField;
+            }
+            set
+            {
+                this.gIINField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -31603,6 +34151,8 @@ namespace BfsApi
         private bool isTerminatedField;
         
         private bool kycDateField;
+        
+        private bool gIINField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -32555,6 +35105,20 @@ namespace BfsApi
                 this.kycDateField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=68)]
+        public bool GIIN
+        {
+            get
+            {
+                return this.gIINField;
+            }
+            set
+            {
+                this.gIINField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -32674,6 +35238,8 @@ namespace BfsApi
         
         private bool taxCountryField;
         
+        private bool gIINField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public bool BrickId
@@ -32769,6 +35335,591 @@ namespace BfsApi
             set
             {
                 this.taxCountryField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public bool GIIN
+        {
+            get
+            {
+                return this.gIINField;
+            }
+            set
+            {
+                this.gIINField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetTasksResponse : APISearchResponseOfGetTasksResponseRowGetTasksFields
+    {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateNoteResponse))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class APIUpdateResponseOfUpdateNote : Response
+    {
+        
+        private UpdateNote[] entitiesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public UpdateNote[] Entities
+        {
+            get
+            {
+                return this.entitiesField;
+            }
+            set
+            {
+                this.entitiesField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class UpdateNoteResponse : APIUpdateResponseOfUpdateNote
+    {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateNotesResponse))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class APICreateResponseOfCreateNote : Response
+    {
+        
+        private CreateNote[] entitiesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public CreateNote[] Entities
+        {
+            get
+            {
+                return this.entitiesField;
+            }
+            set
+            {
+                this.entitiesField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class CreateNotesResponse : APICreateResponseOfCreateNote
+    {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetNotesResponse))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class APISearchResponseOfGetNotesResponseRowGetNotesFields : Response
+    {
+        
+        private GetNotesResponseRow[] resultField;
+        
+        private GetNotesFields fieldsField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public GetNotesResponseRow[] Result
+        {
+            get
+            {
+                return this.resultField;
+            }
+            set
+            {
+                this.resultField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public GetNotesFields Fields
+        {
+            get
+            {
+                return this.fieldsField;
+            }
+            set
+            {
+                this.fieldsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetNotesResponse : APISearchResponseOfGetNotesResponseRowGetNotesFields
+    {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateMessageResponse))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class APIUpdateResponseOfUpdateMessage : Response
+    {
+        
+        private UpdateMessage[] entitiesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public UpdateMessage[] Entities
+        {
+            get
+            {
+                return this.entitiesField;
+            }
+            set
+            {
+                this.entitiesField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class UpdateMessageResponse : APIUpdateResponseOfUpdateMessage
+    {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateMessagesResponse))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class APICreateResponseOfCreateMessage : Response
+    {
+        
+        private CreateMessage[] entitiesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public CreateMessage[] Entities
+        {
+            get
+            {
+                return this.entitiesField;
+            }
+            set
+            {
+                this.entitiesField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class CreateMessagesResponse : APICreateResponseOfCreateMessage
+    {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetMessagesResponse))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class APISearchResponseOfGetMessagesResponseRowGetMessagesFields : Response
+    {
+        
+        private GetMessagesResponseRow[] resultField;
+        
+        private GetMessagesFields fieldsField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public GetMessagesResponseRow[] Result
+        {
+            get
+            {
+                return this.resultField;
+            }
+            set
+            {
+                this.resultField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public GetMessagesFields Fields
+        {
+            get
+            {
+                return this.fieldsField;
+            }
+            set
+            {
+                this.fieldsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetMessagesResponse : APISearchResponseOfGetMessagesResponseRowGetMessagesFields
+    {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetHoldingsOverTimeResponse))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class APISearchResponseOfGetHoldingsOverTimeResponseRowGetHoldingsOverTimeResponseFields : Response
+    {
+        
+        private GetHoldingsOverTimeResponseRow[] resultField;
+        
+        private GetHoldingsOverTimeResponseFields fieldsField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public GetHoldingsOverTimeResponseRow[] Result
+        {
+            get
+            {
+                return this.resultField;
+            }
+            set
+            {
+                this.resultField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public GetHoldingsOverTimeResponseFields Fields
+        {
+            get
+            {
+                return this.fieldsField;
+            }
+            set
+            {
+                this.fieldsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetHoldingsOverTimeResponseFields
+    {
+        
+        private bool dateField;
+        
+        private bool valueField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public bool Date
+        {
+            get
+            {
+                return this.dateField;
+            }
+            set
+            {
+                this.dateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public bool Value
+        {
+            get
+            {
+                return this.valueField;
+            }
+            set
+            {
+                this.valueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetHoldingsOverTimeResponse : APISearchResponseOfGetHoldingsOverTimeResponseRowGetHoldingsOverTimeResponseFields
+    {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetTRSCountriesResponse))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class APISearchResponseOfGetTRSCountriesResponseRowGetTRSCountriesFields : Response
+    {
+        
+        private GetTRSCountriesResponseRow[] resultField;
+        
+        private GetTRSCountriesFields fieldsField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public GetTRSCountriesResponseRow[] Result
+        {
+            get
+            {
+                return this.resultField;
+            }
+            set
+            {
+                this.resultField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public GetTRSCountriesFields Fields
+        {
+            get
+            {
+                return this.fieldsField;
+            }
+            set
+            {
+                this.fieldsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetTRSCountriesFields
+    {
+        
+        private bool brickIdField;
+        
+        private bool tRSIdTypePrio1Field;
+        
+        private bool tRSIdTypePrio2Field;
+        
+        private bool tRSIdTypePrio3Field;
+        
+        private bool countryCodeField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public bool BrickId
+        {
+            get
+            {
+                return this.brickIdField;
+            }
+            set
+            {
+                this.brickIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public bool TRSIdTypePrio1
+        {
+            get
+            {
+                return this.tRSIdTypePrio1Field;
+            }
+            set
+            {
+                this.tRSIdTypePrio1Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public bool TRSIdTypePrio2
+        {
+            get
+            {
+                return this.tRSIdTypePrio2Field;
+            }
+            set
+            {
+                this.tRSIdTypePrio2Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public bool TRSIdTypePrio3
+        {
+            get
+            {
+                return this.tRSIdTypePrio3Field;
+            }
+            set
+            {
+                this.tRSIdTypePrio3Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public bool CountryCode
+        {
+            get
+            {
+                return this.countryCodeField;
+            }
+            set
+            {
+                this.countryCodeField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetTRSCountriesResponse : APISearchResponseOfGetTRSCountriesResponseRowGetTRSCountriesFields
+    {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateInsurancePoliciesResponse))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class APIUpdateResponseOfUpdateInsurancePolicy : Response
+    {
+        
+        private UpdateInsurancePolicy[] entitiesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public UpdateInsurancePolicy[] Entities
+        {
+            get
+            {
+                return this.entitiesField;
+            }
+            set
+            {
+                this.entitiesField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class UpdateInsurancePoliciesResponse : APIUpdateResponseOfUpdateInsurancePolicy
+    {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateInsurancePolicyResponse))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class APICreateResponseOfInsurancePolicy : Response
+    {
+        
+        private InsurancePolicy[] entitiesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public InsurancePolicy[] Entities
+        {
+            get
+            {
+                return this.entitiesField;
+            }
+            set
+            {
+                this.entitiesField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class CreateInsurancePolicyResponse : APICreateResponseOfInsurancePolicy
+    {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetInsurancePolicyResponse))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class APISearchResponseOfGetInsurancePolicyResponseRowGetInsurancePolicyFields : Response
+    {
+        
+        private GetInsurancePolicyResponseRow[] resultField;
+        
+        private GetInsurancePolicyFields fieldsField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public GetInsurancePolicyResponseRow[] Result
+        {
+            get
+            {
+                return this.resultField;
+            }
+            set
+            {
+                this.resultField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public GetInsurancePolicyFields Fields
+        {
+            get
+            {
+                return this.fieldsField;
+            }
+            set
+            {
+                this.fieldsField = value;
             }
         }
     }
@@ -34718,6 +37869,22 @@ namespace BfsApi
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
     public partial class CreateFileResponse : Response
     {
+        
+        private System.Guid fileIdField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public System.Guid FileId
+        {
+            get
+            {
+                return this.fileIdField;
+            }
+            set
+            {
+                this.fileIdField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -34943,6 +38110,72 @@ namespace BfsApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
     public partial class GetRecurringOrderTemplatesResponse : APISearchResponseOfGetRecurringOrderTemplatesResponseRowGetRecurringOrderTemplatesFields
+    {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateRecurringOrderTemplateAutoGiroResponse))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class APIUpdateResponseOfUpdateRecurringOrderTemplateAutoGiro : Response
+    {
+        
+        private UpdateRecurringOrderTemplateAutoGiro[] entitiesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public UpdateRecurringOrderTemplateAutoGiro[] Entities
+        {
+            get
+            {
+                return this.entitiesField;
+            }
+            set
+            {
+                this.entitiesField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class UpdateRecurringOrderTemplateAutoGiroResponse : APIUpdateResponseOfUpdateRecurringOrderTemplateAutoGiro
+    {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateRecurringOrderTemplateAutoGiroResponse))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class APICreateResponseOfRecurringOrderTemplateAutoGiro : Response
+    {
+        
+        private RecurringOrderTemplateAutoGiro[] entitiesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public RecurringOrderTemplateAutoGiro[] Entities
+        {
+            get
+            {
+                return this.entitiesField;
+            }
+            set
+            {
+                this.entitiesField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class CreateRecurringOrderTemplateAutoGiroResponse : APICreateResponseOfRecurringOrderTemplateAutoGiro
     {
     }
     
@@ -35201,6 +38434,8 @@ namespace BfsApi
         private bool tx_AcquisitionValueIncludedField;
         
         private bool tx_AcquisitionValueAccountCurrencyIncludedField;
+        
+        private bool reportingTypeKeyField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -35619,6 +38854,20 @@ namespace BfsApi
             set
             {
                 this.tx_AcquisitionValueAccountCurrencyIncludedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=30)]
+        public bool ReportingTypeKey
+        {
+            get
+            {
+                return this.reportingTypeKeyField;
+            }
+            set
+            {
+                this.reportingTypeKeyField = value;
             }
         }
     }
@@ -43291,6 +46540,494 @@ namespace BfsApi
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetTasksArgs
+    {
+        
+        private System.Guid[] brickIdsField;
+        
+        private System.Guid[] usersField;
+        
+        private System.Guid[] administratorsField;
+        
+        private string[] headingsField;
+        
+        private string[] textsField;
+        
+        private System.Nullable<System.DateTime> dueDateFromField;
+        
+        private System.Nullable<System.DateTime> dueDateToField;
+        
+        private System.Nullable<bool> isHTMLField;
+        
+        private string[] statusField;
+        
+        private string[] prioritiesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public System.Guid[] BrickIds
+        {
+            get
+            {
+                return this.brickIdsField;
+            }
+            set
+            {
+                this.brickIdsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=1)]
+        public System.Guid[] Users
+        {
+            get
+            {
+                return this.usersField;
+            }
+            set
+            {
+                this.usersField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=2)]
+        public System.Guid[] Administrators
+        {
+            get
+            {
+                return this.administratorsField;
+            }
+            set
+            {
+                this.administratorsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=3)]
+        public string[] Headings
+        {
+            get
+            {
+                return this.headingsField;
+            }
+            set
+            {
+                this.headingsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=4)]
+        public string[] Texts
+        {
+            get
+            {
+                return this.textsField;
+            }
+            set
+            {
+                this.textsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=5)]
+        public System.Nullable<System.DateTime> DueDateFrom
+        {
+            get
+            {
+                return this.dueDateFromField;
+            }
+            set
+            {
+                this.dueDateFromField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=6)]
+        public System.Nullable<System.DateTime> DueDateTo
+        {
+            get
+            {
+                return this.dueDateToField;
+            }
+            set
+            {
+                this.dueDateToField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=7)]
+        public System.Nullable<bool> IsHTML
+        {
+            get
+            {
+                return this.isHTMLField;
+            }
+            set
+            {
+                this.isHTMLField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=8)]
+        public string[] Status
+        {
+            get
+            {
+                return this.statusField;
+            }
+            set
+            {
+                this.statusField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=9)]
+        public string[] Priorities
+        {
+            get
+            {
+                return this.prioritiesField;
+            }
+            set
+            {
+                this.prioritiesField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetNotesArgs
+    {
+        
+        private System.Guid[] brickIdsField;
+        
+        private System.Guid[] usersField;
+        
+        private string[] headingsField;
+        
+        private string[] textsField;
+        
+        private System.Nullable<System.DateTime> eventDateFromField;
+        
+        private System.Nullable<System.DateTime> eventDateToField;
+        
+        private System.Nullable<bool> isHTMLField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public System.Guid[] BrickIds
+        {
+            get
+            {
+                return this.brickIdsField;
+            }
+            set
+            {
+                this.brickIdsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=1)]
+        public System.Guid[] Users
+        {
+            get
+            {
+                return this.usersField;
+            }
+            set
+            {
+                this.usersField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=2)]
+        public string[] Headings
+        {
+            get
+            {
+                return this.headingsField;
+            }
+            set
+            {
+                this.headingsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=3)]
+        public string[] Texts
+        {
+            get
+            {
+                return this.textsField;
+            }
+            set
+            {
+                this.textsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=4)]
+        public System.Nullable<System.DateTime> EventDateFrom
+        {
+            get
+            {
+                return this.eventDateFromField;
+            }
+            set
+            {
+                this.eventDateFromField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=5)]
+        public System.Nullable<System.DateTime> EventDateTo
+        {
+            get
+            {
+                return this.eventDateToField;
+            }
+            set
+            {
+                this.eventDateToField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=6)]
+        public System.Nullable<bool> IsHTML
+        {
+            get
+            {
+                return this.isHTMLField;
+            }
+            set
+            {
+                this.isHTMLField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetMessagesArgs
+    {
+        
+        private System.Guid[] brickIdsField;
+        
+        private System.Guid[] receiversField;
+        
+        private string[] subjectsField;
+        
+        private string[] bodiesField;
+        
+        private System.Nullable<System.DateTime> eventDateFromField;
+        
+        private System.Nullable<System.DateTime> eventDateToField;
+        
+        private System.Nullable<bool> isReadField;
+        
+        private System.Nullable<bool> isPublicField;
+        
+        private System.Nullable<bool> isPromotedField;
+        
+        private System.Nullable<bool> isHTMLField;
+        
+        private string[] priorityField;
+        
+        private string[] statusField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public System.Guid[] BrickIds
+        {
+            get
+            {
+                return this.brickIdsField;
+            }
+            set
+            {
+                this.brickIdsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=1)]
+        public System.Guid[] Receivers
+        {
+            get
+            {
+                return this.receiversField;
+            }
+            set
+            {
+                this.receiversField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=2)]
+        public string[] Subjects
+        {
+            get
+            {
+                return this.subjectsField;
+            }
+            set
+            {
+                this.subjectsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=3)]
+        public string[] Bodies
+        {
+            get
+            {
+                return this.bodiesField;
+            }
+            set
+            {
+                this.bodiesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=4)]
+        public System.Nullable<System.DateTime> EventDateFrom
+        {
+            get
+            {
+                return this.eventDateFromField;
+            }
+            set
+            {
+                this.eventDateFromField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=5)]
+        public System.Nullable<System.DateTime> EventDateTo
+        {
+            get
+            {
+                return this.eventDateToField;
+            }
+            set
+            {
+                this.eventDateToField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=6)]
+        public System.Nullable<bool> IsRead
+        {
+            get
+            {
+                return this.isReadField;
+            }
+            set
+            {
+                this.isReadField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=7)]
+        public System.Nullable<bool> IsPublic
+        {
+            get
+            {
+                return this.isPublicField;
+            }
+            set
+            {
+                this.isPublicField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=8)]
+        public System.Nullable<bool> IsPromoted
+        {
+            get
+            {
+                return this.isPromotedField;
+            }
+            set
+            {
+                this.isPromotedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=9)]
+        public System.Nullable<bool> IsHTML
+        {
+            get
+            {
+                return this.isHTMLField;
+            }
+            set
+            {
+                this.isHTMLField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=10)]
+        public string[] Priority
+        {
+            get
+            {
+                return this.priorityField;
+            }
+            set
+            {
+                this.priorityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=11)]
+        public string[] Status
+        {
+            get
+            {
+                return this.statusField;
+            }
+            set
+            {
+                this.statusField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
     public partial class GetHoldingsOverTimeArgs
     {
         
@@ -47104,6 +50841,8 @@ namespace BfsApi
         
         private System.Guid[] instrumentsField;
         
+        private string[] commentsField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
         public System.Guid[] BrickIds
@@ -47157,6 +50896,20 @@ namespace BfsApi
             set
             {
                 this.instrumentsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=4)]
+        public string[] Comments
+        {
+            get
+            {
+                return this.commentsField;
+            }
+            set
+            {
+                this.commentsField = value;
             }
         }
     }
@@ -47316,6 +51069,8 @@ namespace BfsApi
         
         private System.Nullable<System.DateTime> createdDateToField;
         
+        private string[] reportingTypeKeysField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
         public System.Guid[] BrickIds
@@ -47397,6 +51152,20 @@ namespace BfsApi
             set
             {
                 this.createdDateToField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=6)]
+        public string[] ReportingTypeKeys
+        {
+            get
+            {
+                return this.reportingTypeKeysField;
+            }
+            set
+            {
+                this.reportingTypeKeysField = value;
             }
         }
     }
@@ -48138,7 +51907,7 @@ namespace BfsApi
         
         private System.Guid[] brickIdsField;
         
-        private string[] returnCalculationTypeField;
+        private string[] returnCalculationTypesField;
         
         private string[] businessTransactionTypeKeysField;
         
@@ -48206,15 +51975,15 @@ namespace BfsApi
         
         /// <remarks/>
         [System.Xml.Serialization.XmlArrayAttribute(Order=1)]
-        public string[] ReturnCalculationType
+        public string[] ReturnCalculationTypes
         {
             get
             {
-                return this.returnCalculationTypeField;
+                return this.returnCalculationTypesField;
             }
             set
             {
-                this.returnCalculationTypeField = value;
+                this.returnCalculationTypesField = value;
             }
         }
         
@@ -52465,6 +56234,8 @@ namespace BfsApi
         
         private System.Guid[] powerOfAttorneyTypeField;
         
+        private string[] commentsField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
         public System.Guid[] BrickIds
@@ -52546,6 +56317,20 @@ namespace BfsApi
             set
             {
                 this.powerOfAttorneyTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=6)]
+        public string[] Comments
+        {
+            get
+            {
+                return this.commentsField;
+            }
+            set
+            {
+                this.commentsField = value;
             }
         }
     }
@@ -52678,6 +56463,8 @@ namespace BfsApi
         private System.Guid[] fundCompanyField;
         
         private string[] feeGroupsField;
+        
+        private System.Nullable<bool> enableMifidIITenPercentAlertField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
@@ -53140,6 +56927,20 @@ namespace BfsApi
                 this.feeGroupsField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=33)]
+        public System.Nullable<bool> EnableMifidIITenPercentAlert
+        {
+            get
+            {
+                return this.enableMifidIITenPercentAlertField;
+            }
+            set
+            {
+                this.enableMifidIITenPercentAlertField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -53558,6 +57359,8 @@ namespace BfsApi
         private System.Nullable<System.DateTime> kycDateFromField;
         
         private System.Nullable<System.DateTime> kycDateDateToField;
+        
+        private string[] gIINSField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
@@ -54118,6 +57921,20 @@ namespace BfsApi
                 this.kycDateDateToField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=40)]
+        public string[] GIINS
+        {
+            get
+            {
+                return this.gIINSField;
+            }
+            set
+            {
+                this.gIINSField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -54257,6 +58074,24 @@ namespace BfsApi
     }
     
     /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APIUpdateRequestOfUpdateTaskActivityLogItemBrickUpdateTaskFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateTaskRequest))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APICreateRequestOfCreateTaskActivityLogItemBrick))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateTasksRequest))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchRequestOfGetTasksArgsGetTasksFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetTasksRequest))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APIUpdateRequestOfUpdateNoteActivityLogItemBrickUpdateNoteFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateNoteRequest))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APICreateRequestOfCreateNoteActivityLogItemBrick))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateNotesRequest))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchRequestOfGetNotesArgsGetNotesFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetNotesRequest))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APIUpdateRequestOfUpdateMessageActivityLogItemBrickUpdateMessageFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateMessageRequest))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APICreateRequestOfCreateMessageActivityLogItemBrick))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateMessagesRequest))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchRequestOfGetMessagesArgsGetMessagesFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetMessagesRequest))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchRequestOfGetHoldingsOverTimeArgsGetHoldingsOverTimeResponseFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetHoldingsOverTimeRequest))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchRequestOfGetTRSCountriesArgsGetTRSCountriesFields))]
@@ -54296,6 +58131,10 @@ namespace BfsApi
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetHistoricPricesRequest))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchRequestOfGetRecurringOrderTemplatesArgsGetRecurringOrderTemplatesFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetRecurringOrderTemplatesRequest))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APIUpdateRequestOfUpdateRecurringOrderTemplateAutoGiroBetterActionBrickUpdateRecurringOrderTemplateAutoGiroFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateRecurringOrderTemplateAutoGiroRequest))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APICreateRequestOfRecurringOrderTemplateAutoGiroBetterActionBrick))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateRecurringOrderTemplateAutoGiroRequest))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APIUpdateRequestOfUpdateWorkflowInstanceBetterActionBrickUpdateWorkflowInstanceFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateWorkflowInstanceRequest))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APIUpdateRequestOfUpdateTransferReceiverBetterActionBrickUpdateTransferReceiverFields))]
@@ -54489,6 +58328,495 @@ namespace BfsApi
                 this.identifyField = value;
             }
         }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateTaskRequest))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class APIUpdateRequestOfUpdateTaskActivityLogItemBrickUpdateTaskFields : Request
+    {
+        
+        private UpdateTask[] entitiesField;
+        
+        private UpdateTaskFields fieldsField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public UpdateTask[] Entities
+        {
+            get
+            {
+                return this.entitiesField;
+            }
+            set
+            {
+                this.entitiesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public UpdateTaskFields Fields
+        {
+            get
+            {
+                return this.fieldsField;
+            }
+            set
+            {
+                this.fieldsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class UpdateTaskRequest : APIUpdateRequestOfUpdateTaskActivityLogItemBrickUpdateTaskFields
+    {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateTasksRequest))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class APICreateRequestOfCreateTaskActivityLogItemBrick : Request
+    {
+        
+        private CreateTask[] entitiesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public CreateTask[] Entities
+        {
+            get
+            {
+                return this.entitiesField;
+            }
+            set
+            {
+                this.entitiesField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class CreateTasksRequest : APICreateRequestOfCreateTaskActivityLogItemBrick
+    {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetTasksRequest))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class APISearchRequestOfGetTasksArgsGetTasksFields : Request
+    {
+        
+        private GetTasksArgs argsField;
+        
+        private GetTasksFields fieldsField;
+        
+        private string predefinedSearchNameField;
+        
+        private string[] typesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public GetTasksArgs Args
+        {
+            get
+            {
+                return this.argsField;
+            }
+            set
+            {
+                this.argsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public GetTasksFields Fields
+        {
+            get
+            {
+                return this.fieldsField;
+            }
+            set
+            {
+                this.fieldsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string PredefinedSearchName
+        {
+            get
+            {
+                return this.predefinedSearchNameField;
+            }
+            set
+            {
+                this.predefinedSearchNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=3)]
+        public string[] Types
+        {
+            get
+            {
+                return this.typesField;
+            }
+            set
+            {
+                this.typesField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetTasksRequest : APISearchRequestOfGetTasksArgsGetTasksFields
+    {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateNoteRequest))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class APIUpdateRequestOfUpdateNoteActivityLogItemBrickUpdateNoteFields : Request
+    {
+        
+        private UpdateNote[] entitiesField;
+        
+        private UpdateNoteFields fieldsField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public UpdateNote[] Entities
+        {
+            get
+            {
+                return this.entitiesField;
+            }
+            set
+            {
+                this.entitiesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public UpdateNoteFields Fields
+        {
+            get
+            {
+                return this.fieldsField;
+            }
+            set
+            {
+                this.fieldsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class UpdateNoteRequest : APIUpdateRequestOfUpdateNoteActivityLogItemBrickUpdateNoteFields
+    {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateNotesRequest))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class APICreateRequestOfCreateNoteActivityLogItemBrick : Request
+    {
+        
+        private CreateNote[] entitiesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public CreateNote[] Entities
+        {
+            get
+            {
+                return this.entitiesField;
+            }
+            set
+            {
+                this.entitiesField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class CreateNotesRequest : APICreateRequestOfCreateNoteActivityLogItemBrick
+    {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetNotesRequest))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class APISearchRequestOfGetNotesArgsGetNotesFields : Request
+    {
+        
+        private GetNotesArgs argsField;
+        
+        private GetNotesFields fieldsField;
+        
+        private string predefinedSearchNameField;
+        
+        private string[] typesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public GetNotesArgs Args
+        {
+            get
+            {
+                return this.argsField;
+            }
+            set
+            {
+                this.argsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public GetNotesFields Fields
+        {
+            get
+            {
+                return this.fieldsField;
+            }
+            set
+            {
+                this.fieldsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string PredefinedSearchName
+        {
+            get
+            {
+                return this.predefinedSearchNameField;
+            }
+            set
+            {
+                this.predefinedSearchNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=3)]
+        public string[] Types
+        {
+            get
+            {
+                return this.typesField;
+            }
+            set
+            {
+                this.typesField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetNotesRequest : APISearchRequestOfGetNotesArgsGetNotesFields
+    {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateMessageRequest))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class APIUpdateRequestOfUpdateMessageActivityLogItemBrickUpdateMessageFields : Request
+    {
+        
+        private UpdateMessage[] entitiesField;
+        
+        private UpdateMessageFields fieldsField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public UpdateMessage[] Entities
+        {
+            get
+            {
+                return this.entitiesField;
+            }
+            set
+            {
+                this.entitiesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public UpdateMessageFields Fields
+        {
+            get
+            {
+                return this.fieldsField;
+            }
+            set
+            {
+                this.fieldsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class UpdateMessageRequest : APIUpdateRequestOfUpdateMessageActivityLogItemBrickUpdateMessageFields
+    {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateMessagesRequest))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class APICreateRequestOfCreateMessageActivityLogItemBrick : Request
+    {
+        
+        private CreateMessage[] entitiesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public CreateMessage[] Entities
+        {
+            get
+            {
+                return this.entitiesField;
+            }
+            set
+            {
+                this.entitiesField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class CreateMessagesRequest : APICreateRequestOfCreateMessageActivityLogItemBrick
+    {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetMessagesRequest))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class APISearchRequestOfGetMessagesArgsGetMessagesFields : Request
+    {
+        
+        private GetMessagesArgs argsField;
+        
+        private GetMessagesFields fieldsField;
+        
+        private string predefinedSearchNameField;
+        
+        private string[] typesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public GetMessagesArgs Args
+        {
+            get
+            {
+                return this.argsField;
+            }
+            set
+            {
+                this.argsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public GetMessagesFields Fields
+        {
+            get
+            {
+                return this.fieldsField;
+            }
+            set
+            {
+                this.fieldsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string PredefinedSearchName
+        {
+            get
+            {
+                return this.predefinedSearchNameField;
+            }
+            set
+            {
+                this.predefinedSearchNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=3)]
+        public string[] Types
+        {
+            get
+            {
+                return this.typesField;
+            }
+            set
+            {
+                this.typesField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetMessagesRequest : APISearchRequestOfGetMessagesArgsGetMessagesFields
+    {
     }
     
     /// <remarks/>
@@ -55730,6 +60058,88 @@ namespace BfsApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
     public partial class GetRecurringOrderTemplatesRequest : APISearchRequestOfGetRecurringOrderTemplatesArgsGetRecurringOrderTemplatesFields
+    {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateRecurringOrderTemplateAutoGiroRequest))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class APIUpdateRequestOfUpdateRecurringOrderTemplateAutoGiroBetterActionBrickUpdateRecurringOrderTemplateAutoGiroFields : Request
+    {
+        
+        private UpdateRecurringOrderTemplateAutoGiro[] entitiesField;
+        
+        private UpdateRecurringOrderTemplateAutoGiroFields fieldsField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public UpdateRecurringOrderTemplateAutoGiro[] Entities
+        {
+            get
+            {
+                return this.entitiesField;
+            }
+            set
+            {
+                this.entitiesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public UpdateRecurringOrderTemplateAutoGiroFields Fields
+        {
+            get
+            {
+                return this.fieldsField;
+            }
+            set
+            {
+                this.fieldsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class UpdateRecurringOrderTemplateAutoGiroRequest : APIUpdateRequestOfUpdateRecurringOrderTemplateAutoGiroBetterActionBrickUpdateRecurringOrderTemplateAutoGiroFields
+    {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateRecurringOrderTemplateAutoGiroRequest))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class APICreateRequestOfRecurringOrderTemplateAutoGiroBetterActionBrick : Request
+    {
+        
+        private RecurringOrderTemplateAutoGiro[] entitiesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public RecurringOrderTemplateAutoGiro[] Entities
+        {
+            get
+            {
+                return this.entitiesField;
+            }
+            set
+            {
+                this.entitiesField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class CreateRecurringOrderTemplateAutoGiroRequest : APICreateRequestOfRecurringOrderTemplateAutoGiroBetterActionBrick
     {
     }
     
@@ -60834,6 +65244,16 @@ namespace BfsApi
             return base.Channel.UpdateWorkflowInstancesAsync(req);
         }
         
+        public System.Threading.Tasks.Task<BfsApi.CreateRecurringOrderTemplateAutoGiroResponse> CreateRecurringOrderTemplatesAutogiroAsync(BfsApi.CreateRecurringOrderTemplateAutoGiroRequest req)
+        {
+            return base.Channel.CreateRecurringOrderTemplatesAutogiroAsync(req);
+        }
+        
+        public System.Threading.Tasks.Task<BfsApi.UpdateRecurringOrderTemplateAutoGiroResponse> UpdateRecurringOrderTemplateAutoGiroAsync(BfsApi.UpdateRecurringOrderTemplateAutoGiroRequest req)
+        {
+            return base.Channel.UpdateRecurringOrderTemplateAutoGiroAsync(req);
+        }
+        
         public System.Threading.Tasks.Task<BfsApi.GetRecurringOrderTemplatesResponse> GetRecurringOrderTemplatesAsync(BfsApi.GetRecurringOrderTemplatesRequest req)
         {
             return base.Channel.GetRecurringOrderTemplatesAsync(req);
@@ -60937,6 +65357,51 @@ namespace BfsApi
         public System.Threading.Tasks.Task<BfsApi.GetHoldingsOverTimeResponse> GetHoldingsOverTimeAsync(BfsApi.GetHoldingsOverTimeRequest req)
         {
             return base.Channel.GetHoldingsOverTimeAsync(req);
+        }
+        
+        public System.Threading.Tasks.Task<BfsApi.GetMessagesResponse> GetMessagesAsync(BfsApi.GetMessagesRequest req)
+        {
+            return base.Channel.GetMessagesAsync(req);
+        }
+        
+        public System.Threading.Tasks.Task<BfsApi.CreateMessagesResponse> CreateMessagesAsync(BfsApi.CreateMessagesRequest req)
+        {
+            return base.Channel.CreateMessagesAsync(req);
+        }
+        
+        public System.Threading.Tasks.Task<BfsApi.UpdateMessageResponse> UpdateMessagesAsync(BfsApi.UpdateMessageRequest req)
+        {
+            return base.Channel.UpdateMessagesAsync(req);
+        }
+        
+        public System.Threading.Tasks.Task<BfsApi.GetNotesResponse> GetNotesAsync(BfsApi.GetNotesRequest req)
+        {
+            return base.Channel.GetNotesAsync(req);
+        }
+        
+        public System.Threading.Tasks.Task<BfsApi.CreateNotesResponse> CreateNotesAsync(BfsApi.CreateNotesRequest req)
+        {
+            return base.Channel.CreateNotesAsync(req);
+        }
+        
+        public System.Threading.Tasks.Task<BfsApi.UpdateNoteResponse> UpdateNotesAsync(BfsApi.UpdateNoteRequest req)
+        {
+            return base.Channel.UpdateNotesAsync(req);
+        }
+        
+        public System.Threading.Tasks.Task<BfsApi.GetTasksResponse> GetTasksAsync(BfsApi.GetTasksRequest req)
+        {
+            return base.Channel.GetTasksAsync(req);
+        }
+        
+        public System.Threading.Tasks.Task<BfsApi.CreateTasksResponse> CreateTasksAsync(BfsApi.CreateTasksRequest req)
+        {
+            return base.Channel.CreateTasksAsync(req);
+        }
+        
+        public System.Threading.Tasks.Task<BfsApi.UpdateTaskResponse> UpdateTasksAsync(BfsApi.UpdateTaskRequest req)
+        {
+            return base.Channel.UpdateTasksAsync(req);
         }
         
         public virtual System.Threading.Tasks.Task OpenAsync()

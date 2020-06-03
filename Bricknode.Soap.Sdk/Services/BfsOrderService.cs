@@ -12,12 +12,11 @@ namespace Bricknode.Soap.Sdk.Services
 
     public class BfsOrderService : BfsServiceBase, IBfsOrderService
     {
-        private readonly bfsapiSoap _client;
 
         public BfsOrderService(IOptions<BfsApiConfiguration> bfsApiConfiguration, ILogger logger, bfsapiSoap client, IBfsApiClientFactory bfsApiClientFactory) :
             base(bfsApiConfiguration, logger, bfsApiClientFactory, client)
         {
-            _client = client;
+            
         }
 
         /// <summary>
@@ -65,6 +64,52 @@ namespace Bricknode.Soap.Sdk.Services
             if (ValidateResponse(response)) return response;
 
             LogErrors(response.Result.ToArray<EntityBase>());
+
+            return response;
+        }
+
+        /// <summary>
+        ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/958922769/CreateRecurringOrderTemplatesAutogiro
+        /// </summary>
+        /// <param name="recurringOrders"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        public async Task<CreateRecurringOrderTemplateAutoGiroResponse> CreateRecurringOrderTemplatesAutogiroAsync(RecurringOrderTemplateAutoGiro[] recurringOrders, string bfsApiClientName = null)
+        {
+            var request = GetRequest<CreateRecurringOrderTemplateAutoGiroRequest>(bfsApiClientName);
+
+            request.Entities = recurringOrders;
+
+            var response = await GetClient(bfsApiClientName).CreateRecurringOrderTemplatesAutogiroAsync(request);
+
+            if (ValidateResponse(response)) return response;
+
+            LogErrors(response.Entities.ToArray<EntityBase>());
+
+            return response;
+        }
+
+        /// <summary>
+        ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/958398610/UpdateRecurringOrderTemplateAutoGiro
+        /// </summary>
+        /// <param name="recurringOrders"></param>
+        /// <param name="fieldsToUpdate"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        public async Task<UpdateRecurringOrderTemplateAutoGiroResponse> UpdateNotesAsync(UpdateRecurringOrderTemplateAutoGiro[] recurringOrders,
+            UpdateRecurringOrderTemplateAutoGiroFields fieldsToUpdate, string bfsApiClientName = null)
+        {
+            var request = GetRequest<UpdateRecurringOrderTemplateAutoGiroRequest>(bfsApiClientName);
+
+            request.Entities = recurringOrders;
+
+            request.Fields = fieldsToUpdate;
+
+            var response = await GetClient(bfsApiClientName).UpdateRecurringOrderTemplateAutoGiroAsync(request);
+
+            if (ValidateResponse(response)) return response;
+
+            LogErrors(response.Entities.ToArray<EntityBase>());
 
             return response;
         }

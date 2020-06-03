@@ -67,6 +67,9 @@
             services.AddTransient<IBfsBusinessEventService, BfsBusinessEventService>();
             services.AddTransient<IBfsTransferReceiverService, BfsTransferReceiverService>();
             services.AddTransient<IBfsWhiteLabelService, BfsWhiteLabelService>();
+            services.AddTransient<IBfsTasksService, BfsTasksService>();
+            services.AddTransient<IBfsNotesService, BfsNotesService>();
+            services.AddTransient<IBfsMessagesService, BfsMessagesService>();
         }
     }
 }
