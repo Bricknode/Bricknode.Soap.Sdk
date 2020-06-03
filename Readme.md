@@ -43,6 +43,50 @@ public class MyClass
     }
 }
 ```
+# Multi client support (Currently in preview)
+If you want to target multiple BFS API instances in the same application you can use the multi client feature provided in this package. This feature allows you to inject multiple named BFS clients in the DI container.
+
+```c
+ services.AddMultiBfsApiClient()
+      .AddNamedBfsApiClient("client1", configuration =>
+      {
+          configuration.EndpointAddress = "https://bfs1.bricknode.com/test1/api/bfsapi.asmx";
+          configuration.Identifier = "123";
+          configuration.Credentials = new Credentials
+          {
+              UserName = "test1",
+              Password = "test1"
+          };
+        }).AddNamedBfsApiClient("client2", configuration =>
+        {
+              configuration.EndpointAddress = "https://bfs1.bricknode.com/test2/api/bfsapi.asmx";
+              configuration.Identifier = "1234";
+              configuration.Credentials = new Credentials
+              {
+                  UserName = "test2",
+                  Password = "test2"
+              };
+          }).BuildClients();
+```
+To target one of the injected BFS clients simply provide the name used when registering the client with AddNamedBfsApiClient() extension method when calling a service method. 
+
+```c
+public class MyClass
+{
+    private IBfsLegalEntitiesService _bfsLegalEntitiesService;
+    
+    public MyClass(IBfsLegalEntitiesService bfsLegalEntitiesService)
+    {
+        _bfsLegalEntitiesService = bfsLegalEntitiesService;
+    }
+    
+    public async Task GetHouseInformation()
+    {
+         var houseInformation = await _bfsLegalEntitiesService.GetHouseInformationAsync(bfsApiClientName: "client1");
+    }
+}
+```
+# Available services
 The available services are the following:
 ```
 BfsAccountService
@@ -65,4 +109,7 @@ BfsTransactionService
 BfsTransferReceiverService
 BfsTrsService
 BfsWhiteLabelService
+BfsTasksService
+BfsNotesService
+BfsMessagesService
 ````
