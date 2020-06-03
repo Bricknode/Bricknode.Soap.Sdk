@@ -109,7 +109,7 @@ BfsTransactionService
 BfsTransferReceiverService
 BfsTrsService
 BfsWhiteLabelService
-BfsTasksService
-BfsNotesService
-BfsMessagesService
+BfsTaskService
+BfsNoteService
+BfsMessageService
 ````
