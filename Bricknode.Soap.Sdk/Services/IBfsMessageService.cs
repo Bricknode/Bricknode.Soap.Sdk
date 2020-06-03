@@ -3,7 +3,7 @@ using BfsApi;
 
 namespace Bricknode.Soap.Sdk.Services
 {
-    public interface IBfsMessagesService
+    public interface IBfsMessageService
     {
         /// <summary>
         ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/1128267799/GetMessages

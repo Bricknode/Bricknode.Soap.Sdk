@@ -3,7 +3,7 @@ using BfsApi;
 
 namespace Bricknode.Soap.Sdk.Services
 {
-    public interface IBfsNotesService
+    public interface IBfsNoteService
     {
         /// <summary>
         ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/1122894013/GetNotes

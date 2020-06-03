@@ -3,7 +3,7 @@ using BfsApi;
 
 namespace Bricknode.Soap.Sdk.Services
 {
-    public interface IBfsTasksService
+    public interface IBfsTaskService
     {
         /// <summary>
         ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/1123123229/GetTasks

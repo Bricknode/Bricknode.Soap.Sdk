@@ -10,9 +10,9 @@ namespace Bricknode.Soap.Sdk.Services
 {
     using Factories;
 
-    public class BfsTasksService : BfsServiceBase, IBfsTasksService
+    public class BfsTaskService : BfsServiceBase, IBfsTaskService
     {
-        public BfsTasksService(IOptions<BfsApiConfiguration> bfsApiConfiguration, ILogger logger, bfsapiSoap client, IBfsApiClientFactory bfsApiClientFactory) :
+        public BfsTaskService(IOptions<BfsApiConfiguration> bfsApiConfiguration, ILogger logger, bfsapiSoap client, IBfsApiClientFactory bfsApiClientFactory) :
             base(bfsApiConfiguration, logger, bfsApiClientFactory, client)
         {
         }
