@@ -189,5 +189,25 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         Task<GetRecurringOrderTemplatesResponse> GetRecurringOrderTemplatesAsync(GetRecurringOrderTemplatesArgs filters, string bfsApiClientName = null);
+
+        /// <summary>
+        ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/958922769/CreateRecurringOrderTemplatesAutogiro
+        /// </summary>
+        /// <param name="recurringOrders"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        Task<CreateRecurringOrderTemplateAutoGiroResponse> CreateRecurringOrderTemplatesAutogiroAsync(
+            RecurringOrderTemplateAutoGiro[] recurringOrders, string bfsApiClientName = null);
+
+        /// <summary>
+        ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/958398610/UpdateRecurringOrderTemplateAutoGiro
+        /// </summary>
+        /// <param name="recurringOrders"></param>
+        /// <param name="fieldsToUpdate"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        Task<UpdateRecurringOrderTemplateAutoGiroResponse> UpdateRecurringOrderTemplatesAutoGiroAsync(
+            UpdateRecurringOrderTemplateAutoGiro[] recurringOrders,
+            UpdateRecurringOrderTemplateAutoGiroFields fieldsToUpdate, string bfsApiClientName = null);
     }
 }

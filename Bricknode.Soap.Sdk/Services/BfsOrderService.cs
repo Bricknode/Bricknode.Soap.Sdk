@@ -96,7 +96,7 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="fieldsToUpdate"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<UpdateRecurringOrderTemplateAutoGiroResponse> UpdateNotesAsync(UpdateRecurringOrderTemplateAutoGiro[] recurringOrders,
+        public async Task<UpdateRecurringOrderTemplateAutoGiroResponse> UpdateRecurringOrderTemplatesAutoGiroAsync(UpdateRecurringOrderTemplateAutoGiro[] recurringOrders,
             UpdateRecurringOrderTemplateAutoGiroFields fieldsToUpdate, string bfsApiClientName = null)
         {
             var request = GetRequest<UpdateRecurringOrderTemplateAutoGiroRequest>(bfsApiClientName);
