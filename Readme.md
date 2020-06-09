@@ -43,7 +43,7 @@ public class MyClass
     }
 }
 ```
-# Multi client support (Currently in preview)
+# Multi client support
 If you want to target multiple BFS API instances in the same application you can use the multi client feature provided in this package. This feature allows you to inject multiple named BFS clients in the DI container.
 
 ```c
