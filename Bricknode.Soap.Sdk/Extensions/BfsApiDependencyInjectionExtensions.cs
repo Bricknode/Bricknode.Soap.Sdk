@@ -16,7 +16,7 @@
         public static IServiceCollection AddBfsApiClient(this IServiceCollection services,
             Action<BfsApiConfiguration> bfsApiConfiguration)
         {
-            services.AddTransient<bfsapiSoap, bfsapiSoapClient>(
+            services.AddScoped<bfsapiSoap, bfsapiSoapClient>(
                 serviceProvider => new bfsapiSoapClient(
                     BfsBinding.GetBfsBinding(),
                     new EndpointAddress(serviceProvider.GetRequiredService<IOptions<BfsApiConfiguration>>().Value
@@ -38,7 +38,7 @@
         {
             var builder = new MultiBfsApiClientBuilder(services);
 
-            services.AddTransient<bfsapiSoap, bfsapiSoapClient>(provider => new bfsapiSoapClient(bfsapiSoapClient.EndpointConfiguration.bfsapiSoap));
+            services.AddScoped<bfsapiSoap, bfsapiSoapClient>(provider => new bfsapiSoapClient(bfsapiSoapClient.EndpointConfiguration.bfsapiSoap));
             services.AddOptions();
             AddBfsServices(services);
 
