@@ -398,6 +398,12 @@ namespace Bricknode.Soap.Sdk.Services
 
         #endregion
 
+        #region CurrencyExchangeOrders
+
+        
+
+        #endregion
+
         #region TransferOrders Transitions
 
         /// <summary>
