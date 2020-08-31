@@ -400,6 +400,29 @@ namespace Bricknode.Soap.Sdk.Services
 
         #region CurrencyExchangeOrders
 
+        /// <summary>
+        ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/1184038966/GetCurrencyExchangeOrders
+        /// </summary>
+        /// <param name="filters"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        public async Task<GetCurrencyExchangeOrderResponse> GetCurrencyExchangeOrderAsync(
+            GetCurrencyExchangeOrderArgs filters, string bfsApiClientName = null)
+        {
+            var request = GetRequest<GetCurrencyExchangeOrderRequest>(bfsApiClientName);
+
+            request.Args = filters;
+
+            request.Fields = GetFields<GetCurrencyExchangeOrderFields>();
+
+            var response = await GetClient(bfsApiClientName).GetCurrencyExchangeOrdersAsync(request);
+
+            if (ValidateResponse(response)) return response;
+
+            LogErrors(response.Result.ToArray<EntityBase>());
+
+            return response;
+        }
         
 
         #endregion
