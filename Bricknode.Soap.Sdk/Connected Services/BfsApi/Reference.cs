@@ -26,6 +26,36 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
         System.Threading.Tasks.Task<BfsApi.GetHouseInformationResponse> GetHouseInformationAsync(BfsApi.GetHouseInformationRequest req);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetTaxWithholdingAgreements", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
+        System.Threading.Tasks.Task<BfsApi.GetTaxWithholdingAgreementResponse> GetTaxWithholdingAgreementsAsync(BfsApi.GetTaxWithholdingAgreementRequest req);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateTaxWithholdingAgreements", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
+        System.Threading.Tasks.Task<BfsApi.CreateTaxWithholdingAgreementResponse> CreateTaxWithholdingAgreementsAsync(BfsApi.CreateTaxWithholdingAgreementsRequest req);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateTaxWithholdingAgreements", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
+        System.Threading.Tasks.Task<BfsApi.UpdateTaxWithholdingAgreementResponse> UpdateTaxWithholdingAgreementsAsync(BfsApi.UpdateTaxWithholdingAgreementsRequest req);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetPersons", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
@@ -375,6 +405,36 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
         System.Threading.Tasks.Task<BfsApi.GetSubscriptionOrderResponse> GetSubscriptionOrdersAsync(BfsApi.GetSubscriptionOrderRequest req);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateCurrencyExchangeOrders", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
+        System.Threading.Tasks.Task<BfsApi.CreateCurrencyExchangeOrderResponse> CreateCurrencyExchangeOrdersAsync(BfsApi.CreateCurrencyExchangeOrderRequest req);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetCurrencyExchangeOrders", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
+        System.Threading.Tasks.Task<BfsApi.GetCurrencyExchangeOrderResponse> GetCurrencyExchangeOrdersAsync(BfsApi.GetCurrencyExchangeOrderRequest req);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CurrencyExchangeOrder_Cancel", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
+        System.Threading.Tasks.Task<BfsApi.CurrencyExchangeOrder_CancelResponse> CurrencyExchangeOrder_CancelAsync(BfsApi.CurrencyExchangeOrder_CancelRequest req);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateTradeOrders", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -2833,6 +2893,12 @@ namespace BfsApi
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetTradeOrdersResponse))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APICreateResponseOfTradeOrder))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateTradeOrderResponse))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APIWorkflowTriggerResponseOfCurrencyExchangeOrder_Cancel))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CurrencyExchangeOrder_CancelResponse))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchResponseOfGetCurrencyExchangeOrderResponseRowGetCurrencyExchangeOrderFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetCurrencyExchangeOrderResponse))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APICreateResponseOfCurrencyExchangeOrder))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateCurrencyExchangeOrderResponse))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchResponseOfGetSubscriptionOrderResponseRowGetSubscriptionOrderFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetSubscriptionOrderResponse))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APIWorkflowTriggerResponseOfSubscriptionOrder_Process))]
@@ -2896,6 +2962,12 @@ namespace BfsApi
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetFundCompaniesResponse))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchResponseOfGetPersonResponseRowGetPersonFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetPersonResponse))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APIUpdateResponseOfUpdateTaxWithholdingAgreement))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateTaxWithholdingAgreementResponse))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APICreateResponseOfTaxWithholdingAgreement))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateTaxWithholdingAgreementResponse))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchResponseOfGetTaxWithholdingAgreementResponseRowGetTaxWithholdingAgreementFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetTaxWithholdingAgreementResponse))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchResponseOfGetHouseInformationResponseRowGetHouseInformationFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetHouseInformationResponse))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
@@ -3150,6 +3222,7 @@ namespace BfsApi
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(DepositCashOrder))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetTradeOrdersResponseRow))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TradeOrder))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetCurrencyExchangeOrderResponseRow))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ReservationItem))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(OrderFeeCategory))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetSubscriptionOrderResponseRow))]
@@ -3177,8 +3250,14 @@ namespace BfsApi
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetFundEntityResponseRow))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetPersonResponseRow))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetFundCompaniesResponseRow))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateTaxWithholdingAgreement))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TaxWithholdingAgreement))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetTaxWithholdingAgreementResponseRow))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ExecutionInterface))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ManualExecutionInterface))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CurrencyExchangeOrder))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CurrencyExchangeOrderBuy))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CurrencyExchangeOrderSell))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetHouseInformationResponseRow))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CustomField))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
@@ -17196,6 +17275,222 @@ namespace BfsApi
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetCurrencyExchangeOrderResponseRow : EntityBase
+    {
+        
+        private string orderNoField;
+        
+        private System.Guid accountIdField;
+        
+        private System.Guid executionInterfaceIdField;
+        
+        private string stateField;
+        
+        private System.Guid legalEntityIdField;
+        
+        private string commentField;
+        
+        private decimal buyAmountField;
+        
+        private decimal sellAmountField;
+        
+        private string orderDirectionKeyField;
+        
+        private System.Guid sellCashAssetBrickIdField;
+        
+        private System.Guid buyCashAssetBrickIdField;
+        
+        private System.Guid currencyExchangeBatchOrderField;
+        
+        private System.Guid allocationOrderField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string OrderNo
+        {
+            get
+            {
+                return this.orderNoField;
+            }
+            set
+            {
+                this.orderNoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public System.Guid AccountId
+        {
+            get
+            {
+                return this.accountIdField;
+            }
+            set
+            {
+                this.accountIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public System.Guid ExecutionInterfaceId
+        {
+            get
+            {
+                return this.executionInterfaceIdField;
+            }
+            set
+            {
+                this.executionInterfaceIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public string State
+        {
+            get
+            {
+                return this.stateField;
+            }
+            set
+            {
+                this.stateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public System.Guid LegalEntityId
+        {
+            get
+            {
+                return this.legalEntityIdField;
+            }
+            set
+            {
+                this.legalEntityIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public string Comment
+        {
+            get
+            {
+                return this.commentField;
+            }
+            set
+            {
+                this.commentField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public decimal BuyAmount
+        {
+            get
+            {
+                return this.buyAmountField;
+            }
+            set
+            {
+                this.buyAmountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public decimal SellAmount
+        {
+            get
+            {
+                return this.sellAmountField;
+            }
+            set
+            {
+                this.sellAmountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+        public string OrderDirectionKey
+        {
+            get
+            {
+                return this.orderDirectionKeyField;
+            }
+            set
+            {
+                this.orderDirectionKeyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
+        public System.Guid SellCashAssetBrickId
+        {
+            get
+            {
+                return this.sellCashAssetBrickIdField;
+            }
+            set
+            {
+                this.sellCashAssetBrickIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
+        public System.Guid BuyCashAssetBrickId
+        {
+            get
+            {
+                return this.buyCashAssetBrickIdField;
+            }
+            set
+            {
+                this.buyCashAssetBrickIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
+        public System.Guid CurrencyExchangeBatchOrder
+        {
+            get
+            {
+                return this.currencyExchangeBatchOrderField;
+            }
+            set
+            {
+                this.currencyExchangeBatchOrderField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=12)]
+        public System.Guid AllocationOrder
+        {
+            get
+            {
+                return this.allocationOrderField;
+            }
+            set
+            {
+                this.allocationOrderField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
     public partial class GetSubscriptionOrderResponseRow : EntityBase
     {
         
@@ -21303,6 +21598,10 @@ namespace BfsApi
         
         private string gIINField;
         
+        private System.Guid resellerAccountField;
+        
+        private decimal riskLevelField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public bool IsApproved
@@ -22086,6 +22385,34 @@ namespace BfsApi
                 this.gIINField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=56)]
+        public System.Guid ResellerAccount
+        {
+            get
+            {
+                return this.resellerAccountField;
+            }
+            set
+            {
+                this.resellerAccountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=57)]
+        public decimal RiskLevel
+        {
+            get
+            {
+                return this.riskLevelField;
+            }
+            set
+            {
+                this.riskLevelField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -22220,6 +22547,12 @@ namespace BfsApi
         private System.DateTime kycDateField;
         
         private string gIINField;
+        
+        private bool sendWelcomeMailField;
+        
+        private System.Guid resellerAccountField;
+        
+        private decimal riskLevelField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -23100,6 +23433,48 @@ namespace BfsApi
             set
             {
                 this.gIINField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=63)]
+        public bool SendWelcomeMail
+        {
+            get
+            {
+                return this.sendWelcomeMailField;
+            }
+            set
+            {
+                this.sendWelcomeMailField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=64)]
+        public System.Guid ResellerAccount
+        {
+            get
+            {
+                return this.resellerAccountField;
+            }
+            set
+            {
+                this.resellerAccountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=65)]
+        public decimal RiskLevel
+        {
+            get
+            {
+                return this.riskLevelField;
+            }
+            set
+            {
+                this.riskLevelField = value;
             }
         }
     }
@@ -24390,6 +24765,10 @@ namespace BfsApi
         
         private string gIINField;
         
+        private System.Guid resellerAccountField;
+        
+        private decimal riskLevelField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public string FirstName
@@ -25327,6 +25706,34 @@ namespace BfsApi
                 this.gIINField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=67)]
+        public System.Guid ResellerAccount
+        {
+            get
+            {
+                return this.resellerAccountField;
+            }
+            set
+            {
+                this.resellerAccountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=68)]
+        public decimal RiskLevel
+        {
+            get
+            {
+                return this.riskLevelField;
+            }
+            set
+            {
+                this.riskLevelField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -25365,6 +25772,174 @@ namespace BfsApi
             set
             {
                 this.companyNumberField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class UpdateTaxWithholdingAgreement : EntityBase
+    {
+        
+        private System.Nullable<System.Guid> personField;
+        
+        private string taxCountryField;
+        
+        private System.Nullable<System.DateTime> expirationDateField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
+        public System.Nullable<System.Guid> Person
+        {
+            get
+            {
+                return this.personField;
+            }
+            set
+            {
+                this.personField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string TaxCountry
+        {
+            get
+            {
+                return this.taxCountryField;
+            }
+            set
+            {
+                this.taxCountryField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
+        public System.Nullable<System.DateTime> ExpirationDate
+        {
+            get
+            {
+                return this.expirationDateField;
+            }
+            set
+            {
+                this.expirationDateField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class TaxWithholdingAgreement : EntityBase
+    {
+        
+        private System.Guid personField;
+        
+        private string taxCountryField;
+        
+        private System.Nullable<System.DateTime> expirationDateField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public System.Guid Person
+        {
+            get
+            {
+                return this.personField;
+            }
+            set
+            {
+                this.personField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string TaxCountry
+        {
+            get
+            {
+                return this.taxCountryField;
+            }
+            set
+            {
+                this.taxCountryField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
+        public System.Nullable<System.DateTime> ExpirationDate
+        {
+            get
+            {
+                return this.expirationDateField;
+            }
+            set
+            {
+                this.expirationDateField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetTaxWithholdingAgreementResponseRow : EntityBase
+    {
+        
+        private System.Guid personField;
+        
+        private System.DateTime expirationDateField;
+        
+        private string taxCountryField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public System.Guid Person
+        {
+            get
+            {
+                return this.personField;
+            }
+            set
+            {
+                this.personField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public System.DateTime ExpirationDate
+        {
+            get
+            {
+                return this.expirationDateField;
+            }
+            set
+            {
+                this.expirationDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string TaxCountry
+        {
+            get
+            {
+                return this.taxCountryField;
+            }
+            set
+            {
+                this.taxCountryField = value;
             }
         }
     }
@@ -25606,6 +26181,176 @@ namespace BfsApi
             set
             {
                 this.quantityDecimalsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CurrencyExchangeOrderBuy))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CurrencyExchangeOrderSell))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class CurrencyExchangeOrder : EntityBase
+    {
+        
+        private string orderNoField;
+        
+        private System.Guid sellCashAssetBrickIdField;
+        
+        private System.Guid buyCashAssetBrickIdField;
+        
+        private System.Guid batchField;
+        
+        private System.Guid accountField;
+        
+        private string commentField;
+        
+        private System.Guid allocationOrderField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string OrderNo
+        {
+            get
+            {
+                return this.orderNoField;
+            }
+            set
+            {
+                this.orderNoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public System.Guid SellCashAssetBrickId
+        {
+            get
+            {
+                return this.sellCashAssetBrickIdField;
+            }
+            set
+            {
+                this.sellCashAssetBrickIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public System.Guid BuyCashAssetBrickId
+        {
+            get
+            {
+                return this.buyCashAssetBrickIdField;
+            }
+            set
+            {
+                this.buyCashAssetBrickIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public System.Guid Batch
+        {
+            get
+            {
+                return this.batchField;
+            }
+            set
+            {
+                this.batchField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public System.Guid Account
+        {
+            get
+            {
+                return this.accountField;
+            }
+            set
+            {
+                this.accountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public string Comment
+        {
+            get
+            {
+                return this.commentField;
+            }
+            set
+            {
+                this.commentField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public System.Guid AllocationOrder
+        {
+            get
+            {
+                return this.allocationOrderField;
+            }
+            set
+            {
+                this.allocationOrderField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class CurrencyExchangeOrderBuy : CurrencyExchangeOrder
+    {
+        
+        private System.Nullable<decimal> buyAmountField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
+        public System.Nullable<decimal> BuyAmount
+        {
+            get
+            {
+                return this.buyAmountField;
+            }
+            set
+            {
+                this.buyAmountField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class CurrencyExchangeOrderSell : CurrencyExchangeOrder
+    {
+        
+        private System.Nullable<decimal> sellAmountField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
+        public System.Nullable<decimal> SellAmount
+        {
+            get
+            {
+                return this.sellAmountField;
+            }
+            set
+            {
+                this.sellAmountField = value;
             }
         }
     }
@@ -26001,6 +26746,7 @@ namespace BfsApi
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetDepositTransferOrdersFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetWithdrawalTransferOrdersFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetTradeOrderFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetCurrencyExchangeOrderFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetSubscriptionOrderFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateSubscriptionOrderFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetAlgorithmFields))]
@@ -26015,6 +26761,8 @@ namespace BfsApi
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetPersonFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetFundEntityFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetFundCompaniesFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateTaxWithholdingAgreementFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetTaxWithholdingAgreementFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetHouseInformationFields))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -29987,6 +30735,254 @@ namespace BfsApi
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetCurrencyExchangeOrderFields : FieldBase
+    {
+        
+        private bool brickIdField;
+        
+        private bool createdDateField;
+        
+        private bool orderNoField;
+        
+        private bool accountIdField;
+        
+        private bool executionInterfaceIdField;
+        
+        private bool stateField;
+        
+        private bool legalEntityIdField;
+        
+        private bool commentField;
+        
+        private bool buyAmountField;
+        
+        private bool sellAmountField;
+        
+        private bool orderDirectionKeyField;
+        
+        private bool sellCashAssetBrickIdField;
+        
+        private bool buyCashAssetBrickIdField;
+        
+        private bool currencyExchangeBatchOrderField;
+        
+        private bool allocationOrderField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public bool BrickId
+        {
+            get
+            {
+                return this.brickIdField;
+            }
+            set
+            {
+                this.brickIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public bool CreatedDate
+        {
+            get
+            {
+                return this.createdDateField;
+            }
+            set
+            {
+                this.createdDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public bool OrderNo
+        {
+            get
+            {
+                return this.orderNoField;
+            }
+            set
+            {
+                this.orderNoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public bool AccountId
+        {
+            get
+            {
+                return this.accountIdField;
+            }
+            set
+            {
+                this.accountIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public bool ExecutionInterfaceId
+        {
+            get
+            {
+                return this.executionInterfaceIdField;
+            }
+            set
+            {
+                this.executionInterfaceIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public bool State
+        {
+            get
+            {
+                return this.stateField;
+            }
+            set
+            {
+                this.stateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public bool LegalEntityId
+        {
+            get
+            {
+                return this.legalEntityIdField;
+            }
+            set
+            {
+                this.legalEntityIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public bool Comment
+        {
+            get
+            {
+                return this.commentField;
+            }
+            set
+            {
+                this.commentField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+        public bool BuyAmount
+        {
+            get
+            {
+                return this.buyAmountField;
+            }
+            set
+            {
+                this.buyAmountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
+        public bool SellAmount
+        {
+            get
+            {
+                return this.sellAmountField;
+            }
+            set
+            {
+                this.sellAmountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
+        public bool OrderDirectionKey
+        {
+            get
+            {
+                return this.orderDirectionKeyField;
+            }
+            set
+            {
+                this.orderDirectionKeyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
+        public bool SellCashAssetBrickId
+        {
+            get
+            {
+                return this.sellCashAssetBrickIdField;
+            }
+            set
+            {
+                this.sellCashAssetBrickIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=12)]
+        public bool BuyCashAssetBrickId
+        {
+            get
+            {
+                return this.buyCashAssetBrickIdField;
+            }
+            set
+            {
+                this.buyCashAssetBrickIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=13)]
+        public bool CurrencyExchangeBatchOrder
+        {
+            get
+            {
+                return this.currencyExchangeBatchOrderField;
+            }
+            set
+            {
+                this.currencyExchangeBatchOrderField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=14)]
+        public bool AllocationOrder
+        {
+            get
+            {
+                return this.allocationOrderField;
+            }
+            set
+            {
+                this.allocationOrderField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
     public partial class GetSubscriptionOrderFields : FieldBase
     {
         
@@ -32854,6 +33850,8 @@ namespace BfsApi
         
         private bool gIINField;
         
+        private bool riskLevelField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public bool IsApproved
@@ -33637,6 +34635,20 @@ namespace BfsApi
                 this.gIINField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=56)]
+        public bool RiskLevel
+        {
+            get
+            {
+                return this.riskLevelField;
+            }
+            set
+            {
+                this.riskLevelField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -34153,6 +35165,10 @@ namespace BfsApi
         private bool kycDateField;
         
         private bool gIINField;
+        
+        private bool resellerAccountField;
+        
+        private bool riskLevelField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -35119,6 +36135,34 @@ namespace BfsApi
                 this.gIINField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=69)]
+        public bool ResellerAccount
+        {
+            get
+            {
+                return this.resellerAccountField;
+            }
+            set
+            {
+                this.resellerAccountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=70)]
+        public bool RiskLevel
+        {
+            get
+            {
+                return this.riskLevelField;
+            }
+            set
+            {
+                this.riskLevelField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -35213,6 +36257,134 @@ namespace BfsApi
             set
             {
                 this.fundCompanyNameField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class UpdateTaxWithholdingAgreementFields : FieldBase
+    {
+        
+        private bool personField;
+        
+        private bool taxCountryField;
+        
+        private bool expirationDateField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public bool Person
+        {
+            get
+            {
+                return this.personField;
+            }
+            set
+            {
+                this.personField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public bool TaxCountry
+        {
+            get
+            {
+                return this.taxCountryField;
+            }
+            set
+            {
+                this.taxCountryField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public bool ExpirationDate
+        {
+            get
+            {
+                return this.expirationDateField;
+            }
+            set
+            {
+                this.expirationDateField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetTaxWithholdingAgreementFields : FieldBase
+    {
+        
+        private bool brickIdField;
+        
+        private bool taxCountryField;
+        
+        private bool expirationDateField;
+        
+        private bool personField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public bool BrickId
+        {
+            get
+            {
+                return this.brickIdField;
+            }
+            set
+            {
+                this.brickIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public bool TaxCountry
+        {
+            get
+            {
+                return this.taxCountryField;
+            }
+            set
+            {
+                this.taxCountryField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public bool ExpirationDate
+        {
+            get
+            {
+                return this.expirationDateField;
+            }
+            set
+            {
+                this.expirationDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public bool Person
+        {
+            get
+            {
+                return this.personField;
+            }
+            set
+            {
+                this.personField = value;
             }
         }
     }
@@ -44126,6 +45298,105 @@ namespace BfsApi
     }
     
     /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CurrencyExchangeOrder_CancelResponse))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class APIWorkflowTriggerResponseOfCurrencyExchangeOrder_Cancel : Response
+    {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class CurrencyExchangeOrder_CancelResponse : APIWorkflowTriggerResponseOfCurrencyExchangeOrder_Cancel
+    {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetCurrencyExchangeOrderResponse))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class APISearchResponseOfGetCurrencyExchangeOrderResponseRowGetCurrencyExchangeOrderFields : Response
+    {
+        
+        private GetCurrencyExchangeOrderResponseRow[] resultField;
+        
+        private GetCurrencyExchangeOrderFields fieldsField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public GetCurrencyExchangeOrderResponseRow[] Result
+        {
+            get
+            {
+                return this.resultField;
+            }
+            set
+            {
+                this.resultField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public GetCurrencyExchangeOrderFields Fields
+        {
+            get
+            {
+                return this.fieldsField;
+            }
+            set
+            {
+                this.fieldsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetCurrencyExchangeOrderResponse : APISearchResponseOfGetCurrencyExchangeOrderResponseRowGetCurrencyExchangeOrderFields
+    {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateCurrencyExchangeOrderResponse))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class APICreateResponseOfCurrencyExchangeOrder : Response
+    {
+        
+        private CurrencyExchangeOrder[] entitiesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public CurrencyExchangeOrder[] Entities
+        {
+            get
+            {
+                return this.entitiesField;
+            }
+            set
+            {
+                this.entitiesField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class CreateCurrencyExchangeOrderResponse : APICreateResponseOfCurrencyExchangeOrder
+    {
+    }
+    
+    /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetSubscriptionOrderResponse))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -46484,6 +47755,121 @@ namespace BfsApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
     public partial class GetPersonResponse : APISearchResponseOfGetPersonResponseRowGetPersonFields
+    {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateTaxWithholdingAgreementResponse))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class APIUpdateResponseOfUpdateTaxWithholdingAgreement : Response
+    {
+        
+        private UpdateTaxWithholdingAgreement[] entitiesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public UpdateTaxWithholdingAgreement[] Entities
+        {
+            get
+            {
+                return this.entitiesField;
+            }
+            set
+            {
+                this.entitiesField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class UpdateTaxWithholdingAgreementResponse : APIUpdateResponseOfUpdateTaxWithholdingAgreement
+    {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateTaxWithholdingAgreementResponse))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class APICreateResponseOfTaxWithholdingAgreement : Response
+    {
+        
+        private TaxWithholdingAgreement[] entitiesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public TaxWithholdingAgreement[] Entities
+        {
+            get
+            {
+                return this.entitiesField;
+            }
+            set
+            {
+                this.entitiesField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class CreateTaxWithholdingAgreementResponse : APICreateResponseOfTaxWithholdingAgreement
+    {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetTaxWithholdingAgreementResponse))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class APISearchResponseOfGetTaxWithholdingAgreementResponseRowGetTaxWithholdingAgreementFields : Response
+    {
+        
+        private GetTaxWithholdingAgreementResponseRow[] resultField;
+        
+        private GetTaxWithholdingAgreementFields fieldsField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public GetTaxWithholdingAgreementResponseRow[] Result
+        {
+            get
+            {
+                return this.resultField;
+            }
+            set
+            {
+                this.resultField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public GetTaxWithholdingAgreementFields Fields
+        {
+            get
+            {
+                return this.fieldsField;
+            }
+            set
+            {
+                this.fieldsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetTaxWithholdingAgreementResponse : APISearchResponseOfGetTaxWithholdingAgreementResponseRowGetTaxWithholdingAgreementFields
     {
     }
     
@@ -52489,7 +53875,7 @@ namespace BfsApi
         
         private System.Guid[] insurancePayersField;
         
-        private System.Guid[] contactLegalEntititesField;
+        private System.Guid[] contactLegalEntitiesField;
         
         private string[] lockedStatusKeysField;
         
@@ -52735,15 +54121,15 @@ namespace BfsApi
         
         /// <remarks/>
         [System.Xml.Serialization.XmlArrayAttribute(Order=16)]
-        public System.Guid[] ContactLegalEntitites
+        public System.Guid[] ContactLegalEntities
         {
             get
             {
-                return this.contactLegalEntititesField;
+                return this.contactLegalEntitiesField;
             }
             set
             {
-                this.contactLegalEntititesField = value;
+                this.contactLegalEntitiesField = value;
             }
         }
         
@@ -55502,6 +56888,254 @@ namespace BfsApi
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetCurrencyExchangeOrderArgs
+    {
+        
+        private System.Nullable<System.DateTime> createdDateFromField;
+        
+        private System.Nullable<System.DateTime> createdDateToField;
+        
+        private System.Guid[] brickIdsField;
+        
+        private string[] statesField;
+        
+        private string[] orderNosField;
+        
+        private string[] commentsField;
+        
+        private System.Guid[] accountsField;
+        
+        private System.Guid[] accountOwnersField;
+        
+        private System.Nullable<decimal> fromBuyAmountField;
+        
+        private System.Nullable<decimal> toBuyAmountField;
+        
+        private System.Nullable<decimal> fromSellAmountField;
+        
+        private System.Nullable<decimal> toSellAmountField;
+        
+        private System.Guid[] buyCashAssetBrickIdsField;
+        
+        private System.Guid[] sellCashAssetBrickIdsField;
+        
+        private string orderDirectionKeyField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
+        public System.Nullable<System.DateTime> CreatedDateFrom
+        {
+            get
+            {
+                return this.createdDateFromField;
+            }
+            set
+            {
+                this.createdDateFromField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
+        public System.Nullable<System.DateTime> CreatedDateTo
+        {
+            get
+            {
+                return this.createdDateToField;
+            }
+            set
+            {
+                this.createdDateToField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=2)]
+        public System.Guid[] BrickIds
+        {
+            get
+            {
+                return this.brickIdsField;
+            }
+            set
+            {
+                this.brickIdsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=3)]
+        public string[] States
+        {
+            get
+            {
+                return this.statesField;
+            }
+            set
+            {
+                this.statesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=4)]
+        public string[] OrderNos
+        {
+            get
+            {
+                return this.orderNosField;
+            }
+            set
+            {
+                this.orderNosField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=5)]
+        public string[] Comments
+        {
+            get
+            {
+                return this.commentsField;
+            }
+            set
+            {
+                this.commentsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=6)]
+        public System.Guid[] Accounts
+        {
+            get
+            {
+                return this.accountsField;
+            }
+            set
+            {
+                this.accountsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=7)]
+        public System.Guid[] AccountOwners
+        {
+            get
+            {
+                return this.accountOwnersField;
+            }
+            set
+            {
+                this.accountOwnersField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=8)]
+        public System.Nullable<decimal> FromBuyAmount
+        {
+            get
+            {
+                return this.fromBuyAmountField;
+            }
+            set
+            {
+                this.fromBuyAmountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=9)]
+        public System.Nullable<decimal> ToBuyAmount
+        {
+            get
+            {
+                return this.toBuyAmountField;
+            }
+            set
+            {
+                this.toBuyAmountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=10)]
+        public System.Nullable<decimal> FromSellAmount
+        {
+            get
+            {
+                return this.fromSellAmountField;
+            }
+            set
+            {
+                this.fromSellAmountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=11)]
+        public System.Nullable<decimal> ToSellAmount
+        {
+            get
+            {
+                return this.toSellAmountField;
+            }
+            set
+            {
+                this.toSellAmountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=12)]
+        public System.Guid[] BuyCashAssetBrickIds
+        {
+            get
+            {
+                return this.buyCashAssetBrickIdsField;
+            }
+            set
+            {
+                this.buyCashAssetBrickIdsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=13)]
+        public System.Guid[] SellCashAssetBrickIds
+        {
+            get
+            {
+                return this.sellCashAssetBrickIdsField;
+            }
+            set
+            {
+                this.sellCashAssetBrickIdsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=14)]
+        public string OrderDirectionKey
+        {
+            get
+            {
+                return this.orderDirectionKeyField;
+            }
+            set
+            {
+                this.orderDirectionKeyField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
     public partial class GetSubscriptionOrderArgs
     {
         
@@ -55702,6 +57336,7 @@ namespace BfsApi
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ExternalFundBatchOrderSettle))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WithdrawalCashBatchOrder_Fill))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(DepositCashBatchOrder_BatchFill))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CurrencyExchangeOrder_Cancel))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(SubscriptionOrder_Process))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(SubscriptionOrder_Cancel))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
@@ -55914,6 +57549,30 @@ namespace BfsApi
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string OrderNo
+        {
+            get
+            {
+                return this.orderNoField;
+            }
+            set
+            {
+                this.orderNoField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class CurrencyExchangeOrder_Cancel : WorkflowTriggerDataEntityBase
+    {
+        
+        private string orderNoField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public string OrderNo
         {
             get
@@ -57362,6 +59021,12 @@ namespace BfsApi
         
         private string[] gIINSField;
         
+        private System.Guid[] resellerAccountsField;
+        
+        private System.Nullable<decimal> riskLevelFromField;
+        
+        private System.Nullable<decimal> riskLevelToField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
         public System.Guid[] BrickIds
@@ -57935,6 +59600,48 @@ namespace BfsApi
                 this.gIINSField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=41)]
+        public System.Guid[] ResellerAccounts
+        {
+            get
+            {
+                return this.resellerAccountsField;
+            }
+            set
+            {
+                this.resellerAccountsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=42)]
+        public System.Nullable<decimal> RiskLevelFrom
+        {
+            get
+            {
+                return this.riskLevelFromField;
+            }
+            set
+            {
+                this.riskLevelFromField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=43)]
+        public System.Nullable<decimal> RiskLevelTo
+        {
+            get
+            {
+                return this.riskLevelToField;
+            }
+            set
+            {
+                this.riskLevelToField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -58029,6 +59736,95 @@ namespace BfsApi
             set
             {
                 this.fundCompanyNamesField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetTaxWithholdingAgreementArgs
+    {
+        
+        private System.Guid[] brickIdsField;
+        
+        private System.Nullable<System.DateTime> expirationDateFromField;
+        
+        private System.Nullable<System.DateTime> expirationDateToField;
+        
+        private System.Nullable<System.Guid>[] personsField;
+        
+        private string[] taxCountiesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public System.Guid[] BrickIds
+        {
+            get
+            {
+                return this.brickIdsField;
+            }
+            set
+            {
+                this.brickIdsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
+        public System.Nullable<System.DateTime> ExpirationDateFrom
+        {
+            get
+            {
+                return this.expirationDateFromField;
+            }
+            set
+            {
+                this.expirationDateFromField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
+        public System.Nullable<System.DateTime> ExpirationDateTo
+        {
+            get
+            {
+                return this.expirationDateToField;
+            }
+            set
+            {
+                this.expirationDateToField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=3)]
+        [System.Xml.Serialization.XmlArrayItemAttribute()]
+        public System.Nullable<System.Guid>[] Persons
+        {
+            get
+            {
+                return this.personsField;
+            }
+            set
+            {
+                this.personsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=4)]
+        public string[] TaxCounties
+        {
+            get
+            {
+                return this.taxCountiesField;
+            }
+            set
+            {
+                this.taxCountiesField = value;
             }
         }
     }
@@ -58222,6 +60018,12 @@ namespace BfsApi
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetTradeOrdersRequest))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APICreateRequestOfTradeOrderBetterActionBrick))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateTradeOrderRequest))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APIWorkflowTriggerRequestOfCurrencyExchangeOrder_CancelCurrencyExchangeOrder_CancelResponse))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CurrencyExchangeOrder_CancelRequest))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchRequestOfGetCurrencyExchangeOrderArgsGetCurrencyExchangeOrderFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetCurrencyExchangeOrderRequest))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APICreateRequestOfCurrencyExchangeOrderBetterActionBrick))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateCurrencyExchangeOrderRequest))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchRequestOfGetSubscriptionOrderArgsGetSubscriptionOrderFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetSubscriptionOrderRequest))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APIWorkflowTriggerRequestOfSubscriptionOrder_ProcessSubscriptionOrder_ProcessResponse))]
@@ -58289,6 +60091,12 @@ namespace BfsApi
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetFundCompaniesRequest))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchRequestOfGetPersonArgsGetPersonFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetPersonRequest))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APIUpdateRequestOfUpdateTaxWithholdingAgreementTaxWithholdingAgreementBrickUpdateTaxWithholdingAgreementFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateTaxWithholdingAgreementsRequest))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APICreateRequestOfTaxWithholdingAgreementBetterActionBrick))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateTaxWithholdingAgreementsRequest))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchRequestOfGetTaxWithholdingAgreementArgsGetTaxWithholdingAgreementFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetTaxWithholdingAgreementRequest))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchRequestOfGetHouseInformationArgsGetHouseInformationFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetHouseInformationRequest))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
@@ -62898,6 +64706,153 @@ namespace BfsApi
     }
     
     /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CurrencyExchangeOrder_CancelRequest))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class APIWorkflowTriggerRequestOfCurrencyExchangeOrder_CancelCurrencyExchangeOrder_CancelResponse : Request
+    {
+        
+        private CurrencyExchangeOrder_Cancel workflowTriggerDataEntityField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public CurrencyExchangeOrder_Cancel WorkflowTriggerDataEntity
+        {
+            get
+            {
+                return this.workflowTriggerDataEntityField;
+            }
+            set
+            {
+                this.workflowTriggerDataEntityField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class CurrencyExchangeOrder_CancelRequest : APIWorkflowTriggerRequestOfCurrencyExchangeOrder_CancelCurrencyExchangeOrder_CancelResponse
+    {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetCurrencyExchangeOrderRequest))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class APISearchRequestOfGetCurrencyExchangeOrderArgsGetCurrencyExchangeOrderFields : Request
+    {
+        
+        private GetCurrencyExchangeOrderArgs argsField;
+        
+        private GetCurrencyExchangeOrderFields fieldsField;
+        
+        private string predefinedSearchNameField;
+        
+        private string[] typesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public GetCurrencyExchangeOrderArgs Args
+        {
+            get
+            {
+                return this.argsField;
+            }
+            set
+            {
+                this.argsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public GetCurrencyExchangeOrderFields Fields
+        {
+            get
+            {
+                return this.fieldsField;
+            }
+            set
+            {
+                this.fieldsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string PredefinedSearchName
+        {
+            get
+            {
+                return this.predefinedSearchNameField;
+            }
+            set
+            {
+                this.predefinedSearchNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=3)]
+        public string[] Types
+        {
+            get
+            {
+                return this.typesField;
+            }
+            set
+            {
+                this.typesField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetCurrencyExchangeOrderRequest : APISearchRequestOfGetCurrencyExchangeOrderArgsGetCurrencyExchangeOrderFields
+    {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateCurrencyExchangeOrderRequest))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class APICreateRequestOfCurrencyExchangeOrderBetterActionBrick : Request
+    {
+        
+        private CurrencyExchangeOrder[] entitiesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public CurrencyExchangeOrder[] Entities
+        {
+            get
+            {
+                return this.entitiesField;
+            }
+            set
+            {
+                this.entitiesField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class CreateCurrencyExchangeOrderRequest : APICreateRequestOfCurrencyExchangeOrderBetterActionBrick
+    {
+    }
+    
+    /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetSubscriptionOrderRequest))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -64796,6 +66751,169 @@ namespace BfsApi
     {
     }
     
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateTaxWithholdingAgreementsRequest))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class APIUpdateRequestOfUpdateTaxWithholdingAgreementTaxWithholdingAgreementBrickUpdateTaxWithholdingAgreementFields : Request
+    {
+        
+        private UpdateTaxWithholdingAgreement[] entitiesField;
+        
+        private UpdateTaxWithholdingAgreementFields fieldsField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public UpdateTaxWithholdingAgreement[] Entities
+        {
+            get
+            {
+                return this.entitiesField;
+            }
+            set
+            {
+                this.entitiesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public UpdateTaxWithholdingAgreementFields Fields
+        {
+            get
+            {
+                return this.fieldsField;
+            }
+            set
+            {
+                this.fieldsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class UpdateTaxWithholdingAgreementsRequest : APIUpdateRequestOfUpdateTaxWithholdingAgreementTaxWithholdingAgreementBrickUpdateTaxWithholdingAgreementFields
+    {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateTaxWithholdingAgreementsRequest))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class APICreateRequestOfTaxWithholdingAgreementBetterActionBrick : Request
+    {
+        
+        private TaxWithholdingAgreement[] entitiesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public TaxWithholdingAgreement[] Entities
+        {
+            get
+            {
+                return this.entitiesField;
+            }
+            set
+            {
+                this.entitiesField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class CreateTaxWithholdingAgreementsRequest : APICreateRequestOfTaxWithholdingAgreementBetterActionBrick
+    {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetTaxWithholdingAgreementRequest))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class APISearchRequestOfGetTaxWithholdingAgreementArgsGetTaxWithholdingAgreementFields : Request
+    {
+        
+        private GetTaxWithholdingAgreementArgs argsField;
+        
+        private GetTaxWithholdingAgreementFields fieldsField;
+        
+        private string predefinedSearchNameField;
+        
+        private string[] typesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public GetTaxWithholdingAgreementArgs Args
+        {
+            get
+            {
+                return this.argsField;
+            }
+            set
+            {
+                this.argsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public GetTaxWithholdingAgreementFields Fields
+        {
+            get
+            {
+                return this.fieldsField;
+            }
+            set
+            {
+                this.fieldsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string PredefinedSearchName
+        {
+            get
+            {
+                return this.predefinedSearchNameField;
+            }
+            set
+            {
+                this.predefinedSearchNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=3)]
+        public string[] Types
+        {
+            get
+            {
+                return this.typesField;
+            }
+            set
+            {
+                this.typesField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetTaxWithholdingAgreementRequest : APISearchRequestOfGetTaxWithholdingAgreementArgsGetTaxWithholdingAgreementFields
+    {
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     public interface bfsapiSoapChannel : BfsApi.bfsapiSoap, System.ServiceModel.IClientChannel
     {
@@ -64842,6 +66960,21 @@ namespace BfsApi
         public System.Threading.Tasks.Task<BfsApi.GetHouseInformationResponse> GetHouseInformationAsync(BfsApi.GetHouseInformationRequest req)
         {
             return base.Channel.GetHouseInformationAsync(req);
+        }
+        
+        public System.Threading.Tasks.Task<BfsApi.GetTaxWithholdingAgreementResponse> GetTaxWithholdingAgreementsAsync(BfsApi.GetTaxWithholdingAgreementRequest req)
+        {
+            return base.Channel.GetTaxWithholdingAgreementsAsync(req);
+        }
+        
+        public System.Threading.Tasks.Task<BfsApi.CreateTaxWithholdingAgreementResponse> CreateTaxWithholdingAgreementsAsync(BfsApi.CreateTaxWithholdingAgreementsRequest req)
+        {
+            return base.Channel.CreateTaxWithholdingAgreementsAsync(req);
+        }
+        
+        public System.Threading.Tasks.Task<BfsApi.UpdateTaxWithholdingAgreementResponse> UpdateTaxWithholdingAgreementsAsync(BfsApi.UpdateTaxWithholdingAgreementsRequest req)
+        {
+            return base.Channel.UpdateTaxWithholdingAgreementsAsync(req);
         }
         
         public System.Threading.Tasks.Task<BfsApi.GetPersonResponse> GetPersonsAsync(BfsApi.GetPersonRequest req)
@@ -65017,6 +67150,21 @@ namespace BfsApi
         public System.Threading.Tasks.Task<BfsApi.GetSubscriptionOrderResponse> GetSubscriptionOrdersAsync(BfsApi.GetSubscriptionOrderRequest req)
         {
             return base.Channel.GetSubscriptionOrdersAsync(req);
+        }
+        
+        public System.Threading.Tasks.Task<BfsApi.CreateCurrencyExchangeOrderResponse> CreateCurrencyExchangeOrdersAsync(BfsApi.CreateCurrencyExchangeOrderRequest req)
+        {
+            return base.Channel.CreateCurrencyExchangeOrdersAsync(req);
+        }
+        
+        public System.Threading.Tasks.Task<BfsApi.GetCurrencyExchangeOrderResponse> GetCurrencyExchangeOrdersAsync(BfsApi.GetCurrencyExchangeOrderRequest req)
+        {
+            return base.Channel.GetCurrencyExchangeOrdersAsync(req);
+        }
+        
+        public System.Threading.Tasks.Task<BfsApi.CurrencyExchangeOrder_CancelResponse> CurrencyExchangeOrder_CancelAsync(BfsApi.CurrencyExchangeOrder_CancelRequest req)
+        {
+            return base.Channel.CurrencyExchangeOrder_CancelAsync(req);
         }
         
         public System.Threading.Tasks.Task<BfsApi.CreateTradeOrderResponse> CreateTradeOrdersAsync(BfsApi.CreateTradeOrderRequest req)
