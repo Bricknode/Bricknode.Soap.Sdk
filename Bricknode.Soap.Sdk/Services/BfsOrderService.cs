@@ -423,7 +423,55 @@ namespace Bricknode.Soap.Sdk.Services
 
             return response;
         }
+
+
+        /// <summary>
+        ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/1184399365/CreateCurrencyExchangeOrders
+        /// </summary>
+        /// <param name="currencyExchangeOrders"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        public async Task<CreateCurrencyExchangeOrderResponse> CreateCurrencyExchangeOrdersAsync(CurrencyExchangeOrder[] currencyExchangeOrders, string bfsApiClientName = null)
+        {
+            var request = GetRequest<CreateCurrencyExchangeOrderRequest>(bfsApiClientName);
+
+            request.Entities = currencyExchangeOrders;
+
+            var response = await GetClient(bfsApiClientName).CreateCurrencyExchangeOrdersAsync(request);
+
+            if (ValidateResponse(response)) return response;
+
+            LogErrors(response.Entities.ToArray<EntityBase>());
+
+            return response;
+        }
         
+        #endregion
+        
+        #region CurrencyExchangeOrders  Transitions
+
+        /// <summary>
+        ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/1183744113/CurrencyExchangeOrder+Cancel
+        /// </summary>
+        /// <param name="currencyExchangeOrders"></param>
+        /// <param name="fieldsToUpdate"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        public async Task<CurrencyExchangeOrder_CancelResponse> CancelCurrencyExchangeOrder(
+            CurrencyExchangeOrder_Cancel currencyExchangeOrderNumber, string bfsApiClientName = null)
+        {
+            var request = GetRequest<CurrencyExchangeOrder_CancelRequest>(bfsApiClientName);
+
+            request.WorkflowTriggerDataEntity = currencyExchangeOrderNumber;
+
+            var response = await GetClient(bfsApiClientName).CurrencyExchangeOrder_CancelAsync(request);
+
+            if (ValidateResponse(response)) return response;
+
+            LogErrors(response.Message);
+
+            return response;
+        }
 
         #endregion
 
