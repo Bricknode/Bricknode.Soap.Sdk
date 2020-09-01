@@ -105,6 +105,7 @@ BfsOrderService
 BfsPositionService
 BfsPowerOfAttorneyService
 BfsPriceService
+BfsTaxService
 BfsTransactionService
 BfsTransferReceiverService
 BfsTrsService
