@@ -21600,7 +21600,7 @@ namespace BfsApi
         
         private System.Guid resellerAccountField;
         
-        private decimal riskLevelField;
+        private decimal riskValueField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -22402,15 +22402,15 @@ namespace BfsApi
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=57)]
-        public decimal RiskLevel
+        public decimal RiskValue
         {
             get
             {
-                return this.riskLevelField;
+                return this.riskValueField;
             }
             set
             {
-                this.riskLevelField = value;
+                this.riskValueField = value;
             }
         }
     }
@@ -22552,7 +22552,7 @@ namespace BfsApi
         
         private System.Guid resellerAccountField;
         
-        private decimal riskLevelField;
+        private decimal riskValueField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -23466,15 +23466,15 @@ namespace BfsApi
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=65)]
-        public decimal RiskLevel
+        public decimal RiskValue
         {
             get
             {
-                return this.riskLevelField;
+                return this.riskValueField;
             }
             set
             {
-                this.riskLevelField = value;
+                this.riskValueField = value;
             }
         }
     }
@@ -24767,7 +24767,7 @@ namespace BfsApi
         
         private System.Guid resellerAccountField;
         
-        private decimal riskLevelField;
+        private decimal riskValueField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -25723,15 +25723,15 @@ namespace BfsApi
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=68)]
-        public decimal RiskLevel
+        public decimal RiskValue
         {
             get
             {
-                return this.riskLevelField;
+                return this.riskValueField;
             }
             set
             {
-                this.riskLevelField = value;
+                this.riskValueField = value;
             }
         }
     }
@@ -33850,7 +33850,7 @@ namespace BfsApi
         
         private bool gIINField;
         
-        private bool riskLevelField;
+        private bool riskValueField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -34638,15 +34638,15 @@ namespace BfsApi
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=56)]
-        public bool RiskLevel
+        public bool RiskValue
         {
             get
             {
-                return this.riskLevelField;
+                return this.riskValueField;
             }
             set
             {
-                this.riskLevelField = value;
+                this.riskValueField = value;
             }
         }
     }
@@ -35168,7 +35168,7 @@ namespace BfsApi
         
         private bool resellerAccountField;
         
-        private bool riskLevelField;
+        private bool riskValueField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -36152,15 +36152,15 @@ namespace BfsApi
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=70)]
-        public bool RiskLevel
+        public bool RiskValue
         {
             get
             {
-                return this.riskLevelField;
+                return this.riskValueField;
             }
             set
             {
-                this.riskLevelField = value;
+                this.riskValueField = value;
             }
         }
     }
@@ -59023,9 +59023,9 @@ namespace BfsApi
         
         private System.Guid[] resellerAccountsField;
         
-        private System.Nullable<decimal> riskLevelFromField;
+        private System.Nullable<decimal> riskValueFromField;
         
-        private System.Nullable<decimal> riskLevelToField;
+        private System.Nullable<decimal> riskValueToField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
@@ -59617,29 +59617,29 @@ namespace BfsApi
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=42)]
-        public System.Nullable<decimal> RiskLevelFrom
+        public System.Nullable<decimal> RiskValueFrom
         {
             get
             {
-                return this.riskLevelFromField;
+                return this.riskValueFromField;
             }
             set
             {
-                this.riskLevelFromField = value;
+                this.riskValueFromField = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=43)]
-        public System.Nullable<decimal> RiskLevelTo
+        public System.Nullable<decimal> RiskValueTo
         {
             get
             {
-                return this.riskLevelToField;
+                return this.riskValueToField;
             }
             set
             {
-                this.riskLevelToField = value;
+                this.riskValueToField = value;
             }
         }
     }
