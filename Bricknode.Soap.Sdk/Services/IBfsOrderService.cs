@@ -209,5 +209,32 @@ namespace Bricknode.Soap.Sdk.Services
         Task<UpdateRecurringOrderTemplateAutoGiroResponse> UpdateRecurringOrderTemplatesAutoGiroAsync(
             UpdateRecurringOrderTemplateAutoGiro[] recurringOrders,
             UpdateRecurringOrderTemplateAutoGiroFields fieldsToUpdate, string bfsApiClientName = null);
+
+        /// <summary>
+        ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/1183744113/CurrencyExchangeOrder+Cancel
+        /// </summary>
+        /// <param name="currencyExchangeOrders"></param>
+        /// <param name="fieldsToUpdate"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        Task<CurrencyExchangeOrder_CancelResponse> CancelCurrencyExchangeOrder(
+            CurrencyExchangeOrder_Cancel currencyExchangeOrderNumber, string bfsApiClientName = null);
+
+        /// <summary>
+        ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/1184038966/GetCurrencyExchangeOrders
+        /// </summary>
+        /// <param name="filters"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        Task<GetCurrencyExchangeOrderResponse> GetCurrencyExchangeOrderAsync(
+            GetCurrencyExchangeOrderArgs filters, string bfsApiClientName = null);
+
+        /// <summary>
+        ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/1184399365/CreateCurrencyExchangeOrders
+        /// </summary>
+        /// <param name="currencyExchangeOrders"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        Task<CreateCurrencyExchangeOrderResponse> CreateCurrencyExchangeOrdersAsync(CurrencyExchangeOrder[] currencyExchangeOrders, string bfsApiClientName = null);
     }
 }

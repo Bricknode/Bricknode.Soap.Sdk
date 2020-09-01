@@ -398,6 +398,83 @@ namespace Bricknode.Soap.Sdk.Services
 
         #endregion
 
+        #region CurrencyExchangeOrders
+
+        /// <summary>
+        ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/1184038966/GetCurrencyExchangeOrders
+        /// </summary>
+        /// <param name="filters"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        public async Task<GetCurrencyExchangeOrderResponse> GetCurrencyExchangeOrderAsync(
+            GetCurrencyExchangeOrderArgs filters, string bfsApiClientName = null)
+        {
+            var request = GetRequest<GetCurrencyExchangeOrderRequest>(bfsApiClientName);
+
+            request.Args = filters;
+
+            request.Fields = GetFields<GetCurrencyExchangeOrderFields>();
+
+            var response = await GetClient(bfsApiClientName).GetCurrencyExchangeOrdersAsync(request);
+
+            if (ValidateResponse(response)) return response;
+
+            LogErrors(response.Result.ToArray<EntityBase>());
+
+            return response;
+        }
+
+
+        /// <summary>
+        ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/1184399365/CreateCurrencyExchangeOrders
+        /// </summary>
+        /// <param name="currencyExchangeOrders"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        public async Task<CreateCurrencyExchangeOrderResponse> CreateCurrencyExchangeOrdersAsync(CurrencyExchangeOrder[] currencyExchangeOrders, string bfsApiClientName = null)
+        {
+            var request = GetRequest<CreateCurrencyExchangeOrderRequest>(bfsApiClientName);
+
+            request.Entities = currencyExchangeOrders;
+
+            var response = await GetClient(bfsApiClientName).CreateCurrencyExchangeOrdersAsync(request);
+
+            if (ValidateResponse(response)) return response;
+
+            LogErrors(response.Entities.ToArray<EntityBase>());
+
+            return response;
+        }
+        
+        #endregion
+        
+        #region CurrencyExchangeOrders  Transitions
+
+        /// <summary>
+        ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/1183744113/CurrencyExchangeOrder+Cancel
+        /// </summary>
+        /// <param name="currencyExchangeOrders"></param>
+        /// <param name="fieldsToUpdate"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        public async Task<CurrencyExchangeOrder_CancelResponse> CancelCurrencyExchangeOrder(
+            CurrencyExchangeOrder_Cancel currencyExchangeOrderNumber, string bfsApiClientName = null)
+        {
+            var request = GetRequest<CurrencyExchangeOrder_CancelRequest>(bfsApiClientName);
+
+            request.WorkflowTriggerDataEntity = currencyExchangeOrderNumber;
+
+            var response = await GetClient(bfsApiClientName).CurrencyExchangeOrder_CancelAsync(request);
+
+            if (ValidateResponse(response)) return response;
+
+            LogErrors(response.Message);
+
+            return response;
+        }
+
+        #endregion
+
         #region TransferOrders Transitions
 
         /// <summary>
