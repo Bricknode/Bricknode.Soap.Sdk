@@ -29,7 +29,7 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<CreateManualExecutionInterfaceResponse> CreateManualExecutionInterfaceAsync(
-            ManualExecutionInterface[] executionInterfaces, string bfsApiClientName = null)
+            ManualExecutionInterfaceOld[] executionInterfaces, string bfsApiClientName = null)
         {
             var request = GetRequest<CreateManualExecutionInterfaceRequest>(bfsApiClientName);
 

@@ -36,7 +36,7 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="executionInterfaces"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        Task<CreateManualExecutionInterfaceResponse> CreateManualExecutionInterfaceAsync(ManualExecutionInterface[] executionInterfaces, string bfsApiClientName = null);
+        Task<CreateManualExecutionInterfaceResponse> CreateManualExecutionInterfaceAsync(ManualExecutionInterfaceOld[] executionInterfaces, string bfsApiClientName = null);
 
         /// <summary>
         /// https://bricknode.atlassian.net/wiki/spaces/API/pages/83132616/GetTradingVenues

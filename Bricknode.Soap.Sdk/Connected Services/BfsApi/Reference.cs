@@ -21,6 +21,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -31,6 +32,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -41,6 +43,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -51,6 +54,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -61,6 +65,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -71,6 +76,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -81,6 +87,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -91,6 +98,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -101,6 +109,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -111,6 +120,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -121,6 +131,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -131,6 +142,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -141,6 +153,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -151,6 +164,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -161,6 +175,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -171,6 +186,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -181,6 +197,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -191,6 +208,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -201,6 +219,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -211,6 +230,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -221,6 +241,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -231,6 +252,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -241,6 +263,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -251,6 +274,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -261,6 +285,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -271,6 +296,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -281,6 +307,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -291,6 +318,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -301,6 +329,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -311,6 +340,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -321,6 +351,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -331,6 +362,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -341,6 +373,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -351,6 +384,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -361,6 +395,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -371,6 +406,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -381,6 +417,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -391,6 +428,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -401,6 +439,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -411,6 +450,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -421,6 +461,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -431,6 +472,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -441,6 +483,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -451,6 +494,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -461,6 +505,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -471,6 +516,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -481,6 +527,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -491,6 +538,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -501,6 +549,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -511,6 +560,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -521,6 +571,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -531,6 +582,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -541,6 +593,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -551,6 +604,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -561,6 +615,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -571,6 +626,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -581,6 +637,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -591,6 +648,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -601,6 +659,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -611,6 +670,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -621,6 +681,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -631,6 +692,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -641,6 +703,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -651,6 +714,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -661,6 +725,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -671,6 +736,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -681,6 +747,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -691,6 +758,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -701,6 +769,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -711,6 +780,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -721,6 +791,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -731,6 +802,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -741,6 +813,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -751,6 +824,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -761,6 +835,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -771,6 +846,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -781,6 +857,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -791,6 +868,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -801,6 +879,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -811,6 +890,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -821,6 +901,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -831,6 +912,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -841,6 +923,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -851,6 +934,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -861,6 +945,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -871,6 +956,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -881,6 +967,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -891,6 +978,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -901,6 +989,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -911,6 +1000,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -921,6 +1011,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -931,6 +1022,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -941,6 +1033,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -951,6 +1044,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -961,6 +1055,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -971,6 +1066,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -981,16 +1077,29 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
         System.Threading.Tasks.Task<BfsApi.GetTradingVenueResponse> GetTradingVenuesAsync(BfsApi.GetTradingVenueRequest req);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateTradingVenues", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
+        System.Threading.Tasks.Task<BfsApi.CreateTradingVenuesResponse> CreateTradingVenuesAsync(BfsApi.CreateTradingVenuesRequest req);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/FundInstruction_Settle", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -1001,6 +1110,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -1011,6 +1121,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -1021,6 +1132,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -1031,6 +1143,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -1041,6 +1154,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -1051,6 +1165,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -1061,6 +1176,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -1071,6 +1187,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -1081,6 +1198,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -1091,6 +1209,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -1101,6 +1220,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -1111,6 +1231,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -1121,6 +1242,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -1131,6 +1253,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -1141,6 +1264,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -1151,6 +1275,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -1161,6 +1286,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -1171,6 +1297,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -1181,6 +1308,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -1191,6 +1319,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -1201,6 +1330,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
@@ -2789,6 +2919,8 @@ namespace BfsApi
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetInsuranceCoversResponse))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APIActionTriggerResponseOfFundInstructions_Settle))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(FundInstructions_SettleResponse))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APICreateResponseOfCreateTradingVenue))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateTradingVenuesResponse))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchResponseOfGetTradingVenueResponseRowGetTradingVenueFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetTradingVenueResponse))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchResponseOfGetFeeGroupResponseRowGetFeeGroupFields))]
@@ -2926,7 +3058,7 @@ namespace BfsApi
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreatePOAResponse))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchResponseOfGetPOAResponseRowGetPOAFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetPOAResponse))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APICreateResponseOfManualExecutionInterface))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APICreateResponseOfManualExecutionInterfaceOld))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateManualExecutionInterfaceResponse))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APIUpdateResponseOfUpdateInstrument))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateInstrumentResponse))]
@@ -3175,6 +3307,7 @@ namespace BfsApi
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(InsuranceClaim))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetInsuranceClaimsResponseRow))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetInsuranceCoversResponseRow))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateTradingVenue))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetTradingVenueResponseRow))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetFeeGroupResponseRow))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetFileInfoResponseRow))]
@@ -3254,10 +3387,19 @@ namespace BfsApi
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TaxWithholdingAgreement))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetTaxWithholdingAgreementResponseRow))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ExecutionInterface))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ManualExecutionInterfaceOld))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ManualExecutionInterface))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(InternalExecutionInterface))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MfexExecutionInterface))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ExternalFundExecutionInterface))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CurrencyExchangeOrder))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CurrencyExchangeOrderBuy))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CurrencyExchangeOrderSell))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateExecutionInterface))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateManualExecutionInterface))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateInternalExecutionInterface))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateMFEXExecutionInterface))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateExternalFundExecutionInterface))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetHouseInformationResponseRow))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CustomField))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
@@ -4118,6 +4260,10 @@ namespace BfsApi
         
         private string statusField;
         
+        private bool sendMailField;
+        
+        private bool sendMailNotificationField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public System.Guid Receiver
@@ -4255,6 +4401,34 @@ namespace BfsApi
             set
             {
                 this.statusField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
+        public bool SendMail
+        {
+            get
+            {
+                return this.sendMailField;
+            }
+            set
+            {
+                this.sendMailField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
+        public bool SendMailNotification
+        {
+            get
+            {
+                return this.sendMailNotificationField;
+            }
+            set
+            {
+                this.sendMailNotificationField = value;
             }
         }
     }
@@ -8207,6 +8381,126 @@ namespace BfsApi
             set
             {
                 this.xmlFormTemplateField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class CreateTradingVenue : EntityBase
+    {
+        
+        private string nameField;
+        
+        private string shortNameField;
+        
+        private string mICField;
+        
+        private bool isTradingVenueField;
+        
+        private bool isMarketField;
+        
+        private bool isInternalField;
+        
+        private string tRSCountryField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string Name
+        {
+            get
+            {
+                return this.nameField;
+            }
+            set
+            {
+                this.nameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string ShortName
+        {
+            get
+            {
+                return this.shortNameField;
+            }
+            set
+            {
+                this.shortNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string MIC
+        {
+            get
+            {
+                return this.mICField;
+            }
+            set
+            {
+                this.mICField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public bool IsTradingVenue
+        {
+            get
+            {
+                return this.isTradingVenueField;
+            }
+            set
+            {
+                this.isTradingVenueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public bool IsMarket
+        {
+            get
+            {
+                return this.isMarketField;
+            }
+            set
+            {
+                this.isMarketField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public bool IsInternal
+        {
+            get
+            {
+                return this.isInternalField;
+            }
+            set
+            {
+                this.isInternalField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public string TRSCountry
+        {
+            get
+            {
+                return this.tRSCountryField;
+            }
+            set
+            {
+                this.tRSCountryField = value;
             }
         }
     }
@@ -16260,6 +16554,10 @@ namespace BfsApi
         
         private System.Guid resellerField;
         
+        private decimal filledCashAmountField;
+        
+        private decimal filledInstrumentAmountField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public string TradeOrderType
@@ -16749,6 +17047,34 @@ namespace BfsApi
                 this.resellerField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=35)]
+        public decimal FilledCashAmount
+        {
+            get
+            {
+                return this.filledCashAmountField;
+            }
+            set
+            {
+                this.filledCashAmountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=36)]
+        public decimal FilledInstrumentAmount
+        {
+            get
+            {
+                return this.filledInstrumentAmountField;
+            }
+            set
+            {
+                this.filledInstrumentAmountField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -17032,6 +17358,10 @@ namespace BfsApi
         
         private OrderSettlementType orderSettlementTypeField;
         
+        private System.Guid[] decisionMakersField;
+        
+        private System.Guid decisionMakerWithinFirmField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public string TradeOrderDirectionKey
@@ -17267,6 +17597,34 @@ namespace BfsApi
             set
             {
                 this.orderSettlementTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=17)]
+        public System.Guid[] DecisionMakers
+        {
+            get
+            {
+                return this.decisionMakersField;
+            }
+            set
+            {
+                this.decisionMakersField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=18)]
+        public System.Guid DecisionMakerWithinFirm
+        {
+            get
+            {
+                return this.decisionMakerWithinFirmField;
+            }
+            set
+            {
+                this.decisionMakerWithinFirmField = value;
             }
         }
     }
@@ -19240,6 +19598,8 @@ namespace BfsApi
         
         private bool enableMifidIITenPercentAlertField;
         
+        private UpdateExecutionInterface[] executionInterfacesField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public string Symbol
@@ -19757,6 +20117,20 @@ namespace BfsApi
                 this.enableMifidIITenPercentAlertField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=37)]
+        public UpdateExecutionInterface[] ExecutionInterfaces
+        {
+            get
+            {
+                return this.executionInterfacesField;
+            }
+            set
+            {
+                this.executionInterfacesField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -19835,6 +20209,510 @@ namespace BfsApi
             set
             {
                 this.weightField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateManualExecutionInterface))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateInternalExecutionInterface))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateMFEXExecutionInterface))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateExternalFundExecutionInterface))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class UpdateExecutionInterface : EntityBase
+    {
+        
+        private System.Guid custodyAccountField;
+        
+        private System.Guid counterPartyField;
+        
+        private System.Guid counterPartyAccountField;
+        
+        private bool buyAmountAllowedField;
+        
+        private bool buyUnitAllowedField;
+        
+        private bool sellAmountAllowedField;
+        
+        private bool sellUnitAllowedField;
+        
+        private bool isNominalValueOrderEntryField;
+        
+        private double minimumLotSizeField;
+        
+        private System.Nullable<int> quantityDecimalsField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public System.Guid CustodyAccount
+        {
+            get
+            {
+                return this.custodyAccountField;
+            }
+            set
+            {
+                this.custodyAccountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public System.Guid CounterParty
+        {
+            get
+            {
+                return this.counterPartyField;
+            }
+            set
+            {
+                this.counterPartyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public System.Guid CounterPartyAccount
+        {
+            get
+            {
+                return this.counterPartyAccountField;
+            }
+            set
+            {
+                this.counterPartyAccountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public bool BuyAmountAllowed
+        {
+            get
+            {
+                return this.buyAmountAllowedField;
+            }
+            set
+            {
+                this.buyAmountAllowedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public bool BuyUnitAllowed
+        {
+            get
+            {
+                return this.buyUnitAllowedField;
+            }
+            set
+            {
+                this.buyUnitAllowedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public bool SellAmountAllowed
+        {
+            get
+            {
+                return this.sellAmountAllowedField;
+            }
+            set
+            {
+                this.sellAmountAllowedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public bool SellUnitAllowed
+        {
+            get
+            {
+                return this.sellUnitAllowedField;
+            }
+            set
+            {
+                this.sellUnitAllowedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public bool IsNominalValueOrderEntry
+        {
+            get
+            {
+                return this.isNominalValueOrderEntryField;
+            }
+            set
+            {
+                this.isNominalValueOrderEntryField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+        public double MinimumLotSize
+        {
+            get
+            {
+                return this.minimumLotSizeField;
+            }
+            set
+            {
+                this.minimumLotSizeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=9)]
+        public System.Nullable<int> QuantityDecimals
+        {
+            get
+            {
+                return this.quantityDecimalsField;
+            }
+            set
+            {
+                this.quantityDecimalsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class UpdateManualExecutionInterface : UpdateExecutionInterface
+    {
+        
+        private ManualExecutionInterfaceFields updateFieldsField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public ManualExecutionInterfaceFields UpdateFields
+        {
+            get
+            {
+                return this.updateFieldsField;
+            }
+            set
+            {
+                this.updateFieldsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class ManualExecutionInterfaceFields : ExecutionInterfaceFields
+    {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ManualExecutionInterfaceFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(InternalExecutionInterfaceFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MFEXExecutionInterfaceFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ExternalFundExecutionInterfaceFields))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class ExecutionInterfaceFields
+    {
+        
+        private bool custodyAccountField;
+        
+        private bool counterPartyField;
+        
+        private bool counterPartyAccountField;
+        
+        private bool buyAmountAllowedField;
+        
+        private bool buyUnitAllowedField;
+        
+        private bool sellAmountAllowedField;
+        
+        private bool sellUnitAllowedField;
+        
+        private bool isNominalValueOrderEntryField;
+        
+        private bool minimumLotSizeField;
+        
+        private bool quantityDecimalsField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public bool CustodyAccount
+        {
+            get
+            {
+                return this.custodyAccountField;
+            }
+            set
+            {
+                this.custodyAccountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public bool CounterParty
+        {
+            get
+            {
+                return this.counterPartyField;
+            }
+            set
+            {
+                this.counterPartyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public bool CounterPartyAccount
+        {
+            get
+            {
+                return this.counterPartyAccountField;
+            }
+            set
+            {
+                this.counterPartyAccountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public bool BuyAmountAllowed
+        {
+            get
+            {
+                return this.buyAmountAllowedField;
+            }
+            set
+            {
+                this.buyAmountAllowedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public bool BuyUnitAllowed
+        {
+            get
+            {
+                return this.buyUnitAllowedField;
+            }
+            set
+            {
+                this.buyUnitAllowedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public bool SellAmountAllowed
+        {
+            get
+            {
+                return this.sellAmountAllowedField;
+            }
+            set
+            {
+                this.sellAmountAllowedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public bool SellUnitAllowed
+        {
+            get
+            {
+                return this.sellUnitAllowedField;
+            }
+            set
+            {
+                this.sellUnitAllowedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public bool IsNominalValueOrderEntry
+        {
+            get
+            {
+                return this.isNominalValueOrderEntryField;
+            }
+            set
+            {
+                this.isNominalValueOrderEntryField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+        public bool MinimumLotSize
+        {
+            get
+            {
+                return this.minimumLotSizeField;
+            }
+            set
+            {
+                this.minimumLotSizeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
+        public bool QuantityDecimals
+        {
+            get
+            {
+                return this.quantityDecimalsField;
+            }
+            set
+            {
+                this.quantityDecimalsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class InternalExecutionInterfaceFields : ExecutionInterfaceFields
+    {
+        
+        private bool orderExecutionInterfaceKeyField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public bool OrderExecutionInterfaceKey
+        {
+            get
+            {
+                return this.orderExecutionInterfaceKeyField;
+            }
+            set
+            {
+                this.orderExecutionInterfaceKeyField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class MFEXExecutionInterfaceFields : ExecutionInterfaceFields
+    {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class ExternalFundExecutionInterfaceFields : ExecutionInterfaceFields
+    {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class UpdateInternalExecutionInterface : UpdateExecutionInterface
+    {
+        
+        private InternalExecutionInterfaceFields updateFieldsField;
+        
+        private string orderExecutionInterfaceKeyField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public InternalExecutionInterfaceFields UpdateFields
+        {
+            get
+            {
+                return this.updateFieldsField;
+            }
+            set
+            {
+                this.updateFieldsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string OrderExecutionInterfaceKey
+        {
+            get
+            {
+                return this.orderExecutionInterfaceKeyField;
+            }
+            set
+            {
+                this.orderExecutionInterfaceKeyField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class UpdateMFEXExecutionInterface : UpdateExecutionInterface
+    {
+        
+        private MFEXExecutionInterfaceFields updateFieldsField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public MFEXExecutionInterfaceFields UpdateFields
+        {
+            get
+            {
+                return this.updateFieldsField;
+            }
+            set
+            {
+                this.updateFieldsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class UpdateExternalFundExecutionInterface : UpdateExecutionInterface
+    {
+        
+        private ExternalFundExecutionInterfaceFields updateFieldsField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public ExternalFundExecutionInterfaceFields UpdateFields
+        {
+            get
+            {
+                return this.updateFieldsField;
+            }
+            set
+            {
+                this.updateFieldsField = value;
             }
         }
     }
@@ -20019,6 +20897,8 @@ namespace BfsApi
         private string feeGroupField;
         
         private bool enableMifidIITenPercentAlertField;
+        
+        private ExecutionInterface[] executionInterfacesField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -20677,6 +21557,329 @@ namespace BfsApi
                 this.enableMifidIITenPercentAlertField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=47)]
+        public ExecutionInterface[] ExecutionInterfaces
+        {
+            get
+            {
+                return this.executionInterfacesField;
+            }
+            set
+            {
+                this.executionInterfacesField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ManualExecutionInterfaceOld))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ManualExecutionInterface))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(InternalExecutionInterface))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MfexExecutionInterface))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ExternalFundExecutionInterface))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class ExecutionInterface : EntityBase
+    {
+        
+        private System.Guid defaultCustodyAccountField;
+        
+        private System.Guid counterPartyAccountField;
+        
+        private System.Guid counterPartyField;
+        
+        private bool buyAmountAllowedField;
+        
+        private bool buyUnitAllowedField;
+        
+        private bool sellAmountAllowedField;
+        
+        private bool sellUnitAllowedField;
+        
+        private bool isNominalValueOrderEntryField;
+        
+        private System.Nullable<int> quantityDecimalsField;
+        
+        private double minimumLotSizeField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public System.Guid DefaultCustodyAccount
+        {
+            get
+            {
+                return this.defaultCustodyAccountField;
+            }
+            set
+            {
+                this.defaultCustodyAccountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public System.Guid CounterPartyAccount
+        {
+            get
+            {
+                return this.counterPartyAccountField;
+            }
+            set
+            {
+                this.counterPartyAccountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public System.Guid CounterParty
+        {
+            get
+            {
+                return this.counterPartyField;
+            }
+            set
+            {
+                this.counterPartyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public bool BuyAmountAllowed
+        {
+            get
+            {
+                return this.buyAmountAllowedField;
+            }
+            set
+            {
+                this.buyAmountAllowedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public bool BuyUnitAllowed
+        {
+            get
+            {
+                return this.buyUnitAllowedField;
+            }
+            set
+            {
+                this.buyUnitAllowedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public bool SellAmountAllowed
+        {
+            get
+            {
+                return this.sellAmountAllowedField;
+            }
+            set
+            {
+                this.sellAmountAllowedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public bool SellUnitAllowed
+        {
+            get
+            {
+                return this.sellUnitAllowedField;
+            }
+            set
+            {
+                this.sellUnitAllowedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public bool IsNominalValueOrderEntry
+        {
+            get
+            {
+                return this.isNominalValueOrderEntryField;
+            }
+            set
+            {
+                this.isNominalValueOrderEntryField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=8)]
+        public System.Nullable<int> QuantityDecimals
+        {
+            get
+            {
+                return this.quantityDecimalsField;
+            }
+            set
+            {
+                this.quantityDecimalsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
+        public double MinimumLotSize
+        {
+            get
+            {
+                return this.minimumLotSizeField;
+            }
+            set
+            {
+                this.minimumLotSizeField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class ManualExecutionInterfaceOld : ExecutionInterface
+    {
+        
+        private System.Guid instrumentField;
+        
+        private bool defaultExecutionInterfaceField;
+        
+        private System.Guid custodyAccountField;
+        
+        private string feeCategoryField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public System.Guid Instrument
+        {
+            get
+            {
+                return this.instrumentField;
+            }
+            set
+            {
+                this.instrumentField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public bool DefaultExecutionInterface
+        {
+            get
+            {
+                return this.defaultExecutionInterfaceField;
+            }
+            set
+            {
+                this.defaultExecutionInterfaceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public System.Guid CustodyAccount
+        {
+            get
+            {
+                return this.custodyAccountField;
+            }
+            set
+            {
+                this.custodyAccountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public string FeeCategory
+        {
+            get
+            {
+                return this.feeCategoryField;
+            }
+            set
+            {
+                this.feeCategoryField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class ManualExecutionInterface : ExecutionInterface
+    {
+        
+        private string feeCategoryField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string FeeCategory
+        {
+            get
+            {
+                return this.feeCategoryField;
+            }
+            set
+            {
+                this.feeCategoryField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class InternalExecutionInterface : ExecutionInterface
+    {
+        
+        private string orderExecutionInterfaceKeyField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string OrderExecutionInterfaceKey
+        {
+            get
+            {
+                return this.orderExecutionInterfaceKeyField;
+            }
+            set
+            {
+                this.orderExecutionInterfaceKeyField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class MfexExecutionInterface : ExecutionInterface
+    {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class ExternalFundExecutionInterface : ExecutionInterface
+    {
     }
     
     /// <remarks/>
@@ -20783,6 +21986,8 @@ namespace BfsApi
         private string feeGroupField;
         
         private bool enableMifidIITenPercentAlertField;
+        
+        private ExecutionInterface[] executionInterfacesField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -21467,6 +22672,20 @@ namespace BfsApi
             set
             {
                 this.enableMifidIITenPercentAlertField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=49)]
+        public ExecutionInterface[] ExecutionInterfaces
+        {
+            get
+            {
+                return this.executionInterfacesField;
+            }
+            set
+            {
+                this.executionInterfacesField = value;
             }
         }
     }
@@ -25945,247 +27164,6 @@ namespace BfsApi
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ManualExecutionInterface))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public abstract partial class ExecutionInterface : EntityBase
-    {
-        
-        private string keyField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string Key
-        {
-            get
-            {
-                return this.keyField;
-            }
-            set
-            {
-                this.keyField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class ManualExecutionInterface : ExecutionInterface
-    {
-        
-        private System.Guid instrumentField;
-        
-        private bool defaultExecutionInterfaceField;
-        
-        private System.Guid custodyAccountField;
-        
-        private System.Guid counterPartyAccountField;
-        
-        private string feeCategoryField;
-        
-        private bool buyAmountAllowedField;
-        
-        private bool buyUnitAllowedField;
-        
-        private bool sellAmountAllowedField;
-        
-        private bool sellUnitAllowedField;
-        
-        private bool isNominalValueOrderEntryField;
-        
-        private double minimumLotSizeField;
-        
-        private System.Guid counterPartyField;
-        
-        private System.Nullable<int> quantityDecimalsField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public System.Guid Instrument
-        {
-            get
-            {
-                return this.instrumentField;
-            }
-            set
-            {
-                this.instrumentField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public bool DefaultExecutionInterface
-        {
-            get
-            {
-                return this.defaultExecutionInterfaceField;
-            }
-            set
-            {
-                this.defaultExecutionInterfaceField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public System.Guid CustodyAccount
-        {
-            get
-            {
-                return this.custodyAccountField;
-            }
-            set
-            {
-                this.custodyAccountField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
-        public System.Guid CounterPartyAccount
-        {
-            get
-            {
-                return this.counterPartyAccountField;
-            }
-            set
-            {
-                this.counterPartyAccountField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
-        public string FeeCategory
-        {
-            get
-            {
-                return this.feeCategoryField;
-            }
-            set
-            {
-                this.feeCategoryField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
-        public bool BuyAmountAllowed
-        {
-            get
-            {
-                return this.buyAmountAllowedField;
-            }
-            set
-            {
-                this.buyAmountAllowedField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
-        public bool BuyUnitAllowed
-        {
-            get
-            {
-                return this.buyUnitAllowedField;
-            }
-            set
-            {
-                this.buyUnitAllowedField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
-        public bool SellAmountAllowed
-        {
-            get
-            {
-                return this.sellAmountAllowedField;
-            }
-            set
-            {
-                this.sellAmountAllowedField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
-        public bool SellUnitAllowed
-        {
-            get
-            {
-                return this.sellUnitAllowedField;
-            }
-            set
-            {
-                this.sellUnitAllowedField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
-        public bool IsNominalValueOrderEntry
-        {
-            get
-            {
-                return this.isNominalValueOrderEntryField;
-            }
-            set
-            {
-                this.isNominalValueOrderEntryField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
-        public double MinimumLotSize
-        {
-            get
-            {
-                return this.minimumLotSizeField;
-            }
-            set
-            {
-                this.minimumLotSizeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
-        public System.Guid CounterParty
-        {
-            get
-            {
-                return this.counterPartyField;
-            }
-            set
-            {
-                this.counterPartyField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=12)]
-        public System.Nullable<int> QuantityDecimals
-        {
-            get
-            {
-                return this.quantityDecimalsField;
-            }
-            set
-            {
-                this.quantityDecimalsField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CurrencyExchangeOrderBuy))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CurrencyExchangeOrderSell))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
@@ -30198,6 +31176,10 @@ namespace BfsApi
         
         private bool resellerField;
         
+        private bool filledCashAmountField;
+        
+        private bool filledInstrumentAmountField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public bool BrickId
@@ -30727,6 +31709,34 @@ namespace BfsApi
             set
             {
                 this.resellerField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=38)]
+        public bool FilledCashAmount
+        {
+            get
+            {
+                return this.filledCashAmountField;
+            }
+            set
+            {
+                this.filledCashAmountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=39)]
+        public bool FilledInstrumentAmount
+        {
+            get
+            {
+                return this.filledInstrumentAmountField;
+            }
+            set
+            {
+                this.filledInstrumentAmountField = value;
             }
         }
     }
@@ -32374,6 +33384,8 @@ namespace BfsApi
         
         private bool enableMifidIITenPercentAlertField;
         
+        private bool executionInterfacesField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public bool Symbol
@@ -32905,6 +33917,20 @@ namespace BfsApi
                 this.enableMifidIITenPercentAlertField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=38)]
+        public bool ExecutionInterfaces
+        {
+            get
+            {
+                return this.executionInterfacesField;
+            }
+            set
+            {
+                this.executionInterfacesField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -33015,6 +34041,8 @@ namespace BfsApi
         private bool feeGroupField;
         
         private bool enableMifidIITenPercentAlertField;
+        
+        private bool executionInterfacesField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -33727,6 +34755,20 @@ namespace BfsApi
             set
             {
                 this.enableMifidIITenPercentAlertField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=51)]
+        public bool ExecutionInterfaces
+        {
+            get
+            {
+                return this.executionInterfacesField;
+            }
+            set
+            {
+                this.executionInterfacesField = value;
             }
         }
     }
@@ -38653,6 +39695,39 @@ namespace BfsApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
     public partial class FundInstructions_SettleResponse : APIActionTriggerResponseOfFundInstructions_Settle
+    {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateTradingVenuesResponse))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class APICreateResponseOfCreateTradingVenue : Response
+    {
+        
+        private CreateTradingVenue[] entitiesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public CreateTradingVenue[] Entities
+        {
+            get
+            {
+                return this.entitiesField;
+            }
+            set
+            {
+                this.entitiesField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class CreateTradingVenuesResponse : APICreateResponseOfCreateTradingVenue
     {
     }
     
@@ -46121,14 +47196,14 @@ namespace BfsApi
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public abstract partial class APICreateResponseOfManualExecutionInterface : Response
+    public abstract partial class APICreateResponseOfManualExecutionInterfaceOld : Response
     {
         
-        private ManualExecutionInterface[] entitiesField;
+        private ManualExecutionInterfaceOld[] entitiesField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
-        public ManualExecutionInterface[] Entities
+        public ManualExecutionInterfaceOld[] Entities
         {
             get
             {
@@ -46145,7 +47220,7 @@ namespace BfsApi
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class CreateManualExecutionInterfaceResponse : APICreateResponseOfManualExecutionInterface
+    public partial class CreateManualExecutionInterfaceResponse : APICreateResponseOfManualExecutionInterfaceOld
     {
     }
     
@@ -59914,6 +60989,8 @@ namespace BfsApi
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetInsuranceCoversRequest))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APIActionTriggerRequestOfFundInstructions_SettleFundInstructions_SettleResponse))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(FundInstructions_SettleRequest))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APICreateRequestOfCreateTradingVenueTradingVenueBrick))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateTradingVenuesRequest))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchRequestOfGetTradingVenueArgsGetTradingVenueFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetTradingVenueRequest))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchRequestOfGetFeeGroupArgsGetFeeGroupFields))]
@@ -60055,7 +61132,7 @@ namespace BfsApi
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreatePOARequest))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchRequestOfGetPOAArgsGetPOAFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetPOARequest))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APICreateRequestOfManualExecutionInterfaceExecutionInterfaceBrick))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APICreateRequestOfManualExecutionInterfaceOldExecutionInterfaceBrick))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateManualExecutionInterfaceRequest))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APIUpdateRequestOfUpdateInstrumentBrickBaseUpdateInstrumentFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateInstrumentsRequest))]
@@ -61389,6 +62466,39 @@ namespace BfsApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
     public partial class FundInstructions_SettleRequest : APIActionTriggerRequestOfFundInstructions_SettleFundInstructions_SettleResponse
+    {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateTradingVenuesRequest))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class APICreateRequestOfCreateTradingVenueTradingVenueBrick : Request
+    {
+        
+        private CreateTradingVenue[] entitiesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public CreateTradingVenue[] Entities
+        {
+            get
+            {
+                return this.entitiesField;
+            }
+            set
+            {
+                this.entitiesField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class CreateTradingVenuesRequest : APICreateRequestOfCreateTradingVenueTradingVenueBrick
     {
     }
     
@@ -65746,14 +66856,14 @@ namespace BfsApi
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public abstract partial class APICreateRequestOfManualExecutionInterfaceExecutionInterfaceBrick : Request
+    public abstract partial class APICreateRequestOfManualExecutionInterfaceOldExecutionInterfaceBrick : Request
     {
         
-        private ManualExecutionInterface[] entitiesField;
+        private ManualExecutionInterfaceOld[] entitiesField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
-        public ManualExecutionInterface[] Entities
+        public ManualExecutionInterfaceOld[] Entities
         {
             get
             {
@@ -65770,7 +66880,7 @@ namespace BfsApi
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class CreateManualExecutionInterfaceRequest : APICreateRequestOfManualExecutionInterfaceExecutionInterfaceBrick
+    public partial class CreateManualExecutionInterfaceRequest : APICreateRequestOfManualExecutionInterfaceOldExecutionInterfaceBrick
     {
     }
     
@@ -67440,6 +68550,11 @@ namespace BfsApi
         public System.Threading.Tasks.Task<BfsApi.GetTradingVenueResponse> GetTradingVenuesAsync(BfsApi.GetTradingVenueRequest req)
         {
             return base.Channel.GetTradingVenuesAsync(req);
+        }
+        
+        public System.Threading.Tasks.Task<BfsApi.CreateTradingVenuesResponse> CreateTradingVenuesAsync(BfsApi.CreateTradingVenuesRequest req)
+        {
+            return base.Channel.CreateTradingVenuesAsync(req);
         }
         
         public System.Threading.Tasks.Task<BfsApi.FundInstructions_SettleResponse> FundInstruction_SettleAsync(BfsApi.FundInstructions_SettleRequest req)
