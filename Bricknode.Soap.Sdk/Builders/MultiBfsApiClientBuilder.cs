@@ -9,20 +9,20 @@
     {
         public IServiceCollection Services { get; }
 
-        private static readonly Dictionary<string, BfsApiConfiguration> ApiConfigurations = new Dictionary<string, BfsApiConfiguration>();
+        private readonly Dictionary<string, BfsApiConfiguration> _apiConfigurations = new Dictionary<string, BfsApiConfiguration>();
 
         public MultiBfsApiClientBuilder(IServiceCollection services)
             => Services = services;
 
         public void AddBfsApiConfiguration(string bfsApiClientName, BfsApiConfiguration bfsApiConfiguration)
         {
-            if (ApiConfigurations.ContainsKey(bfsApiClientName))
+            if (_apiConfigurations.ContainsKey(bfsApiClientName))
                 throw new Exception($"A BfsApiClient with name {bfsApiClientName} has already been added.");
 
-            ApiConfigurations.Add(bfsApiClientName, bfsApiConfiguration);
+            _apiConfigurations.Add(bfsApiClientName, bfsApiConfiguration);
         }
 
         public Dictionary<string, BfsApiConfiguration> GetBfsApiConfigurations()
-            => ApiConfigurations;
+            => _apiConfigurations;
     }
 }
