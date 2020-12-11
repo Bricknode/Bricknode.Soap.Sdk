@@ -70,6 +70,10 @@
             services.AddTransient<IBfsTaskService, BfsTaskService>();
             services.AddTransient<IBfsNoteService, BfsNoteService>();
             services.AddTransient<IBfsMessageService, BfsMessageService>();
+            services.AddTransient<IBfsReservationService, BfsReservationService>();
+            services.AddTransient<IBfsTransactionNoteService, BfsTransactionNoteService>();
+
+            
         }
     }
 }

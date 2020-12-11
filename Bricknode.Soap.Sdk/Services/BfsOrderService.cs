@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
 using BfsApi;
 using Bricknode.Soap.Sdk.Configuration;
@@ -448,7 +449,7 @@ namespace Bricknode.Soap.Sdk.Services
         
         #endregion
         
-        #region CurrencyExchangeOrders  Transitions
+        #region CurrencyExchangeOrders Transitions
 
         /// <summary>
         ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/1183744113/CurrencyExchangeOrder+Cancel
@@ -692,6 +693,145 @@ namespace Bricknode.Soap.Sdk.Services
             return response;
         }
 
+        #endregion
+
+        #region InternalCashTransferOrders
+
+        /// <summary>
+        ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/1757708308/GetInternalCashTransferOrders
+        /// </summary>
+        /// <param name="filters"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        public async Task<GetInternalCashTransferOrderResponse> GetInternalCashTransferOrdersAsync(GetInternalCashTransferOrderArgs filters, string bfsApiClientName = null)
+        {
+            var request = GetRequest<GetInternalCashTransferOrderRequest>(bfsApiClientName);
+
+            request.Args = filters;
+
+            request.Fields = GetFields<GetInternalCashTransferOrderFields>();
+
+            var response = await GetClient(bfsApiClientName).GetInternalCashTransferOrdersAsync(request);
+
+            if (ValidateResponse(response)) return response;
+
+            LogErrors(response.Result.ToArray<EntityBase>());
+
+            return response;
+        }
+
+        /// <summary>
+        ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/1755546006/CreateInternalCashTransferOrders
+        /// </summary>
+        /// <param name="internalCashTransferOrder"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        public async Task<CreateInternalCashTransferOrderResponse> CreateInternalCashTransferOrdersAsync(InternalCashTransferOrder[] internalCashTransferOrder, string bfsApiClientName = null)
+        {
+            var request = GetRequest<CreateInternalCashTransferOrderRequest>(bfsApiClientName);
+
+            request.Entities = internalCashTransferOrder;
+
+            var response = await GetClient(bfsApiClientName).CreateInternalCashTransferOrdersAsync(request);
+
+            if (ValidateResponse(response)) return response;
+
+            LogErrors(response.Entities.ToArray<EntityBase>());
+
+            return response;
+        }
+        #endregion
+
+        #region InternalInstrumentTransferOrders
+
+        /// <summary>
+        ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/1755513097/GetInternalInstrumentTransferOrders
+        /// </summary>
+        /// <param name="filters"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        public async Task<GetInternalInstrumentTransferOrderResponse> GetInternalInstrumentTransferOrdersAsync(GetInternalInstrumentTransferOrderArgs filters, string bfsApiClientName = null)
+        {
+            var request = GetRequest<GetInternalInstrumentTransferOrderRequest>(bfsApiClientName);
+
+            request.Args = filters;
+
+            request.Fields = GetFields<GetInternalInstrumentTransferOrderFields>();
+
+            var response = await GetClient(bfsApiClientName).GetInternalInstrumentTransferOrdersAsync(request);
+
+            if (ValidateResponse(response)) return response;
+
+            LogErrors(response.Result.ToArray<EntityBase>());
+
+            return response;
+        }
+
+        /// <summary>
+        ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/1758461975/CreateInternalInstrumentTransferOrders
+        /// </summary>
+        /// <param name="internalInstrumentTransferOrder"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        public async Task<CreateInternalInstrumentTransferOrderResponse> CreateInternalInstrumentTransferOrdersAsync(InternalInstrumentTransferOrder[] internalInstrumentTransferOrder, string bfsApiClientName = null)
+        {
+            var request = GetRequest<CreateInternalInstrumentTransferOrderRequest>(bfsApiClientName);
+
+            request.Entities = internalInstrumentTransferOrder;
+
+            var response = await GetClient(bfsApiClientName).CreateInternalInstrumentTransferOrdersAsync(request);
+
+            if (ValidateResponse(response)) return response;
+
+            LogErrors(response.Entities.ToArray<EntityBase>());
+
+            return response;
+        }
+        #endregion
+
+        #region InternalTransferOrders
+
+        /// <summary>
+        ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/1757839430/ExecuteInternalTransferOrders
+        /// </summary>
+        /// <param name="internalTransferOrders"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        public async Task<string> ExecuteInternalTransferOrdersAsync(ExecuteInternalTransferOrder[] internalTransferOrders, string bfsApiClientName = null)
+        {
+            var request = GetRequest<ExecuteInternalTransferOrderRequest>(bfsApiClientName);
+
+            request.Entities = internalTransferOrders;
+
+            var response = await GetClient(bfsApiClientName).ExecuteInternalTransferOrdersAsync(request);
+
+            if (ValidateResponse(response)) return response.Message;
+
+            LogErrors(response.Message);
+
+            return response.Message;
+        }
+
+        /// <summary>
+        ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/1758265382/DeleteInternalTransferOrders
+        /// </summary>
+        /// <param name="internalTransferOrders"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        public async Task<string> DeleteInternalTransferOrdersAsync(DeleteInternalTransferOrder[] internalTransferOrders, string bfsApiClientName = null)
+        {
+            var request = GetRequest<DeleteInternalTransferOrderRequest>(bfsApiClientName);
+
+            request.Entities = internalTransferOrders;
+
+            var response = await GetClient(bfsApiClientName).DeleteInternalTransferOrdersAsync(request);
+
+            if (ValidateResponse(response)) return response.Message;
+
+            LogErrors(response.Message);
+
+            return response.Message;
+        }
         #endregion
     }
 }
