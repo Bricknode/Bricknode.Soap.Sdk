@@ -27114,6 +27114,10 @@ namespace BfsApi
         
         private string reportingTypeField;
         
+        private System.Guid superTransactionBusinessEventIdField;
+        
+        private CustomField[] superTransactionCustomFieldsField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public int SequenceNo
@@ -27617,6 +27621,34 @@ namespace BfsApi
                 this.reportingTypeField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=36)]
+        public System.Guid SuperTransactionBusinessEventId
+        {
+            get
+            {
+                return this.superTransactionBusinessEventIdField;
+            }
+            set
+            {
+                this.superTransactionBusinessEventIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=37)]
+        public CustomField[] SuperTransactionCustomFields
+        {
+            get
+            {
+                return this.superTransactionCustomFieldsField;
+            }
+            set
+            {
+                this.superTransactionCustomFieldsField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -27701,6 +27733,10 @@ namespace BfsApi
         private bool orderIdField;
         
         private bool reportingTypeField;
+        
+        private bool superTransactionBusinessEventIdField;
+        
+        private bool superTransactionCustomFieldsField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -28231,6 +28267,34 @@ namespace BfsApi
             set
             {
                 this.reportingTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=38)]
+        public bool SuperTransactionBusinessEventId
+        {
+            get
+            {
+                return this.superTransactionBusinessEventIdField;
+            }
+            set
+            {
+                this.superTransactionBusinessEventIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=39)]
+        public bool SuperTransactionCustomFields
+        {
+            get
+            {
+                return this.superTransactionCustomFieldsField;
+            }
+            set
+            {
+                this.superTransactionCustomFieldsField = value;
             }
         }
     }
@@ -57531,6 +57595,8 @@ namespace BfsApi
         
         private System.Guid[] superTransactionIdsField;
         
+        private System.Guid[] superTransactionBusinessEventIdsField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
         public System.Guid[] BrickIds
@@ -57906,6 +57972,20 @@ namespace BfsApi
             set
             {
                 this.superTransactionIdsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=27)]
+        public System.Guid[] SuperTransactionBusinessEventIds
+        {
+            get
+            {
+                return this.superTransactionBusinessEventIdsField;
+            }
+            set
+            {
+                this.superTransactionBusinessEventIdsField = value;
             }
         }
     }
@@ -68456,6 +68536,8 @@ namespace BfsApi
         
         private System.Guid batchField;
         
+        private System.Guid businessEventIdField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
         public BusinessTransaction[] BusinessTransactions
@@ -68509,6 +68591,20 @@ namespace BfsApi
             set
             {
                 this.batchField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public System.Guid BusinessEventId
+        {
+            get
+            {
+                return this.businessEventIdField;
+            }
+            set
+            {
+                this.businessEventIdField = value;
             }
         }
     }
