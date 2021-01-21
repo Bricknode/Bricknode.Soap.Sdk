@@ -72,8 +72,7 @@
             services.AddTransient<IBfsMessageService, BfsMessageService>();
             services.AddTransient<IBfsReservationService, BfsReservationService>();
             services.AddTransient<IBfsTransactionNoteService, BfsTransactionNoteService>();
-
-            
+            services.AddTransient<IBfsTaxService, BfsTaxService>();
         }
     }
 }
