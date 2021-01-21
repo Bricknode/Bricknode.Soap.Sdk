@@ -113,4 +113,7 @@ BfsWhiteLabelService
 BfsTaskService
 BfsNoteService
 BfsMessageService
+IBfsReservationService
+IBfsTransactionNoteService
+IBfsTaxService
 ````
