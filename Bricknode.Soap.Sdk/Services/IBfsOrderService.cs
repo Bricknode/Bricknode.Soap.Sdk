@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using BfsApi;
 
 namespace Bricknode.Soap.Sdk.Services
@@ -289,6 +290,15 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         Task<string> DeleteInternalTransferOrdersAsync(DeleteInternalTransferOrder[] internalTransferOrders,
+            string bfsApiClientName = null);
+
+        /// <summary>
+        /// https://bricknode.atlassian.net/wiki/spaces/API/pages/1930133509/CancelTradeOrders
+        /// </summary>
+        /// <param name="tradeOrderIds"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        Task<CancelTradeOrderResponse> CancelTradeOrdersAsync(Guid[] tradeOrderIds,
             string bfsApiClientName = null);
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using BfsApi;
@@ -201,6 +202,38 @@ namespace Bricknode.Soap.Sdk.Services
             request.WorkflowTriggerDataEntity = fundBatchOrder;
 
             var response = await GetClient(bfsApiClientName).ExternalFundBatchOrder_SettleAsync(request);
+
+            if (ValidateResponse(response)) return response;
+
+            LogErrors(response.Message);
+
+            return response;
+        }
+
+        /// <summary>
+        /// https://bricknode.atlassian.net/wiki/spaces/API/pages/1930133509/CancelTradeOrders
+        /// </summary>
+        /// <param name="tradeOrderIds"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        public async Task<CancelTradeOrderResponse> CancelTradeOrdersAsync(Guid[] tradeOrderIds,
+            string bfsApiClientName = null)
+        {
+            var request = GetRequest<CancelTradeOrderRequest>(bfsApiClientName);
+
+            var listOfCancelTradeOrder = new List<CancelTradeOrder>();
+
+            foreach (var tradeOrderId in tradeOrderIds)
+            {
+                listOfCancelTradeOrder.Add(new CancelTradeOrder
+                {
+                    OrderId = tradeOrderId
+                });
+            }
+
+            request.Entities = listOfCancelTradeOrder.ToArray();
+
+            var response = await GetClient(bfsApiClientName).CancelTradeOrdersAsync(request);
 
             if (ValidateResponse(response)) return response;
 
