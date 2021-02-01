@@ -244,6 +244,33 @@ namespace Bricknode.Soap.Sdk.Services
 
         #endregion
 
+        #region AutogiroOrders
+
+        /// <summary>
+        /// https://bricknode.atlassian.net/wiki/spaces/API/pages/1951499222/GetAutoGiroOrders
+        /// </summary>
+        /// <param name="filters"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        public async Task<GetAutoGiroOrdersResponse> GetAutoGiroOrdersAsync(GetAutoGiroOrdersArgs filters, string bfsApiClientName = null)
+        {
+            var request = GetRequest<GetAutoGiroOrdersRequest>(bfsApiClientName);
+
+            request.Args = filters;
+
+            request.Fields = GetFields<GetAutoGiroOrdersFields>();
+
+            var response = await GetClient(bfsApiClientName).GetAutoGiroOrdersAsync(request);
+
+            if (ValidateResponse(response)) return response;
+
+            LogErrors(response.Result.ToArray<EntityBase>());
+
+            return response;
+        }
+
+        #endregion
+
         #region TransferOrders
 
         /// <summary>
