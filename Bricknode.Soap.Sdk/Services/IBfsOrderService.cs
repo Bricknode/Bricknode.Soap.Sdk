@@ -300,5 +300,13 @@ namespace Bricknode.Soap.Sdk.Services
         /// <returns></returns>
         Task<CancelTradeOrderResponse> CancelTradeOrdersAsync(Guid[] tradeOrderIds,
             string bfsApiClientName = null);
+
+        /// <summary>
+        /// https://bricknode.atlassian.net/wiki/spaces/API/pages/1951499222/GetAutoGiroOrders
+        /// </summary>
+        /// <param name="filters"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        Task<GetAutoGiroOrdersResponse> GetAutoGiroOrdersAsync(GetAutoGiroOrdersArgs filters, string bfsApiClientName = null);
     }
 }
