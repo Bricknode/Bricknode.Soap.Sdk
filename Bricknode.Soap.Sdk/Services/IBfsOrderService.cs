@@ -308,5 +308,14 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         Task<GetAutoGiroOrdersResponse> GetAutoGiroOrdersAsync(GetAutoGiroOrdersArgs filters, string bfsApiClientName = null);
+
+        /// <summary>
+        /// https://bricknode.atlassian.net/wiki/spaces/API/pages/2183299109/CreateAutoGiroDepositOrders
+        /// </summary>
+        /// <param name="autoGiroDepositOrders"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        Task<CreateAutoGiroDepositOrderResponse> CreateAutoGiroDepositOrdersAsync(
+            AutoGiroDepositOrder[] autoGiroDepositOrders, string bfsApiClientName = null);
     }
 }

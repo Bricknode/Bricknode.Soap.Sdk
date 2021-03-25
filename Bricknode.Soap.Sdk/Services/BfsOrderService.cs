@@ -269,6 +269,50 @@ namespace Bricknode.Soap.Sdk.Services
             return response;
         }
 
+        /// <summary>
+        ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/636452882/CreateAutoGiroWithdrawalOrders
+        /// </summary>
+        /// <param name="autoGiroWithdrawalOrders"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        public async Task<CreateAutoGiroWithdrawalOrderResponse> CreateAutoGiroWithdrawalOrderAsync(
+            AutoGiroWithdrawalOrder[] autoGiroWithdrawalOrders, string bfsApiClientName = null)
+        {
+            var request = GetRequest<CreateAutoGiroWithdrawalOrderRequest>(bfsApiClientName);
+
+            request.Entities = autoGiroWithdrawalOrders;
+
+            var response = await GetClient(bfsApiClientName).CreateAutoGiroWithdrawalOrdersAsync(request);
+
+            if (ValidateResponse(response)) return response;
+
+            LogErrors(response.Entities.ToArray<EntityBase>());
+
+            return response;
+        }
+
+        /// <summary>
+        /// https://bricknode.atlassian.net/wiki/spaces/API/pages/2183299109/CreateAutoGiroDepositOrders
+        /// </summary>
+        /// <param name="autoGiroDepositOrders"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        public async Task<CreateAutoGiroDepositOrderResponse> CreateAutoGiroDepositOrdersAsync(
+            AutoGiroDepositOrder[] autoGiroDepositOrders, string bfsApiClientName = null)
+        {
+            var request = GetRequest<CreateAutoGiroDepositOrderRequest>(bfsApiClientName);
+
+            request.Entities = autoGiroDepositOrders;
+
+            var response = await GetClient(bfsApiClientName).CreateAutoGiroDepositOrdersAsync(request);
+
+            if (ValidateResponse(response)) return response;
+
+            LogErrors(response.Entities.ToArray<EntityBase>());
+
+            return response;
+        }
+
         #endregion
 
         #region TransferOrders
@@ -435,27 +479,7 @@ namespace Bricknode.Soap.Sdk.Services
             return response;
         }
 
-        /// <summary>
-        ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/636452882/CreateAutoGiroWithdrawalOrders
-        /// </summary>
-        /// <param name="autoGiroWithdrawalOrders"></param>
-        /// <param name="bfsApiClientName"></param>
-        /// <returns></returns>
-        public async Task<CreateAutoGiroWithdrawalOrderResponse> CreateAutoGiroWithdrawalOrderAsync(
-            AutoGiroWithdrawalOrder[] autoGiroWithdrawalOrders, string bfsApiClientName = null)
-        {
-            var request = GetRequest<CreateAutoGiroWithdrawalOrderRequest>(bfsApiClientName);
-
-            request.Entities = autoGiroWithdrawalOrders;
-
-            var response = await GetClient(bfsApiClientName).CreateAutoGiroWithdrawalOrdersAsync(request);
-
-            if (ValidateResponse(response)) return response;
-
-            LogErrors(response.Entities.ToArray<EntityBase>());
-
-            return response;
-        }
+        
 
         #endregion
 
