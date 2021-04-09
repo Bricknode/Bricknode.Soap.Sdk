@@ -24154,6 +24154,8 @@ namespace BfsApi
         
         private System.Guid parentCompanyField;
         
+        private bool isCustodianField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public bool IsApproved
@@ -25007,6 +25009,20 @@ namespace BfsApi
                 this.parentCompanyField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=61)]
+        public bool IsCustodian
+        {
+            get
+            {
+                return this.isCustodianField;
+            }
+            set
+            {
+                this.isCustodianField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -25151,6 +25167,8 @@ namespace BfsApi
         private string legalJurisdictionField;
         
         private System.Guid parentCompanyField;
+        
+        private bool isCustodianField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -26101,6 +26119,20 @@ namespace BfsApi
             set
             {
                 this.parentCompanyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=68)]
+        public bool IsCustodian
+        {
+            get
+            {
+                return this.isCustodianField;
+            }
+            set
+            {
+                this.isCustodianField = value;
             }
         }
     }
@@ -27377,6 +27409,8 @@ namespace BfsApi
         
         private bool isNaturalPersonField;
         
+        private bool isCustodianField;
+        
         private string countryField;
         
         private string postageAddressCountryField;
@@ -28145,6 +28179,20 @@ namespace BfsApi
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=52)]
+        public bool IsCustodian
+        {
+            get
+            {
+                return this.isCustodianField;
+            }
+            set
+            {
+                this.isCustodianField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=53)]
         public string Country
         {
             get
@@ -28158,7 +28206,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=53)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=54)]
         public string PostageAddressCountry
         {
             get
@@ -28172,7 +28220,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=54)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=55)]
         public string TaxCountry
         {
             get
@@ -28186,7 +28234,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=55)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=56)]
         public string CustomerNo
         {
             get
@@ -28200,7 +28248,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=56)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=57)]
         public string UserDomain
         {
             get
@@ -28214,7 +28262,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=57)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=58)]
         public int AccessLevel
         {
             get
@@ -28228,7 +28276,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=58)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=59)]
         public string AddressAttention
         {
             get
@@ -28242,7 +28290,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=59)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=60)]
         public System.Guid WhiteLabel
         {
             get
@@ -28256,7 +28304,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=60)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=61)]
         public bool HasCustomerProtectionData
         {
             get
@@ -28270,7 +28318,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=61)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=62)]
         public System.Guid CustomerCashAccount
         {
             get
@@ -28284,7 +28332,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=62)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=63)]
         public bool IsCounterParty
         {
             get
@@ -28298,7 +28346,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=63)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=64)]
         public System.Guid FundCompany
         {
             get
@@ -28312,7 +28360,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=64)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=65)]
         public bool IsTerminated
         {
             get
@@ -28326,7 +28374,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=65)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=66)]
         public System.DateTime KycDate
         {
             get
@@ -28340,7 +28388,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=66)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=67)]
         public string GIIN
         {
             get
@@ -28354,7 +28402,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=67)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=68)]
         public System.Guid ResellerAccount
         {
             get
@@ -28368,7 +28416,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=68)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=69)]
         public decimal RiskValue
         {
             get
@@ -28382,7 +28430,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=69)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=70)]
         public string LegalJurisdiction
         {
             get
@@ -28396,7 +28444,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=70)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=71)]
         public System.Guid ParentCompany
         {
             get
@@ -38280,6 +38328,8 @@ namespace BfsApi
         
         private bool parentCompanyField;
         
+        private bool isCustodianField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public bool IsApproved
@@ -39119,6 +39169,20 @@ namespace BfsApi
                 this.parentCompanyField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=60)]
+        public bool IsCustodian
+        {
+            get
+            {
+                return this.isCustodianField;
+            }
+            set
+            {
+                this.isCustodianField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -39605,6 +39669,8 @@ namespace BfsApi
         private bool defaultCompanyField;
         
         private bool isNaturalPersonField;
+        
+        private bool isCustodianField;
         
         private bool countryField;
         
@@ -40402,6 +40468,20 @@ namespace BfsApi
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=54)]
+        public bool IsCustodian
+        {
+            get
+            {
+                return this.isCustodianField;
+            }
+            set
+            {
+                this.isCustodianField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=55)]
         public bool Country
         {
             get
@@ -40415,7 +40495,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=55)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=56)]
         public bool PostageAddressCountry
         {
             get
@@ -40429,7 +40509,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=56)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=57)]
         public bool TaxCountry
         {
             get
@@ -40443,7 +40523,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=57)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=58)]
         public bool CustomerNo
         {
             get
@@ -40457,7 +40537,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=58)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=59)]
         public bool UserDomain
         {
             get
@@ -40471,7 +40551,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=59)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=60)]
         public bool AccessLevel
         {
             get
@@ -40485,7 +40565,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=60)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=61)]
         public bool AddressAttention
         {
             get
@@ -40499,7 +40579,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=61)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=62)]
         public bool WhiteLabel
         {
             get
@@ -40513,7 +40593,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=62)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=63)]
         public bool HasCustomerProtectionData
         {
             get
@@ -40527,7 +40607,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=63)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=64)]
         public bool CustomerCashAccount
         {
             get
@@ -40541,7 +40621,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=64)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=65)]
         public bool IsCounterParty
         {
             get
@@ -40555,7 +40635,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=65)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=66)]
         public bool FundCompany
         {
             get
@@ -40569,7 +40649,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=66)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=67)]
         public bool IsTerminated
         {
             get
@@ -40583,7 +40663,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=67)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=68)]
         public bool KycDate
         {
             get
@@ -40597,7 +40677,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=68)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=69)]
         public bool GIIN
         {
             get
@@ -40611,7 +40691,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=69)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=70)]
         public bool ResellerAccount
         {
             get
@@ -40625,7 +40705,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=70)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=71)]
         public bool RiskValue
         {
             get
@@ -40639,7 +40719,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=71)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=72)]
         public bool LegalJurisdiction
         {
             get
@@ -40653,7 +40733,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=72)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=73)]
         public bool ParentCompany
         {
             get
@@ -66793,6 +66873,8 @@ namespace BfsApi
         
         private System.Guid[] parentCompanyField;
         
+        private System.Nullable<bool> isCustodianField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
         public System.Guid[] BrickIds
@@ -67462,6 +67544,20 @@ namespace BfsApi
             set
             {
                 this.parentCompanyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=48)]
+        public System.Nullable<bool> IsCustodian
+        {
+            get
+            {
+                return this.isCustodianField;
+            }
+            set
+            {
+                this.isCustodianField = value;
             }
         }
     }
