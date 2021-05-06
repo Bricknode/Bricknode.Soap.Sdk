@@ -16,6 +16,18 @@ namespace BfsApi
     public interface bfsapiSoap
     {
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetFailedWebhooks", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
+        System.Threading.Tasks.Task<BfsApi.GetFailedWebhookResponse> GetFailedWebhooksAsync(BfsApi.GetFailedWebhookRequest req);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetMessages", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
@@ -916,7 +928,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
         System.Threading.Tasks.Task<BfsApi.GetDepositTransferOrdersResponse> GetDepositTransferOrdersAsync(BfsApi.GetDepositTransferOrdersRequest req);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateAllocationOrders", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateSwitchOrders", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -926,7 +938,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
-        System.Threading.Tasks.Task<BfsApi.CreateAllocationOrdersResponse> CreateAllocationOrdersAsync(BfsApi.CreateAllocationOrdersRequest req);
+        System.Threading.Tasks.Task<BfsApi.CreateSwitchOrdersResponse> CreateSwitchOrdersAsync(BfsApi.CreateSwitchOrdersRequest req);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetAllocationOrders", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -987,6 +999,18 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
         System.Threading.Tasks.Task<BfsApi.CreateAutoGiroDepositOrderResponse> CreateAutoGiroDepositOrdersAsync(BfsApi.CreateAutoGiroDepositOrderRequest req);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetFundBatchOrders", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
+        System.Threading.Tasks.Task<BfsApi.GetFundBatchOrdersResponse> GetFundBatchOrdersAsync(BfsApi.GetFundBatchOrdersRequest req);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetExternalFundBatchOrders", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -1683,39 +1707,27 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
         System.Threading.Tasks.Task<BfsApi.DeleteWebhookSubscriptionResponse> DeleteWebhookSubscriptionsAsync(BfsApi.DeleteWebhookSubscriptionRequest req);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetFailedWebhooks", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
-        System.Threading.Tasks.Task<BfsApi.GetFailedWebhookResponse> GetFailedWebhooksAsync(BfsApi.GetFailedWebhookRequest req);
     }
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class GetMessagesRequest : APISearchRequestOfGetMessagesArgsGetMessagesFields
+    public partial class GetFailedWebhookRequest : APISearchRequestOfGetFailedWebhookArgsGetFailedWebhookFields
     {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetMessagesRequest))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetFailedWebhookRequest))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public abstract partial class APISearchRequestOfGetMessagesArgsGetMessagesFields : Request
+    public abstract partial class APISearchRequestOfGetFailedWebhookArgsGetFailedWebhookFields : Request
     {
         
-        private GetMessagesArgs argsField;
+        private GetFailedWebhookArgs argsField;
         
-        private GetMessagesFields fieldsField;
+        private GetFailedWebhookFields fieldsField;
         
         private string predefinedSearchNameField;
         
@@ -1723,7 +1735,7 @@ namespace BfsApi
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public GetMessagesArgs Args
+        public GetFailedWebhookArgs Args
         {
             get
             {
@@ -1737,7 +1749,7 @@ namespace BfsApi
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public GetMessagesFields Fields
+        public GetFailedWebhookFields Fields
         {
             get
             {
@@ -1782,200 +1794,8 @@ namespace BfsApi
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class GetMessagesArgs
+    public partial class GetFailedWebhookArgs
     {
-        
-        private System.Guid[] brickIdsField;
-        
-        private System.Guid[] receiversField;
-        
-        private string[] subjectsField;
-        
-        private string[] bodiesField;
-        
-        private System.Nullable<System.DateTime> eventDateFromField;
-        
-        private System.Nullable<System.DateTime> eventDateToField;
-        
-        private System.Nullable<bool> isReadField;
-        
-        private System.Nullable<bool> isPublicField;
-        
-        private System.Nullable<bool> isPromotedField;
-        
-        private System.Nullable<bool> isHTMLField;
-        
-        private string[] priorityField;
-        
-        private string[] statusField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
-        public System.Guid[] BrickIds
-        {
-            get
-            {
-                return this.brickIdsField;
-            }
-            set
-            {
-                this.brickIdsField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=1)]
-        public System.Guid[] Receivers
-        {
-            get
-            {
-                return this.receiversField;
-            }
-            set
-            {
-                this.receiversField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=2)]
-        public string[] Subjects
-        {
-            get
-            {
-                return this.subjectsField;
-            }
-            set
-            {
-                this.subjectsField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=3)]
-        public string[] Bodies
-        {
-            get
-            {
-                return this.bodiesField;
-            }
-            set
-            {
-                this.bodiesField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=4)]
-        public System.Nullable<System.DateTime> EventDateFrom
-        {
-            get
-            {
-                return this.eventDateFromField;
-            }
-            set
-            {
-                this.eventDateFromField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=5)]
-        public System.Nullable<System.DateTime> EventDateTo
-        {
-            get
-            {
-                return this.eventDateToField;
-            }
-            set
-            {
-                this.eventDateToField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=6)]
-        public System.Nullable<bool> IsRead
-        {
-            get
-            {
-                return this.isReadField;
-            }
-            set
-            {
-                this.isReadField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=7)]
-        public System.Nullable<bool> IsPublic
-        {
-            get
-            {
-                return this.isPublicField;
-            }
-            set
-            {
-                this.isPublicField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=8)]
-        public System.Nullable<bool> IsPromoted
-        {
-            get
-            {
-                return this.isPromotedField;
-            }
-            set
-            {
-                this.isPromotedField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=9)]
-        public System.Nullable<bool> IsHTML
-        {
-            get
-            {
-                return this.isHTMLField;
-            }
-            set
-            {
-                this.isHTMLField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=10)]
-        public string[] Priority
-        {
-            get
-            {
-                return this.priorityField;
-            }
-            set
-            {
-                this.priorityField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=11)]
-        public string[] Status
-        {
-            get
-            {
-                return this.statusField;
-            }
-            set
-            {
-                this.statusField = value;
-            }
-        }
     }
     
     /// <remarks/>
@@ -3507,8 +3327,6 @@ namespace BfsApi
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchResponseOfGetFailedWebhookResponseRowGetFailedWebhookFields))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetFailedWebhookResponse))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APICreateResponseOfDeleteWebhookSubscription))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(DeleteWebhookSubscriptionResponse))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APICreateResponseOfCreateWebhookSubscription))]
@@ -3620,6 +3438,8 @@ namespace BfsApi
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ExternalFundBatchOrderSettleResponse))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchResponseOfGetExternalFundBatchOrdersResponseRowGetExternalFundBatchOrderFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetExternalFundBatchOrdersResponse))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchResponseOfGetFundBatchOrdersResponseRowGetFundBatchOrderFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetFundBatchOrdersResponse))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APICreateResponseOfAutoGiroDepositOrder))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateAutoGiroDepositOrderResponse))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APICreateResponseOfAutoGiroWithdrawalOrder))]
@@ -3630,8 +3450,8 @@ namespace BfsApi
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateDirectBankWithdrawalOrderResponse))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchResponseOfGetAllocationOrderResponseRowGetAllocationOrderFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetAllocationOrderResponse))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APICreateResponseOfAllocationOrder))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateAllocationOrdersResponse))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APICreateResponseOfSwitchOrder))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateSwitchOrdersResponse))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchResponseOfGetDepositTransferOrdersResponseRowGetDepositTransferOrdersFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetDepositTransferOrdersResponse))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchResponseOfGetDepositBatchTransferOrdersResponseRowGetDepositBatchTransferOrdersFields))]
@@ -3772,6 +3592,8 @@ namespace BfsApi
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateMessagesResponse))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchResponseOfGetMessagesResponseRowGetMessagesFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetMessagesResponse))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchResponseOfGetFailedWebhookResponseRowGetFailedWebhookFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetFailedWebhookResponse))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
@@ -3796,42 +3618,26 @@ namespace BfsApi
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetFailedWebhookResponse))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DeleteWebhookSubscriptionResponse))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public abstract partial class APISearchResponseOfGetFailedWebhookResponseRowGetFailedWebhookFields : Response
+    public abstract partial class APICreateResponseOfDeleteWebhookSubscription : Response
     {
         
-        private GetFailedWebhookResponseRow[] resultField;
-        
-        private GetFailedWebhookFields fieldsField;
+        private DeleteWebhookSubscription[] entitiesField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
-        public GetFailedWebhookResponseRow[] Result
+        public DeleteWebhookSubscription[] Entities
         {
             get
             {
-                return this.resultField;
+                return this.entitiesField;
             }
             set
             {
-                this.resultField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public GetFailedWebhookFields Fields
-        {
-            get
-            {
-                return this.fieldsField;
-            }
-            set
-            {
-                this.fieldsField = value;
+                this.entitiesField = value;
             }
         }
     }
@@ -3840,76 +3646,11 @@ namespace BfsApi
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class GetFailedWebhookResponseRow : EntityBase
+    public partial class DeleteWebhookSubscription : EntityBase
     {
-        
-        private string eventNameField;
-        
-        private string destinationAddressField;
-        
-        private string stateField;
-        
-        private string jsonPayloadField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string EventName
-        {
-            get
-            {
-                return this.eventNameField;
-            }
-            set
-            {
-                this.eventNameField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public string DestinationAddress
-        {
-            get
-            {
-                return this.destinationAddressField;
-            }
-            set
-            {
-                this.destinationAddressField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public string State
-        {
-            get
-            {
-                return this.stateField;
-            }
-            set
-            {
-                this.stateField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
-        public string JsonPayload
-        {
-            get
-            {
-                return this.jsonPayloadField;
-            }
-            set
-            {
-                this.jsonPayloadField = value;
-            }
-        }
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetFailedWebhookResponseRow))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(DeleteWebhookSubscription))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateWebhookSubscription))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetAvailableWebhookEventResponseRow))]
@@ -3961,12 +3702,13 @@ namespace BfsApi
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetBusinessEventResponseRow))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetDealsResponseRow))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetExternalFundBatchOrdersResponseRow))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetFundBatchOrdersResponseRow))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AutoGiroDepositOrder))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AutoGiroWithdrawalOrder))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetAutoGiroOrdersResponseRow))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(DirectBankWithdrawalOrder))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetAllocationOrderResponseRow))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AllocationOrder))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SwitchOrder))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetDepositTransferOrdersResponseRow))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetDepositBatchTransferOrdersResponseRow))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetWithdrawalTransferOrdersResponseRow))]
@@ -4024,6 +3766,7 @@ namespace BfsApi
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetNotesResponseRow))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateMessage))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateMessage))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetMessagesResponseRow))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ExecutionInterface))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ManualExecutionInterfaceOld))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ManualExecutionInterface))]
@@ -4038,7 +3781,7 @@ namespace BfsApi
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateInternalExecutionInterface))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateMFEXExecutionInterface))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateExternalFundExecutionInterface))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetMessagesResponseRow))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetFailedWebhookResponseRow))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CustomField))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4165,14 +3908,6 @@ namespace BfsApi
                 this.valueField = value;
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class DeleteWebhookSubscription : EntityBase
-    {
     }
     
     /// <remarks/>
@@ -14983,6 +14718,318 @@ namespace BfsApi
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetFundBatchOrdersResponseRow : EntityBase
+    {
+        
+        private decimal cashAmountField;
+        
+        private decimal instrumentAmountField;
+        
+        private string tradeOrderDirectionKeyField;
+        
+        private System.Guid instrumentField;
+        
+        private System.Guid cashField;
+        
+        private double priceField;
+        
+        private string stateField;
+        
+        private System.Guid executionInterfaceField;
+        
+        private string executionInterfaceKeyField;
+        
+        private bool isUnitOrderField;
+        
+        private string orderNoField;
+        
+        private System.DateTime cashTradeDateField;
+        
+        private System.DateTime instrumentTradeDateField;
+        
+        private System.DateTime cashSettlementDateField;
+        
+        private System.DateTime instrumentSettlementDateField;
+        
+        private bool isPrePayedField;
+        
+        private System.DateTime sentDateField;
+        
+        private decimal settledAmountField;
+        
+        private string externalReferenceField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public decimal CashAmount
+        {
+            get
+            {
+                return this.cashAmountField;
+            }
+            set
+            {
+                this.cashAmountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public decimal InstrumentAmount
+        {
+            get
+            {
+                return this.instrumentAmountField;
+            }
+            set
+            {
+                this.instrumentAmountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string TradeOrderDirectionKey
+        {
+            get
+            {
+                return this.tradeOrderDirectionKeyField;
+            }
+            set
+            {
+                this.tradeOrderDirectionKeyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public System.Guid Instrument
+        {
+            get
+            {
+                return this.instrumentField;
+            }
+            set
+            {
+                this.instrumentField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public System.Guid Cash
+        {
+            get
+            {
+                return this.cashField;
+            }
+            set
+            {
+                this.cashField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public double Price
+        {
+            get
+            {
+                return this.priceField;
+            }
+            set
+            {
+                this.priceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public string State
+        {
+            get
+            {
+                return this.stateField;
+            }
+            set
+            {
+                this.stateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public System.Guid ExecutionInterface
+        {
+            get
+            {
+                return this.executionInterfaceField;
+            }
+            set
+            {
+                this.executionInterfaceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+        public string ExecutionInterfaceKey
+        {
+            get
+            {
+                return this.executionInterfaceKeyField;
+            }
+            set
+            {
+                this.executionInterfaceKeyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
+        public bool IsUnitOrder
+        {
+            get
+            {
+                return this.isUnitOrderField;
+            }
+            set
+            {
+                this.isUnitOrderField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
+        public string OrderNo
+        {
+            get
+            {
+                return this.orderNoField;
+            }
+            set
+            {
+                this.orderNoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
+        public System.DateTime CashTradeDate
+        {
+            get
+            {
+                return this.cashTradeDateField;
+            }
+            set
+            {
+                this.cashTradeDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=12)]
+        public System.DateTime InstrumentTradeDate
+        {
+            get
+            {
+                return this.instrumentTradeDateField;
+            }
+            set
+            {
+                this.instrumentTradeDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=13)]
+        public System.DateTime CashSettlementDate
+        {
+            get
+            {
+                return this.cashSettlementDateField;
+            }
+            set
+            {
+                this.cashSettlementDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=14)]
+        public System.DateTime InstrumentSettlementDate
+        {
+            get
+            {
+                return this.instrumentSettlementDateField;
+            }
+            set
+            {
+                this.instrumentSettlementDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=15)]
+        public bool IsPrePayed
+        {
+            get
+            {
+                return this.isPrePayedField;
+            }
+            set
+            {
+                this.isPrePayedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=16)]
+        public System.DateTime SentDate
+        {
+            get
+            {
+                return this.sentDateField;
+            }
+            set
+            {
+                this.sentDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=17)]
+        public decimal SettledAmount
+        {
+            get
+            {
+                return this.settledAmountField;
+            }
+            set
+            {
+                this.settledAmountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=18)]
+        public string ExternalReference
+        {
+            get
+            {
+                return this.externalReferenceField;
+            }
+            set
+            {
+                this.externalReferenceField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
     public partial class AutoGiroDepositOrder : EntityBase
     {
         
@@ -15480,6 +15527,8 @@ namespace BfsApi
         
         private string stateField;
         
+        private string externalReferenceField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
         public System.Nullable<System.Guid> Account
@@ -15577,6 +15626,20 @@ namespace BfsApi
                 this.stateField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public string ExternalReference
+        {
+            get
+            {
+                return this.externalReferenceField;
+            }
+            set
+            {
+                this.externalReferenceField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -15663,18 +15726,20 @@ namespace BfsApi
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class AllocationOrder : EntityBase
+    public partial class SwitchOrder : EntityBase
     {
         
         private System.Guid accountField;
         
+        private string commentField;
+        
+        private System.Guid resellerField;
+        
+        private string externalReferenceField;
+        
         private SellOrder[] sellOrdersField;
         
         private AllocationItem[] allocationItemsField;
-        
-        private OrderSettlementType buyOrderSettlementTypeField;
-        
-        private OrderSettlementType sellOrderSettlementTypeField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -15691,7 +15756,49 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string Comment
+        {
+            get
+            {
+                return this.commentField;
+            }
+            set
+            {
+                this.commentField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public System.Guid Reseller
+        {
+            get
+            {
+                return this.resellerField;
+            }
+            set
+            {
+                this.resellerField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public string ExternalReference
+        {
+            get
+            {
+                return this.externalReferenceField;
+            }
+            set
+            {
+                this.externalReferenceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=4)]
         public SellOrder[] SellOrders
         {
             get
@@ -15705,7 +15812,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=2)]
+        [System.Xml.Serialization.XmlArrayAttribute(Order=5)]
         public AllocationItem[] AllocationItems
         {
             get
@@ -15717,34 +15824,6 @@ namespace BfsApi
                 this.allocationItemsField = value;
             }
         }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
-        public OrderSettlementType BuyOrderSettlementType
-        {
-            get
-            {
-                return this.buyOrderSettlementTypeField;
-            }
-            set
-            {
-                this.buyOrderSettlementTypeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
-        public OrderSettlementType SellOrderSettlementType
-        {
-            get
-            {
-                return this.sellOrderSettlementTypeField;
-            }
-            set
-            {
-                this.sellOrderSettlementTypeField = value;
-            }
-        }
     }
     
     /// <remarks/>
@@ -15754,25 +15833,23 @@ namespace BfsApi
     public partial class SellOrder
     {
         
-        private decimal amountField;
+        private decimal sellPercentageField;
         
         private System.Guid assetField;
-        
-        private bool isUnitOrderField;
         
         private string externalReferenceField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public decimal Amount
+        public decimal SellPercentage
         {
             get
             {
-                return this.amountField;
+                return this.sellPercentageField;
             }
             set
             {
-                this.amountField = value;
+                this.sellPercentageField = value;
             }
         }
         
@@ -15792,20 +15869,6 @@ namespace BfsApi
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public bool IsUnitOrder
-        {
-            get
-            {
-                return this.isUnitOrderField;
-            }
-            set
-            {
-                this.isUnitOrderField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
         public string ExternalReference
         {
             get
@@ -15817,22 +15880,6 @@ namespace BfsApi
                 this.externalReferenceField = value;
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public enum OrderSettlementType
-    {
-        
-        /// <remarks/>
-        PAYMENT,
-        
-        /// <remarks/>
-        PRICE,
-        
-        /// <remarks/>
-        CONFIRMATION,
     }
     
     /// <remarks/>
@@ -16589,6 +16636,22 @@ namespace BfsApi
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public enum OrderSettlementType
+    {
+        
+        /// <remarks/>
+        PAYMENT,
+        
+        /// <remarks/>
+        PRICE,
+        
+        /// <remarks/>
+        CONFIRMATION,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
     public partial class CancelTradeOrder : EntityBase
@@ -16697,6 +16760,8 @@ namespace BfsApi
         private System.Nullable<FourEyesStatus> fourEyesStatusField;
         
         private System.Guid subscriptionOrderIdField;
+        
+        private System.Guid fundBatchOrderField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -17255,6 +17320,20 @@ namespace BfsApi
             set
             {
                 this.subscriptionOrderIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=40)]
+        public System.Guid FundBatchOrder
+        {
+            get
+            {
+                return this.fundBatchOrderField;
+            }
+            set
+            {
+                this.fundBatchOrderField = value;
             }
         }
     }
@@ -30464,6 +30543,174 @@ namespace BfsApi
     }
     
     /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetMessagesResponseRow : EntityBase
+    {
+        
+        private System.Guid receiverField;
+        
+        private string subjectField;
+        
+        private string bodyField;
+        
+        private bool isReadField;
+        
+        private bool isPublicField;
+        
+        private bool isPromotedField;
+        
+        private System.DateTime eventDateField;
+        
+        private bool isHTMLField;
+        
+        private string priorityField;
+        
+        private string statusField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public System.Guid Receiver
+        {
+            get
+            {
+                return this.receiverField;
+            }
+            set
+            {
+                this.receiverField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string Subject
+        {
+            get
+            {
+                return this.subjectField;
+            }
+            set
+            {
+                this.subjectField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string Body
+        {
+            get
+            {
+                return this.bodyField;
+            }
+            set
+            {
+                this.bodyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public bool IsRead
+        {
+            get
+            {
+                return this.isReadField;
+            }
+            set
+            {
+                this.isReadField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public bool IsPublic
+        {
+            get
+            {
+                return this.isPublicField;
+            }
+            set
+            {
+                this.isPublicField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public bool IsPromoted
+        {
+            get
+            {
+                return this.isPromotedField;
+            }
+            set
+            {
+                this.isPromotedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public System.DateTime EventDate
+        {
+            get
+            {
+                return this.eventDateField;
+            }
+            set
+            {
+                this.eventDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public bool IsHTML
+        {
+            get
+            {
+                return this.isHTMLField;
+            }
+            set
+            {
+                this.isHTMLField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+        public string Priority
+        {
+            get
+            {
+                return this.priorityField;
+            }
+            set
+            {
+                this.priorityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
+        public string Status
+        {
+            get
+            {
+                return this.statusField;
+            }
+            set
+            {
+                this.statusField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CurrencyExchangeOrderBuy))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CurrencyExchangeOrderSell))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
@@ -30637,166 +30884,70 @@ namespace BfsApi
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class GetMessagesResponseRow : EntityBase
+    public partial class GetFailedWebhookResponseRow : EntityBase
     {
         
-        private System.Guid receiverField;
+        private string eventNameField;
         
-        private string subjectField;
+        private string destinationAddressField;
         
-        private string bodyField;
+        private string stateField;
         
-        private bool isReadField;
-        
-        private bool isPublicField;
-        
-        private bool isPromotedField;
-        
-        private System.DateTime eventDateField;
-        
-        private bool isHTMLField;
-        
-        private string priorityField;
-        
-        private string statusField;
+        private string jsonPayloadField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public System.Guid Receiver
+        public string EventName
         {
             get
             {
-                return this.receiverField;
+                return this.eventNameField;
             }
             set
             {
-                this.receiverField = value;
+                this.eventNameField = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public string Subject
+        public string DestinationAddress
         {
             get
             {
-                return this.subjectField;
+                return this.destinationAddressField;
             }
             set
             {
-                this.subjectField = value;
+                this.destinationAddressField = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public string Body
+        public string State
         {
             get
             {
-                return this.bodyField;
+                return this.stateField;
             }
             set
             {
-                this.bodyField = value;
+                this.stateField = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=3)]
-        public bool IsRead
+        public string JsonPayload
         {
             get
             {
-                return this.isReadField;
+                return this.jsonPayloadField;
             }
             set
             {
-                this.isReadField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
-        public bool IsPublic
-        {
-            get
-            {
-                return this.isPublicField;
-            }
-            set
-            {
-                this.isPublicField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
-        public bool IsPromoted
-        {
-            get
-            {
-                return this.isPromotedField;
-            }
-            set
-            {
-                this.isPromotedField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
-        public System.DateTime EventDate
-        {
-            get
-            {
-                return this.eventDateField;
-            }
-            set
-            {
-                this.eventDateField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
-        public bool IsHTML
-        {
-            get
-            {
-                return this.isHTMLField;
-            }
-            set
-            {
-                this.isHTMLField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
-        public string Priority
-        {
-            get
-            {
-                return this.priorityField;
-            }
-            set
-            {
-                this.priorityField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
-        public string Status
-        {
-            get
-            {
-                return this.statusField;
-            }
-            set
-            {
-                this.statusField = value;
+                this.jsonPayloadField = value;
             }
         }
     }
@@ -30805,12 +30956,93 @@ namespace BfsApi
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class GetFailedWebhookFields : FieldBase
+    public partial class DeleteWebhookSubscriptionResponse : APICreateResponseOfDeleteWebhookSubscription
     {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetFailedWebhookFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateWebhookSubscriptionResponse))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class APICreateResponseOfCreateWebhookSubscription : Response
+    {
+        
+        private CreateWebhookSubscription[] entitiesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public CreateWebhookSubscription[] Entities
+        {
+            get
+            {
+                return this.entitiesField;
+            }
+            set
+            {
+                this.entitiesField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class CreateWebhookSubscriptionResponse : APICreateResponseOfCreateWebhookSubscription
+    {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetAvailableWebhookEventResponse))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class APISearchResponseOfGetAvailableWebhookEventResponseRowGetAvailableWebhookEventFields : Response
+    {
+        
+        private GetAvailableWebhookEventResponseRow[] resultField;
+        
+        private GetAvailableWebhookEventFields fieldsField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public GetAvailableWebhookEventResponseRow[] Result
+        {
+            get
+            {
+                return this.resultField;
+            }
+            set
+            {
+                this.resultField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public GetAvailableWebhookEventFields Fields
+        {
+            get
+            {
+                return this.fieldsField;
+            }
+            set
+            {
+                this.fieldsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetAvailableWebhookEventFields : FieldBase
+    {
+    }
+    
+    /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetAvailableWebhookEventFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetWebhookSubscriptionFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetInsurancePolicyFields))]
@@ -30858,6 +31090,7 @@ namespace BfsApi
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetNotesFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateMessageFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetMessagesFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetFailedWebhookFields))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
@@ -30879,14 +31112,6 @@ namespace BfsApi
                 this.customFieldsField = value;
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class GetAvailableWebhookEventFields : FieldBase
-    {
     }
     
     /// <remarks/>
@@ -34022,6 +34247,8 @@ namespace BfsApi
         
         private bool subscriptionOrderIdField;
         
+        private bool fundBatchOrderField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public bool BrickId
@@ -34621,6 +34848,20 @@ namespace BfsApi
             set
             {
                 this.subscriptionOrderIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=43)]
+        public bool FundBatchOrder
+        {
+            get
+            {
+                return this.fundBatchOrderField;
+            }
+            set
+            {
+                this.fundBatchOrderField = value;
             }
         }
     }
@@ -42159,115 +42400,8 @@ namespace BfsApi
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class GetFailedWebhookResponse : APISearchResponseOfGetFailedWebhookResponseRowGetFailedWebhookFields
+    public partial class GetFailedWebhookFields : FieldBase
     {
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DeleteWebhookSubscriptionResponse))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public abstract partial class APICreateResponseOfDeleteWebhookSubscription : Response
-    {
-        
-        private DeleteWebhookSubscription[] entitiesField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
-        public DeleteWebhookSubscription[] Entities
-        {
-            get
-            {
-                return this.entitiesField;
-            }
-            set
-            {
-                this.entitiesField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class DeleteWebhookSubscriptionResponse : APICreateResponseOfDeleteWebhookSubscription
-    {
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateWebhookSubscriptionResponse))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public abstract partial class APICreateResponseOfCreateWebhookSubscription : Response
-    {
-        
-        private CreateWebhookSubscription[] entitiesField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
-        public CreateWebhookSubscription[] Entities
-        {
-            get
-            {
-                return this.entitiesField;
-            }
-            set
-            {
-                this.entitiesField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class CreateWebhookSubscriptionResponse : APICreateResponseOfCreateWebhookSubscription
-    {
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetAvailableWebhookEventResponse))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public abstract partial class APISearchResponseOfGetAvailableWebhookEventResponseRowGetAvailableWebhookEventFields : Response
-    {
-        
-        private GetAvailableWebhookEventResponseRow[] resultField;
-        
-        private GetAvailableWebhookEventFields fieldsField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
-        public GetAvailableWebhookEventResponseRow[] Result
-        {
-            get
-            {
-                return this.resultField;
-            }
-            set
-            {
-                this.resultField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public GetAvailableWebhookEventFields Fields
-        {
-            get
-            {
-                return this.fieldsField;
-            }
-            set
-            {
-                this.fieldsField = value;
-            }
-        }
     }
     
     /// <remarks/>
@@ -49753,6 +49887,399 @@ namespace BfsApi
     }
     
     /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetFundBatchOrdersResponse))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class APISearchResponseOfGetFundBatchOrdersResponseRowGetFundBatchOrderFields : Response
+    {
+        
+        private GetFundBatchOrdersResponseRow[] resultField;
+        
+        private GetFundBatchOrderFields fieldsField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public GetFundBatchOrdersResponseRow[] Result
+        {
+            get
+            {
+                return this.resultField;
+            }
+            set
+            {
+                this.resultField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public GetFundBatchOrderFields Fields
+        {
+            get
+            {
+                return this.fieldsField;
+            }
+            set
+            {
+                this.fieldsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetFundBatchOrderFields
+    {
+        
+        private bool brickIdField;
+        
+        private bool createdDateField;
+        
+        private bool cashAmountField;
+        
+        private bool instrumentAmountField;
+        
+        private bool tradeOrderDirectionKeyField;
+        
+        private bool instrumentField;
+        
+        private bool cashField;
+        
+        private bool priceField;
+        
+        private bool stateField;
+        
+        private bool executionInterfaceField;
+        
+        private bool executionInterfaceKeyField;
+        
+        private bool isUnitOrderField;
+        
+        private bool orderNoField;
+        
+        private bool cashTradeDateField;
+        
+        private bool instrumentTradeDateField;
+        
+        private bool cashSettlementDateField;
+        
+        private bool instrumentSettlementDateField;
+        
+        private bool isPrePayedField;
+        
+        private bool sentDateField;
+        
+        private bool settledAmountField;
+        
+        private bool externalReferenceField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public bool BrickId
+        {
+            get
+            {
+                return this.brickIdField;
+            }
+            set
+            {
+                this.brickIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public bool CreatedDate
+        {
+            get
+            {
+                return this.createdDateField;
+            }
+            set
+            {
+                this.createdDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public bool CashAmount
+        {
+            get
+            {
+                return this.cashAmountField;
+            }
+            set
+            {
+                this.cashAmountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public bool InstrumentAmount
+        {
+            get
+            {
+                return this.instrumentAmountField;
+            }
+            set
+            {
+                this.instrumentAmountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public bool TradeOrderDirectionKey
+        {
+            get
+            {
+                return this.tradeOrderDirectionKeyField;
+            }
+            set
+            {
+                this.tradeOrderDirectionKeyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public bool Instrument
+        {
+            get
+            {
+                return this.instrumentField;
+            }
+            set
+            {
+                this.instrumentField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public bool Cash
+        {
+            get
+            {
+                return this.cashField;
+            }
+            set
+            {
+                this.cashField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public bool Price
+        {
+            get
+            {
+                return this.priceField;
+            }
+            set
+            {
+                this.priceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+        public bool State
+        {
+            get
+            {
+                return this.stateField;
+            }
+            set
+            {
+                this.stateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
+        public bool ExecutionInterface
+        {
+            get
+            {
+                return this.executionInterfaceField;
+            }
+            set
+            {
+                this.executionInterfaceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
+        public bool ExecutionInterfaceKey
+        {
+            get
+            {
+                return this.executionInterfaceKeyField;
+            }
+            set
+            {
+                this.executionInterfaceKeyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
+        public bool IsUnitOrder
+        {
+            get
+            {
+                return this.isUnitOrderField;
+            }
+            set
+            {
+                this.isUnitOrderField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=12)]
+        public bool OrderNo
+        {
+            get
+            {
+                return this.orderNoField;
+            }
+            set
+            {
+                this.orderNoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=13)]
+        public bool CashTradeDate
+        {
+            get
+            {
+                return this.cashTradeDateField;
+            }
+            set
+            {
+                this.cashTradeDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=14)]
+        public bool InstrumentTradeDate
+        {
+            get
+            {
+                return this.instrumentTradeDateField;
+            }
+            set
+            {
+                this.instrumentTradeDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=15)]
+        public bool CashSettlementDate
+        {
+            get
+            {
+                return this.cashSettlementDateField;
+            }
+            set
+            {
+                this.cashSettlementDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=16)]
+        public bool InstrumentSettlementDate
+        {
+            get
+            {
+                return this.instrumentSettlementDateField;
+            }
+            set
+            {
+                this.instrumentSettlementDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=17)]
+        public bool IsPrePayed
+        {
+            get
+            {
+                return this.isPrePayedField;
+            }
+            set
+            {
+                this.isPrePayedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=18)]
+        public bool SentDate
+        {
+            get
+            {
+                return this.sentDateField;
+            }
+            set
+            {
+                this.sentDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=19)]
+        public bool SettledAmount
+        {
+            get
+            {
+                return this.settledAmountField;
+            }
+            set
+            {
+                this.settledAmountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=20)]
+        public bool ExternalReference
+        {
+            get
+            {
+                return this.externalReferenceField;
+            }
+            set
+            {
+                this.externalReferenceField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetFundBatchOrdersResponse : APISearchResponseOfGetFundBatchOrdersResponseRowGetFundBatchOrderFields
+    {
+    }
+    
+    /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateAutoGiroDepositOrderResponse))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -49980,6 +50507,8 @@ namespace BfsApi
         
         private bool stateField;
         
+        private bool externalReferenceField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public bool BrickId
@@ -50091,6 +50620,20 @@ namespace BfsApi
                 this.stateField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+        public bool ExternalReference
+        {
+            get
+            {
+                return this.externalReferenceField;
+            }
+            set
+            {
+                this.externalReferenceField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -50102,18 +50645,18 @@ namespace BfsApi
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateAllocationOrdersResponse))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateSwitchOrdersResponse))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public abstract partial class APICreateResponseOfAllocationOrder : Response
+    public abstract partial class APICreateResponseOfSwitchOrder : Response
     {
         
-        private AllocationOrder[] entitiesField;
+        private SwitchOrder[] entitiesField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
-        public AllocationOrder[] Entities
+        public SwitchOrder[] Entities
         {
             get
             {
@@ -50130,7 +50673,7 @@ namespace BfsApi
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class CreateAllocationOrdersResponse : APICreateResponseOfAllocationOrder
+    public partial class CreateSwitchOrdersResponse : APICreateResponseOfSwitchOrder
     {
     }
     
@@ -54351,10 +54894,51 @@ namespace BfsApi
     }
     
     /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetFailedWebhookResponse))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class GetFailedWebhookArgs
+    public abstract partial class APISearchResponseOfGetFailedWebhookResponseRowGetFailedWebhookFields : Response
+    {
+        
+        private GetFailedWebhookResponseRow[] resultField;
+        
+        private GetFailedWebhookFields fieldsField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public GetFailedWebhookResponseRow[] Result
+        {
+            get
+            {
+                return this.resultField;
+            }
+            set
+            {
+                this.resultField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public GetFailedWebhookFields Fields
+        {
+            get
+            {
+                return this.fieldsField;
+            }
+            set
+            {
+                this.fieldsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetFailedWebhookResponse : APISearchResponseOfGetFailedWebhookResponseRowGetFailedWebhookFields
     {
     }
     
@@ -61756,6 +62340,190 @@ namespace BfsApi
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetFundBatchOrdersArgs
+    {
+        
+        private System.Guid[] brickIdsField;
+        
+        private string[] statesField;
+        
+        private System.Guid[] instrumentsField;
+        
+        private System.Nullable<System.DateTime> createdDateFromField;
+        
+        private System.Nullable<System.DateTime> createdDateToField;
+        
+        private System.Guid[] executionInterfaceField;
+        
+        private string executionInterfaceKeyField;
+        
+        private System.Nullable<bool> isPrePayedField;
+        
+        private string[] externalReferencesField;
+        
+        private string[] orderNosField;
+        
+        private System.Nullable<bool> isUnitOrderField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public System.Guid[] BrickIds
+        {
+            get
+            {
+                return this.brickIdsField;
+            }
+            set
+            {
+                this.brickIdsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=1)]
+        public string[] States
+        {
+            get
+            {
+                return this.statesField;
+            }
+            set
+            {
+                this.statesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=2)]
+        public System.Guid[] Instruments
+        {
+            get
+            {
+                return this.instrumentsField;
+            }
+            set
+            {
+                this.instrumentsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
+        public System.Nullable<System.DateTime> CreatedDateFrom
+        {
+            get
+            {
+                return this.createdDateFromField;
+            }
+            set
+            {
+                this.createdDateFromField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=4)]
+        public System.Nullable<System.DateTime> CreatedDateTo
+        {
+            get
+            {
+                return this.createdDateToField;
+            }
+            set
+            {
+                this.createdDateToField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=5)]
+        public System.Guid[] ExecutionInterface
+        {
+            get
+            {
+                return this.executionInterfaceField;
+            }
+            set
+            {
+                this.executionInterfaceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public string ExecutionInterfaceKey
+        {
+            get
+            {
+                return this.executionInterfaceKeyField;
+            }
+            set
+            {
+                this.executionInterfaceKeyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=7)]
+        public System.Nullable<bool> IsPrePayed
+        {
+            get
+            {
+                return this.isPrePayedField;
+            }
+            set
+            {
+                this.isPrePayedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=8)]
+        public string[] ExternalReferences
+        {
+            get
+            {
+                return this.externalReferencesField;
+            }
+            set
+            {
+                this.externalReferencesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=9)]
+        public string[] OrderNos
+        {
+            get
+            {
+                return this.orderNosField;
+            }
+            set
+            {
+                this.orderNosField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=10)]
+        public System.Nullable<bool> IsUnitOrder
+        {
+            get
+            {
+                return this.isUnitOrderField;
+            }
+            set
+            {
+                this.isUnitOrderField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
     public partial class GetAutoGiroOrdersArgs
     {
         
@@ -62007,6 +62775,8 @@ namespace BfsApi
         
         private string[] statesField;
         
+        private string[] externalReferencesField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
         public System.Guid[] BrickIds
@@ -62116,6 +62886,20 @@ namespace BfsApi
             set
             {
                 this.statesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=8)]
+        public string[] ExternalReferences
+        {
+            get
+            {
+                return this.externalReferencesField;
+            }
+            set
+            {
+                this.externalReferencesField = value;
             }
         }
     }
@@ -63555,6 +64339,8 @@ namespace BfsApi
         
         private System.Guid[] subscriptionOrderIdField;
         
+        private System.Guid[] fundBatchOrdersField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
         public System.Guid[] BrickIds
@@ -63860,6 +64646,20 @@ namespace BfsApi
             set
             {
                 this.subscriptionOrderIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=22)]
+        public System.Guid[] FundBatchOrders
+        {
+            get
+            {
+                return this.fundBatchOrdersField;
+            }
+            set
+            {
+                this.fundBatchOrdersField = value;
             }
         }
     }
@@ -68311,6 +69111,206 @@ namespace BfsApi
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetMessagesArgs
+    {
+        
+        private System.Guid[] brickIdsField;
+        
+        private System.Guid[] receiversField;
+        
+        private string[] subjectsField;
+        
+        private string[] bodiesField;
+        
+        private System.Nullable<System.DateTime> eventDateFromField;
+        
+        private System.Nullable<System.DateTime> eventDateToField;
+        
+        private System.Nullable<bool> isReadField;
+        
+        private System.Nullable<bool> isPublicField;
+        
+        private System.Nullable<bool> isPromotedField;
+        
+        private System.Nullable<bool> isHTMLField;
+        
+        private string[] priorityField;
+        
+        private string[] statusField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public System.Guid[] BrickIds
+        {
+            get
+            {
+                return this.brickIdsField;
+            }
+            set
+            {
+                this.brickIdsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=1)]
+        public System.Guid[] Receivers
+        {
+            get
+            {
+                return this.receiversField;
+            }
+            set
+            {
+                this.receiversField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=2)]
+        public string[] Subjects
+        {
+            get
+            {
+                return this.subjectsField;
+            }
+            set
+            {
+                this.subjectsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=3)]
+        public string[] Bodies
+        {
+            get
+            {
+                return this.bodiesField;
+            }
+            set
+            {
+                this.bodiesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=4)]
+        public System.Nullable<System.DateTime> EventDateFrom
+        {
+            get
+            {
+                return this.eventDateFromField;
+            }
+            set
+            {
+                this.eventDateFromField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=5)]
+        public System.Nullable<System.DateTime> EventDateTo
+        {
+            get
+            {
+                return this.eventDateToField;
+            }
+            set
+            {
+                this.eventDateToField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=6)]
+        public System.Nullable<bool> IsRead
+        {
+            get
+            {
+                return this.isReadField;
+            }
+            set
+            {
+                this.isReadField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=7)]
+        public System.Nullable<bool> IsPublic
+        {
+            get
+            {
+                return this.isPublicField;
+            }
+            set
+            {
+                this.isPublicField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=8)]
+        public System.Nullable<bool> IsPromoted
+        {
+            get
+            {
+                return this.isPromotedField;
+            }
+            set
+            {
+                this.isPromotedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=9)]
+        public System.Nullable<bool> IsHTML
+        {
+            get
+            {
+                return this.isHTMLField;
+            }
+            set
+            {
+                this.isHTMLField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=10)]
+        public string[] Priority
+        {
+            get
+            {
+                return this.priorityField;
+            }
+            set
+            {
+                this.priorityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=11)]
+        public string[] Status
+        {
+            get
+            {
+                return this.statusField;
+            }
+            set
+            {
+                this.statusField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
     public partial class Credentials
     {
         
@@ -68348,8 +69348,6 @@ namespace BfsApi
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchRequestOfGetFailedWebhookArgsGetFailedWebhookFields))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetFailedWebhookRequest))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APICreateRequestOfDeleteWebhookSubscriptionBetterActionBrick))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(DeleteWebhookSubscriptionRequest))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APICreateRequestOfCreateWebhookSubscriptionBetterActionBrick))]
@@ -68461,6 +69459,8 @@ namespace BfsApi
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ExternalFundBatchOrderSettleRequest))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchRequestOfGetExternalFundBatchOrdersArgsGetExternalFundBatchOrderFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetExternalFundBatchOrdersRequest))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchRequestOfGetFundBatchOrdersArgsGetFundBatchOrderFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetFundBatchOrdersRequest))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APICreateRequestOfAutoGiroDepositOrderBetterActionBrick))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateAutoGiroDepositOrderRequest))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APICreateRequestOfAutoGiroWithdrawalOrderBetterActionBrick))]
@@ -68471,8 +69471,8 @@ namespace BfsApi
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateDirectBankWithdrawalOrderRequest))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchRequestOfGetAllocationOrderArgsGetAllocationOrderFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetAllocationOrderRequest))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APICreateRequestOfAllocationOrderBetterActionBrick))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateAllocationOrdersRequest))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APICreateRequestOfSwitchOrderBetterActionBrick))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateSwitchOrdersRequest))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchRequestOfGetDepositTransferOrdersArgsGetDepositTransferOrdersFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetDepositTransferOrdersRequest))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchRequestOfGetDepositBatchTransferOrdersArgsGetDepositBatchTransferOrdersFields))]
@@ -68617,6 +69617,8 @@ namespace BfsApi
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateMessagesRequest))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchRequestOfGetMessagesArgsGetMessagesFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetMessagesRequest))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchRequestOfGetFailedWebhookArgsGetFailedWebhookFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetFailedWebhookRequest))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
@@ -68654,87 +69656,6 @@ namespace BfsApi
                 this.identifyField = value;
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetFailedWebhookRequest))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public abstract partial class APISearchRequestOfGetFailedWebhookArgsGetFailedWebhookFields : Request
-    {
-        
-        private GetFailedWebhookArgs argsField;
-        
-        private GetFailedWebhookFields fieldsField;
-        
-        private string predefinedSearchNameField;
-        
-        private string[] typesField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public GetFailedWebhookArgs Args
-        {
-            get
-            {
-                return this.argsField;
-            }
-            set
-            {
-                this.argsField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public GetFailedWebhookFields Fields
-        {
-            get
-            {
-                return this.fieldsField;
-            }
-            set
-            {
-                this.fieldsField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public string PredefinedSearchName
-        {
-            get
-            {
-                return this.predefinedSearchNameField;
-            }
-            set
-            {
-                this.predefinedSearchNameField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=3)]
-        public string[] Types
-        {
-            get
-            {
-                return this.typesField;
-            }
-            set
-            {
-                this.typesField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class GetFailedWebhookRequest : APISearchRequestOfGetFailedWebhookArgsGetFailedWebhookFields
-    {
     }
     
     /// <remarks/>
@@ -72303,6 +73224,87 @@ namespace BfsApi
     }
     
     /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetFundBatchOrdersRequest))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class APISearchRequestOfGetFundBatchOrdersArgsGetFundBatchOrderFields : Request
+    {
+        
+        private GetFundBatchOrdersArgs argsField;
+        
+        private GetFundBatchOrderFields fieldsField;
+        
+        private string predefinedSearchNameField;
+        
+        private string[] typesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public GetFundBatchOrdersArgs Args
+        {
+            get
+            {
+                return this.argsField;
+            }
+            set
+            {
+                this.argsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public GetFundBatchOrderFields Fields
+        {
+            get
+            {
+                return this.fieldsField;
+            }
+            set
+            {
+                this.fieldsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string PredefinedSearchName
+        {
+            get
+            {
+                return this.predefinedSearchNameField;
+            }
+            set
+            {
+                this.predefinedSearchNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=3)]
+        public string[] Types
+        {
+            get
+            {
+                return this.typesField;
+            }
+            set
+            {
+                this.typesField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetFundBatchOrdersRequest : APISearchRequestOfGetFundBatchOrdersArgsGetFundBatchOrderFields
+    {
+    }
+    
+    /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateAutoGiroDepositOrderRequest))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -72564,18 +73566,18 @@ namespace BfsApi
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateAllocationOrdersRequest))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateSwitchOrdersRequest))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public abstract partial class APICreateRequestOfAllocationOrderBetterActionBrick : Request
+    public abstract partial class APICreateRequestOfSwitchOrderBetterActionBrick : Request
     {
         
-        private AllocationOrder[] entitiesField;
+        private SwitchOrder[] entitiesField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
-        public AllocationOrder[] Entities
+        public SwitchOrder[] Entities
         {
             get
             {
@@ -72592,7 +73594,7 @@ namespace BfsApi
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class CreateAllocationOrdersRequest : APICreateRequestOfAllocationOrderBetterActionBrick
+    public partial class CreateSwitchOrdersRequest : APICreateRequestOfSwitchOrderBetterActionBrick
     {
     }
     
@@ -76539,6 +77541,87 @@ namespace BfsApi
     {
     }
     
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetMessagesRequest))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class APISearchRequestOfGetMessagesArgsGetMessagesFields : Request
+    {
+        
+        private GetMessagesArgs argsField;
+        
+        private GetMessagesFields fieldsField;
+        
+        private string predefinedSearchNameField;
+        
+        private string[] typesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public GetMessagesArgs Args
+        {
+            get
+            {
+                return this.argsField;
+            }
+            set
+            {
+                this.argsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public GetMessagesFields Fields
+        {
+            get
+            {
+                return this.fieldsField;
+            }
+            set
+            {
+                this.fieldsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string PredefinedSearchName
+        {
+            get
+            {
+                return this.predefinedSearchNameField;
+            }
+            set
+            {
+                this.predefinedSearchNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=3)]
+        public string[] Types
+        {
+            get
+            {
+                return this.typesField;
+            }
+            set
+            {
+                this.typesField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetMessagesRequest : APISearchRequestOfGetMessagesArgsGetMessagesFields
+    {
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     public interface bfsapiSoapChannel : BfsApi.bfsapiSoap, System.ServiceModel.IClientChannel
     {
@@ -76580,6 +77663,11 @@ namespace BfsApi
         public bfsapiSoapClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress)
         {
+        }
+        
+        public System.Threading.Tasks.Task<BfsApi.GetFailedWebhookResponse> GetFailedWebhooksAsync(BfsApi.GetFailedWebhookRequest req)
+        {
+            return base.Channel.GetFailedWebhooksAsync(req);
         }
         
         public System.Threading.Tasks.Task<BfsApi.GetMessagesResponse> GetMessagesAsync(BfsApi.GetMessagesRequest req)
@@ -76957,9 +78045,9 @@ namespace BfsApi
             return base.Channel.GetDepositTransferOrdersAsync(req);
         }
         
-        public System.Threading.Tasks.Task<BfsApi.CreateAllocationOrdersResponse> CreateAllocationOrdersAsync(BfsApi.CreateAllocationOrdersRequest req)
+        public System.Threading.Tasks.Task<BfsApi.CreateSwitchOrdersResponse> CreateSwitchOrdersAsync(BfsApi.CreateSwitchOrdersRequest req)
         {
-            return base.Channel.CreateAllocationOrdersAsync(req);
+            return base.Channel.CreateSwitchOrdersAsync(req);
         }
         
         public System.Threading.Tasks.Task<BfsApi.GetAllocationOrderResponse> GetAllocationOrdersAsync(BfsApi.GetAllocationOrderRequest req)
@@ -76985,6 +78073,11 @@ namespace BfsApi
         public System.Threading.Tasks.Task<BfsApi.CreateAutoGiroDepositOrderResponse> CreateAutoGiroDepositOrdersAsync(BfsApi.CreateAutoGiroDepositOrderRequest req)
         {
             return base.Channel.CreateAutoGiroDepositOrdersAsync(req);
+        }
+        
+        public System.Threading.Tasks.Task<BfsApi.GetFundBatchOrdersResponse> GetFundBatchOrdersAsync(BfsApi.GetFundBatchOrdersRequest req)
+        {
+            return base.Channel.GetFundBatchOrdersAsync(req);
         }
         
         public System.Threading.Tasks.Task<BfsApi.GetExternalFundBatchOrdersResponse> GetExternalFundBatchOrdersAsync(BfsApi.GetExternalFundBatchOrdersRequest req)
@@ -77275,11 +78368,6 @@ namespace BfsApi
         public System.Threading.Tasks.Task<BfsApi.DeleteWebhookSubscriptionResponse> DeleteWebhookSubscriptionsAsync(BfsApi.DeleteWebhookSubscriptionRequest req)
         {
             return base.Channel.DeleteWebhookSubscriptionsAsync(req);
-        }
-        
-        public System.Threading.Tasks.Task<BfsApi.GetFailedWebhookResponse> GetFailedWebhooksAsync(BfsApi.GetFailedWebhookRequest req)
-        {
-            return base.Channel.GetFailedWebhooksAsync(req);
         }
         
         public virtual System.Threading.Tasks.Task OpenAsync()

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using BfsApi;
@@ -119,6 +120,30 @@ namespace Bricknode.Soap.Sdk.Services
         #endregion
 
         #region TradeOrders
+
+        /// <summary>
+        /// https://bricknode.atlassian.net/wiki/spaces/API/pages/2352971801/GetFundBatchOrders
+        /// </summary>
+        /// <param name="filters"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        public async Task<GetFundBatchOrdersResponse> GetFundBatchOrdersAsync(
+            GetFundBatchOrdersArgs filters, string bfsApiClientName = null)
+        {
+            var request = GetRequest<GetFundBatchOrdersRequest>(bfsApiClientName);
+
+            request.Args = filters;
+
+            request.Fields = GetFields<GetFundBatchOrderFields>();
+
+            var response = await GetClient(bfsApiClientName).GetFundBatchOrdersAsync(request);
+
+            if (ValidateResponse(response)) return response;
+
+            LogErrors(response.Result.ToArray<EntityBase>());
+
+            return response;
+        }
 
         /// <summary>
         ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/52002923/GetTradeOrders
@@ -616,6 +641,30 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
+        public async Task<GetAllocationOrderResponse> GetAllocationOrdersAsync(GetAllocationOrderArgs filters, string bfsApiClientName = null)
+        {
+            var request = GetRequest<GetAllocationOrderRequest>(bfsApiClientName);
+
+            request.Args = filters;
+
+            request.Fields = GetFields<GetAllocationOrderFields>();
+
+            var response = await GetClient(bfsApiClientName).GetAllocationOrdersAsync(request);
+
+            if (ValidateResponse(response)) return response;
+
+            LogErrors(response.Result.ToArray<EntityBase>());
+
+            return response;
+        }
+
+        /// <summary>
+        ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/79790114/GetAllocationOrders
+        /// </summary>
+        /// <param name="filters"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        [Obsolete("This method has been replaced by another method with slightly different name GetAllocationOrde(r)sAsync.")]
         public async Task<GetAllocationOrderResponse> GetAllocationOrdesAsync(GetAllocationOrderArgs filters, string bfsApiClientName = null)
         {
             var request = GetRequest<GetAllocationOrderRequest>(bfsApiClientName);
@@ -634,19 +683,19 @@ namespace Bricknode.Soap.Sdk.Services
         }
 
         /// <summary>
-        ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/60031190/CreateAllocationOrders
+        /// https://bricknode.atlassian.net/wiki/spaces/API/pages/60031190/CreateSwitchOrders
         /// </summary>
-        /// <param name="allocationOrders"></param>
+        /// <param name="switchOrders"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<CreateAllocationOrdersResponse> CreateAllocationOrdersAsync(
-            AllocationOrder[] allocationOrders, string bfsApiClientName = null)
+        public async Task<CreateSwitchOrdersResponse> CreateSwitchOrdersAsync(
+            SwitchOrder[] switchOrders, string bfsApiClientName = null)
         {
-            var request = GetRequest<CreateAllocationOrdersRequest>(bfsApiClientName);
+            var request = GetRequest<CreateSwitchOrdersRequest>(bfsApiClientName);
 
-            request.Entities = allocationOrders;
+            request.Entities = switchOrders;
 
-            var response = await GetClient(bfsApiClientName).CreateAllocationOrdersAsync(request);
+            var response = await GetClient(bfsApiClientName).CreateSwitchOrdersAsync(request);
 
             if (ValidateResponse(response)) return response;
 

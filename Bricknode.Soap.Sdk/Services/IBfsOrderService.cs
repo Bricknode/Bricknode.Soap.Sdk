@@ -7,6 +7,30 @@ namespace Bricknode.Soap.Sdk.Services
     public interface IBfsOrderService
     {
         /// <summary>
+        /// https://bricknode.atlassian.net/wiki/spaces/API/pages/79790114/GetAllocationOrders
+        /// </summary>
+        /// <param name="filters"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        Task<GetAllocationOrderResponse> GetAllocationOrdersAsync(GetAllocationOrderArgs filters, string bfsApiClientName = null);
+
+        /// <summary>
+        /// https://bricknode.atlassian.net/wiki/spaces/API/pages/60031190/CreateSwitchOrders
+        /// </summary>
+        /// <param name="switchOrders"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        Task<CreateSwitchOrdersResponse> CreateSwitchOrdersAsync(SwitchOrder[] switchOrders, string bfsApiClientName = null);
+
+        /// <summary>
+        /// https://bricknode.atlassian.net/wiki/spaces/API/pages/2352971801/GetFundBatchOrders
+        /// </summary>
+        /// <param name="filters"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        Task<GetFundBatchOrdersResponse> GetFundBatchOrdersAsync(GetFundBatchOrdersArgs filters, string bfsApiClientName = null);
+
+        /// <summary>
         /// https://bricknode.atlassian.net/wiki/spaces/API/pages/58261877/GetOrderTypes
         /// </summary>
         /// <param name="filters"></param>
@@ -133,14 +157,6 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         Task<GetAllocationOrderResponse> GetAllocationOrdesAsync(GetAllocationOrderArgs filters, string bfsApiClientName = null);
-
-        /// <summary>
-        /// https://bricknode.atlassian.net/wiki/spaces/API/pages/60031190/CreateAllocationOrders
-        /// </summary>
-        /// <param name="allocationOrders"></param>
-        /// <param name="bfsApiClientName"></param>
-        /// <returns></returns>
-        Task<CreateAllocationOrdersResponse> CreateAllocationOrdersAsync(AllocationOrder[] allocationOrders, string bfsApiClientName = null);
 
         /// <summary>
         /// https://bricknode.atlassian.net/wiki/spaces/API/pages/95846459/GetSubscriptionOrders
