@@ -156,6 +156,7 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
+        [Obsolete("This method has been replaced by another method with slightly different name GetAllocationOrde(r)sAsync.")]
         Task<GetAllocationOrderResponse> GetAllocationOrdesAsync(GetAllocationOrderArgs filters, string bfsApiClientName = null);
 
         /// <summary>
