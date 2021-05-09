@@ -14759,6 +14759,8 @@ namespace BfsApi
         
         private string externalReferenceField;
         
+        private System.Nullable<System.DateTime> paymentConfirmationDateField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public decimal CashAmount
@@ -15022,6 +15024,20 @@ namespace BfsApi
             set
             {
                 this.externalReferenceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=19)]
+        public System.Nullable<System.DateTime> PaymentConfirmationDate
+        {
+            get
+            {
+                return this.paymentConfirmationDateField;
+            }
+            set
+            {
+                this.paymentConfirmationDateField = value;
             }
         }
     }
@@ -49976,6 +49992,8 @@ namespace BfsApi
         
         private bool externalReferenceField;
         
+        private bool paymentConfirmationDateField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public bool BrickId
@@ -50267,6 +50285,20 @@ namespace BfsApi
             set
             {
                 this.externalReferenceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=21)]
+        public bool PaymentConfirmationDate
+        {
+            get
+            {
+                return this.paymentConfirmationDateField;
+            }
+            set
+            {
+                this.paymentConfirmationDateField = value;
             }
         }
     }
@@ -62365,6 +62397,10 @@ namespace BfsApi
         
         private System.Nullable<bool> isUnitOrderField;
         
+        private System.Nullable<System.DateTime> paymentConfirmationDateFromField;
+        
+        private System.Nullable<System.DateTime> paymentConfirmationDateToField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
         public System.Guid[] BrickIds
@@ -62516,6 +62552,34 @@ namespace BfsApi
             set
             {
                 this.isUnitOrderField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=11)]
+        public System.Nullable<System.DateTime> PaymentConfirmationDateFrom
+        {
+            get
+            {
+                return this.paymentConfirmationDateFromField;
+            }
+            set
+            {
+                this.paymentConfirmationDateFromField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=12)]
+        public System.Nullable<System.DateTime> PaymentConfirmationDateTo
+        {
+            get
+            {
+                return this.paymentConfirmationDateToField;
+            }
+            set
+            {
+                this.paymentConfirmationDateToField = value;
             }
         }
     }
