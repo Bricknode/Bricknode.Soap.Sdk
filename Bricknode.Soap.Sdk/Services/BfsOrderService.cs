@@ -214,28 +214,6 @@ namespace Bricknode.Soap.Sdk.Services
         }
 
         /// <summary>
-        ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/83132533/ExternalFundBatchOrder+Settle
-        /// </summary>
-        /// <param name="fundBatchOrder"></param>
-        /// <param name="bfsApiClientName"></param>
-        /// <returns></returns>
-        public async Task<ExternalFundBatchOrderSettleResponse> SettleExternalFundBatchOrdersAsync(
-            ExternalFundBatchOrderSettle fundBatchOrder, string bfsApiClientName = null)
-        {
-            var request = GetRequest<ExternalFundBatchOrderSettleRequest>(bfsApiClientName);
-
-            request.WorkflowTriggerDataEntity = fundBatchOrder;
-
-            var response = await GetClient(bfsApiClientName).ExternalFundBatchOrder_SettleAsync(request);
-
-            if (ValidateResponse(response)) return response;
-
-            LogErrors(response.Message);
-
-            return response;
-        }
-
-        /// <summary>
         /// https://bricknode.atlassian.net/wiki/spaces/API/pages/1930133509/CancelTradeOrders
         /// </summary>
         /// <param name="tradeOrderIds"></param>
@@ -263,6 +241,27 @@ namespace Bricknode.Soap.Sdk.Services
             if (ValidateResponse(response)) return response;
 
             LogErrors(response.Message);
+
+            return response;
+        }
+
+        /// <summary>
+        /// https://bricknode.atlassian.net/wiki/spaces/API/pages/2507440145/CreateTradeBuyOrdersFromAutogiro
+        /// </summary>
+        /// <param name="tradeBuyOrdersFromAutogiro"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        public async Task<CreateTradeBuyOrdersFromAutogiroResponse> CreateTradeBuyOrdersFromAutogiroAsync(TradeBuyOrderFromAutogiro[] tradeBuyOrdersFromAutogiro, string bfsApiClientName = null)
+        {
+            var request = GetRequest<CreateTradeBuyOrdersFromAutogiroRequest>(bfsApiClientName);
+
+            request.Entities = tradeBuyOrdersFromAutogiro;
+
+            var response = await GetClient(bfsApiClientName).CreateTradeBuyOrdersFromAutogiroAsync(request);
+
+            if (ValidateResponse(response)) return response;
+
+            LogErrors(response.Entities.ToArray<EntityBase>());
 
             return response;
         }
@@ -965,6 +964,52 @@ namespace Bricknode.Soap.Sdk.Services
 
             return response.Message;
         }
+        #endregion
+
+        #region OrderActions
+
+        /// <summary>
+        /// https://bricknode.atlassian.net/wiki/spaces/API/pages/2714271827/ExecuteOrders
+        /// </summary>
+        /// <param name="orderExecutions"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        public async Task<ExecuteOrderResponse> ExecuteOrdersAsync(OrderExecuteBase[] orderExecutions, string bfsApiClientName = null)
+        {
+            var request = GetRequest<ExecuteOrderRequest>(bfsApiClientName);
+
+            request.Entities = orderExecutions;
+
+            var response = await GetClient(bfsApiClientName).ExecuteOrdersAsync(request);
+
+            if (ValidateResponse(response)) return response;
+
+            LogErrors(response.Entities.ToArray<EntityBase>());
+
+            return response;
+        }
+
+        /// <summary>
+        /// https://bricknode.atlassian.net/wiki/spaces/API/pages/2714304848/SettleOrders
+        /// </summary>
+        /// <param name="orderSettlements"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        public async Task<SettleOrderResponse> SettleOrdersAsync(OrderSettleBase[] orderSettlements, string bfsApiClientName = null)
+        {
+            var request = GetRequest<SettleOrderRequest>(bfsApiClientName);
+
+            request.Entities = orderSettlements;
+
+            var response = await GetClient(bfsApiClientName).SettleOrdersAsync(request);
+
+            if (ValidateResponse(response)) return response;
+
+            LogErrors(response.Entities.ToArray<EntityBase>());
+
+            return response;
+        }
+
         #endregion
     }
 }

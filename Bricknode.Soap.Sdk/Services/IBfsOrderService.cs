@@ -63,14 +63,6 @@ namespace Bricknode.Soap.Sdk.Services
         Task<GetExternalFundBatchOrdersResponse> GetExternalFundBatchOrdersAsync(GetExternalFundBatchOrdersArgs filters, string bfsApiClientName = null);
 
         /// <summary>
-        /// https://bricknode.atlassian.net/wiki/spaces/API/pages/83132533/ExternalFundBatchOrder+Settle
-        /// </summary>
-        /// <param name="fundBatchOrder"></param>
-        /// <param name="bfsApiClientName"></param>
-        /// <returns></returns>
-        Task<ExternalFundBatchOrderSettleResponse> SettleExternalFundBatchOrdersAsync(ExternalFundBatchOrderSettle fundBatchOrder, string bfsApiClientName = null);
-
-        /// <summary>
         /// https://bricknode.atlassian.net/wiki/spaces/API/pages/81100944/GetWithdrawalTransferOrders
         /// </summary>
         /// <param name="filters"></param>
@@ -334,5 +326,13 @@ namespace Bricknode.Soap.Sdk.Services
         /// <returns></returns>
         Task<CreateAutoGiroDepositOrderResponse> CreateAutoGiroDepositOrdersAsync(
             AutoGiroDepositOrder[] autoGiroDepositOrders, string bfsApiClientName = null);
+
+        /// <summary>
+        /// https://bricknode.atlassian.net/wiki/spaces/API/pages/2507440145/CreateTradeBuyOrdersFromAutogiro
+        /// </summary>
+        /// <param name="tradeBuyOrdersFromAutogiro"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        Task<CreateTradeBuyOrdersFromAutogiroResponse> CreateTradeBuyOrdersFromAutogiroAsync(TradeBuyOrderFromAutogiro[] tradeBuyOrdersFromAutogiro, string bfsApiClientName = null);
     }
 }
