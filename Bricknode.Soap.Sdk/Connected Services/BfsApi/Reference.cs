@@ -37700,38 +37700,6 @@ namespace BfsApi
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
     public abstract partial class OrderSettleBase : EntityBase
     {
-        
-        private System.Guid cashCustodyAccountField;
-        
-        private System.Guid instrumentCustodyAccountField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public System.Guid CashCustodyAccount
-        {
-            get
-            {
-                return this.cashCustodyAccountField;
-            }
-            set
-            {
-                this.cashCustodyAccountField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public System.Guid InstrumentCustodyAccount
-        {
-            get
-            {
-                return this.instrumentCustodyAccountField;
-            }
-            set
-            {
-                this.instrumentCustodyAccountField = value;
-            }
-        }
     }
     
     /// <remarks/>
