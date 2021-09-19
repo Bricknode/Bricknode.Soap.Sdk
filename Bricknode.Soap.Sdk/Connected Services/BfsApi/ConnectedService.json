@@ -1,6 +1,4 @@
-﻿{
-  "ProviderId": "Microsoft.VisualStudio.ConnectedService.Wcf",
-  "Version": "15.0.40203.910",
+{
   "ExtendedData": {
     "inputs": [
       "https://stage.bricknode.com/preview1/api/bfsapi.asmx"
@@ -13,12 +11,29 @@
       "*, BfsApi"
     ],
     "references": [
-      "System.ServiceModel, {System.ServiceModel.Primitives, 4.4.4}",
-      "System.ServiceModel.Duplex, {System.ServiceModel.Duplex, 4.4.4}",
-      "System.ServiceModel.Http, {System.ServiceModel.Http, 4.4.4}",
-      "System.ServiceModel.NetTcp, {System.ServiceModel.NetTcp, 4.4.4}",
-      "System.ServiceModel.Primitives, {System.ServiceModel.Primitives, 4.4.4}",
-      "System.ServiceModel.Security, {System.ServiceModel.Security, 4.4.4}"
+      "Microsoft.Bcl.AsyncInterfaces, {Microsoft.Bcl.AsyncInterfaces, 1.1.0}",
+      "Microsoft.Extensions.DependencyInjection, {Microsoft.Extensions.DependencyInjection, 3.1.1}",
+      "Microsoft.Extensions.DependencyInjection.Abstractions, {Microsoft.Extensions.DependencyInjection.Abstractions, 3.1.1}",
+      "Microsoft.Extensions.Logging.Abstractions, {Microsoft.Extensions.Logging.Abstractions, 3.1.1}",
+      "Microsoft.Extensions.Options, {Microsoft.Extensions.Options, 3.1.1}",
+      "Microsoft.Extensions.Primitives, {Microsoft.Extensions.Primitives, 3.1.1}",
+      "System.Buffers, {System.Buffers, 4.4.0}",
+      "System.ComponentModel.Annotations, {System.ComponentModel.Annotations, 4.7.0}",
+      "System.Memory, {System.Memory, 4.5.2}",
+      "System.Numerics.Vectors, {System.Numerics.Vectors, 4.4.0}",
+      "System.Reflection.DispatchProxy, {System.Reflection.DispatchProxy, 4.5.0}",
+      "System.Runtime.CompilerServices.Unsafe, {System.Runtime.CompilerServices.Unsafe, 4.7.0}",
+      "System.Security.AccessControl, {System.Security.AccessControl, 4.5.0}",
+      "System.Security.Cryptography.Xml, {System.Security.Cryptography.Xml, 4.5.0}",
+      "System.Security.Permissions, {System.Security.Permissions, 4.5.0}",
+      "System.Security.Principal.Windows, {System.Security.Principal.Windows, 4.5.0}",
+      "System.ServiceModel, {System.ServiceModel.Primitives, 4.7.0}",
+      "System.ServiceModel.Duplex, {System.ServiceModel.Duplex, 4.7.0}",
+      "System.ServiceModel.Http, {System.ServiceModel.Http, 4.7.0}",
+      "System.ServiceModel.NetTcp, {System.ServiceModel.NetTcp, 4.7.0}",
+      "System.ServiceModel.Primitives, {System.ServiceModel.Primitives, 4.7.0}",
+      "System.ServiceModel.Security, {System.ServiceModel.Security, 4.7.0}",
+      "System.Threading.Tasks.Extensions, {System.Threading.Tasks.Extensions, 4.5.2}"
     ],
     "targetFramework": "netstandard2.0",
     "typeReuseMode": "All"
