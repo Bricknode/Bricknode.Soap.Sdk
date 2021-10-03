@@ -334,5 +334,21 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         Task<CreateTradeBuyOrdersFromAutogiroResponse> CreateTradeBuyOrdersFromAutogiroAsync(TradeBuyOrderFromAutogiro[] tradeBuyOrdersFromAutogiro, string bfsApiClientName = null);
+
+        /// <summary>
+        /// https://bricknode.atlassian.net/wiki/spaces/API/pages/2714271827/ExecuteOrders
+        /// </summary>
+        /// <param name="orderExecutions"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        Task<ExecuteOrderResponse> ExecuteOrdersAsync(OrderExecuteBase[] orderExecutions, string bfsApiClientName = null);
+
+        /// <summary>
+        /// https://bricknode.atlassian.net/wiki/spaces/API/pages/2714304848/SettleOrders
+        /// </summary>
+        /// <param name="orderSettlements"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        Task<SettleOrderResponse> SettleOrdersAsync(OrderSettleBase[] orderSettlements, string bfsApiClientName = null);
     }
 }
