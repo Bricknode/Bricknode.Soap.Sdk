@@ -74,6 +74,7 @@
             services.AddTransient<IBfsTransactionNoteService, BfsTransactionNoteService>();
             services.AddTransient<IBfsTaxService, BfsTaxService>();
             services.AddTransient<IBfsCountryService, BfsCountryService>();
+            services.AddTransient<IBfsWebhookService, BfsWebhookService>();
         }
     }
 }
