@@ -1,5 +1,5 @@
 # Bricknode.Soap.Sdk
-[![Build Status](https://bricknode.visualstudio.com/BricknodeBroker/_apis/build/status/Bricknode.Bricknode.Soap.Sdk?branchName=master)](https://bricknode.visualstudio.com/BricknodeBroker/_build/latest?definitionId=2&branchName=master)
+[![Build Status](https://dev.azure.com/Bricknode-BFS/BricknodeBroker/_apis/build/status/Bricknode.Bricknode.Soap.Sdk?branchName=master)](https://dev.azure.com/Bricknode-BFS/BricknodeBroker/_build/latest?definitionId=2&branchName=master)
 
 Bricknode.Soap.Sdk is a wrapper for the Bricknode SOAP API described here: http://api.bricknode.com with some added documentation.
 
@@ -108,7 +108,7 @@ BfsOrderService
 BfsPositionService
 BfsPowerOfAttorneyService
 BfsPriceService
-IBfsReservationService
+BfsReservationService
 BfsTaskService
 BfsTaxService
 BfsTransactionNoteService
@@ -116,4 +116,5 @@ BfsTransactionService
 BfsTransferReceiverService
 BfsTrsService
 BfsWhiteLabelService
+BfsWebhookService
 ````
