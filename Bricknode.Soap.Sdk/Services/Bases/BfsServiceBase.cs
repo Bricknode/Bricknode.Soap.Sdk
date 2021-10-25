@@ -69,6 +69,11 @@ namespace Bricknode.Soap.Sdk.Services.Bases
             return response.Message == "OK";
         }
 
+        protected static bool ValidateResponse(ResponseBase response)
+        {
+            return response.Message == "OK";
+        }
+
         protected void LogErrors(IEnumerable<EntityBase> entities, [CallerMemberName] string callerMethodName = "")
         {
             var errorMessages = ResolveErrorsInResponse(entities);
@@ -79,6 +84,18 @@ namespace Bricknode.Soap.Sdk.Services.Bases
         protected void LogErrors(string message, [CallerMemberName] string callerMethodName = "")
         {
             _logger.LogError($"Error in {callerMethodName} with the following error message: {message}");
+        }
+
+        protected void LogErrors(IEnumerable<DtoBase> entities, [CallerMemberName] string callerMethodName = "")
+        {
+            var errorMessages = ResolveErrorsInResponse(entities);
+
+            _logger.LogError($"Error in {callerMethodName} with the following error message: {errorMessages}");
+        }
+
+        protected static string ResolveErrorsInResponse(IEnumerable<DtoBase> entities)
+        {
+            return string.Join(", ", entities.SelectMany(e => e.ErrorMessages));
         }
 
         protected static string ResolveErrorsInResponse(IEnumerable<EntityBase> entities)
