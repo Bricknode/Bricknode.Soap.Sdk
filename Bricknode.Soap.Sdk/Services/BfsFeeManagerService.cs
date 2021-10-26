@@ -1,5 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using BfsApi;
 using Bricknode.Soap.Sdk.Configuration;
 using Bricknode.Soap.Sdk.Factories;
@@ -70,9 +69,19 @@ namespace Bricknode.Soap.Sdk.Services
             return response;
         }
 
-        public async Task DeleteFeeRecordsAsync(FeeRecordDto[] feeRecordDtoArray, string bfsApiClientName = null)
+        public async Task<DeleteFeeRecordResponse> DeleteFeeRecordsAsync(FeeRecordDto[] feeRecordDtoArray, string bfsApiClientName = null)
         {
-            throw new NotImplementedException("Coming soon");
+            var request = GetRequest<DeleteFeeRecordRequest>(bfsApiClientName);
+
+            request.Entities = feeRecordDtoArray;
+
+            var response = await GetClient(bfsApiClientName).DeleteFeeRecordsAsync(request);
+
+            if (ValidateResponse(response)) return response;
+
+            LogErrors(response.Entities);
+
+            return response;
         }
     }
 }

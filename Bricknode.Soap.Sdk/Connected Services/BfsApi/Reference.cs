@@ -296,6 +296,20 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
         System.Threading.Tasks.Task<BfsApi.UpdateFeeRecordResponse> UpdateFeeRecordsAsync(BfsApi.UpdateFeeRecordRequest req);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DeleteFeeRecords", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DtoBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
+        System.Threading.Tasks.Task<BfsApi.DeleteFeeRecordResponse> DeleteFeeRecordsAsync(BfsApi.DeleteFeeRecordRequest deleteFeeRecordRequest);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateSwitchOrders", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
@@ -2440,6 +2454,7 @@ namespace BfsApi
     }
     
     /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DeleteFeeRecordResponse))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateFeeRecordResponse))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateFeeRecordResponse))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetFeeRecordResponse))]
@@ -3498,6 +3513,14 @@ namespace BfsApi
         
         /// <remarks/>
         _30_365,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3-preview3.21351.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class DeleteFeeRecordResponse : ResponseBase
+    {
     }
     
     /// <remarks/>
@@ -73017,6 +73040,7 @@ namespace BfsApi
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetAllocationOrderRequest))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APICreateRequestOfSwitchOrderBetterActionBrick))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateSwitchOrdersRequest))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DeleteFeeRecordRequest))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateFeeRecordRequest))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateFeeRecordRequest))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchRequestOfGetFeeRecordArgsGetFeeRecordFields))]
@@ -80343,6 +80367,30 @@ namespace BfsApi
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3-preview3.21351.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class DeleteFeeRecordRequest : Request
+    {
+        
+        private FeeRecordDto[] entitiesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public FeeRecordDto[] Entities
+        {
+            get
+            {
+                return this.entitiesField;
+            }
+            set
+            {
+                this.entitiesField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3-preview3.21351.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
     public partial class UpdateFeeRecordRequest : Request
     {
         
@@ -81521,6 +81569,11 @@ namespace BfsApi
         public System.Threading.Tasks.Task<BfsApi.UpdateFeeRecordResponse> UpdateFeeRecordsAsync(BfsApi.UpdateFeeRecordRequest req)
         {
             return base.Channel.UpdateFeeRecordsAsync(req);
+        }
+        
+        public System.Threading.Tasks.Task<BfsApi.DeleteFeeRecordResponse> DeleteFeeRecordsAsync(BfsApi.DeleteFeeRecordRequest deleteFeeRecordRequest)
+        {
+            return base.Channel.DeleteFeeRecordsAsync(deleteFeeRecordRequest);
         }
         
         public System.Threading.Tasks.Task<BfsApi.CreateSwitchOrdersResponse> CreateSwitchOrdersAsync(BfsApi.CreateSwitchOrdersRequest req)
