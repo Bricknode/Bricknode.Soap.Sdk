@@ -6,7 +6,7 @@ namespace Bricknode.Soap.Sdk.Services
     public interface IBfsFeeManagerService
     {
 
-        Task<GetFeeRecordResponse> GetFeeRecordsAsync(string bfsApiClientName = null);
+        Task<GetFeeRecordResponse> GetFeeRecordsAsync(GetFeeRecordArgs filters, string bfsApiClientName = null);
 
 
         Task<CreateFeeRecordResponse> CreateFeeRecordsAsync(FeeRecordDto[] feeRecordDtoArray, 

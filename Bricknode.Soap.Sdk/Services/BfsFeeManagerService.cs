@@ -1,13 +1,11 @@
-﻿using BfsApi;
+﻿using System;
+using System.Threading.Tasks;
+using BfsApi;
 using Bricknode.Soap.Sdk.Configuration;
 using Bricknode.Soap.Sdk.Factories;
 using Bricknode.Soap.Sdk.Services.Bases;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Bricknode.Soap.Sdk.Services
 {
@@ -15,16 +13,21 @@ namespace Bricknode.Soap.Sdk.Services
     {
         private readonly bfsapiSoap _client;
 
-        public BfsFeeManagerService(IOptions<BfsApiConfiguration> bfsApiConfiguration, ILogger logger, bfsapiSoap client, IBfsApiClientFactory bfsApiClientFactory) :
+        public BfsFeeManagerService(IOptions<BfsApiConfiguration> bfsApiConfiguration, ILogger logger,
+            bfsapiSoap client, IBfsApiClientFactory bfsApiClientFactory) :
             base(bfsApiConfiguration, logger, bfsApiClientFactory, client)
         {
             _client = client;
         }
 
 
-        public async Task<GetFeeRecordResponse> GetFeeRecordsAsync(string bfsApiClientName = null)
+        public async Task<GetFeeRecordResponse> GetFeeRecordsAsync(GetFeeRecordArgs filters, string bfsApiClientName = null)
         {
             var request = GetRequest<GetFeeRecordRequest>(bfsApiClientName);
+
+            request.Args = filters;
+
+            request.Fields = GetFields<GetFeeRecordFields>();
 
             var response = await GetClient(bfsApiClientName).GetFeeRecordsAsync(request);
 
@@ -35,7 +38,8 @@ namespace Bricknode.Soap.Sdk.Services
             return response;
         }
 
-        public async Task<CreateFeeRecordResponse> CreateFeeRecordsAsync(FeeRecordDto[] feeRecordDtoArray, string bfsApiClientName = null)
+        public async Task<CreateFeeRecordResponse> CreateFeeRecordsAsync(FeeRecordDto[] feeRecordDtoArray,
+            string bfsApiClientName = null)
         {
             var request = GetRequest<CreateFeeRecordRequest>(bfsApiClientName);
 
@@ -50,7 +54,8 @@ namespace Bricknode.Soap.Sdk.Services
             return response;
         }
 
-        public async Task<UpdateFeeRecordResponse> UpdateFeeRecordsAsync(FeeRecordDto[] feeRecordDtoArray, string bfsApiClientName = null)
+        public async Task<UpdateFeeRecordResponse> UpdateFeeRecordsAsync(FeeRecordDto[] feeRecordDtoArray,
+            string bfsApiClientName = null)
         {
             var request = GetRequest<UpdateFeeRecordRequest>(bfsApiClientName);
 
