@@ -69,7 +69,12 @@ namespace Bricknode.Soap.Sdk.Services.Bases
             return response.Message == "OK";
         }
 
-        protected static bool ValidateResponse(ResponseBase response)
+        protected static bool ValidateResponse(ResponseBaseOfFeeRecordDto response)
+        {
+            return response.Message == "OK";
+        }
+
+        protected static bool ValidateResponse(DeleteCustomFieldResponse response)
         {
             return response.Message == "OK";
         }

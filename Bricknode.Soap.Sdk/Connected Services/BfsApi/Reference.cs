@@ -18,7 +18,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateWebhookSubscriptions", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -32,7 +33,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DeleteWebhookSubscriptions", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -46,7 +48,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetFailedWebhooks", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -60,7 +63,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetMessages", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -74,7 +78,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateMessages", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -88,7 +93,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateMessages", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -102,7 +108,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetNotes", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -116,7 +123,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateNotes", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -130,7 +138,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateNotes", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -144,7 +153,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetTasks", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -158,7 +168,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateTasks", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -172,7 +183,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateTasks", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -186,7 +198,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetReservations", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -200,7 +213,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateReservations", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -214,7 +228,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DeleteReservations", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -228,7 +243,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetTransactionNotes", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -242,7 +258,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetCountries", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -256,7 +273,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetFeeRecords", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -270,7 +288,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateFeeRecords", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -284,7 +303,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateFeeRecords", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -298,7 +318,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DeleteFeeRecords", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -310,9 +331,25 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
         System.Threading.Tasks.Task<BfsApi.DeleteFeeRecordResponse> DeleteFeeRecordsAsync(BfsApi.DeleteFeeRecordRequest deleteFeeRecordRequest);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DeleteCustomField", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DtoBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
+        System.Threading.Tasks.Task<BfsApi.DeleteCustomFieldResponse> DeleteCustomFieldAsync(BfsApi.DeleteCustomFieldRequest req);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateSwitchOrders", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -326,7 +363,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetAllocationOrders", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -340,7 +378,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateDirectBankWithdrawalOrders", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -354,7 +393,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetAutoGiroOrders", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -368,7 +408,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateAutoGiroWithdrawalOrders", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -382,7 +423,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateAutoGiroDepositOrders", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -396,7 +438,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetFundBatchOrders", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -410,7 +453,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetExternalFundBatchOrders", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -424,7 +468,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ExternalFundBatchOrder_Settle", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -438,7 +483,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetDeals", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -452,7 +498,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetBusinessEvents", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -466,7 +513,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetDecisionMakers", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -480,7 +528,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetFundInstructions", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -494,7 +543,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetFundInstructionStatusLogs", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -508,7 +558,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetFundInstructionExecutions", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -522,7 +573,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetAccounts", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -536,7 +588,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateAccounts", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -550,7 +603,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateAccounts", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -564,7 +618,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetWhiteLabels", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -578,7 +633,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateWhiteLabels", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -592,7 +648,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateWhiteLabel", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -606,7 +663,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetBusinessTransactions", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -620,7 +678,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateBusinessTransactions", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -634,7 +693,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CorrectBusinessTransactions", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -648,7 +708,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SetHistoricPrices", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -662,7 +723,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetCurrencies", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -676,7 +738,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetCurrencyValues", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -690,7 +753,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SetCurrencyValues", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -704,7 +768,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetCash", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -718,7 +783,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetAccountTypes", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -732,7 +798,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetPOATypes", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -746,7 +813,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetOrderTypes", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -760,7 +828,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetBusinessTransactionTypes", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -774,7 +843,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetTransferReceivers", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -788,7 +858,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateTransferReceivers", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -802,7 +873,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateTransferReceivers", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -816,7 +888,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateWorkflowInstances", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -830,7 +903,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateRecurringOrderTemplatesAutogiro", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -844,7 +918,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateRecurringOrderTemplateAutoGiro", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -858,7 +933,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetRecurringOrderTemplates", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -872,7 +948,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetHistoricPrices", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -886,7 +963,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetFile", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -900,7 +978,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateFile", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -914,7 +993,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetFileList", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -928,7 +1008,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DeleteFile", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -942,7 +1023,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetFeeGroups", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -956,7 +1038,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetTradingVenues", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -970,7 +1053,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateTradingVenues", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -984,7 +1068,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/FundInstruction_Settle", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -998,7 +1083,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetInsuranceCovers", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1012,7 +1098,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetInsuranceClaims", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1026,7 +1113,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateInsuranceClaims", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1040,7 +1128,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateInsuranceClaims", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1054,7 +1143,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetInsuranceProducts", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1068,7 +1158,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateInsuranceProducts", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1082,7 +1173,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateInsuranceProducts", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1096,7 +1188,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetInsurancePolicies", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1110,7 +1203,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateInsurancePolicy", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1124,7 +1218,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateInsurancePolicies", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1138,7 +1233,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetTRSCountries", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1152,7 +1248,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetHoldingsOverTime", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1166,7 +1263,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetWebhookSubscriptions", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1180,7 +1278,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetAvailableWebhookEvents", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1194,7 +1293,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetHouseInformation", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1208,7 +1308,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetTaxWithholdingAgreements", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1222,7 +1323,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateTaxWithholdingAgreements", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1236,7 +1338,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateTaxWithholdingAgreements", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1250,7 +1353,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetPersons", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1264,7 +1368,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetFundCompanies", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1278,7 +1383,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetFundEntity", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1292,7 +1398,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateFundCompanies", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1306,7 +1413,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateFundcompanies", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1320,7 +1428,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateFundEntities", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1334,7 +1443,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateFundentities", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1348,7 +1458,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreatePersons", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1362,7 +1473,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdatePersons", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1376,7 +1488,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InactivatePersons", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1390,7 +1503,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetPositions", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1404,7 +1518,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetHistoricPositions", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1418,7 +1533,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetInstruments", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1432,7 +1548,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateInstruments", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1446,7 +1563,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateAssetAccountTypeLimitations", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1460,7 +1578,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetAssetAccountTypeLimitations", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1474,7 +1593,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateInstruments", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1488,7 +1608,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateManualExecutionInterface", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1502,7 +1623,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetPOAS", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1516,7 +1638,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreatePOAs", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1530,7 +1653,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DeletePOAs", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1544,7 +1668,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetAllocationProfiles", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1558,7 +1683,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateAllocationProfiles", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1572,7 +1698,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateAllocationProfiles", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1586,7 +1713,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DeleteAllocationProfiles", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1600,7 +1728,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/BankIdAuthentication", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1614,7 +1743,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UsernamePasswordAuthentication", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1628,7 +1758,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/BankIdSign", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1642,7 +1773,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetBankIdStatus", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1656,7 +1788,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetAlgorithms", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1670,7 +1803,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetInternalCashTransferOrders", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1684,7 +1818,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateInternalCashTransferOrders", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1698,7 +1833,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetInternalInstrumentTransferOrders", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1712,7 +1848,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateInternalInstrumentTransferOrders", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1726,7 +1863,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ExecuteInternalTransferOrders", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1740,7 +1878,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DeleteInternalTransferOrders", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1754,7 +1893,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateSubscriptionOrders", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1768,7 +1908,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateSubscriptionOrders", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1782,7 +1923,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SubscriptionOrder_Cancel", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1796,7 +1938,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SubscriptionOrder_Process", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1810,7 +1953,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetSubscriptionOrders", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1824,7 +1968,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateCurrencyExchangeOrders", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1838,7 +1983,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetCurrencyExchangeOrders", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1852,7 +1998,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CurrencyExchangeOrder_Cancel", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1866,7 +2013,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateTradeOrders", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1880,7 +2028,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetTradeOrders", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1894,7 +2043,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ExecuteOrders", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1908,7 +2058,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SettleOrders", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1922,7 +2073,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CancelTradeOrders", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1936,7 +2088,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateTradeBuyOrdersFromAutogiro", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1950,7 +2103,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateDepositCashOrders", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1964,7 +2118,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DepositCashBatchOrder_BatchFill", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1978,7 +2133,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateWithdrawalCashOrders", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -1992,7 +2148,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WithdrawalCashBatchOrder_Fill", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -2006,7 +2163,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetWithdrawalBatchTransferOrders", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -2020,7 +2178,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetWithdrawalTransferOrders", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -2034,7 +2193,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SettleWithdrawalTransferOrders", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -2048,7 +2208,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetDepositBatchTransferOrders", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -2062,7 +2223,8 @@ namespace BfsApi
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetDepositTransferOrders", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
@@ -2454,17 +2616,14 @@ namespace BfsApi
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DeleteFeeRecordResponse))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateFeeRecordResponse))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateFeeRecordResponse))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetFeeRecordResponse))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DeleteCustomFieldResponse))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3-preview3.21351.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public abstract partial class ResponseBase
+    public abstract partial class ResponseBaseOfDeleteCustomField
     {
         
-        private FeeRecordDto[] entitiesField;
+        private DeleteCustomField[] entitiesField;
         
         private string messageField;
         
@@ -2472,7 +2631,7 @@ namespace BfsApi
         
         /// <remarks/>
         [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
-        public FeeRecordDto[] Entities
+        public DeleteCustomField[] Entities
         {
             get
             {
@@ -2509,6 +2668,90 @@ namespace BfsApi
             set
             {
                 this.isErrorField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3-preview3.21351.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class DeleteCustomField : DtoBase
+    {
+        
+        private System.Guid bfsEntityIdField;
+        
+        private System.Guid customFieldIdField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public System.Guid BfsEntityId
+        {
+            get
+            {
+                return this.bfsEntityIdField;
+            }
+            set
+            {
+                this.bfsEntityIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public System.Guid CustomFieldId
+        {
+            get
+            {
+                return this.customFieldIdField;
+            }
+            set
+            {
+                this.customFieldIdField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DeleteCustomField))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FeeRecordDto))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FixedAmountFeeRecordDto))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AumPercentageFeeRecordDto))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3-preview3.21351.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class DtoBase
+    {
+        
+        private bool isErrorField;
+        
+        private string[] errorMessagesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public bool IsError
+        {
+            get
+            {
+                return this.isErrorField;
+            }
+            set
+            {
+                this.isErrorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=1)]
+        public string[] ErrorMessages
+        {
+            get
+            {
+                return this.errorMessagesField;
+            }
+            set
+            {
+                this.errorMessagesField = value;
             }
         }
     }
@@ -3360,49 +3603,6 @@ namespace BfsApi
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FeeRecordDto))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FixedAmountFeeRecordDto))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AumPercentageFeeRecordDto))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3-preview3.21351.2")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public abstract partial class DtoBase
-    {
-        
-        private bool isErrorField;
-        
-        private string[] errorMessagesField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public bool IsError
-        {
-            get
-            {
-                return this.isErrorField;
-            }
-            set
-            {
-                this.isErrorField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=1)]
-        public string[] ErrorMessages
-        {
-            get
-            {
-                return this.errorMessagesField;
-            }
-            set
-            {
-                this.errorMessagesField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3-preview3.21351.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
@@ -3519,7 +3719,75 @@ namespace BfsApi
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3-preview3.21351.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class DeleteFeeRecordResponse : ResponseBase
+    public partial class DeleteCustomFieldResponse : ResponseBaseOfDeleteCustomField
+    {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DeleteFeeRecordResponse))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateFeeRecordResponse))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateFeeRecordResponse))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetFeeRecordResponse))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3-preview3.21351.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class ResponseBaseOfFeeRecordDto
+    {
+        
+        private FeeRecordDto[] entitiesField;
+        
+        private string messageField;
+        
+        private bool isErrorField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public FeeRecordDto[] Entities
+        {
+            get
+            {
+                return this.entitiesField;
+            }
+            set
+            {
+                this.entitiesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string Message
+        {
+            get
+            {
+                return this.messageField;
+            }
+            set
+            {
+                this.messageField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public bool IsError
+        {
+            get
+            {
+                return this.isErrorField;
+            }
+            set
+            {
+                this.isErrorField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3-preview3.21351.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class DeleteFeeRecordResponse : ResponseBaseOfFeeRecordDto
     {
     }
     
@@ -3527,7 +3795,7 @@ namespace BfsApi
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3-preview3.21351.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class UpdateFeeRecordResponse : ResponseBase
+    public partial class UpdateFeeRecordResponse : ResponseBaseOfFeeRecordDto
     {
     }
     
@@ -3535,7 +3803,7 @@ namespace BfsApi
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3-preview3.21351.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class CreateFeeRecordResponse : ResponseBase
+    public partial class CreateFeeRecordResponse : ResponseBaseOfFeeRecordDto
     {
     }
     
@@ -3543,7 +3811,7 @@ namespace BfsApi
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3-preview3.21351.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class GetFeeRecordResponse : ResponseBase
+    public partial class GetFeeRecordResponse : ResponseBaseOfFeeRecordDto
     {
     }
     
@@ -73040,6 +73308,7 @@ namespace BfsApi
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetAllocationOrderRequest))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APICreateRequestOfSwitchOrderBetterActionBrick))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateSwitchOrdersRequest))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DeleteCustomFieldRequest))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(DeleteFeeRecordRequest))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateFeeRecordRequest))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateFeeRecordRequest))]
@@ -80367,6 +80636,30 @@ namespace BfsApi
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3-preview3.21351.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class DeleteCustomFieldRequest : Request
+    {
+        
+        private DeleteCustomField[] entitiesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public DeleteCustomField[] Entities
+        {
+            get
+            {
+                return this.entitiesField;
+            }
+            set
+            {
+                this.entitiesField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3-preview3.21351.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
     public partial class DeleteFeeRecordRequest : Request
     {
         
@@ -81574,6 +81867,11 @@ namespace BfsApi
         public System.Threading.Tasks.Task<BfsApi.DeleteFeeRecordResponse> DeleteFeeRecordsAsync(BfsApi.DeleteFeeRecordRequest deleteFeeRecordRequest)
         {
             return base.Channel.DeleteFeeRecordsAsync(deleteFeeRecordRequest);
+        }
+        
+        public System.Threading.Tasks.Task<BfsApi.DeleteCustomFieldResponse> DeleteCustomFieldAsync(BfsApi.DeleteCustomFieldRequest req)
+        {
+            return base.Channel.DeleteCustomFieldAsync(req);
         }
         
         public System.Threading.Tasks.Task<BfsApi.CreateSwitchOrdersResponse> CreateSwitchOrdersAsync(BfsApi.CreateSwitchOrdersRequest req)
