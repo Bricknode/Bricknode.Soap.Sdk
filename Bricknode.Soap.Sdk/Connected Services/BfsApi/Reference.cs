@@ -331,7 +331,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
         System.Threading.Tasks.Task<BfsApi.DeleteFeeRecordResponse> DeleteFeeRecordsAsync(BfsApi.DeleteFeeRecordRequest deleteFeeRecordRequest);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DeleteCustomField", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DeleteCustomFields", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomField))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
@@ -344,7 +344,7 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
-        System.Threading.Tasks.Task<BfsApi.DeleteCustomFieldResponse> DeleteCustomFieldAsync(BfsApi.DeleteCustomFieldRequest req);
+        System.Threading.Tasks.Task<BfsApi.DeleteCustomFieldResponse> DeleteCustomFieldsAsync(BfsApi.DeleteCustomFieldRequest req);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateSwitchOrders", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -81869,9 +81869,9 @@ namespace BfsApi
             return base.Channel.DeleteFeeRecordsAsync(deleteFeeRecordRequest);
         }
         
-        public System.Threading.Tasks.Task<BfsApi.DeleteCustomFieldResponse> DeleteCustomFieldAsync(BfsApi.DeleteCustomFieldRequest req)
+        public System.Threading.Tasks.Task<BfsApi.DeleteCustomFieldResponse> DeleteCustomFieldsAsync(BfsApi.DeleteCustomFieldRequest req)
         {
-            return base.Channel.DeleteCustomFieldAsync(req);
+            return base.Channel.DeleteCustomFieldsAsync(req);
         }
         
         public System.Threading.Tasks.Task<BfsApi.CreateSwitchOrdersResponse> CreateSwitchOrdersAsync(BfsApi.CreateSwitchOrdersRequest req)

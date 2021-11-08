@@ -25,7 +25,7 @@ namespace Bricknode.Soap.Sdk.Services
 
             request.Entities = deleteCustomFieldArray;
 
-            var response = await GetClient(bfsApiClientName).DeleteCustomFieldAsync(request);
+            var response = await GetClient(bfsApiClientName).DeleteCustomFieldsAsync(request);
 
             if (ValidateResponse(response)) return response;
 
