@@ -5,6 +5,6 @@ namespace Bricknode.Soap.Sdk.Services
 {
     public interface IBfsCustomFieldService
     {
-        Task<DeleteCustomFieldResponse> DeleteCustomFieldsAsync(DeleteCustomField[] deleteCustomFieldArray, string bfsApiClientName = null);
+        Task<DeleteCustomFieldResponse> DeleteCustomFieldsAsync(DeleteCustomFieldDto[] deleteCustomFieldDtos, string bfsApiClientName = null);
     }
 }

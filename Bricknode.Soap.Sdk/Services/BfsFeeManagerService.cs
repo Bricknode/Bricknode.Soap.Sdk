@@ -69,11 +69,11 @@ namespace Bricknode.Soap.Sdk.Services
             return response;
         }
 
-        public async Task<DeleteFeeRecordResponse> DeleteFeeRecordsAsync(FeeRecordDto[] feeRecordDtoArray, string bfsApiClientName = null)
+        public async Task<DeleteFeeRecordResponse> DeleteFeeRecordsAsync(DeleteFeeRecordArgs deleteFeeRecordArgs, string bfsApiClientName = null)
         {
             var request = GetRequest<DeleteFeeRecordRequest>(bfsApiClientName);
 
-            request.Entities = feeRecordDtoArray;
+            request.DeleteFeeRecordArgs = deleteFeeRecordArgs;
 
             var response = await GetClient(bfsApiClientName).DeleteFeeRecordsAsync(request);
 

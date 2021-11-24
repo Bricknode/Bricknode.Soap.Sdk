@@ -19,11 +19,11 @@ namespace Bricknode.Soap.Sdk.Services
             _client = client;
         }
 
-        public async Task<DeleteCustomFieldResponse> DeleteCustomFieldsAsync(DeleteCustomField[] deleteCustomFieldArray, string bfsApiClientName = null)
+        public async Task<DeleteCustomFieldResponse> DeleteCustomFieldsAsync(DeleteCustomFieldDto[] deleteCustomFieldDtos, string bfsApiClientName = null)
         {
             var request = GetRequest<DeleteCustomFieldRequest>(bfsApiClientName);
 
-            request.Entities = deleteCustomFieldArray;
+            request.Entities = deleteCustomFieldDtos;
 
             var response = await GetClient(bfsApiClientName).DeleteCustomFieldsAsync(request);
 

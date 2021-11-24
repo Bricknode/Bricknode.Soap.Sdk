@@ -13,7 +13,7 @@ namespace Bricknode.Soap.Sdk.Services
         Task<UpdateFeeRecordResponse> UpdateFeeRecordsAsync(FeeRecordDto[] feeRecordDtoArray, 
             string bfsApiClientName = null);
 
-        Task<DeleteFeeRecordResponse> DeleteFeeRecordsAsync(FeeRecordDto[] feeRecordDtoArray,
+        Task<DeleteFeeRecordResponse> DeleteFeeRecordsAsync(DeleteFeeRecordArgs deleteFeeRecordArgs,
             string bfsApiClientName = null);
     }
 }
