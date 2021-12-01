@@ -81,6 +81,9 @@ namespace Bricknode.Soap.Sdk.Services.Bases
 
         protected void LogErrors(IEnumerable<EntityBase> entities, [CallerMemberName] string callerMethodName = "")
         {
+            if (entities == null || !entities.Any())
+                return;
+
             var errorMessages = ResolveErrorsInResponse(entities);
 
             _logger.LogError($"Error in {callerMethodName} with the following error message: {errorMessages}");
@@ -93,6 +96,9 @@ namespace Bricknode.Soap.Sdk.Services.Bases
 
         protected void LogErrors(IEnumerable<DtoBase> entities, [CallerMemberName] string callerMethodName = "")
         {
+            if (entities == null || !entities.Any())
+                return;
+
             var errorMessages = ResolveErrorsInResponse(entities);
 
             _logger.LogError($"Error in {callerMethodName} with the following error message: {errorMessages}");
