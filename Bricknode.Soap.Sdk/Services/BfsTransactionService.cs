@@ -86,7 +86,7 @@ namespace Bricknode.Soap.Sdk.Services
 
             if (ValidateResponse(response)) return response;
 
-            LogErrors(response.Entities.ToArray<EntityBase>());
+            LogErrors(response.Message);
 
             return response;
         }
