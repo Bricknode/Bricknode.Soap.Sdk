@@ -47,6 +47,14 @@ namespace Bricknode.Soap.Sdk.Services
         Task<GetTradingVenueResponse> GetTradingVenuesAsync(GetTradingVenueArgs filters, string bfsApiClientName = null);
 
         /// <summary>
+        /// https://bricknode.atlassian.net/wiki/spaces/API/pages/1457979715/CreateTradingVenue
+        /// </summary>
+        /// <param name="createTradingVenues"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        Task<CreateTradingVenuesResponse> CreateTradingVenuesAsync(CreateTradingVenue[] createTradingVenues, string bfsApiClientName = null);
+
+        /// <summary>
         /// https://bricknode.atlassian.net/wiki/spaces/API/pages/60031184/GetCash
         /// </summary>
         /// <param name="filters"></param>

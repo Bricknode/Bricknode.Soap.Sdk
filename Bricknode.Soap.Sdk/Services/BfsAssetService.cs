@@ -71,6 +71,27 @@ namespace Bricknode.Soap.Sdk.Services
             return response;
         }
 
+        /// <summary>
+        ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/1457979715/CreateTradingVenue
+        /// </summary>
+        /// <param name="createTradingVenues"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        public async Task<CreateTradingVenuesResponse> CreateTradingVenuesAsync(CreateTradingVenue[] createTradingVenues, string bfsApiClientName = null)
+        {
+            var request = GetRequest<CreateTradingVenuesRequest>(bfsApiClientName);
+
+            request.Entities = createTradingVenues;
+
+            var response = await GetClient(bfsApiClientName).CreateTradingVenuesAsync(request);
+
+            if (ValidateResponse(response)) return response;
+
+            LogErrors(response.Entities.ToArray<EntityBase>());
+
+            return response;
+        }
+
         #endregion
 
         #region Cash
