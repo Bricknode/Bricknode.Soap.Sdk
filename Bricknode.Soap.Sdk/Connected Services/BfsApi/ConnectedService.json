@@ -1,7 +1,7 @@
 {
   "ExtendedData": {
     "inputs": [
-      "https://stage.bricknode.com/preview1/api/bfsapi.asmx"
+      "https://192.168.32.133:45461/bfsapi.asmx"
     ],
     "collectionTypes": [
       "System.Array",
@@ -11,6 +11,6 @@
       "*, BfsApi"
     ],
     "targetFramework": "netstandard2.0",
-    "typeReuseMode": "All"
+    "typeReuseMode": "None"
   }
 }

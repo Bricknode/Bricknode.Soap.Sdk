@@ -79,6 +79,16 @@ namespace Bricknode.Soap.Sdk.Services.Bases
             return response.Message == "OK";
         }
 
+        protected static bool ValidateResponse(UpdateCustomFieldResponse response)
+        {
+            return response.Message == "OK";
+        }
+
+        protected static bool ValidateResponse(CreateCustomFieldResponse response)
+        {
+            return response.Message == "OK";
+        }
+
         protected void LogErrors(IEnumerable<EntityBase> entities, [CallerMemberName] string callerMethodName = "")
         {
             if (entities == null || !entities.Any())
