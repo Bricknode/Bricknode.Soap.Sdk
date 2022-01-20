@@ -40,7 +40,7 @@ namespace Bricknode.Soap.Sdk.Services
 
             if (ValidateResponse(response)) return response;
 
-            LogErrors(response.Result.ToArray<EntityBase>());
+            LogErrors(response.Result);
 
             return response;
         }
@@ -63,7 +63,7 @@ namespace Bricknode.Soap.Sdk.Services
 
             if (ValidateResponse(response)) return response;
 
-            LogErrors(response.Result.ToArray<EntityBase>());
+            LogErrors(response.Result);
 
             return response;
         }
@@ -84,7 +84,7 @@ namespace Bricknode.Soap.Sdk.Services
 
             if (ValidateResponse(response)) return response;
 
-            LogErrors(response.Entities.ToArray<EntityBase>());
+            LogErrors(response.Entities);
 
             return response;
         }
