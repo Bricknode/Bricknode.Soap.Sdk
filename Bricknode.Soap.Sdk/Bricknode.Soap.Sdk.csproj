@@ -7,7 +7,7 @@
     <ApplicationIcon />
 
     <!--Nuget metadata starts here-->
-    <PackageVersion>6.3.0</PackageVersion>
+    <PackageVersion>6.3.1</PackageVersion>
     <PackageId>Bricknode.Soap.Sdk</PackageId>
     <Title>Bricknode SOAP SDK</Title>
     <Authors>Bricknode</Authors>
