@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using BfsApi;
 using Bricknode.Soap.Sdk.Configuration;
 using Bricknode.Soap.Sdk.Services.Bases;
@@ -40,7 +39,7 @@ namespace Bricknode.Soap.Sdk.Services
 
             if (ValidateResponse(response)) return response;
 
-            LogErrors(response.Result.ToArray<EntityBase>());
+            LogErrors(response.Result);
 
             return response;
         }
@@ -61,7 +60,7 @@ namespace Bricknode.Soap.Sdk.Services
 
             if (ValidateResponse(response)) return response;
 
-            LogErrors(response.Entities.ToArray<EntityBase>());
+            LogErrors(response.Entities);
 
             return response;
         }
@@ -86,7 +85,7 @@ namespace Bricknode.Soap.Sdk.Services
 
             if (ValidateResponse(response)) return response;
 
-            LogErrors(response.Entities.ToArray<EntityBase>());
+            LogErrors(response.Entities);
 
             return response;
         }
@@ -107,7 +106,7 @@ namespace Bricknode.Soap.Sdk.Services
 
             if (ValidateResponse(response)) return response;
 
-            LogErrors(response.Result.ToArray<EntityBase>());
+            LogErrors(response.Result);
 
             return response;
         }
@@ -130,7 +129,7 @@ namespace Bricknode.Soap.Sdk.Services
 
             if (ValidateResponse(response)) return response;
 
-            LogErrors(response.Result.ToArray<EntityBase>());
+            LogErrors(response.Result);
 
             return response;
         }
@@ -153,7 +152,7 @@ namespace Bricknode.Soap.Sdk.Services
 
             if (ValidateResponse(response)) return response;
 
-            LogErrors(response.Result.ToArray<EntityBase>());
+            LogErrors(response.Result);
 
             return response;
         }
@@ -176,7 +175,7 @@ namespace Bricknode.Soap.Sdk.Services
 
             if (ValidateResponse(response)) return response;
 
-            LogErrors(response.Result.ToArray<EntityBase>());
+            LogErrors(response.Result);
 
             return response;
         }
