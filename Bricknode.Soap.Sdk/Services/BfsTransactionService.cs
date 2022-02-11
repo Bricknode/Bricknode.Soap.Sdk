@@ -123,7 +123,7 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<UpdateBusinessTransactionsResponse> UpdateBusinessTransactionsAsync(UpdateBusinessTransaction[] businessTransactions, 
-            UpdateBusinessTransactionFields fieldsToUpdate ,string bfsApiClientName = null)
+            UpdateBusinessTransactionFields fieldsToUpdate, string bfsApiClientName = null)
         {
             var request = GetRequest<UpdateBusinessTransactionsRequest> (bfsApiClientName);
 
