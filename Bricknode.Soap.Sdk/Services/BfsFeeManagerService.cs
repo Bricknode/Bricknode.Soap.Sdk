@@ -19,7 +19,7 @@ namespace Bricknode.Soap.Sdk.Services
             _client = client;
         }
 
-
+        #region FeeRecords
         public async Task<GetFeeRecordResponse> GetFeeRecordsAsync(GetFeeRecordArgs filters, string bfsApiClientName = null)
         {
             var request = GetRequest<GetFeeRecordRequest>(bfsApiClientName);
@@ -53,12 +53,12 @@ namespace Bricknode.Soap.Sdk.Services
             return response;
         }
 
-        public async Task<UpdateFeeRecordResponse> UpdateFeeRecordsAsync(FeeRecordDto[] feeRecordDtoArray,
+        public async Task<UpdateFeeRecordResponse> UpdateFeeRecordsAsync(FeeRecordDto[] feeInstructionDtoArray,
             string bfsApiClientName = null)
         {
             var request = GetRequest<UpdateFeeRecordRequest>(bfsApiClientName);
 
-            request.Entities = feeRecordDtoArray;
+            request.Entities = feeInstructionDtoArray;
 
             var response = await GetClient(bfsApiClientName).UpdateFeeRecordsAsync(request);
 
@@ -83,5 +83,60 @@ namespace Bricknode.Soap.Sdk.Services
 
             return response;
         }
+
+        #endregion
+
+        #region FeeInstructions
+
+        public async Task<GetFeeInstructionResponse> GetFeeInstructionsAsync(GetFeeInstructionArgs filters, string bfsApiClientName = null)
+        {
+            var request = GetRequest<GetFeeInstructionRequest>(bfsApiClientName);
+
+            request.Args = filters;
+
+            request.Fields = GetFields<GetFeeInstructionFields>();
+
+            var response = await GetClient(bfsApiClientName).GetFeeInstructionsAsync(request);
+
+            if (ValidateResponse(response)) return response;
+
+            LogErrors(response.Entities);
+
+            return response;
+        }
+
+        public async Task<CreateFeeInstructionResponse> CreateFeeInstructionsAsync(FeeInstructionDto[] feeInstructionDtoArray,
+            string bfsApiClientName = null)
+        {
+            var request = GetRequest<CreateFeeInstructionRequest>(bfsApiClientName);
+
+            request.Entities = feeInstructionDtoArray;
+
+            var response = await GetClient(bfsApiClientName).CreateFeeInstructionsAsync(request);
+
+            if (ValidateResponse(response)) return response;
+
+            LogErrors(response.Entities);
+
+            return response;
+        }
+
+        public async Task<UpdateFeeInstructionResponse> UpdateFeeInstructionsAsync(FeeInstructionDto[] feeInstructionDtoArray,
+            string bfsApiClientName = null)
+        {
+            var request = GetRequest<UpdateFeeInstructionRequest>(bfsApiClientName);
+
+            request.Entities = feeInstructionDtoArray;
+
+            var response = await GetClient(bfsApiClientName).UpdateFeeInstructionsAsync(request);
+
+            if (ValidateResponse(response)) return response;
+
+            LogErrors(response.Entities);
+
+            return response;
+        }
+
+        #endregion
     }
 }
