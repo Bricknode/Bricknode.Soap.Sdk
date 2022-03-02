@@ -104,6 +104,8 @@ namespace Bricknode.Soap.Sdk.Services
 
             request.Entities = correctionBusinessTransactions;
 
+            request.Fields = GetFields<CorrectionBusinessTransactionFields>();
+
             var response = await GetClient(bfsApiClientName).CorrectBusinessTransactionsAsync(request);
 
             if (ValidateResponse(response)) return response;
