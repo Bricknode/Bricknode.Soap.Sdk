@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using BfsApi;
 using Bricknode.Soap.Sdk.Configuration;
 using Bricknode.Soap.Sdk.Services.Bases;
@@ -11,13 +12,10 @@ namespace Bricknode.Soap.Sdk.Services
 
     public class BfsAuthenticationService : BfsServiceBase, IBfsAuthenticationService
     {
-        private readonly bfsapiSoap _client;
-
         public BfsAuthenticationService(IOptions<BfsApiConfiguration> bfsApiConfiguration, ILogger logger,
             bfsapiSoap client, IBfsApiClientFactory bfsApiClientFactory) :
             base(bfsApiConfiguration, logger, bfsApiClientFactory, client)
         {
-            _client = client;
         }
 
         /// <summary>
@@ -42,6 +40,21 @@ namespace Bricknode.Soap.Sdk.Services
             if (ValidateResponse(response)) return response;
 
             LogErrors(response.Message);
+
+            return response;
+        }
+
+        public async Task<ResetPasswordResponse> ResetPasswordAsync(Guid personId, string password, string bfsApiClientName = null)
+        {
+            var request = GetRequest<ResetPasswordRequest>(bfsApiClientName);
+            request.PersonId = personId;
+            request.NewPassword = password;
+
+            var response = await GetClient(bfsApiClientName).ResetPasswordAsync(request);
+            if (!ValidateResponse(response))
+            {
+                LogErrors(response.Message);
+            }
 
             return response;
         }

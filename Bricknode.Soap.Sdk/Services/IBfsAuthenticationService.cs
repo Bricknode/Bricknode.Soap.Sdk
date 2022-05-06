@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using BfsApi;
 
 namespace Bricknode.Soap.Sdk.Services
@@ -15,5 +16,7 @@ namespace Bricknode.Soap.Sdk.Services
         /// <returns></returns>
         Task<UsernamePasswordAuthenticateResponse> UsernamePasswordAuthenticationAsync(Domain domain,
             string username, string password, string bfsApiClientName = null);
+
+        Task<ResetPasswordResponse> ResetPasswordAsync(Guid personId, string password, string bfsApiClientName = null);
     }
 }
