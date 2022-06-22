@@ -13,7 +13,7 @@
     <Authors>Bricknode</Authors>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <Description>A wrapper around the BFS API described at http://api.bricknode.com with additional documentation for Bricknode Financial Systems.</Description>
-    <Copyright>Copyright 2019 - 2021</Copyright>
+    <Copyright>Copyright 2019 - 2022</Copyright>
     <PackageTags>BricknodeSoapSdk</PackageTags>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>  
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
