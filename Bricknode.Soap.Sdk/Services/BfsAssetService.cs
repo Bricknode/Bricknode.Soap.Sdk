@@ -146,6 +146,31 @@ namespace Bricknode.Soap.Sdk.Services
             return response;
         }
 
+
+        /// <summary>
+        ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/3108241446/GetInstrumentsByName
+        /// </summary>
+        /// <param name="filters"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        public async Task<GetInstrumentsByNameResponse> GetInstrumentsByNameAsync(GetInstrumentsByNameArgs filters, string bfsApiClientName = null)
+        {
+            var request = GetRequest<GetInstrumentsByNameRequest>(bfsApiClientName);
+
+            request.Args = filters;
+
+            request.Fields = GetFields<GetInstrumentsFields>();
+
+            var response = await GetClient(bfsApiClientName).GetInstrumentsByNameAsync(request);
+
+            if (ValidateResponse(response)) return response;
+
+            LogErrors(response.Result);
+
+            return response;
+        }
+
+
         /// <summary>
         ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/56328268/CreateInstruments
         /// </summary>

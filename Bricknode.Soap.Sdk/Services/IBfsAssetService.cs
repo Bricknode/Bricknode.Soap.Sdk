@@ -77,5 +77,13 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         Task<CreateAssetAccountTypeLimitationResponse> CreateAssetAccountTypeLimitationAsync(AssetAccountTypeLimitation[] assetAccountTypeLimitations, string bfsApiClientName = null);
+
+        /// <summary>
+        ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/3108241446/GetInstrumentsByName
+        /// </summary>
+        /// <param name="filters"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        Task<GetInstrumentsByNameResponse> GetInstrumentsByNameAsync(GetInstrumentsByNameArgs filters, string bfsApiClientName = null);
     }
 }
