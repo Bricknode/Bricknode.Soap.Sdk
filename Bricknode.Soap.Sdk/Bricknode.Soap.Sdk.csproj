@@ -1,13 +1,13 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
+    <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>Bricknode.Soap.Sdk</RootNamespace>
     <AssemblyName>Bricknode.Soap.Sdk</AssemblyName>
     <ApplicationIcon />
 
     <!--Nuget metadata starts here-->
-    <PackageVersion>9.1.0</PackageVersion>
+    <PackageVersion>9.2.0</PackageVersion>
     <PackageId>Bricknode.Soap.Sdk</PackageId>
     <Title>Bricknode SOAP SDK</Title>
     <Authors>Bricknode</Authors>
@@ -15,7 +15,7 @@
     <Description>A wrapper around the BFS API described at http://api.bricknode.com with additional documentation for Bricknode Financial Systems.</Description>
     <Copyright>Copyright 2019 - 2022</Copyright>
     <PackageTags>BricknodeSoapSdk</PackageTags>
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>  
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <IsPackable>true</IsPackable>
     <!--Nuget metadata ends here-->
