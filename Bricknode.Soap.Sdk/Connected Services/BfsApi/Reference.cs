@@ -16,6 +16,23 @@ namespace BfsApi
     public interface bfsapiSoap
     {
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetTRSCountries", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfCreateCustomFieldDto))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfUpdateCustomFieldDto))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomFieldDto))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DtoBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
+        System.Threading.Tasks.Task<BfsApi.GetTRSCountriesResponse> GetTRSCountriesAsync(BfsApi.GetTRSCountriesRequest req);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetHoldingsOverTime", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfCreateCustomFieldDto))]
@@ -2005,6 +2022,23 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
         System.Threading.Tasks.Task<BfsApi.CorrectBusinessTransactionsResponse> CorrectBusinessTransactionsAsync(BfsApi.CorrectBusinessTransactionRequest req);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateBusinessTransactions", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfCreateCustomFieldDto))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfUpdateCustomFieldDto))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomFieldDto))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DtoBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
+        System.Threading.Tasks.Task<BfsApi.UpdateBusinessTransactionsResponse> UpdateBusinessTransactionsAsync(BfsApi.UpdateBusinessTransactionsRequest request);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SetHistoricPrices", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfCreateCustomFieldDto))]
@@ -2599,44 +2633,27 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
         System.Threading.Tasks.Task<BfsApi.UpdateInsurancePoliciesResponse> UpdateInsurancePoliciesAsync(BfsApi.UpdateInsurancePoliciesRequest req);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetTRSCountries", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfCreateCustomFieldDto))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfUpdateCustomFieldDto))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomFieldDto))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DtoBase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
-        System.Threading.Tasks.Task<BfsApi.GetTRSCountriesResponse> GetTRSCountriesAsync(BfsApi.GetTRSCountriesRequest req);
     }
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class GetHoldingsOverTimeRequest : APISearchRequestOfGetHoldingsOverTimeArgsGetHoldingsOverTimeResponseFields
+    public partial class GetTRSCountriesRequest : APISearchRequestOfGetTRSCountriesArgsGetTRSCountriesFields
     {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetHoldingsOverTimeRequest))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetTRSCountriesRequest))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public abstract partial class APISearchRequestOfGetHoldingsOverTimeArgsGetHoldingsOverTimeResponseFields : Request
+    public abstract partial class APISearchRequestOfGetTRSCountriesArgsGetTRSCountriesFields : Request
     {
         
-        private GetHoldingsOverTimeArgs argsField;
+        private GetTRSCountriesArgs argsField;
         
-        private GetHoldingsOverTimeResponseFields fieldsField;
+        private GetTRSCountriesFields fieldsField;
         
         private string predefinedSearchNameField;
         
@@ -2644,7 +2661,7 @@ namespace BfsApi
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public GetHoldingsOverTimeArgs Args
+        public GetTRSCountriesArgs Args
         {
             get
             {
@@ -2658,7 +2675,7 @@ namespace BfsApi
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public GetHoldingsOverTimeResponseFields Fields
+        public GetTRSCountriesFields Fields
         {
             get
             {
@@ -2703,102 +2720,86 @@ namespace BfsApi
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class GetHoldingsOverTimeArgs
+    public partial class GetTRSCountriesArgs
     {
         
-        private System.DateTime startField;
+        private System.Guid[] brickIdsField;
         
-        private System.DateTime endField;
+        private string tRSIdTypePrio1Field;
         
-        private string displayCurrencyCodeField;
+        private string tRSIdTypePrio2Field;
         
-        private System.Guid[] accountsField;
+        private string tRSIdTypePrio3Field;
         
-        private System.Guid[] assetsField;
-        
-        private bool percentageReturnField;
+        private string[] countryCodesField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public System.DateTime Start
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public System.Guid[] BrickIds
         {
             get
             {
-                return this.startField;
+                return this.brickIdsField;
             }
             set
             {
-                this.startField = value;
+                this.brickIdsField = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public System.DateTime End
+        public string TRSIdTypePrio1
         {
             get
             {
-                return this.endField;
+                return this.tRSIdTypePrio1Field;
             }
             set
             {
-                this.endField = value;
+                this.tRSIdTypePrio1Field = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public string DisplayCurrencyCode
+        public string TRSIdTypePrio2
         {
             get
             {
-                return this.displayCurrencyCodeField;
+                return this.tRSIdTypePrio2Field;
             }
             set
             {
-                this.displayCurrencyCodeField = value;
+                this.tRSIdTypePrio2Field = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=3)]
-        public System.Guid[] Accounts
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public string TRSIdTypePrio3
         {
             get
             {
-                return this.accountsField;
+                return this.tRSIdTypePrio3Field;
             }
             set
             {
-                this.accountsField = value;
+                this.tRSIdTypePrio3Field = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlArrayAttribute(Order=4)]
-        public System.Guid[] Assets
+        public string[] CountryCodes
         {
             get
             {
-                return this.assetsField;
+                return this.countryCodesField;
             }
             set
             {
-                this.assetsField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
-        public bool PercentageReturn
-        {
-            get
-            {
-                return this.percentageReturnField;
-            }
-            set
-            {
-                this.percentageReturnField = value;
+                this.countryCodesField = value;
             }
         }
     }
@@ -2957,7 +2958,6 @@ namespace BfsApi
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetTRSCountriesResponseRow))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateInsurancePolicy))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(InsurancePolicy))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetInsurancePolicyResponseRow))]
@@ -2987,6 +2987,7 @@ namespace BfsApi
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetCashResponseRow))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetCurrencyValueResponseRow))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetCurrencyResponseRow))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateBusinessTransaction))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CorrectionBusinessTransaction))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(BusinessTransaction))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(SuperTransaction))]
@@ -3077,6 +3078,7 @@ namespace BfsApi
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(DeleteWebhookSubscription))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateWebhookSubscription))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetAvailableWebhookEventResponseRow))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetWebhookSubscriptionResponseRow))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ExecutionInterface))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ManualExecutionInterfaceOld))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ManualExecutionInterface))]
@@ -3102,7 +3104,7 @@ namespace BfsApi
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(InternalOrderSettle))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ExternalFundBatchOrderSettle))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(FundBatchOrderSettle))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetWebhookSubscriptionResponseRow))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetTRSCountriesResponseRow))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CustomField))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -3187,78 +3189,6 @@ namespace BfsApi
             set
             {
                 this.customFieldsField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class GetTRSCountriesResponseRow : EntityBase
-    {
-        
-        private string tRSIdTypePrio1Field;
-        
-        private string tRSIdTypePrio2Field;
-        
-        private string tRSIdTypePrio3Field;
-        
-        private string countryCodeField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string TRSIdTypePrio1
-        {
-            get
-            {
-                return this.tRSIdTypePrio1Field;
-            }
-            set
-            {
-                this.tRSIdTypePrio1Field = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public string TRSIdTypePrio2
-        {
-            get
-            {
-                return this.tRSIdTypePrio2Field;
-            }
-            set
-            {
-                this.tRSIdTypePrio2Field = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public string TRSIdTypePrio3
-        {
-            get
-            {
-                return this.tRSIdTypePrio3Field;
-            }
-            set
-            {
-                this.tRSIdTypePrio3Field = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
-        public string CountryCode
-        {
-            get
-            {
-                return this.countryCodeField;
-            }
-            set
-            {
-                this.countryCodeField = value;
             }
         }
     }
@@ -9992,6 +9922,62 @@ namespace BfsApi
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class UpdateBusinessTransaction : EntityBase
+    {
+        
+        private System.Nullable<ReconciliationStatus> reconciliationStatusField;
+        
+        private CustomField[] superTransactionCustomFieldsField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
+        public System.Nullable<ReconciliationStatus> ReconciliationStatus
+        {
+            get
+            {
+                return this.reconciliationStatusField;
+            }
+            set
+            {
+                this.reconciliationStatusField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=1)]
+        public CustomField[] SuperTransactionCustomFields
+        {
+            get
+            {
+                return this.superTransactionCustomFieldsField;
+            }
+            set
+            {
+                this.superTransactionCustomFieldsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public enum ReconciliationStatus
+    {
+        
+        /// <remarks/>
+        Reconciled,
+        
+        /// <remarks/>
+        Ignored,
+        
+        /// <remarks/>
+        Investigate,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
     public partial class CorrectionBusinessTransaction : EntityBase
     {
     }
@@ -10034,6 +10020,8 @@ namespace BfsApi
         private double acquisitionValueAccountCurrencyField;
         
         private string settlementTypeField;
+        
+        private System.Nullable<ReconciliationStatus> reconciliationStatusField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -10258,6 +10246,20 @@ namespace BfsApi
                 this.settlementTypeField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=16)]
+        public System.Nullable<ReconciliationStatus> ReconciliationStatus
+        {
+            get
+            {
+                return this.reconciliationStatusField;
+            }
+            set
+            {
+                this.reconciliationStatusField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -10462,6 +10464,8 @@ namespace BfsApi
         private System.Guid superTransactionBusinessEventIdField;
         
         private CustomField[] superTransactionCustomFieldsField;
+        
+        private System.Nullable<ReconciliationStatus> reconciliationStatusField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -10992,6 +10996,20 @@ namespace BfsApi
             set
             {
                 this.superTransactionCustomFieldsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=38)]
+        public System.Nullable<ReconciliationStatus> ReconciliationStatus
+        {
+            get
+            {
+                return this.reconciliationStatusField;
+            }
+            set
+            {
+                this.reconciliationStatusField = value;
             }
         }
     }
@@ -31224,6 +31242,46 @@ namespace BfsApi
     }
     
     /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetWebhookSubscriptionResponseRow : EntityBase
+    {
+        
+        private string eventNameField;
+        
+        private string destinationAddressField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string EventName
+        {
+            get
+            {
+                return this.eventNameField;
+            }
+            set
+            {
+                this.eventNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string DestinationAddress
+        {
+            get
+            {
+                return this.destinationAddressField;
+            }
+            set
+            {
+                this.destinationAddressField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CurrencyExchangeOrderBuy))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CurrencyExchangeOrderSell))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
@@ -32582,38 +32640,70 @@ namespace BfsApi
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class GetWebhookSubscriptionResponseRow : EntityBase
+    public partial class GetTRSCountriesResponseRow : EntityBase
     {
         
-        private string eventNameField;
+        private string tRSIdTypePrio1Field;
         
-        private string destinationAddressField;
+        private string tRSIdTypePrio2Field;
+        
+        private string tRSIdTypePrio3Field;
+        
+        private string countryCodeField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string EventName
+        public string TRSIdTypePrio1
         {
             get
             {
-                return this.eventNameField;
+                return this.tRSIdTypePrio1Field;
             }
             set
             {
-                this.eventNameField = value;
+                this.tRSIdTypePrio1Field = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public string DestinationAddress
+        public string TRSIdTypePrio2
         {
             get
             {
-                return this.destinationAddressField;
+                return this.tRSIdTypePrio2Field;
             }
             set
             {
-                this.destinationAddressField = value;
+                this.tRSIdTypePrio2Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string TRSIdTypePrio3
+        {
+            get
+            {
+                return this.tRSIdTypePrio3Field;
+            }
+            set
+            {
+                this.tRSIdTypePrio3Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public string CountryCode
+        {
+            get
+            {
+                return this.countryCodeField;
+            }
+            set
+            {
+                this.countryCodeField = value;
             }
         }
     }
@@ -35571,8 +35661,6 @@ namespace BfsApi
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchResponseOfGetTRSCountriesResponseRowGetTRSCountriesFields))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetTRSCountriesResponse))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APIUpdateResponseOfUpdateInsurancePolicy))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateInsurancePoliciesResponse))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APICreateResponseOfInsurancePolicy))]
@@ -35638,6 +35726,8 @@ namespace BfsApi
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchResponseOfGetCurrencyResponseRowGetCurrencyFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetCurrencyResponse))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(SetHistoricPricesResponse))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APIUpdateResponseOfUpdateBusinessTransaction))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateBusinessTransactionsResponse))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APIUpdateResponseOfCorrectionBusinessTransaction))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CorrectBusinessTransactionsResponse))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APICreateResponseOfBusinessTransaction))]
@@ -35846,6 +35936,8 @@ namespace BfsApi
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetWebhookSubscriptionResponse))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchResponseOfGetHoldingsOverTimeResponseRowGetHoldingsOverTimeResponseFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetHoldingsOverTimeResponse))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchResponseOfGetTRSCountriesResponseRowGetTRSCountriesFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetTRSCountriesResponse))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
@@ -35867,143 +35959,6 @@ namespace BfsApi
                 this.messageField = value;
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetTRSCountriesResponse))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public abstract partial class APISearchResponseOfGetTRSCountriesResponseRowGetTRSCountriesFields : Response
-    {
-        
-        private GetTRSCountriesResponseRow[] resultField;
-        
-        private GetTRSCountriesFields fieldsField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
-        public GetTRSCountriesResponseRow[] Result
-        {
-            get
-            {
-                return this.resultField;
-            }
-            set
-            {
-                this.resultField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public GetTRSCountriesFields Fields
-        {
-            get
-            {
-                return this.fieldsField;
-            }
-            set
-            {
-                this.fieldsField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class GetTRSCountriesFields
-    {
-        
-        private bool brickIdField;
-        
-        private bool tRSIdTypePrio1Field;
-        
-        private bool tRSIdTypePrio2Field;
-        
-        private bool tRSIdTypePrio3Field;
-        
-        private bool countryCodeField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public bool BrickId
-        {
-            get
-            {
-                return this.brickIdField;
-            }
-            set
-            {
-                this.brickIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public bool TRSIdTypePrio1
-        {
-            get
-            {
-                return this.tRSIdTypePrio1Field;
-            }
-            set
-            {
-                this.tRSIdTypePrio1Field = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public bool TRSIdTypePrio2
-        {
-            get
-            {
-                return this.tRSIdTypePrio2Field;
-            }
-            set
-            {
-                this.tRSIdTypePrio2Field = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
-        public bool TRSIdTypePrio3
-        {
-            get
-            {
-                return this.tRSIdTypePrio3Field;
-            }
-            set
-            {
-                this.tRSIdTypePrio3Field = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
-        public bool CountryCode
-        {
-            get
-            {
-                return this.countryCodeField;
-            }
-            set
-            {
-                this.countryCodeField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class GetTRSCountriesResponse : APISearchResponseOfGetTRSCountriesResponseRowGetTRSCountriesFields
-    {
     }
     
     /// <remarks/>
@@ -36450,6 +36405,7 @@ namespace BfsApi
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateWorkflowInstanceFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateTransferReceiverFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetTransferReceiverFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateBusinessTransactionFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateAccountFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetAccountFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetDecisionMakerFields))]
@@ -37718,6 +37674,46 @@ namespace BfsApi
             set
             {
                 this.statusField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class UpdateBusinessTransactionFields : FieldBase
+    {
+        
+        private bool reconciliationStatusField;
+        
+        private bool superTransactionCustomFieldsField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public bool ReconciliationStatus
+        {
+            get
+            {
+                return this.reconciliationStatusField;
+            }
+            set
+            {
+                this.reconciliationStatusField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public bool SuperTransactionCustomFields
+        {
+            get
+            {
+                return this.superTransactionCustomFieldsField;
+            }
+            set
+            {
+                this.superTransactionCustomFieldsField = value;
             }
         }
     }
@@ -51936,6 +51932,39 @@ namespace BfsApi
     }
     
     /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateBusinessTransactionsResponse))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class APIUpdateResponseOfUpdateBusinessTransaction : Response
+    {
+        
+        private UpdateBusinessTransaction[] entitiesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public UpdateBusinessTransaction[] Entities
+        {
+            get
+            {
+                return this.entitiesField;
+            }
+            set
+            {
+                this.entitiesField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class UpdateBusinessTransactionsResponse : APIUpdateResponseOfUpdateBusinessTransaction
+    {
+    }
+    
+    /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CorrectBusinessTransactionsResponse))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -52128,6 +52157,8 @@ namespace BfsApi
         private bool superTransactionBusinessEventIdField;
         
         private bool superTransactionCustomFieldsField;
+        
+        private bool reconciliationStatusField;
         
         private bool customFieldsField;
         
@@ -52693,6 +52724,20 @@ namespace BfsApi
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=40)]
+        public bool ReconciliationStatus
+        {
+            get
+            {
+                return this.reconciliationStatusField;
+            }
+            set
+            {
+                this.reconciliationStatusField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=41)]
         public bool CustomFields
         {
             get
@@ -60490,39 +60535,80 @@ namespace BfsApi
     }
     
     /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetTRSCountriesResponse))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class GetTRSCountriesArgs
+    public abstract partial class APISearchResponseOfGetTRSCountriesResponseRowGetTRSCountriesFields : Response
     {
         
-        private System.Guid[] brickIdsField;
+        private GetTRSCountriesResponseRow[] resultField;
         
-        private string tRSIdTypePrio1Field;
-        
-        private string tRSIdTypePrio2Field;
-        
-        private string tRSIdTypePrio3Field;
-        
-        private string[] countryCodesField;
+        private GetTRSCountriesFields fieldsField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
-        public System.Guid[] BrickIds
+        public GetTRSCountriesResponseRow[] Result
         {
             get
             {
-                return this.brickIdsField;
+                return this.resultField;
             }
             set
             {
-                this.brickIdsField = value;
+                this.resultField = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public string TRSIdTypePrio1
+        public GetTRSCountriesFields Fields
+        {
+            get
+            {
+                return this.fieldsField;
+            }
+            set
+            {
+                this.fieldsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetTRSCountriesFields
+    {
+        
+        private bool brickIdField;
+        
+        private bool tRSIdTypePrio1Field;
+        
+        private bool tRSIdTypePrio2Field;
+        
+        private bool tRSIdTypePrio3Field;
+        
+        private bool countryCodeField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public bool BrickId
+        {
+            get
+            {
+                return this.brickIdField;
+            }
+            set
+            {
+                this.brickIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public bool TRSIdTypePrio1
         {
             get
             {
@@ -60536,7 +60622,7 @@ namespace BfsApi
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public string TRSIdTypePrio2
+        public bool TRSIdTypePrio2
         {
             get
             {
@@ -60550,7 +60636,7 @@ namespace BfsApi
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=3)]
-        public string TRSIdTypePrio3
+        public bool TRSIdTypePrio3
         {
             get
             {
@@ -60563,18 +60649,26 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=4)]
-        public string[] CountryCodes
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public bool CountryCode
         {
             get
             {
-                return this.countryCodesField;
+                return this.countryCodeField;
             }
             set
             {
-                this.countryCodesField = value;
+                this.countryCodeField = value;
             }
         }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetTRSCountriesResponse : APISearchResponseOfGetTRSCountriesResponseRowGetTRSCountriesFields
+    {
     }
     
     /// <remarks/>
@@ -65370,6 +65464,8 @@ namespace BfsApi
         
         private System.Guid[] superTransactionBusinessEventIdsField;
         
+        private ReconciliationStatus[] reconciliationStatusesField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
         public System.Guid[] BrickIds
@@ -65759,6 +65855,20 @@ namespace BfsApi
             set
             {
                 this.superTransactionBusinessEventIdsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=28)]
+        public ReconciliationStatus[] ReconciliationStatuses
+        {
+            get
+            {
+                return this.reconciliationStatusesField;
+            }
+            set
+            {
+                this.reconciliationStatusesField = value;
             }
         }
     }
@@ -74716,6 +74826,110 @@ namespace BfsApi
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetHoldingsOverTimeArgs
+    {
+        
+        private System.DateTime startField;
+        
+        private System.DateTime endField;
+        
+        private string displayCurrencyCodeField;
+        
+        private System.Guid[] accountsField;
+        
+        private System.Guid[] assetsField;
+        
+        private bool percentageReturnField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public System.DateTime Start
+        {
+            get
+            {
+                return this.startField;
+            }
+            set
+            {
+                this.startField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public System.DateTime End
+        {
+            get
+            {
+                return this.endField;
+            }
+            set
+            {
+                this.endField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string DisplayCurrencyCode
+        {
+            get
+            {
+                return this.displayCurrencyCodeField;
+            }
+            set
+            {
+                this.displayCurrencyCodeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=3)]
+        public System.Guid[] Accounts
+        {
+            get
+            {
+                return this.accountsField;
+            }
+            set
+            {
+                this.accountsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=4)]
+        public System.Guid[] Assets
+        {
+            get
+            {
+                return this.assetsField;
+            }
+            set
+            {
+                this.assetsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public bool PercentageReturn
+        {
+            get
+            {
+                return this.percentageReturnField;
+            }
+            set
+            {
+                this.percentageReturnField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
     public partial class Credentials
     {
         
@@ -74753,8 +74967,6 @@ namespace BfsApi
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchRequestOfGetTRSCountriesArgsGetTRSCountriesFields))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetTRSCountriesRequest))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APIUpdateRequestOfUpdateInsurancePolicyBetterActionBrickUpdateInsurancePolicyFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateInsurancePoliciesRequest))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APICreateRequestOfInsurancePolicyInsurancePolicyBrick))]
@@ -74820,6 +75032,8 @@ namespace BfsApi
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchRequestOfGetCurrencyArgsGetCurrencyFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetCurrencyRequest))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(SetHistoricPricesRequest))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APIUpdateRequestOfUpdateBusinessTransactionBusinessTransactionBrickUpdateBusinessTransactionFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateBusinessTransactionsRequest))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APIUpdateRequestOfCorrectionBusinessTransactionSuperTransactionBrickCorrectionBusinessTransactionFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CorrectBusinessTransactionRequest))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APICreateRequestOfSuperTransactionBetterActionBrick))]
@@ -75039,6 +75253,8 @@ namespace BfsApi
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetWebhookSubscriptionRequest))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchRequestOfGetHoldingsOverTimeArgsGetHoldingsOverTimeResponseFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetHoldingsOverTimeRequest))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchRequestOfGetTRSCountriesArgsGetTRSCountriesFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetTRSCountriesRequest))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
@@ -75076,87 +75292,6 @@ namespace BfsApi
                 this.identifyField = value;
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetTRSCountriesRequest))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public abstract partial class APISearchRequestOfGetTRSCountriesArgsGetTRSCountriesFields : Request
-    {
-        
-        private GetTRSCountriesArgs argsField;
-        
-        private GetTRSCountriesFields fieldsField;
-        
-        private string predefinedSearchNameField;
-        
-        private string[] typesField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public GetTRSCountriesArgs Args
-        {
-            get
-            {
-                return this.argsField;
-            }
-            set
-            {
-                this.argsField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public GetTRSCountriesFields Fields
-        {
-            get
-            {
-                return this.fieldsField;
-            }
-            set
-            {
-                this.fieldsField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public string PredefinedSearchName
-        {
-            get
-            {
-                return this.predefinedSearchNameField;
-            }
-            set
-            {
-                this.predefinedSearchNameField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=3)]
-        public string[] Types
-        {
-            get
-            {
-                return this.typesField;
-            }
-            set
-            {
-                this.typesField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class GetTRSCountriesRequest : APISearchRequestOfGetTRSCountriesArgsGetTRSCountriesFields
-    {
     }
     
     /// <remarks/>
@@ -77243,6 +77378,55 @@ namespace BfsApi
                 this.clearPreviousDataByRangeField = value;
             }
         }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateBusinessTransactionsRequest))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class APIUpdateRequestOfUpdateBusinessTransactionBusinessTransactionBrickUpdateBusinessTransactionFields : Request
+    {
+        
+        private UpdateBusinessTransaction[] entitiesField;
+        
+        private UpdateBusinessTransactionFields fieldsField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public UpdateBusinessTransaction[] Entities
+        {
+            get
+            {
+                return this.entitiesField;
+            }
+            set
+            {
+                this.entitiesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public UpdateBusinessTransactionFields Fields
+        {
+            get
+            {
+                return this.fieldsField;
+            }
+            set
+            {
+                this.fieldsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class UpdateBusinessTransactionsRequest : APIUpdateRequestOfUpdateBusinessTransactionBusinessTransactionBrickUpdateBusinessTransactionFields
+    {
     }
     
     /// <remarks/>
@@ -83469,6 +83653,87 @@ namespace BfsApi
     {
     }
     
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetHoldingsOverTimeRequest))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class APISearchRequestOfGetHoldingsOverTimeArgsGetHoldingsOverTimeResponseFields : Request
+    {
+        
+        private GetHoldingsOverTimeArgs argsField;
+        
+        private GetHoldingsOverTimeResponseFields fieldsField;
+        
+        private string predefinedSearchNameField;
+        
+        private string[] typesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public GetHoldingsOverTimeArgs Args
+        {
+            get
+            {
+                return this.argsField;
+            }
+            set
+            {
+                this.argsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public GetHoldingsOverTimeResponseFields Fields
+        {
+            get
+            {
+                return this.fieldsField;
+            }
+            set
+            {
+                this.fieldsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string PredefinedSearchName
+        {
+            get
+            {
+                return this.predefinedSearchNameField;
+            }
+            set
+            {
+                this.predefinedSearchNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=3)]
+        public string[] Types
+        {
+            get
+            {
+                return this.typesField;
+            }
+            set
+            {
+                this.typesField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetHoldingsOverTimeRequest : APISearchRequestOfGetHoldingsOverTimeArgsGetHoldingsOverTimeResponseFields
+    {
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     public interface bfsapiSoapChannel : BfsApi.bfsapiSoap, System.ServiceModel.IClientChannel
     {
@@ -83510,6 +83775,11 @@ namespace BfsApi
         public bfsapiSoapClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress)
         {
+        }
+        
+        public System.Threading.Tasks.Task<BfsApi.GetTRSCountriesResponse> GetTRSCountriesAsync(BfsApi.GetTRSCountriesRequest req)
+        {
+            return base.Channel.GetTRSCountriesAsync(req);
         }
         
         public System.Threading.Tasks.Task<BfsApi.GetHoldingsOverTimeResponse> GetHoldingsOverTimeAsync(BfsApi.GetHoldingsOverTimeRequest req)
@@ -84097,6 +84367,11 @@ namespace BfsApi
             return base.Channel.CorrectBusinessTransactionsAsync(req);
         }
         
+        public System.Threading.Tasks.Task<BfsApi.UpdateBusinessTransactionsResponse> UpdateBusinessTransactionsAsync(BfsApi.UpdateBusinessTransactionsRequest request)
+        {
+            return base.Channel.UpdateBusinessTransactionsAsync(request);
+        }
+        
         public System.Threading.Tasks.Task<BfsApi.SetHistoricPricesResponse> SetHistoricPricesAsync(BfsApi.SetHistoricPricesRequest req)
         {
             return base.Channel.SetHistoricPricesAsync(req);
@@ -84270,11 +84545,6 @@ namespace BfsApi
         public System.Threading.Tasks.Task<BfsApi.UpdateInsurancePoliciesResponse> UpdateInsurancePoliciesAsync(BfsApi.UpdateInsurancePoliciesRequest req)
         {
             return base.Channel.UpdateInsurancePoliciesAsync(req);
-        }
-        
-        public System.Threading.Tasks.Task<BfsApi.GetTRSCountriesResponse> GetTRSCountriesAsync(BfsApi.GetTRSCountriesRequest req)
-        {
-            return base.Channel.GetTRSCountriesAsync(req);
         }
         
         public virtual System.Threading.Tasks.Task OpenAsync()
