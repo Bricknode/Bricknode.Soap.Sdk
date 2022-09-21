@@ -114,5 +114,30 @@ namespace Bricknode.Soap.Sdk.Services
 
             return response;
         }
+
+        /// <summary>
+        ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/2937782287/UpdateBusinessTransactions
+        /// </summary>
+        /// <param name="businessTransactions"></param>
+        /// <param name="fieldsToUpdate"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        public async Task<UpdateBusinessTransactionsResponse> UpdateBusinessTransactionsAsync(UpdateBusinessTransaction[] businessTransactions, 
+            UpdateBusinessTransactionFields fieldsToUpdate, string bfsApiClientName = null)
+        {
+            var request = GetRequest<UpdateBusinessTransactionsRequest> (bfsApiClientName);
+
+            request.Entities = businessTransactions;
+
+            request.Fields = fieldsToUpdate;
+
+            var response = await GetClient(bfsApiClientName).UpdateBusinessTransactionsAsync(request);
+
+            if (ValidateResponse(response)) return response;
+
+            LogErrors(response.Entities);
+
+            return response;
+        }
     }
 }

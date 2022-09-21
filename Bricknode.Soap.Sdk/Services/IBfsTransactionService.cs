@@ -37,5 +37,15 @@ namespace Bricknode.Soap.Sdk.Services
         /// <returns></returns>
         Task<CorrectBusinessTransactionsResponse> CorrectBusinessTransactionsAsync(
             CorrectionBusinessTransaction[] correctionBusinessTransactions, string bfsApiClientName = null);
+
+        /// <summary>
+        /// https://bricknode.atlassian.net/wiki/spaces/API/pages/2937782287/UpdateBusinessTransactions
+        /// </summary>
+        /// <param name="businessTransactions"></param>
+        /// <param name="fieldsToUpdate"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        Task<UpdateBusinessTransactionsResponse> UpdateBusinessTransactionsAsync(UpdateBusinessTransaction[] businessTransactions,
+            UpdateBusinessTransactionFields fieldsToUpdate, string bfsApiClientName = null);
     }
 }
