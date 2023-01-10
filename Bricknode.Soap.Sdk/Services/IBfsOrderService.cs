@@ -350,5 +350,7 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         Task<SettleOrderResponse> SettleOrdersAsync(OrderSettleBase[] orderSettlements, string bfsApiClientName = null);
+
+        Task<CreateFundBatchOrdersResponse> CreateFundBatchOrdersAsync(CreateFundBatchOrdersBase createFundBatchOrdersBase, string bfsApiClientName = null);
     }
 }

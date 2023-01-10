@@ -35746,7 +35746,7 @@ namespace BfsApi
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateBusinessTransactionsResponse))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APIUpdateResponseOfCorrectionBusinessTransaction))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CorrectBusinessTransactionsResponse))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APICreateResponseOfBusinessTransaction))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APICreateResponseOfSuperTransaction))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateBusinessTransactionResponse))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchResponseOfGetBusinessTransactionResponseRowGetBusinessTransactionFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetBusinessTransactionsResponse))]
@@ -52034,14 +52034,14 @@ namespace BfsApi
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public abstract partial class APICreateResponseOfBusinessTransaction : Response
+    public abstract partial class APICreateResponseOfSuperTransaction : Response
     {
         
-        private BusinessTransaction[] entitiesField;
+        private SuperTransaction[] entitiesField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
-        public BusinessTransaction[] Entities
+        public SuperTransaction[] Entities
         {
             get
             {
@@ -52058,7 +52058,7 @@ namespace BfsApi
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class CreateBusinessTransactionResponse : APICreateResponseOfBusinessTransaction
+    public partial class CreateBusinessTransactionResponse : APICreateResponseOfSuperTransaction
     {
     }
     
@@ -74135,6 +74135,10 @@ namespace BfsApi
         
         private NoteType[] transactionNoteTypesField;
         
+        private System.Nullable<System.DateTime> createdDateFromField;
+        
+        private System.Nullable<System.DateTime> createdDateToField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
         public System.Guid[] NoteBrickIds
@@ -74202,6 +74206,34 @@ namespace BfsApi
             set
             {
                 this.transactionNoteTypesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=5)]
+        public System.Nullable<System.DateTime> CreatedDateFrom
+        {
+            get
+            {
+                return this.createdDateFromField;
+            }
+            set
+            {
+                this.createdDateFromField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=6)]
+        public System.Nullable<System.DateTime> CreatedDateTo
+        {
+            get
+            {
+                return this.createdDateToField;
+            }
+            set
+            {
+                this.createdDateToField = value;
             }
         }
     }

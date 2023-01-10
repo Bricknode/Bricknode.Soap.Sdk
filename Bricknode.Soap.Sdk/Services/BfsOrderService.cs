@@ -266,6 +266,27 @@ namespace Bricknode.Soap.Sdk.Services
             return response;
         }
 
+        /// <summary>
+        /// https://bricknode.atlassian.net/wiki/spaces/API/pages/2801500161/CreateFundBatchOrders
+        /// </summary>
+        /// <param name="createFundBatchOrdersBase"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        public async Task<CreateFundBatchOrdersResponse> CreateFundBatchOrdersAsync(CreateFundBatchOrdersBase createFundBatchOrdersBase, string bfsApiClientName = null)
+        {
+            var request = GetRequest<CreateFundBatchOrdersRequest>(bfsApiClientName);
+
+            request.Entity = createFundBatchOrdersBase;
+
+            var response = await GetClient(bfsApiClientName).CreateFundBatchOrdersAsync(request);
+
+            if (ValidateResponse(response)) return response;
+
+            LogErrors(response.Entities);
+
+            return response;
+        }
+
         #endregion
 
         #region AutogiroOrders
