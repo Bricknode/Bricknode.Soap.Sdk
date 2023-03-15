@@ -1,10 +1,13 @@
-﻿namespace Bricknode.Soap.Sdk.Factories
-{
-    using BfsApi;
-    using Configuration;
+﻿namespace Bricknode.Soap.Sdk.Factories;
 
-    public interface IBfsApiClientFactory
-    {
-        (bfsapiSoap Client, BfsApiConfiguration BfsApiConfiguration) CreateClient(string bfsApiClientName);
-    }
+using System;
+using System.Threading.Tasks;
+using BfsApi;
+using Configuration;
+
+public interface IBfsApiClientFactory : IDisposable
+{
+    ValueTask<BfsApiConfiguration> GetConfigurationAsync(string? bfsApiClientName = null);
+
+    ValueTask<bfsapiSoap> CreateClientAsync(string? bfsApiClientName = null);
 }
