@@ -1,51 +1,56 @@
 ﻿namespace Bricknode.Soap.Sdk.Extensions
 {
     using System;
-    using System.ServiceModel;
-    using BfsApi;
-    using Builders;
+    using System.Collections.Generic;
+    using Bricknode.Soap.Sdk.Builders;
     using Configuration;
     using Factories;
-    using Helpers;
     using Microsoft.Extensions.DependencyInjection;
-    using Microsoft.Extensions.Options;
     using Services;
 
     public static class BfsApiDependencyInjectionExtensions
     {
-        public static IServiceCollection AddBfsApiClient(this IServiceCollection services,
-            Action<BfsApiConfiguration> bfsApiConfiguration)
+        public static IServiceCollection AddBfsApiClient(
+            this IServiceCollection services,
+            Action<BfsApiConfiguration> configureAction)
         {
-            services.AddScoped<bfsapiSoap, bfsapiSoapClient>(
-                serviceProvider => new bfsapiSoapClient(
-                    BfsBinding.GetBfsBinding(),
-                    new EndpointAddress(serviceProvider.GetRequiredService<IOptions<BfsApiConfiguration>>().Value
-                        .EndpointAddress)
-                )
-            );
-
-            services.AddScoped<IBfsApiClientFactory, BfsApiClientFactory>();
-
-            services.Configure(bfsApiConfiguration);
-            services.AddSingleton(bfsApiConfiguration);
-
+            services.AddSingleton<IBfsApiClientFactory>(new SingleBfsClientFactory(configureAction));
             AddBfsServices(services);
-
             return services;
         }
 
+        public static IServiceCollection AddBfsApiClients(
+            this IServiceCollection services,
+            Func<IDictionary<string, BfsApiConfiguration>> configureFactory)
+        {
+            services.AddSingleton<IBfsApiConfigurationProvider>(_ => new BfsApiConfigurationProvider(configureFactory()));
+            services.AddScoped<IBfsApiClientFactory, BfsApiClientFactory>();
+            AddBfsServices(services);
+            return services;
+        }
+
+        public static IServiceCollection AddBfsApiClients(
+            this IServiceCollection services,
+            Func<IServiceProvider, IBfsApiConfigurationProvider> providerFactory)
+        {
+            services.AddSingleton<IBfsApiConfigurationProvider>(providerFactory);
+            services.AddScoped<IBfsApiClientFactory, BfsApiClientFactory>();
+            AddBfsServices(services);
+            return services;
+        }
+
+        [Obsolete($"The usage of {nameof(IMultiBfsApiClientBuilder)} is deprecated, please migrate to {nameof(AddBfsServices)} or for more flexibility you can create a custom implementation of {nameof(IBfsApiConfigurationProvider)}. {nameof(IMultiBfsApiClientBuilder)} will be removed in a future release.")]
         public static IMultiBfsApiClientBuilder AddMultiBfsApiClient(this IServiceCollection services)
         {
             var builder = new MultiBfsApiClientBuilder(services);
 
-            services.AddScoped<bfsapiSoap, bfsapiSoapClient>(provider => new bfsapiSoapClient(bfsapiSoapClient.EndpointConfiguration.bfsapiSoap));
-            services.AddOptions();
+            services.AddScoped<IBfsApiClientFactory, BfsApiClientFactory>();
             AddBfsServices(services);
 
             return builder;
         }
 
-        private static void AddBfsServices(IServiceCollection services)
+        public static IServiceCollection AddBfsServices(this IServiceCollection services)
         {
             services.AddTransient<IBfsLegalEntitiesService, BfsLegalEntitiesService>();
             services.AddTransient<IBfsAccountService, BfsAccountService>();
@@ -77,6 +82,7 @@
             services.AddTransient<IBfsWebhookService, BfsWebhookService>();
             services.AddTransient<IBfsFeeManagerService, BfsFeeManagerService>();
             services.AddTransient<IBfsCustomFieldService, BfsCustomFieldService>();
+            return services;
         }
     }
 }
