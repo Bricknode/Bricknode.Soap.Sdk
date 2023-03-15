@@ -1,32 +1,63 @@
-﻿namespace Bricknode.Soap.Sdk.Factories
+﻿namespace Bricknode.Soap.Sdk.Factories;
+
+using System;
+using System.Collections.Generic;
+using System.ServiceModel;
+using System.Threading.Tasks;
+using BfsApi;
+using Configuration;
+using Helpers;
+
+public class BfsApiClientFactory : IBfsApiClientFactory
 {
-    using System.Collections.Generic;
-    using System.ServiceModel;
-    using BfsApi;
-    using Configuration;
-    using Helpers;
+    private readonly IBfsApiConfigurationProvider _configurationProvider;
+    private readonly Dictionary<string, BfsApiConfiguration> _cacheConfigurations;
+    private readonly Dictionary<string, bfsapiSoapClient> _cacheClients;
 
-    public class BfsApiClientFactory : IBfsApiClientFactory
+    public BfsApiClientFactory(IBfsApiConfigurationProvider configurationProvider)
     {
-        private static Dictionary<string, BfsApiConfiguration> _bfsApiConfigurations;
+        _configurationProvider = configurationProvider;
+        _cacheConfigurations = new Dictionary<string, BfsApiConfiguration>(StringComparer.OrdinalIgnoreCase);
+        _cacheClients = new Dictionary<string, bfsapiSoapClient>(StringComparer.OrdinalIgnoreCase);
+    }
 
-        public void AddConfigurations(Dictionary<string, BfsApiConfiguration> configurations)
+    public async ValueTask<BfsApiConfiguration> GetConfigurationAsync(string? bfsApiClientName = null)
+    {
+        bfsApiClientName ??= string.Empty;
+
+        if (!_cacheConfigurations.TryGetValue(bfsApiClientName, out var configuration))
         {
-            _bfsApiConfigurations = configurations;
-        } 
-
-        public (bfsapiSoap Client, BfsApiConfiguration BfsApiConfiguration) CreateClient(string bfsApiClientName)
-        {
-            if (!_bfsApiConfigurations.ContainsKey(bfsApiClientName))
-                throw new KeyNotFoundException($"Missing BfsApiClient for name {bfsApiClientName}");
-
-            var bfsApiConfiguration = _bfsApiConfigurations[bfsApiClientName];
-
-            return 
-                (CreateSoapClient(bfsApiConfiguration), bfsApiConfiguration);
+            configuration = await _configurationProvider.GetConfigurationAsync(bfsApiClientName);
+            _cacheConfigurations[bfsApiClientName] = configuration;
         }
 
-        private static bfsapiSoapClient CreateSoapClient(BfsApiConfiguration bfsApiConfiguration)
-            => new bfsapiSoapClient(BfsBinding.GetBfsBinding(), new EndpointAddress(bfsApiConfiguration.EndpointAddress));
+        return configuration;
+    }
+
+    public async ValueTask<bfsapiSoap> CreateClientAsync(string? bfsApiClientName = null)
+    {
+        bfsApiClientName ??= string.Empty;
+
+        if (!_cacheClients.TryGetValue(bfsApiClientName, out var client))
+        {
+            var configuration = await GetConfigurationAsync(bfsApiClientName);
+            client = CreateSoapClient(configuration);
+            _cacheClients[bfsApiClientName] = client;
+        }
+
+        return client;
+    }
+
+    internal static bfsapiSoapClient CreateSoapClient(BfsApiConfiguration bfsApiConfiguration)
+        => new(BfsBinding.GetBfsBinding(), new EndpointAddress(bfsApiConfiguration.EndpointAddress));
+
+    public void Dispose()
+    {
+        foreach (var client in _cacheClients.Values)
+        {
+            ((IDisposable)client).Dispose();
+        }
+
+        _cacheClients.Clear();
     }
 }
