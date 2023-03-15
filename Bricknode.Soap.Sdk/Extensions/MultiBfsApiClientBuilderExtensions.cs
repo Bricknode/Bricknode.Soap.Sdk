@@ -21,10 +21,9 @@
 
         public static void BuildClients(this IMultiBfsApiClientBuilder builder)
         {
-            var bfsApiClientFactory = new BfsApiClientFactory();
-            bfsApiClientFactory.AddConfigurations(builder.GetBfsApiConfigurations());
-
-            builder.Services.AddSingleton<IBfsApiClientFactory, BfsApiClientFactory>(provider => bfsApiClientFactory);
+            var configurationProvider = new BfsApiConfigurationProvider();
+            configurationProvider.AddConfigurations(builder.GetBfsApiConfigurations());
+            builder.Services.AddSingleton<IBfsApiConfigurationProvider>(configurationProvider);
         }
     }
 }
