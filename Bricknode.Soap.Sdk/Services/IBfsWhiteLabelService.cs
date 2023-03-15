@@ -11,7 +11,7 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        Task<GetWhiteLabelResponse> GetWhiteLabelsAsync(GetWhiteLabelArgs filters, string bfsApiClientName = null);
+        Task<GetWhiteLabelResponse> GetWhiteLabelsAsync(GetWhiteLabelArgs filters, string? bfsApiClientName = null);
 
         /// <summary>
         /// https://bricknode.atlassian.net/wiki/spaces/API/pages/435585030/CreateWhiteLabels
@@ -19,7 +19,7 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="whiteLabels"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        Task<CreateWhiteLabelResponse> CreateWhiteLabelsAsync(WhiteLabel[] whiteLabels, string bfsApiClientName = null);
+        Task<CreateWhiteLabelResponse> CreateWhiteLabelsAsync(WhiteLabel[] whiteLabels, string? bfsApiClientName = null);
 
         /// <summary>
         /// https://bricknode.atlassian.net/wiki/spaces/API/pages/435650564/UpdateWhiteLabel
@@ -28,6 +28,6 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="fieldsToUpdate"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        Task<UpdateWhiteLabelResponse> UpdateWhiteLabelsAsync(UpdateWhiteLabel[] updateWhiteLabels, UpdateWhiteLabelFields fieldsToUpdate, string bfsApiClientName = null);
+        Task<UpdateWhiteLabelResponse> UpdateWhiteLabelsAsync(UpdateWhiteLabel[] updateWhiteLabels, UpdateWhiteLabelFields fieldsToUpdate, string? bfsApiClientName = null);
     }
 }

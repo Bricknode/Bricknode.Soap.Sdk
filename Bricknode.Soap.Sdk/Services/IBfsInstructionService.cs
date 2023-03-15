@@ -11,7 +11,7 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        Task<GetFundInstructionResponse> GetFundInstructionsAsync(GetFundInstructionArgs filters, string bfsApiClientName = null);
+        Task<GetFundInstructionResponse> GetFundInstructionsAsync(GetFundInstructionArgs filters, string? bfsApiClientName = null);
 
         /// <summary>
         /// https://bricknode.atlassian.net/wiki/spaces/API/pages/147881428/GetFundInstructionStatusLogs
@@ -19,7 +19,7 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        Task<GetFundInstructionStatusLogResponse> GetFundInstructionStatusLogsAsync(GetFundInstructionStatusLogArgs filters, string bfsApiClientName = null);
+        Task<GetFundInstructionStatusLogResponse> GetFundInstructionStatusLogsAsync(GetFundInstructionStatusLogArgs filters, string? bfsApiClientName = null);
 
         /// <summary>
         /// https://bricknode.atlassian.net/wiki/spaces/API/pages/147881601/GetFundInstructionExecutions
@@ -27,7 +27,7 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        Task<GetFundInstructionExecutionResponse> GetFundInstructionExecutionsAsync(GetFundInstructionExecutionArgs filters, string bfsApiClientName = null);
+        Task<GetFundInstructionExecutionResponse> GetFundInstructionExecutionsAsync(GetFundInstructionExecutionArgs filters, string? bfsApiClientName = null);
 
         /// <summary>
         /// https://bricknode.atlassian.net/wiki/spaces/API/pages/83132952/FundInstructions+Settle
@@ -35,6 +35,6 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="fundInstruction"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        Task<FundInstructions_SettleResponse> SettleFundInstructionAsync(FundInstructions_Settle fundInstruction, string bfsApiClientName = null);
+        Task<FundInstructions_SettleResponse> SettleFundInstructionAsync(FundInstructions_Settle fundInstruction, string? bfsApiClientName = null);
     }
 }

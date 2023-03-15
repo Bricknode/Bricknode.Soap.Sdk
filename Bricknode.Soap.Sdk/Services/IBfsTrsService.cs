@@ -11,6 +11,6 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        Task<GetTRSCountriesResponse> GetTrsCountriesAsync(GetTRSCountriesArgs filters, string bfsApiClientName = null);
+        Task<GetTRSCountriesResponse> GetTrsCountriesAsync(GetTRSCountriesArgs filters, string? bfsApiClientName = null);
     }
 }

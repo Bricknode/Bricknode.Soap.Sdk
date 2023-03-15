@@ -5,15 +5,15 @@ namespace Bricknode.Soap.Sdk.Services
 {
     public interface IBfsFeeManagerService
     {
-        Task<GetFeeRecordResponse> GetFeeRecordsAsync(GetFeeRecordArgs filters, string bfsApiClientName = null);
+        Task<GetFeeRecordResponse> GetFeeRecordsAsync(GetFeeRecordArgs filters, string? bfsApiClientName = null);
 
         Task<CreateFeeRecordResponse> CreateFeeRecordsAsync(FeeRecordDto[] feeRecordDtoArray, 
-            string bfsApiClientName = null);
+            string? bfsApiClientName = null);
 
         Task<UpdateFeeRecordResponse> UpdateFeeRecordsAsync(FeeRecordDto[] feeRecordDtoArray, 
-            string bfsApiClientName = null);
+            string? bfsApiClientName = null);
 
         Task<DeleteFeeRecordResponse> DeleteFeeRecordsAsync(DeleteFeeRecordArgs deleteFeeRecordArgs,
-            string bfsApiClientName = null);
+            string? bfsApiClientName = null);
     }
 }

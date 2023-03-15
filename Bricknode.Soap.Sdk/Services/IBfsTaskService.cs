@@ -11,7 +11,7 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        Task<GetTasksResponse> GetTasksAsync(GetTasksArgs filters, string bfsApiClientName = null);
+        Task<GetTasksResponse> GetTasksAsync(GetTasksArgs filters, string? bfsApiClientName = null);
 
         /// <summary>
         ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/1122664558/CreateTasks
@@ -19,7 +19,7 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="tasks"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        Task<CreateTasksResponse> CreateTasksAsync(CreateTask[] tasks, string bfsApiClientName = null);
+        Task<CreateTasksResponse> CreateTasksAsync(CreateTask[] tasks, string? bfsApiClientName = null);
 
         /// <summary>
         ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/1122959430/UpdateTasks
@@ -29,6 +29,6 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         Task<UpdateTaskResponse> UpdateTasksAsync(UpdateTask[] tasks,
-            UpdateTaskFields fieldsToUpdate, string bfsApiClientName = null);
+            UpdateTaskFields fieldsToUpdate, string? bfsApiClientName = null);
     }
 }

@@ -11,6 +11,6 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        Task<GetDealsResponse> GetDealsAsync(GetDealsArgs filters, string bfsApiClientName = null);
+        Task<GetDealsResponse> GetDealsAsync(GetDealsArgs filters, string? bfsApiClientName = null);
     }
 }

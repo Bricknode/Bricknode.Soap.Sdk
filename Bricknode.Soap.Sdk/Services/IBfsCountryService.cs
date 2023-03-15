@@ -5,6 +5,6 @@ namespace Bricknode.Soap.Sdk.Services
 {
     public interface IBfsCountryService
     {
-        Task<GetCountryResponse> GetCountries(GetCountryArgs filters, string bfsApiClientName = null);
+        Task<GetCountryResponse> GetCountries(GetCountryArgs filters, string? bfsApiClientName = null);
     }
 }

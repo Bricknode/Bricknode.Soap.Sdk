@@ -11,7 +11,7 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        Task<GetHistoricPricesResponse> GetHistoricPricesAsync(GetHistoricPricesArgs filters, string bfsApiClientName = null);
+        Task<GetHistoricPricesResponse> GetHistoricPricesAsync(GetHistoricPricesArgs filters, string? bfsApiClientName = null);
 
 
         /// <summary>
@@ -29,6 +29,6 @@ namespace Bricknode.Soap.Sdk.Services
             bool clearPreviousDataByRange = false,
             bool updateCurrentPriceFromLastPrice = false,
             bool clearAllsubsequentData = false,
-            string bfsApiClientName = null);
+            string? bfsApiClientName = null);
     }
 }
