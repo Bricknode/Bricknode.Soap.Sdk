@@ -1,31 +1,27 @@
 ﻿using System.Threading.Tasks;
 using BfsApi;
-using Bricknode.Soap.Sdk.Configuration;
 using Bricknode.Soap.Sdk.Factories;
 using Bricknode.Soap.Sdk.Services.Bases;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 
 namespace Bricknode.Soap.Sdk.Services
 {
     public class BfsCustomFieldService : BfsServiceBase, IBfsCustomFieldService
     {
-        private readonly bfsapiSoap _client;
-
-        public BfsCustomFieldService(IOptions<BfsApiConfiguration> bfsApiConfiguration, ILogger logger,
-            bfsapiSoap client, IBfsApiClientFactory bfsApiClientFactory) :
-            base(bfsApiConfiguration, logger, bfsApiClientFactory, client)
+        public BfsCustomFieldService(IBfsApiClientFactory bfsApiClientFactory, ILogger logger)
+            : base(bfsApiClientFactory, logger)
         {
-            _client = client;
+            // no operation
         }
 
-        public async Task<DeleteCustomFieldResponse> DeleteCustomFieldsAsync(DeleteCustomFieldDto[] deleteCustomFieldDtoArray, string bfsApiClientName = null)
+        public async Task<DeleteCustomFieldResponse> DeleteCustomFieldsAsync(DeleteCustomFieldDto[] deleteCustomFieldDtoArray, string? bfsApiClientName = null)
         {
-            var request = GetRequest<DeleteCustomFieldRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<DeleteCustomFieldRequest>(bfsApiClientName);
 
             request.Entities = deleteCustomFieldDtoArray;
 
-            var response = await GetClient(bfsApiClientName).DeleteCustomFieldsAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.DeleteCustomFieldsAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -34,13 +30,14 @@ namespace Bricknode.Soap.Sdk.Services
             return response;
         }
 
-        public async Task<UpdateCustomFieldResponse> UpdateCustomFieldsAsync(UpdateCustomFieldDto[] updateCustomFieldDtoArray, string bfsApiClientName = null)
+        public async Task<UpdateCustomFieldResponse> UpdateCustomFieldsAsync(UpdateCustomFieldDto[] updateCustomFieldDtoArray, string? bfsApiClientName = null)
         {
-            var request = GetRequest<UpdateCustomFieldRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<UpdateCustomFieldRequest>(bfsApiClientName);
 
             request.Entities = updateCustomFieldDtoArray;
 
-            var response = await GetClient(bfsApiClientName).UpdateCustomFieldsAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.UpdateCustomFieldsAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -49,13 +46,14 @@ namespace Bricknode.Soap.Sdk.Services
             return response;
         }
 
-        public async Task<CreateCustomFieldResponse> CreateCustomFieldsAsync(CreateCustomFieldDto[] createCustomFieldDtoArray, string bfsApiClientName = null)
+        public async Task<CreateCustomFieldResponse> CreateCustomFieldsAsync(CreateCustomFieldDto[] createCustomFieldDtoArray, string? bfsApiClientName = null)
         {
-            var request = GetRequest<CreateCustomFieldRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<CreateCustomFieldRequest>(bfsApiClientName);
 
             request.Entities = createCustomFieldDtoArray;
 
-            var response = await GetClient(bfsApiClientName).CreateCustomFieldsAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.CreateCustomFieldsAsync(request);
 
             if (ValidateResponse(response)) return response;
 

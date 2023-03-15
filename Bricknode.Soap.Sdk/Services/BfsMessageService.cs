@@ -1,10 +1,7 @@
-﻿using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using BfsApi;
-using Bricknode.Soap.Sdk.Configuration;
 using Bricknode.Soap.Sdk.Services.Bases;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 
 namespace Bricknode.Soap.Sdk.Services
 {
@@ -12,10 +9,10 @@ namespace Bricknode.Soap.Sdk.Services
 
     public class BfsMessageService : BfsServiceBase, IBfsMessageService
     {
-        public BfsMessageService(IOptions<BfsApiConfiguration> bfsApiConfiguration, ILogger logger, bfsapiSoap client, IBfsApiClientFactory bfsApiClientFactory) :
-            base(bfsApiConfiguration, logger, bfsApiClientFactory, client)
+        public BfsMessageService(IBfsApiClientFactory bfsApiClientFactory, ILogger logger)
+            : base(bfsApiClientFactory, logger)
         {
-            
+            // no operation
         }
 
         /// <summary>
@@ -24,15 +21,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<GetMessagesResponse> GetMessagesAsync(GetMessagesArgs filters, string bfsApiClientName = null)
+        public async Task<GetMessagesResponse> GetMessagesAsync(GetMessagesArgs filters, string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetMessagesRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetMessagesRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetMessagesFields>();
 
-            var response = await GetClient(bfsApiClientName).GetMessagesAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetMessagesAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -47,13 +45,14 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="messages"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<CreateMessagesResponse> CreateMessagesAsync(CreateMessage[] messages, string bfsApiClientName = null)
+        public async Task<CreateMessagesResponse> CreateMessagesAsync(CreateMessage[] messages, string? bfsApiClientName = null)
         {
-            var request = GetRequest<CreateMessagesRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<CreateMessagesRequest>(bfsApiClientName);
 
             request.Entities = messages;
 
-            var response = await GetClient(bfsApiClientName).CreateMessagesAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.CreateMessagesAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -70,15 +69,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<UpdateMessageResponse> UpdateMessagesAsync(UpdateMessage[] messages,
-            UpdateMessageFields fieldsToUpdate, string bfsApiClientName = null)
+            UpdateMessageFields fieldsToUpdate, string? bfsApiClientName = null)
         {
-            var request = GetRequest<UpdateMessageRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<UpdateMessageRequest>(bfsApiClientName);
 
             request.Entities = messages;
 
             request.Fields = fieldsToUpdate;
 
-            var response = await GetClient(bfsApiClientName).UpdateMessagesAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.UpdateMessagesAsync(request);
 
             if (ValidateResponse(response)) return response;
 

@@ -1,9 +1,7 @@
 ﻿using System.Threading.Tasks;
 using BfsApi;
-using Bricknode.Soap.Sdk.Configuration;
 using Bricknode.Soap.Sdk.Services.Bases;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 
 namespace Bricknode.Soap.Sdk.Services
 {
@@ -11,12 +9,10 @@ namespace Bricknode.Soap.Sdk.Services
 
     public class BfsFileService : BfsServiceBase, IBfsFileService
     {
-        private readonly bfsapiSoap _client;
-
-        public BfsFileService(IOptions<BfsApiConfiguration> bfsApiConfiguration, ILogger logger, bfsapiSoap client, IBfsApiClientFactory bfsApiClientFactory) :
-            base(bfsApiConfiguration, logger, bfsApiClientFactory, client)
+        public BfsFileService(IBfsApiClientFactory bfsApiClientFactory, ILogger logger)
+            : base(bfsApiClientFactory, logger)
         {
-            _client = client;
+            // no operation
         }
 
         /// <summary>
@@ -25,13 +21,14 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="fileInfo"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<GetFileResponse> GetFileAsync(FileInfoGeneral fileInfo, string bfsApiClientName = null)
+        public async Task<GetFileResponse> GetFileAsync(FileInfoGeneral fileInfo, string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetFileRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetFileRequest>(bfsApiClientName);
 
             request.FileInfoGet = fileInfo;
 
-            var response = await GetClient(bfsApiClientName).GetFileAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetFileAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -46,15 +43,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="fileInfo"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<GetFileListResponse> GetFileListAsync(GetFileInfoArgs fileInfo, string bfsApiClientName = null)
+        public async Task<GetFileListResponse> GetFileListAsync(GetFileInfoArgs fileInfo, string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetFileListRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetFileListRequest>(bfsApiClientName);
 
             request.Args = fileInfo;
 
             request.Fields = GetFields<GetFileInfoFields>();
 
-            var response = await GetClient(bfsApiClientName).GetFileListAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetFileListAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -69,13 +67,14 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="fileInfo"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<CreateFileResponse> CreateFileAsync(FileInfoUpload fileInfo, string bfsApiClientName = null)
+        public async Task<CreateFileResponse> CreateFileAsync(FileInfoUpload fileInfo, string? bfsApiClientName = null)
         {
-            var request = GetRequest<CreateFileRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<CreateFileRequest>(bfsApiClientName);
 
             request.FileInfoUpload = fileInfo;
 
-            var response = await GetClient(bfsApiClientName).CreateFileAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.CreateFileAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -90,13 +89,14 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="fileInfo"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<DeleteFileResponse> DeleteFileAsync(FileInfoGeneral fileInfo, string bfsApiClientName = null)
+        public async Task<DeleteFileResponse> DeleteFileAsync(FileInfoGeneral fileInfo, string? bfsApiClientName = null)
         {
-            var request = GetRequest<DeleteFileRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<DeleteFileRequest>(bfsApiClientName);
 
             request.FileInfoDelete = fileInfo;
 
-            var response = await GetClient(bfsApiClientName).DeleteFileAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.DeleteFileAsync(request);
 
             if (ValidateResponse(response)) return response;
 

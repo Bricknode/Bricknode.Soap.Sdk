@@ -3,54 +3,38 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using BfsApi;
-using Bricknode.Soap.Sdk.Configuration;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
-using Microsoft.Extensions.Options;
 
 namespace Bricknode.Soap.Sdk.Services.Bases
 {
+    using System.Threading.Tasks;
     using Factories;
 
     public abstract class BfsServiceBase
     {
-        protected static BfsApiConfiguration _bfsApiConfiguration;
-        protected ILogger _logger;
-        protected IBfsApiClientFactory _bfsApiClientFactory;
-        protected bfsapiSoap Client;
+        private readonly IBfsApiClientFactory _bfsApiClientFactory;
+        private readonly ILogger _logger;
 
-        protected BfsServiceBase(IOptions<BfsApiConfiguration> bfsApiConfiguration, ILogger logger, IBfsApiClientFactory bfsApiClientFactory, bfsapiSoap client)
+        protected BfsServiceBase(IBfsApiClientFactory bfsApiClientFactory, ILogger? logger)
         {
-            _bfsApiConfiguration = bfsApiConfiguration.Value;
-            _logger = logger ?? NullLogger.Instance;
             _bfsApiClientFactory = bfsApiClientFactory;
-            Client = client;
+            _logger = logger ?? NullLogger.Instance;
         }
 
-        protected bfsapiSoap GetClient(string bfsApiClientName = null)
+        protected ValueTask<bfsapiSoap> GetClientAsync(string? bfsApiClientName = null)
         {
-            if (string.IsNullOrWhiteSpace(bfsApiClientName))
-                return Client;
-
-            return _bfsApiClientFactory.CreateClient(bfsApiClientName).Client;
+            return _bfsApiClientFactory.CreateClientAsync(bfsApiClientName);
         }
 
-        protected T GetRequest<T>(string bfsApiClientName = null) where T : Request
+        protected async ValueTask<TRequest> GetRequestAsync<TRequest>(string? bfsApiClientName = null)
+            where TRequest : Request
         {
-            var request = Activator.CreateInstance<T>();
+            var request = Activator.CreateInstance<TRequest>();
+            var configuration = await _bfsApiClientFactory.GetConfigurationAsync(bfsApiClientName);
 
-            if (string.IsNullOrWhiteSpace(bfsApiClientName))
-            {
-                request.identify = _bfsApiConfiguration.Identifier;
-                request.Credentials = _bfsApiConfiguration.Credentials;
-            }
-            else
-            {
-                var bfsApiConfiguration = _bfsApiClientFactory.CreateClient(bfsApiClientName).BfsApiConfiguration;
-                request.identify = bfsApiConfiguration.Identifier;
-                request.Credentials = bfsApiConfiguration.Credentials;
-            }
-
+            request.identify = configuration.Identifier;
+            request.Credentials = configuration.Credentials;
             return request;
         }
 
@@ -89,7 +73,7 @@ namespace Bricknode.Soap.Sdk.Services.Bases
             return response.Message == "OK";
         }
 
-        protected void LogErrors(IEnumerable<EntityBase> entities, [CallerMemberName] string callerMethodName = "")
+        protected void LogErrors(IEnumerable<EntityBase>? entities, [CallerMemberName] string callerMethodName = "")
         {
             if (entities == null || !entities.Any())
                 return;
@@ -104,7 +88,7 @@ namespace Bricknode.Soap.Sdk.Services.Bases
             _logger.LogError($"Error in {callerMethodName} with the following error message: {message}");
         }
 
-        protected void LogErrors(IEnumerable<DtoBase> entities, [CallerMemberName] string callerMethodName = "")
+        protected void LogErrors(IEnumerable<DtoBase>? entities, [CallerMemberName] string callerMethodName = "")
         {
             if (entities == null || !entities.Any())
                 return;

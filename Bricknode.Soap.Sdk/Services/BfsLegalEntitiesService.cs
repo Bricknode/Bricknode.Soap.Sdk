@@ -1,9 +1,7 @@
 ﻿using System.Threading.Tasks;
 using BfsApi;
-using Bricknode.Soap.Sdk.Configuration;
 using Bricknode.Soap.Sdk.Services.Bases;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 
 namespace Bricknode.Soap.Sdk.Services
 {
@@ -11,13 +9,10 @@ namespace Bricknode.Soap.Sdk.Services
 
     public class BfsLegalEntitiesService : BfsServiceBase, IBfsLegalEntitiesService
     {
-        private readonly bfsapiSoap _client;
-
-        public BfsLegalEntitiesService(IOptions<BfsApiConfiguration> bfsApiConfiguration, ILogger logger,
-            bfsapiSoap client, IBfsApiClientFactory bfsApiClientFactory) :
-            base(bfsApiConfiguration, logger, bfsApiClientFactory, client)
+        public BfsLegalEntitiesService(IBfsApiClientFactory bfsApiClientFactory, ILogger logger)
+            : base(bfsApiClientFactory, logger)
         {
-            _client = client;
+            // no operation
         }
 
         /// <summary>
@@ -27,15 +22,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<GetPersonResponse> GetLegalEntitiesAsync(GetPersonArgs filters, string bfsApiClientName = null)
+        public async Task<GetPersonResponse> GetLegalEntitiesAsync(GetPersonArgs filters, string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetPersonRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetPersonRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetPersonFields>();
 
-            var response = await GetClient(bfsApiClientName).GetPersonsAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetPersonsAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -50,13 +46,14 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="legalEntities"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<CreatePersonResponse> CreateLegalEntitiesAsync(Person[] legalEntities, string bfsApiClientName = null)
+        public async Task<CreatePersonResponse> CreateLegalEntitiesAsync(Person[] legalEntities, string? bfsApiClientName = null)
         {
-            var request = GetRequest<CreatePersonRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<CreatePersonRequest>(bfsApiClientName);
 
             request.Entities = legalEntities;
 
-            var response = await GetClient(bfsApiClientName).CreatePersonsAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.CreatePersonsAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -73,15 +70,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<UpdatePersonsResponse> UpdateLegalEntitiesAsync(UpdatePerson[] legalEntities,
-            UpdatePersonFields fieldsToUpdate, string bfsApiClientName = null)
+            UpdatePersonFields fieldsToUpdate, string? bfsApiClientName = null)
         {
-            var request = GetRequest<UpdatePersonsRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<UpdatePersonsRequest>(bfsApiClientName);
 
             request.Entities = legalEntities;
 
             request.Fields = fieldsToUpdate;
 
-            var response = await GetClient(bfsApiClientName).UpdatePersonsAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.UpdatePersonsAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -96,13 +94,14 @@ namespace Bricknode.Soap.Sdk.Services
         /// </summary>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<GetHouseInformationResponse> GetHouseInformationAsync(string bfsApiClientName = null)
+        public async Task<GetHouseInformationResponse> GetHouseInformationAsync(string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetHouseInformationRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetHouseInformationRequest>(bfsApiClientName);
 
             request.Fields = GetFields<GetHouseInformationFields>();
 
-            var response = await GetClient(bfsApiClientName).GetHouseInformationAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetHouseInformationAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -117,15 +116,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<GetDecisionMakerResponse> GetDecisionMakersAsync(GetDecisionMakerArgs filters, string bfsApiClientName = null)
+        public async Task<GetDecisionMakerResponse> GetDecisionMakersAsync(GetDecisionMakerArgs filters, string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetDecisionMakerRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetDecisionMakerRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetDecisionMakerFields>();
 
-            var response = await GetClient(bfsApiClientName).GetDecisionMakersAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetDecisionMakersAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -140,15 +140,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<GetFundCompaniesResponse> GetFundCompaniesAsync(GetFundCompaniesArgs filters, string bfsApiClientName = null)
+        public async Task<GetFundCompaniesResponse> GetFundCompaniesAsync(GetFundCompaniesArgs filters, string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetFundCompaniesRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetFundCompaniesRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetFundCompaniesFields>();
 
-            var response = await GetClient(bfsApiClientName).GetFundCompaniesAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetFundCompaniesAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -163,15 +164,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<GetFundEntityResponse> GetFundEntitiesAsync(GetFundEntityArgs filters, string bfsApiClientName = null)
+        public async Task<GetFundEntityResponse> GetFundEntitiesAsync(GetFundEntityArgs filters, string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetFundEntityRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetFundEntityRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetFundEntityFields>();
 
-            var response = await GetClient(bfsApiClientName).GetFundEntityAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetFundEntityAsync(request);
 
             if (ValidateResponse(response)) return response;
 

@@ -1,34 +1,29 @@
 ﻿using System.Threading.Tasks;
 using BfsApi;
-using Bricknode.Soap.Sdk.Configuration;
 using Bricknode.Soap.Sdk.Factories;
 using Bricknode.Soap.Sdk.Services.Bases;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 
 namespace Bricknode.Soap.Sdk.Services
 {
     public class BfsFeeManagerService : BfsServiceBase, IBfsFeeManagerService
     {
-        private readonly bfsapiSoap _client;
-
-        public BfsFeeManagerService(IOptions<BfsApiConfiguration> bfsApiConfiguration, ILogger logger,
-            bfsapiSoap client, IBfsApiClientFactory bfsApiClientFactory) :
-            base(bfsApiConfiguration, logger, bfsApiClientFactory, client)
+        public BfsFeeManagerService(IBfsApiClientFactory bfsApiClientFactory, ILogger logger)
+            : base(bfsApiClientFactory, logger)
         {
-            _client = client;
+            // no operation
         }
 
-
-        public async Task<GetFeeRecordResponse> GetFeeRecordsAsync(GetFeeRecordArgs filters, string bfsApiClientName = null)
+        public async Task<GetFeeRecordResponse> GetFeeRecordsAsync(GetFeeRecordArgs filters, string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetFeeRecordRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetFeeRecordRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetFeeRecordFields>();
 
-            var response = await GetClient(bfsApiClientName).GetFeeRecordsAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetFeeRecordsAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -38,13 +33,14 @@ namespace Bricknode.Soap.Sdk.Services
         }
 
         public async Task<CreateFeeRecordResponse> CreateFeeRecordsAsync(FeeRecordDto[] feeRecordDtoArray,
-            string bfsApiClientName = null)
+            string? bfsApiClientName = null)
         {
-            var request = GetRequest<CreateFeeRecordRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<CreateFeeRecordRequest>(bfsApiClientName);
 
             request.Entities = feeRecordDtoArray;
 
-            var response = await GetClient(bfsApiClientName).CreateFeeRecordsAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.CreateFeeRecordsAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -54,13 +50,14 @@ namespace Bricknode.Soap.Sdk.Services
         }
 
         public async Task<UpdateFeeRecordResponse> UpdateFeeRecordsAsync(FeeRecordDto[] feeRecordDtoArray,
-            string bfsApiClientName = null)
+            string? bfsApiClientName = null)
         {
-            var request = GetRequest<UpdateFeeRecordRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<UpdateFeeRecordRequest>(bfsApiClientName);
 
             request.Entities = feeRecordDtoArray;
 
-            var response = await GetClient(bfsApiClientName).UpdateFeeRecordsAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.UpdateFeeRecordsAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -69,13 +66,14 @@ namespace Bricknode.Soap.Sdk.Services
             return response;
         }
 
-        public async Task<DeleteFeeRecordResponse> DeleteFeeRecordsAsync(DeleteFeeRecordArgs deleteFeeRecordArgs, string bfsApiClientName = null)
+        public async Task<DeleteFeeRecordResponse> DeleteFeeRecordsAsync(DeleteFeeRecordArgs deleteFeeRecordArgs, string? bfsApiClientName = null)
         {
-            var request = GetRequest<DeleteFeeRecordRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<DeleteFeeRecordRequest>(bfsApiClientName);
 
             request.DeleteFeeRecordArgs = deleteFeeRecordArgs;
 
-            var response = await GetClient(bfsApiClientName).DeleteFeeRecordsAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.DeleteFeeRecordsAsync(request);
 
             if (ValidateResponse(response)) return response;
 

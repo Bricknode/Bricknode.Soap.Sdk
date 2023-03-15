@@ -1,10 +1,7 @@
-﻿using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using BfsApi;
-using Bricknode.Soap.Sdk.Configuration;
 using Bricknode.Soap.Sdk.Services.Bases;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 
 namespace Bricknode.Soap.Sdk.Services
 {
@@ -12,13 +9,10 @@ namespace Bricknode.Soap.Sdk.Services
 
     public class BfsInstructionService : BfsServiceBase, IBfsInstructionService
     {
-        private readonly bfsapiSoap _client;
-
-        public BfsInstructionService(IOptions<BfsApiConfiguration> bfsApiConfiguration, ILogger logger,
-            bfsapiSoap client, IBfsApiClientFactory bfsApiClientFactory) :
-            base(bfsApiConfiguration, logger, bfsApiClientFactory, client)
+        public BfsInstructionService(IBfsApiClientFactory bfsApiClientFactory, ILogger logger)
+            : base(bfsApiClientFactory, logger)
         {
-            _client = client;
+            // no operation
         }
 
         #region Fund Instructions
@@ -29,15 +23,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<GetFundInstructionResponse> GetFundInstructionsAsync(GetFundInstructionArgs filters, string bfsApiClientName = null)
+        public async Task<GetFundInstructionResponse> GetFundInstructionsAsync(GetFundInstructionArgs filters, string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetFundInstructionRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetFundInstructionRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetFundInstructionFields>();
 
-            var response = await GetClient(bfsApiClientName).GetFundInstructionsAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetFundInstructionsAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -53,15 +48,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<GetFundInstructionStatusLogResponse> GetFundInstructionStatusLogsAsync(
-            GetFundInstructionStatusLogArgs filters, string bfsApiClientName = null)
+            GetFundInstructionStatusLogArgs filters, string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetFundInstructionStatusLogRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetFundInstructionStatusLogRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetFundInstructionStatusLogFields>();
 
-            var response = await GetClient(bfsApiClientName).GetFundInstructionStatusLogsAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetFundInstructionStatusLogsAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -77,15 +73,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<GetFundInstructionExecutionResponse> GetFundInstructionExecutionsAsync(
-            GetFundInstructionExecutionArgs filters, string bfsApiClientName = null)
+            GetFundInstructionExecutionArgs filters, string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetFundInstructionExecutionRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetFundInstructionExecutionRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetFundInstructionExecutionFields>();
 
-            var response = await GetClient(bfsApiClientName).GetFundInstructionExecutionsAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetFundInstructionExecutionsAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -101,13 +98,14 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<FundInstructions_SettleResponse> SettleFundInstructionAsync(
-            FundInstructions_Settle fundInstruction, string bfsApiClientName = null)
+            FundInstructions_Settle fundInstruction, string? bfsApiClientName = null)
         {
-            var request = GetRequest<FundInstructions_SettleRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<FundInstructions_SettleRequest>(bfsApiClientName);
 
             request.ActionTriggerDataEntity = fundInstruction;
 
-            var response = await GetClient(bfsApiClientName).FundInstruction_SettleAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.FundInstruction_SettleAsync(request);
 
             if (ValidateResponse(response)) return response;
 

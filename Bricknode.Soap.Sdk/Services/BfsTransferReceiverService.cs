@@ -1,10 +1,7 @@
-﻿using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using BfsApi;
-using Bricknode.Soap.Sdk.Configuration;
 using Bricknode.Soap.Sdk.Services.Bases;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 
 namespace Bricknode.Soap.Sdk.Services
 {
@@ -12,13 +9,10 @@ namespace Bricknode.Soap.Sdk.Services
 
     public class BfsTransferReceiverService : BfsServiceBase, IBfsTransferReceiverService
     {
-        private readonly bfsapiSoap _client;
-
-        public BfsTransferReceiverService(IOptions<BfsApiConfiguration> bfsApiConfiguration, ILogger logger,
-            bfsapiSoap client, IBfsApiClientFactory bfsApiClientFactory) :
-            base(bfsApiConfiguration, logger, bfsApiClientFactory, client)
+        public BfsTransferReceiverService(IBfsApiClientFactory bfsApiClientFactory, ILogger logger)
+            : base(bfsApiClientFactory, logger)
         {
-            _client = client;
+            // no operation
         }
 
         /// <summary>
@@ -28,15 +22,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<GetTransferReceiversResponse> GetTransferReceiversAsync(GetTransferReceiversArgs filters, string bfsApiClientName = null)
+        public async Task<GetTransferReceiversResponse> GetTransferReceiversAsync(GetTransferReceiversArgs filters, string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetTransferReceiversRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetTransferReceiversRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetTransferReceiverFields>();
 
-            var response = await GetClient(bfsApiClientName).GetTransferReceiversAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetTransferReceiversAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -52,13 +47,14 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<CreateTransferReceiversResponse> CreateTransferReceiversAsync(
-            TransferReceiver[] transferReceivers, string bfsApiClientName = null)
+            TransferReceiver[] transferReceivers, string? bfsApiClientName = null)
         {
-            var request = GetRequest<CreateTransferReceiversRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<CreateTransferReceiversRequest>(bfsApiClientName);
 
             request.Entities = transferReceivers;
 
-            var response = await GetClient(bfsApiClientName).CreateTransferReceiversAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.CreateTransferReceiversAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -75,15 +71,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<UpdateTransferReceiversResponse> UpdateTransferReceiversAsync(
-            UpdateTransferReceiver[] updateTransferReceivers, UpdateTransferReceiverFields fieldsToUpdate, string bfsApiClientName = null)
+            UpdateTransferReceiver[] updateTransferReceivers, UpdateTransferReceiverFields fieldsToUpdate, string? bfsApiClientName = null)
         {
-            var request = GetRequest<UpdateTransferReceiversRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<UpdateTransferReceiversRequest>(bfsApiClientName);
 
             request.Entities = updateTransferReceivers;
 
             request.Fields = fieldsToUpdate;
 
-            var response = await GetClient(bfsApiClientName).UpdateTransferReceiversAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.UpdateTransferReceiversAsync(request);
 
             if (ValidateResponse(response)) return response;
 

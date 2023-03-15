@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Threading.Tasks;
 using BfsApi;
-using Bricknode.Soap.Sdk.Configuration;
 using Bricknode.Soap.Sdk.Services.Bases;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 
 namespace Bricknode.Soap.Sdk.Services
 {
@@ -12,10 +10,10 @@ namespace Bricknode.Soap.Sdk.Services
 
     public class BfsAuthenticationService : BfsServiceBase, IBfsAuthenticationService
     {
-        public BfsAuthenticationService(IOptions<BfsApiConfiguration> bfsApiConfiguration, ILogger logger,
-            bfsapiSoap client, IBfsApiClientFactory bfsApiClientFactory) :
-            base(bfsApiConfiguration, logger, bfsApiClientFactory, client)
+        public BfsAuthenticationService(IBfsApiClientFactory bfsApiClientFactory, ILogger logger)
+            : base(bfsApiClientFactory, logger)
         {
+            // no operation
         }
 
         /// <summary>
@@ -27,15 +25,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<UsernamePasswordAuthenticateResponse> UsernamePasswordAuthenticationAsync(Domain domain,
-            string username, string password, string bfsApiClientName = null)
+            string username, string password, string? bfsApiClientName = null)
         {
-            var request = GetRequest<UsernamePasswordAuthenticateRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<UsernamePasswordAuthenticateRequest>(bfsApiClientName);
 
             request.Domain = domain;
             request.Username = username;
             request.Password = password;
 
-            var response = await GetClient(bfsApiClientName).UsernamePasswordAuthenticationAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.UsernamePasswordAuthenticationAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -44,13 +43,14 @@ namespace Bricknode.Soap.Sdk.Services
             return response;
         }
 
-        public async Task<ResetPasswordResponse> ResetPasswordAsync(Guid personId, string password, string bfsApiClientName = null)
+        public async Task<ResetPasswordResponse> ResetPasswordAsync(Guid personId, string password, string? bfsApiClientName = null)
         {
-            var request = GetRequest<ResetPasswordRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<ResetPasswordRequest>(bfsApiClientName);
             request.PersonId = personId;
             request.NewPassword = password;
 
-            var response = await GetClient(bfsApiClientName).ResetPasswordAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.ResetPasswordAsync(request);
             if (!ValidateResponse(response))
             {
                 LogErrors(response.Message);
