@@ -11,7 +11,7 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        Task<GetTransferReceiversResponse> GetTransferReceiversAsync(GetTransferReceiversArgs filters, string bfsApiClientName = null);
+        Task<GetTransferReceiversResponse> GetTransferReceiversAsync(GetTransferReceiversArgs filters, string? bfsApiClientName = null);
 
         /// <summary>
         /// https://bricknode.atlassian.net/wiki/spaces/API/pages/175177771/CreateTransferReceivers
@@ -19,7 +19,7 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="transferReceivers"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        Task<CreateTransferReceiversResponse> CreateTransferReceiversAsync(TransferReceiver[] transferReceivers, string bfsApiClientName = null);
+        Task<CreateTransferReceiversResponse> CreateTransferReceiversAsync(TransferReceiver[] transferReceivers, string? bfsApiClientName = null);
 
         /// <summary>
         /// https://bricknode.atlassian.net/wiki/spaces/API/pages/175800361/UpdateTransferReceivers
@@ -28,6 +28,6 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="fieldsToUpdate"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        Task<UpdateTransferReceiversResponse> UpdateTransferReceiversAsync(UpdateTransferReceiver[] updateTransferReceivers, UpdateTransferReceiverFields fieldsToUpdate, string bfsApiClientName = null);
+        Task<UpdateTransferReceiversResponse> UpdateTransferReceiversAsync(UpdateTransferReceiver[] updateTransferReceivers, UpdateTransferReceiverFields fieldsToUpdate, string? bfsApiClientName = null);
     }
 }

@@ -11,7 +11,7 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        Task<GetInsuranceProductsResponse> GetInsuranceProductsAsync(GetInsuranceProductsArgs filters, string bfsApiClientName = null);
+        Task<GetInsuranceProductsResponse> GetInsuranceProductsAsync(GetInsuranceProductsArgs filters, string? bfsApiClientName = null);
 
         /// <summary>
         /// https://bricknode.atlassian.net/wiki/spaces/API/pages/126189659/CreateInsuranceProducts
@@ -19,7 +19,7 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="insuranceProducts"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        Task<CreateInsuranceProductsResponse> CreateInsuranceProductsAsync(InsuranceProduct[] insuranceProducts, string bfsApiClientName = null);
+        Task<CreateInsuranceProductsResponse> CreateInsuranceProductsAsync(InsuranceProduct[] insuranceProducts, string? bfsApiClientName = null);
 
         /// <summary>
         /// https://bricknode.atlassian.net/wiki/spaces/API/pages/126910479/UpdateInsuranceProducts
@@ -28,7 +28,7 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="fieldsToUpdate"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        Task<UpdateInsuranceProductsResponse> UpdateInsuranceProductsAsync(UpdateInsuranceProduct[] insuranceProducts, UpdateInsuranceProductFields fieldsToUpdate, string bfsApiClientName = null);
+        Task<UpdateInsuranceProductsResponse> UpdateInsuranceProductsAsync(UpdateInsuranceProduct[] insuranceProducts, UpdateInsuranceProductFields fieldsToUpdate, string? bfsApiClientName = null);
 
         /// <summary>
         /// https://bricknode.atlassian.net/wiki/spaces/API/pages/90177627/GetInsurancePolicies
@@ -36,7 +36,7 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        Task<GetInsurancePolicyResponse> GetInsurancePoliciesAsync(GetInsurancePolicyArgs filters, string bfsApiClientName = null);
+        Task<GetInsurancePolicyResponse> GetInsurancePoliciesAsync(GetInsurancePolicyArgs filters, string? bfsApiClientName = null);
 
         /// <summary>
         /// https://bricknode.atlassian.net/wiki/spaces/API/pages/90767592/CreateInsurancePolicies
@@ -44,7 +44,7 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="insurancePolicies"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        Task<CreateInsurancePolicyResponse> CreateInsurancePoliciesAsync(InsurancePolicy[] insurancePolicies, string bfsApiClientName = null);
+        Task<CreateInsurancePolicyResponse> CreateInsurancePoliciesAsync(InsurancePolicy[] insurancePolicies, string? bfsApiClientName = null);
 
         /// <summary>
         /// https://bricknode.atlassian.net/wiki/spaces/API/pages/90767926/UpdateInsurancePolicy
@@ -53,7 +53,7 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="fieldsToUpdate"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        Task<UpdateInsurancePoliciesResponse> UpdateInsurancePoliciesAsync(UpdateInsurancePolicy[] insurancePolicies, UpdateInsurancePolicyFields fieldsToUpdate, string bfsApiClientName = null);
+        Task<UpdateInsurancePoliciesResponse> UpdateInsurancePoliciesAsync(UpdateInsurancePolicy[] insurancePolicies, UpdateInsurancePolicyFields fieldsToUpdate, string? bfsApiClientName = null);
 
         /// <summary>
         /// https://bricknode.atlassian.net/wiki/spaces/API/pages/128942686/GetInsuranceCovers
@@ -61,7 +61,7 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        Task<GetInsuranceCoversResponse> GetInsuranceCoversAsync(GetInsuranceCoversArgs filters, string bfsApiClientName = null);
+        Task<GetInsuranceCoversResponse> GetInsuranceCoversAsync(GetInsuranceCoversArgs filters, string? bfsApiClientName = null);
 
         /// <summary>
         /// https://bricknode.atlassian.net/wiki/spaces/API/pages/128942312/GetInsuranceClaims
@@ -69,7 +69,7 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        Task<GetInsuranceClaimsResponse> GetInsuranceClaimsAsync(GetInsuranceClaimsArgs filters, string bfsApiClientName = null);
+        Task<GetInsuranceClaimsResponse> GetInsuranceClaimsAsync(GetInsuranceClaimsArgs filters, string? bfsApiClientName = null);
 
         /// <summary>
         /// https://bricknode.atlassian.net/wiki/spaces/API/pages/128942296/CreateInsuranceClaims
@@ -77,7 +77,7 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="insuranceClaims"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        Task<CreateInsuranceClaimsResponse> CreateInsuranceClaimsAsync(InsuranceClaim[] insuranceClaims, string bfsApiClientName = null);
+        Task<CreateInsuranceClaimsResponse> CreateInsuranceClaimsAsync(InsuranceClaim[] insuranceClaims, string? bfsApiClientName = null);
 
         /// <summary>
         /// https://bricknode.atlassian.net/wiki/spaces/API/pages/128942315/UpdateInsuranceClaims
@@ -86,6 +86,6 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="fieldsToUpdate"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        Task<UpdateInsuranceClaimsResponse> UpdateInsuranceClaimsAsync(UpdateInsuranceClaim[] insuranceClaims, UpdateInsuranceClaimsFields fieldsToUpdate, string bfsApiClientName = null);
+        Task<UpdateInsuranceClaimsResponse> UpdateInsuranceClaimsAsync(UpdateInsuranceClaim[] insuranceClaims, UpdateInsuranceClaimsFields fieldsToUpdate, string? bfsApiClientName = null);
     }
 }

@@ -11,7 +11,7 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        Task<GetAccountsResponse> GetAccountsAsync(GetAccountsArgs filters, string bfsApiClientName = null);
+        Task<GetAccountsResponse> GetAccountsAsync(GetAccountsArgs filters, string? bfsApiClientName = null);
 
         /// <summary>
         /// https://bricknode.atlassian.net/wiki/spaces/API/pages/52003249/CreateAccounts
@@ -19,7 +19,7 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="accounts"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        Task<CreateAccountResponse> CreateAccountsAsync(Account[] accounts, string bfsApiClientName = null);
+        Task<CreateAccountResponse> CreateAccountsAsync(Account[] accounts, string? bfsApiClientName = null);
 
         /// <summary>
         /// https://bricknode.atlassian.net/wiki/spaces/API/pages/58916926/UpdateAccounts
@@ -28,7 +28,7 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="fieldsToUpdate"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        Task<UpdateAccountsResponse> UpdateAccountsAsync(UpdateAccount[] accounts, UpdateAccountFields fieldsToUpdate, string bfsApiClientName = null);
+        Task<UpdateAccountsResponse> UpdateAccountsAsync(UpdateAccount[] accounts, UpdateAccountFields fieldsToUpdate, string? bfsApiClientName = null);
 
         /// <summary>
         /// https://bricknode.atlassian.net/wiki/spaces/API/pages/58916901/GetAccountTypes
@@ -36,6 +36,6 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        Task<GetAccountTypeResponse> GetAccountTypesAsync(GetAccountTypeArgs filters, string bfsApiClientName = null);
+        Task<GetAccountTypeResponse> GetAccountTypesAsync(GetAccountTypeArgs filters, string? bfsApiClientName = null);
     }
 }

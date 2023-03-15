@@ -11,7 +11,7 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        Task<GetAvailableWebhookEventResponse> GetAvailableWebhookEventsAsync(GetAvailableWebhookEventArgs filters, string bfsApiClientName = null);
+        Task<GetAvailableWebhookEventResponse> GetAvailableWebhookEventsAsync(GetAvailableWebhookEventArgs filters, string? bfsApiClientName = null);
 
         /// <summary>
         /// https://bricknode.atlassian.net/wiki/spaces/API/pages/1711833274/GetFailedWebhooks
@@ -19,7 +19,7 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        Task<GetFailedWebhookResponse> GetFailedWebhooksAsync(GetFailedWebhookArgs filters, string bfsApiClientName = null);
+        Task<GetFailedWebhookResponse> GetFailedWebhooksAsync(GetFailedWebhookArgs filters, string? bfsApiClientName = null);
 
         /// <summary>
         /// https://bricknode.atlassian.net/wiki/spaces/API/pages/1711833289/GetWebhookSubscriptions
@@ -27,7 +27,7 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        Task<GetWebhookSubscriptionResponse> GetWebhookSubscriptionsAsync(GetWebhookSubscriptionArgs filters, string bfsApiClientName = null);
+        Task<GetWebhookSubscriptionResponse> GetWebhookSubscriptionsAsync(GetWebhookSubscriptionArgs filters, string? bfsApiClientName = null);
 
         /// <summary>
         /// https://bricknode.atlassian.net/wiki/spaces/API/pages/1708360352/DeleteWebhookSubscriptions
@@ -35,7 +35,7 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="webhookSubscriptions"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        Task<DeleteWebhookSubscriptionResponse> DeleteWebhookSubscriptionsAsync(DeleteWebhookSubscription[] webhookSubscriptions, string bfsApiClientName = null);
+        Task<DeleteWebhookSubscriptionResponse> DeleteWebhookSubscriptionsAsync(DeleteWebhookSubscription[] webhookSubscriptions, string? bfsApiClientName = null);
 
         /// <summary>
         /// https://bricknode.atlassian.net/wiki/spaces/API/pages/1711472815/CreateWebhookSubscriptions
@@ -43,6 +43,6 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="webhookSubscriptions"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        Task<CreateWebhookSubscriptionResponse> CreateWebhookSubscriptionsAsync(CreateWebhookSubscription[] webhookSubscriptions, string bfsApiClientName = null);
+        Task<CreateWebhookSubscriptionResponse> CreateWebhookSubscriptionsAsync(CreateWebhookSubscription[] webhookSubscriptions, string? bfsApiClientName = null);
     }
 }

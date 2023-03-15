@@ -9,6 +9,6 @@ namespace Bricknode.Soap.Sdk.Services
     public interface IBfsTransactionNoteService
     {
         Task<GetTransactionNoteResponse> GetTransactionNotesAsync(GetTransactionNoteArgs filters,
-            string bfsApiClientName = null);
+            string? bfsApiClientName = null);
     }
 }

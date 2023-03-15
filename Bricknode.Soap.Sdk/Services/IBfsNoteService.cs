@@ -11,7 +11,7 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        Task<GetNotesResponse> GetNotesAsync(GetNotesArgs filters, string bfsApiClientName = null);
+        Task<GetNotesResponse> GetNotesAsync(GetNotesArgs filters, string? bfsApiClientName = null);
 
         /// <summary>
         ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/1123221693/CreateNotes
@@ -19,7 +19,7 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="notes"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        Task<CreateNotesResponse> CreateNotesAsync(CreateNote[] notes, string bfsApiClientName = null);
+        Task<CreateNotesResponse> CreateNotesAsync(CreateNote[] notes, string? bfsApiClientName = null);
 
         /// <summary>
         ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/1128497184/UpdateNotes
@@ -29,6 +29,6 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         Task<UpdateNoteResponse> UpdateNotesAsync(UpdateNote[] notes,
-            UpdateNoteFields fieldsToUpdate, string bfsApiClientName = null);
+            UpdateNoteFields fieldsToUpdate, string? bfsApiClientName = null);
     }
 }

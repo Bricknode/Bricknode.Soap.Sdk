@@ -11,7 +11,7 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        Task<GetCurrencyResponse> GetCurrenciesAsync(GetCurrencyArgs filters, string bfsApiClientName = null);
+        Task<GetCurrencyResponse> GetCurrenciesAsync(GetCurrencyArgs filters, string? bfsApiClientName = null);
 
         /// <summary>
         /// https://bricknode.atlassian.net/wiki/spaces/API/pages/458817672/GetCurrencyValues
@@ -19,6 +19,6 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        Task<GetCurrencyValueResponse> GetCurrencyValuesAsync(GetCurrencyValuesArgs filters, string bfsApiClientName = null);
+        Task<GetCurrencyValueResponse> GetCurrencyValuesAsync(GetCurrencyValuesArgs filters, string? bfsApiClientName = null);
     }
 }
