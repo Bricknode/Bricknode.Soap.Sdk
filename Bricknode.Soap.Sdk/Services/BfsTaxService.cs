@@ -1,22 +1,17 @@
-﻿using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using BfsApi;
-using Bricknode.Soap.Sdk.Configuration;
 using Bricknode.Soap.Sdk.Factories;
 using Bricknode.Soap.Sdk.Services.Bases;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 
 namespace Bricknode.Soap.Sdk.Services
 {
-   
     public class BfsTaxService : BfsServiceBase, IBfsTaxService
     {
-        private readonly bfsapiSoap _client;
-
-        public BfsTaxService(IOptions<BfsApiConfiguration> bfsApiConfiguration, ILogger logger, IBfsApiClientFactory bfsApiClientFactory, bfsapiSoap client) : base(bfsApiConfiguration, logger, bfsApiClientFactory, client)
+        public BfsTaxService(IBfsApiClientFactory bfsApiClientFactory, ILogger logger)
+            : base(bfsApiClientFactory, logger)
         {
-            _client = client;
+            // no operation
         }
 
 
@@ -26,15 +21,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<GetTaxWithholdingAgreementResponse> GetTaxWithholdingAgreementsAsync(GetTaxWithholdingAgreementArgs filters, string bfsApiClientName = null)
+        public async Task<GetTaxWithholdingAgreementResponse> GetTaxWithholdingAgreementsAsync(GetTaxWithholdingAgreementArgs filters, string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetTaxWithholdingAgreementRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetTaxWithholdingAgreementRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetTaxWithholdingAgreementFields>();
 
-            var response = await GetClient(bfsApiClientName).GetTaxWithholdingAgreementsAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetTaxWithholdingAgreementsAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -49,13 +45,14 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="taxWithholdingAgreements"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<CreateTaxWithholdingAgreementResponse> CreateTaxWithholdingAgreementsAsync(TaxWithholdingAgreement[] taxWithholdingAgreements, string bfsApiClientName = null)
+        public async Task<CreateTaxWithholdingAgreementResponse> CreateTaxWithholdingAgreementsAsync(TaxWithholdingAgreement[] taxWithholdingAgreements, string? bfsApiClientName = null)
         {
-            var request = GetRequest<CreateTaxWithholdingAgreementsRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<CreateTaxWithholdingAgreementsRequest>(bfsApiClientName);
 
             request.Entities = taxWithholdingAgreements;
 
-            var response = await GetClient(bfsApiClientName).CreateTaxWithholdingAgreementsAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.CreateTaxWithholdingAgreementsAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -73,15 +70,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<UpdateTaxWithholdingAgreementResponse> UpdateTaxWithholdingAgreementsAsync(UpdateTaxWithholdingAgreement[] taxWithholdingAgreements,
-            UpdateTaxWithholdingAgreementFields fieldsToUpdate, string bfsApiClientName = null)
+            UpdateTaxWithholdingAgreementFields fieldsToUpdate, string? bfsApiClientName = null)
         {
-            var request = GetRequest<UpdateTaxWithholdingAgreementsRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<UpdateTaxWithholdingAgreementsRequest>(bfsApiClientName);
 
             request.Entities = taxWithholdingAgreements;
 
             request.Fields = fieldsToUpdate;
 
-            var response = await GetClient(bfsApiClientName).UpdateTaxWithholdingAgreementsAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.UpdateTaxWithholdingAgreementsAsync(request);
 
             if (ValidateResponse(response)) return response;
 

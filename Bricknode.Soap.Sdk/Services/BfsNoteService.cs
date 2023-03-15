@@ -1,10 +1,7 @@
-﻿using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using BfsApi;
-using Bricknode.Soap.Sdk.Configuration;
 using Bricknode.Soap.Sdk.Services.Bases;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 
 namespace Bricknode.Soap.Sdk.Services
 {
@@ -12,10 +9,10 @@ namespace Bricknode.Soap.Sdk.Services
 
     public class BfsNoteService : BfsServiceBase, IBfsNoteService
     {
-        public BfsNoteService(IOptions<BfsApiConfiguration> bfsApiConfiguration, ILogger logger, bfsapiSoap client, IBfsApiClientFactory bfsApiClientFactory) :
-            base(bfsApiConfiguration, logger, bfsApiClientFactory, client)
+        public BfsNoteService(IBfsApiClientFactory bfsApiClientFactory, ILogger logger)
+            : base(bfsApiClientFactory, logger)
         {
-
+            // no operation
         }
 
         /// <summary>
@@ -24,15 +21,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<GetNotesResponse> GetNotesAsync(GetNotesArgs filters, string bfsApiClientName = null)
+        public async Task<GetNotesResponse> GetNotesAsync(GetNotesArgs filters, string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetNotesRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetNotesRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetNotesFields>();
 
-            var response = await GetClient(bfsApiClientName).GetNotesAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetNotesAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -47,13 +45,14 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="notes"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<CreateNotesResponse> CreateNotesAsync(CreateNote[] notes, string bfsApiClientName = null)
+        public async Task<CreateNotesResponse> CreateNotesAsync(CreateNote[] notes, string? bfsApiClientName = null)
         {
-            var request = GetRequest<CreateNotesRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<CreateNotesRequest>(bfsApiClientName);
 
             request.Entities = notes;
 
-            var response = await GetClient(bfsApiClientName).CreateNotesAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.CreateNotesAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -70,15 +69,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<UpdateNoteResponse> UpdateNotesAsync(UpdateNote[] notes,
-            UpdateNoteFields fieldsToUpdate, string bfsApiClientName = null)
+            UpdateNoteFields fieldsToUpdate, string? bfsApiClientName = null)
         {
-            var request = GetRequest<UpdateNoteRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<UpdateNoteRequest>(bfsApiClientName);
 
             request.Entities = notes;
 
             request.Fields = fieldsToUpdate;
 
-            var response = await GetClient(bfsApiClientName).UpdateNotesAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.UpdateNotesAsync(request);
 
             if (ValidateResponse(response)) return response;
 

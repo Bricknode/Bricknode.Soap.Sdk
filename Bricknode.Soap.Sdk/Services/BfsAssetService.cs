@@ -1,10 +1,7 @@
-﻿using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using BfsApi;
-using Bricknode.Soap.Sdk.Configuration;
 using Bricknode.Soap.Sdk.Services.Bases;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 
 namespace Bricknode.Soap.Sdk.Services
 {
@@ -12,12 +9,10 @@ namespace Bricknode.Soap.Sdk.Services
 
     public class BfsAssetService : BfsServiceBase, IBfsAssetService
     {
-        private readonly bfsapiSoap _client;
-
-        public BfsAssetService(IOptions<BfsApiConfiguration> bfsApiConfiguration, ILogger logger, bfsapiSoap client, IBfsApiClientFactory bfsApiClientFactory) :
-            base(bfsApiConfiguration, logger, bfsApiClientFactory, client)
+        public BfsAssetService(IBfsApiClientFactory bfsApiClientFactory, ILogger logger)
+            : base(bfsApiClientFactory, logger)
         {
-            _client = client;
+            // no operation
         }
 
         #region ExecutionInterface
@@ -29,13 +24,14 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<CreateManualExecutionInterfaceResponse> CreateManualExecutionInterfaceAsync(
-            ManualExecutionInterfaceOld[] executionInterfaces, string bfsApiClientName = null)
+            ManualExecutionInterfaceOld[] executionInterfaces, string? bfsApiClientName = null)
         {
-            var request = GetRequest<CreateManualExecutionInterfaceRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<CreateManualExecutionInterfaceRequest>(bfsApiClientName);
 
             request.Entities = executionInterfaces;
 
-            var response = await GetClient(bfsApiClientName).CreateManualExecutionInterfaceAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.CreateManualExecutionInterfaceAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -54,15 +50,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<GetTradingVenueResponse> GetTradingVenuesAsync(GetTradingVenueArgs filters, string bfsApiClientName = null)
+        public async Task<GetTradingVenueResponse> GetTradingVenuesAsync(GetTradingVenueArgs filters, string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetTradingVenueRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetTradingVenueRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetTradingVenueFields>();
 
-            var response = await GetClient(bfsApiClientName).GetTradingVenuesAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetTradingVenuesAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -77,13 +74,14 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="createTradingVenues"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<CreateTradingVenuesResponse> CreateTradingVenuesAsync(CreateTradingVenue[] createTradingVenues, string bfsApiClientName = null)
+        public async Task<CreateTradingVenuesResponse> CreateTradingVenuesAsync(CreateTradingVenue[] createTradingVenues, string? bfsApiClientName = null)
         {
-            var request = GetRequest<CreateTradingVenuesRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<CreateTradingVenuesRequest>(bfsApiClientName);
 
             request.Entities = createTradingVenues;
 
-            var response = await GetClient(bfsApiClientName).CreateTradingVenuesAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.CreateTradingVenuesAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -102,15 +100,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<GetCashResponse> GetCashAsync(GetCashArgs filters, string bfsApiClientName = null)
+        public async Task<GetCashResponse> GetCashAsync(GetCashArgs filters, string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetCashRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetCashRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetCashFields>();
 
-            var response = await GetClient(bfsApiClientName).GetCashAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetCashAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -129,15 +128,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<GetInstrumentsResponse> GetInstrumentsAsync(GetInstrumentsArgs filters, string bfsApiClientName = null)
+        public async Task<GetInstrumentsResponse> GetInstrumentsAsync(GetInstrumentsArgs filters, string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetInstrumentsRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetInstrumentsRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetInstrumentsFields>();
 
-            var response = await GetClient(bfsApiClientName).GetInstrumentsAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetInstrumentsAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -153,15 +153,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<GetInstrumentsByNameResponse> GetInstrumentsByNameAsync(GetInstrumentsByNameArgs filters, string bfsApiClientName = null)
+        public async Task<GetInstrumentsByNameResponse> GetInstrumentsByNameAsync(GetInstrumentsByNameArgs filters, string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetInstrumentsByNameRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetInstrumentsByNameRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetInstrumentsFields>();
 
-            var response = await GetClient(bfsApiClientName).GetInstrumentsByNameAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetInstrumentsByNameAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -177,13 +178,14 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="instruments"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<CreateInstrumentResponse> CreateInstrumentsAsync(Instrument[] instruments, string bfsApiClientName = null)
+        public async Task<CreateInstrumentResponse> CreateInstrumentsAsync(Instrument[] instruments, string? bfsApiClientName = null)
         {
-            var request = GetRequest<CreateInstrumentRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<CreateInstrumentRequest>(bfsApiClientName);
 
             request.Entities = instruments;
 
-            var response = await GetClient(bfsApiClientName).CreateInstrumentsAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.CreateInstrumentsAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -200,15 +202,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<UpdateInstrumentResponse> UpdateInstrumetnsAsync(UpdateInstrument[] instruments,
-            UpdateInstrumentFields fieldsToUpdate, string bfsApiClientName = null)
+            UpdateInstrumentFields fieldsToUpdate, string? bfsApiClientName = null)
         {
-            var request = GetRequest<UpdateInstrumentsRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<UpdateInstrumentsRequest>(bfsApiClientName);
 
             request.Entities = instruments;
 
             request.Fields = fieldsToUpdate;
 
-            var response = await GetClient(bfsApiClientName).UpdateInstrumentsAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.UpdateInstrumentsAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -228,15 +231,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<GetAssetAccountTypeLimitationResponse> GetAssetAccountTypeLimitationsAsync(
-            GetAssetAccountTypeLimitationArgs filters, string bfsApiClientName = null)
+            GetAssetAccountTypeLimitationArgs filters, string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetAssetAccountTypeLimitationRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetAssetAccountTypeLimitationRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetAssetAccountTypeLimitationFields>();
 
-            var response = await GetClient(bfsApiClientName).GetAssetAccountTypeLimitationsAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetAssetAccountTypeLimitationsAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -252,13 +256,14 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<CreateAssetAccountTypeLimitationResponse> CreateAssetAccountTypeLimitationAsync(
-            AssetAccountTypeLimitation[] assetAccountTypeLimitations, string bfsApiClientName = null)
+            AssetAccountTypeLimitation[] assetAccountTypeLimitations, string? bfsApiClientName = null)
         {
-            var request = GetRequest<CreateAssetAccountTypeLimitationRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<CreateAssetAccountTypeLimitationRequest>(bfsApiClientName);
 
             request.Entities = assetAccountTypeLimitations;
 
-            var response = await GetClient(bfsApiClientName).CreateAssetAccountTypeLimitationsAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.CreateAssetAccountTypeLimitationsAsync(request);
 
             if (ValidateResponse(response)) return response;
 

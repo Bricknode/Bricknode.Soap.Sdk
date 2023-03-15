@@ -1,10 +1,7 @@
-﻿using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using BfsApi;
-using Bricknode.Soap.Sdk.Configuration;
 using Bricknode.Soap.Sdk.Services.Bases;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 
 namespace Bricknode.Soap.Sdk.Services
 {
@@ -12,12 +9,10 @@ namespace Bricknode.Soap.Sdk.Services
 
     public class BfsAccountService : BfsServiceBase, IBfsAccountService
     {
-        private readonly bfsapiSoap _client;
-
-        public BfsAccountService(IOptions<BfsApiConfiguration> bfsApiConfiguration, ILogger logger, bfsapiSoap client, IBfsApiClientFactory bfsApiClientFactory) :
-            base(bfsApiConfiguration, logger, bfsApiClientFactory, client)
+        public BfsAccountService(IBfsApiClientFactory bfsApiClientFactory, ILogger logger)
+            : base(bfsApiClientFactory, logger)
         {
-            _client = client;
+            // no operation
         }
 
         /// <summary>
@@ -26,15 +21,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<GetAccountsResponse> GetAccountsAsync(GetAccountsArgs filters, string bfsApiClientName = null)
+        public async Task<GetAccountsResponse> GetAccountsAsync(GetAccountsArgs filters, string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetAccountsRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetAccountsRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetAccountFields>();
 
-            var response = await GetClient(bfsApiClientName).GetAccountsAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetAccountsAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -49,13 +45,14 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="accounts"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<CreateAccountResponse> CreateAccountsAsync(Account[] accounts, string bfsApiClientName = null)
+        public async Task<CreateAccountResponse> CreateAccountsAsync(Account[] accounts, string? bfsApiClientName = null)
         {
-            var request = GetRequest<CreateAccountRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<CreateAccountRequest>(bfsApiClientName);
 
             request.Entities = accounts;
 
-            var response = await GetClient(bfsApiClientName).CreateAccountsAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.CreateAccountsAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -72,15 +69,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<UpdateAccountsResponse> UpdateAccountsAsync(UpdateAccount[] accounts,
-            UpdateAccountFields fieldsToUpdate, string bfsApiClientName = null)
+            UpdateAccountFields fieldsToUpdate, string? bfsApiClientName = null)
         {
-            var request = GetRequest<UpdateAccountsRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<UpdateAccountsRequest>(bfsApiClientName);
 
             request.Entities = accounts;
 
             request.Fields = fieldsToUpdate;
 
-            var response = await GetClient(bfsApiClientName).UpdateAccountsAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.UpdateAccountsAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -95,15 +93,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<GetAccountTypeResponse> GetAccountTypesAsync(GetAccountTypeArgs filters, string bfsApiClientName = null)
+        public async Task<GetAccountTypeResponse> GetAccountTypesAsync(GetAccountTypeArgs filters, string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetAccountTypeRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetAccountTypeRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetAccountTypeFields>();
 
-            var response = await GetClient(bfsApiClientName).GetAccountTypesAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetAccountTypesAsync(request);
 
             if (ValidateResponse(response)) return response;
 

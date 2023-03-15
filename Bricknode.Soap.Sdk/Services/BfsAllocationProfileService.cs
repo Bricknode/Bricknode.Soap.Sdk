@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Linq;
 using System.Threading.Tasks;
 using BfsApi;
-using Bricknode.Soap.Sdk.Configuration;
 using Bricknode.Soap.Sdk.Services.Bases;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 
 namespace Bricknode.Soap.Sdk.Services
 {
@@ -13,13 +10,10 @@ namespace Bricknode.Soap.Sdk.Services
 
     public class BfsAllocationProfileService : BfsServiceBase, IBfsAllocationProfileService
     {
-        private readonly bfsapiSoap _client;
-
-        public BfsAllocationProfileService(IOptions<BfsApiConfiguration> bfsApiConfiguration, ILogger logger,
-            bfsapiSoap client, IBfsApiClientFactory bfsApiClientFactory) :
-            base(bfsApiConfiguration, logger, bfsApiClientFactory, client)
+        public BfsAllocationProfileService(IBfsApiClientFactory bfsApiClientFactory, ILogger logger)
+            : base(bfsApiClientFactory, logger)
         {
-            _client = client;
+            // no operation
         }
 
         /// <summary>
@@ -28,15 +22,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<GetAllocationProfileResponse> GetAllocationProfilesAsync(GetAllocationProfileArgs filters, string bfsApiClientName = null)
+        public async Task<GetAllocationProfileResponse> GetAllocationProfilesAsync(GetAllocationProfileArgs filters, string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetAllocationProfileRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetAllocationProfileRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetAllocationProfileFields>();
 
-            var response = await GetClient(bfsApiClientName).GetAllocationProfilesAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetAllocationProfilesAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -52,13 +47,14 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<CreateAllocationProfileResponse> CreateAllocationProfilesAsync(
-            AllocationProfile[] allocationProfiles, string bfsApiClientName = null)
+            AllocationProfile[] allocationProfiles, string? bfsApiClientName = null)
         {
-            var request = GetRequest<CreateAllocationProfileRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<CreateAllocationProfileRequest>(bfsApiClientName);
 
             request.Entities = allocationProfiles;
 
-            var response = await GetClient(bfsApiClientName).CreateAllocationProfilesAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.CreateAllocationProfilesAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -75,15 +71,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<UpdateAllocationProfileResponse> UpdateAllocationProfilesAsync(
-            AllocationProfile[] allocationProfiles, UpdateAllocationProfileFields fieldsToUpdate, string bfsApiClientName = null)
+            AllocationProfile[] allocationProfiles, UpdateAllocationProfileFields fieldsToUpdate, string? bfsApiClientName = null)
         {
-            var request = GetRequest<UpdateAllocationProfileRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<UpdateAllocationProfileRequest>(bfsApiClientName);
 
             request.Entities = allocationProfiles;
 
             request.Fields = fieldsToUpdate;
 
-            var response = await GetClient(bfsApiClientName).UpdateAllocationProfilesAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.UpdateAllocationProfilesAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -98,13 +95,14 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="allocationProfileBrickIds"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<APIDeleteResponse> DeleteAllocationProfilesAsync(Guid[] allocationProfileBrickIds, string bfsApiClientName = null)
+        public async Task<APIDeleteResponse> DeleteAllocationProfilesAsync(Guid[] allocationProfileBrickIds, string? bfsApiClientName = null)
         {
-            var request = GetRequest<DeleteAllocationProfileRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<DeleteAllocationProfileRequest>(bfsApiClientName);
 
             request.BrickIds = allocationProfileBrickIds;
 
-            var response = await GetClient(bfsApiClientName).DeleteAllocationProfilesAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.DeleteAllocationProfilesAsync(request);
 
             if (ValidateResponse(response)) return response;
 

@@ -1,13 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
 using System.Threading.Tasks;
 using BfsApi;
-using Bricknode.Soap.Sdk.Configuration;
 using Bricknode.Soap.Sdk.Services.Bases;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 
 namespace Bricknode.Soap.Sdk.Services
 {
@@ -16,10 +12,10 @@ namespace Bricknode.Soap.Sdk.Services
     public class BfsOrderService : BfsServiceBase, IBfsOrderService
     {
 
-        public BfsOrderService(IOptions<BfsApiConfiguration> bfsApiConfiguration, ILogger logger, bfsapiSoap client, IBfsApiClientFactory bfsApiClientFactory) :
-            base(bfsApiConfiguration, logger, bfsApiClientFactory, client)
+        public BfsOrderService(IBfsApiClientFactory bfsApiClientFactory, ILogger logger)
+            : base(bfsApiClientFactory, logger)
         {
-            
+            // no operation
         }
 
         /// <summary>
@@ -28,15 +24,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<GetOrderTypeResponse> GetOrderTypesAsync(GetOrderTypeArgs filters, string bfsApiClientName = null)
+        public async Task<GetOrderTypeResponse> GetOrderTypesAsync(GetOrderTypeArgs filters, string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetOrderTypeRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetOrderTypeRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetOrderTypeFields>();
 
-            var response = await GetClient(bfsApiClientName).GetOrderTypesAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetOrderTypesAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -54,15 +51,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<GetRecurringOrderTemplatesResponse> GetRecurringOrderTemplatesAsync(
-            GetRecurringOrderTemplatesArgs filters, string bfsApiClientName = null)
+            GetRecurringOrderTemplatesArgs filters, string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetRecurringOrderTemplatesRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetRecurringOrderTemplatesRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetRecurringOrderTemplatesFields>();
 
-            var response = await GetClient(bfsApiClientName).GetRecurringOrderTemplatesAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetRecurringOrderTemplatesAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -77,13 +75,14 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="recurringOrders"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<CreateRecurringOrderTemplateAutoGiroResponse> CreateRecurringOrderTemplatesAutogiroAsync(RecurringOrderTemplateAutoGiro[] recurringOrders, string bfsApiClientName = null)
+        public async Task<CreateRecurringOrderTemplateAutoGiroResponse> CreateRecurringOrderTemplatesAutogiroAsync(RecurringOrderTemplateAutoGiro[] recurringOrders, string? bfsApiClientName = null)
         {
-            var request = GetRequest<CreateRecurringOrderTemplateAutoGiroRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<CreateRecurringOrderTemplateAutoGiroRequest>(bfsApiClientName);
 
             request.Entities = recurringOrders;
 
-            var response = await GetClient(bfsApiClientName).CreateRecurringOrderTemplatesAutogiroAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.CreateRecurringOrderTemplatesAutogiroAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -100,15 +99,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<UpdateRecurringOrderTemplateAutoGiroResponse> UpdateRecurringOrderTemplatesAutoGiroAsync(UpdateRecurringOrderTemplateAutoGiro[] recurringOrders,
-            UpdateRecurringOrderTemplateAutoGiroFields fieldsToUpdate, string bfsApiClientName = null)
+            UpdateRecurringOrderTemplateAutoGiroFields fieldsToUpdate, string? bfsApiClientName = null)
         {
-            var request = GetRequest<UpdateRecurringOrderTemplateAutoGiroRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<UpdateRecurringOrderTemplateAutoGiroRequest>(bfsApiClientName);
 
             request.Entities = recurringOrders;
 
             request.Fields = fieldsToUpdate;
 
-            var response = await GetClient(bfsApiClientName).UpdateRecurringOrderTemplateAutoGiroAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.UpdateRecurringOrderTemplateAutoGiroAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -128,15 +128,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<GetFundBatchOrdersResponse> GetFundBatchOrdersAsync(
-            GetFundBatchOrdersArgs filters, string bfsApiClientName = null)
+            GetFundBatchOrdersArgs filters, string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetFundBatchOrdersRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetFundBatchOrdersRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetFundBatchOrderFields>();
 
-            var response = await GetClient(bfsApiClientName).GetFundBatchOrdersAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetFundBatchOrdersAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -151,15 +152,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<GetTradeOrdersResponse> GetTradeOrdersAsync(GetTradeOrdersArgs filters, string bfsApiClientName = null)
+        public async Task<GetTradeOrdersResponse> GetTradeOrdersAsync(GetTradeOrdersArgs filters, string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetTradeOrdersRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetTradeOrdersRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetTradeOrderFields>();
 
-            var response = await GetClient(bfsApiClientName).GetTradeOrdersAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetTradeOrdersAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -174,13 +176,14 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="tradeOrders"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<CreateTradeOrderResponse> CreateTradeOrdersAsync(TradeOrder[] tradeOrders, string bfsApiClientName = null)
+        public async Task<CreateTradeOrderResponse> CreateTradeOrdersAsync(TradeOrder[] tradeOrders, string? bfsApiClientName = null)
         {
-            var request = GetRequest<CreateTradeOrderRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<CreateTradeOrderRequest>(bfsApiClientName);
 
             request.Entities = tradeOrders;
 
-            var response = await GetClient(bfsApiClientName).CreateTradeOrdersAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.CreateTradeOrdersAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -196,15 +199,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<GetExternalFundBatchOrdersResponse> GetExternalFundBatchOrdersAsync(
-            GetExternalFundBatchOrdersArgs filters, string bfsApiClientName = null)
+            GetExternalFundBatchOrdersArgs filters, string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetExternalFundBatchOrdersRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetExternalFundBatchOrdersRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetExternalFundBatchOrderFields>();
 
-            var response = await GetClient(bfsApiClientName).GetExternalFundBatchOrdersAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetExternalFundBatchOrdersAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -220,9 +224,9 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<CancelTradeOrderResponse> CancelTradeOrdersAsync(Guid[] tradeOrderIds,
-            string bfsApiClientName = null)
+            string? bfsApiClientName = null)
         {
-            var request = GetRequest<CancelTradeOrderRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<CancelTradeOrderRequest>(bfsApiClientName);
 
             var listOfCancelTradeOrder = new List<CancelTradeOrder>();
 
@@ -236,7 +240,8 @@ namespace Bricknode.Soap.Sdk.Services
 
             request.Entities = listOfCancelTradeOrder.ToArray();
 
-            var response = await GetClient(bfsApiClientName).CancelTradeOrdersAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.CancelTradeOrdersAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -251,13 +256,14 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="tradeBuyOrdersFromAutogiro"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<CreateTradeBuyOrdersFromAutogiroResponse> CreateTradeBuyOrdersFromAutogiroAsync(TradeBuyOrderFromAutogiro[] tradeBuyOrdersFromAutogiro, string bfsApiClientName = null)
+        public async Task<CreateTradeBuyOrdersFromAutogiroResponse> CreateTradeBuyOrdersFromAutogiroAsync(TradeBuyOrderFromAutogiro[] tradeBuyOrdersFromAutogiro, string? bfsApiClientName = null)
         {
-            var request = GetRequest<CreateTradeBuyOrdersFromAutogiroRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<CreateTradeBuyOrdersFromAutogiroRequest>(bfsApiClientName);
 
             request.Entities = tradeBuyOrdersFromAutogiro;
 
-            var response = await GetClient(bfsApiClientName).CreateTradeBuyOrdersFromAutogiroAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.CreateTradeBuyOrdersFromAutogiroAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -272,13 +278,14 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="createFundBatchOrdersBase"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<CreateFundBatchOrdersResponse> CreateFundBatchOrdersAsync(CreateFundBatchOrdersBase createFundBatchOrdersBase, string bfsApiClientName = null)
+        public async Task<CreateFundBatchOrdersResponse> CreateFundBatchOrdersAsync(CreateFundBatchOrdersBase createFundBatchOrdersBase, string? bfsApiClientName = null)
         {
-            var request = GetRequest<CreateFundBatchOrdersRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<CreateFundBatchOrdersRequest>(bfsApiClientName);
 
             request.Entity = createFundBatchOrdersBase;
 
-            var response = await GetClient(bfsApiClientName).CreateFundBatchOrdersAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.CreateFundBatchOrdersAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -297,15 +304,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<GetAutoGiroOrdersResponse> GetAutoGiroOrdersAsync(GetAutoGiroOrdersArgs filters, string bfsApiClientName = null)
+        public async Task<GetAutoGiroOrdersResponse> GetAutoGiroOrdersAsync(GetAutoGiroOrdersArgs filters, string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetAutoGiroOrdersRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetAutoGiroOrdersRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetAutoGiroOrdersFields>();
 
-            var response = await GetClient(bfsApiClientName).GetAutoGiroOrdersAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetAutoGiroOrdersAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -321,13 +329,14 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<CreateAutoGiroWithdrawalOrderResponse> CreateAutoGiroWithdrawalOrderAsync(
-            AutoGiroWithdrawalOrder[] autoGiroWithdrawalOrders, string bfsApiClientName = null)
+            AutoGiroWithdrawalOrder[] autoGiroWithdrawalOrders, string? bfsApiClientName = null)
         {
-            var request = GetRequest<CreateAutoGiroWithdrawalOrderRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<CreateAutoGiroWithdrawalOrderRequest>(bfsApiClientName);
 
             request.Entities = autoGiroWithdrawalOrders;
 
-            var response = await GetClient(bfsApiClientName).CreateAutoGiroWithdrawalOrdersAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.CreateAutoGiroWithdrawalOrdersAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -343,13 +352,14 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<CreateAutoGiroDepositOrderResponse> CreateAutoGiroDepositOrdersAsync(
-            AutoGiroDepositOrder[] autoGiroDepositOrders, string bfsApiClientName = null)
+            AutoGiroDepositOrder[] autoGiroDepositOrders, string? bfsApiClientName = null)
         {
-            var request = GetRequest<CreateAutoGiroDepositOrderRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<CreateAutoGiroDepositOrderRequest>(bfsApiClientName);
 
             request.Entities = autoGiroDepositOrders;
 
-            var response = await GetClient(bfsApiClientName).CreateAutoGiroDepositOrdersAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.CreateAutoGiroDepositOrdersAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -369,15 +379,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<GetWithdrawalTransferOrdersResponse> GetWithdrawalTransferOrdersAsync(
-            GetWithdrawalTransferOrdersArgs filters, string bfsApiClientName = null)
+            GetWithdrawalTransferOrdersArgs filters, string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetWithdrawalTransferOrdersRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetWithdrawalTransferOrdersRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetWithdrawalTransferOrdersFields>();
 
-            var response = await GetClient(bfsApiClientName).GetWithdrawalTransferOrdersAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetWithdrawalTransferOrdersAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -393,15 +404,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<GetWithdrawalBatchTransferOrdersResponse> GetWithdrawalBatchTransferOrdersAsync(
-            GetWithdrawalBatchTransferOrdersArgs filters, string bfsApiClientName = null)
+            GetWithdrawalBatchTransferOrdersArgs filters, string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetWithdrawalBatchTransferOrdersRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetWithdrawalBatchTransferOrdersRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetWithdrawalBatchTransferOrdersFields>();
 
-            var response = await GetClient(bfsApiClientName).GetWithdrawalBatchTransferOrdersAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetWithdrawalBatchTransferOrdersAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -417,15 +429,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<GetDepositTransferOrdersResponse> GetDepositTransferOrdersAsync(
-            GetDepositTransferOrdersArgs filters, string bfsApiClientName = null)
+            GetDepositTransferOrdersArgs filters, string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetDepositTransferOrdersRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetDepositTransferOrdersRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetDepositTransferOrdersFields>();
 
-            var response = await GetClient(bfsApiClientName).GetDepositTransferOrdersAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetDepositTransferOrdersAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -441,15 +454,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<GetDepositBatchTransferOrdersResponse> GetDepositBatchTransferOrdersAsync(
-            GetDepositBatchTransferOrdersArgs filters, string bfsApiClientName = null)
+            GetDepositBatchTransferOrdersArgs filters, string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetDepositBatchTransferOrdersRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetDepositBatchTransferOrdersRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetDepositBatchTransferOrdersFields>();
 
-            var response = await GetClient(bfsApiClientName).GetDepositBatchTransferOrdersAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetDepositBatchTransferOrdersAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -465,13 +479,14 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<CreateWithdrawalCashOrderResponse> CreateWithdrawalCashOrdersAsync(
-            WithdrawalCashOrder[] withdrawalCashOrders, string bfsApiClientName = null)
+            WithdrawalCashOrder[] withdrawalCashOrders, string? bfsApiClientName = null)
         {
-            var request = GetRequest<CreateWithdrawalCashOrderRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<CreateWithdrawalCashOrderRequest>(bfsApiClientName);
 
             request.Entities = withdrawalCashOrders;
 
-            var response = await GetClient(bfsApiClientName).CreateWithdrawalCashOrdersAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.CreateWithdrawalCashOrdersAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -487,13 +502,14 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<CreateDepositCashOrderResponse> CreateDepositCashOrdersAsync(
-            DepositCashOrder[] depositCashOrders, string bfsApiClientName = null)
+            DepositCashOrder[] depositCashOrders, string? bfsApiClientName = null)
         {
-            var request = GetRequest<CreateDepositCashOrderRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<CreateDepositCashOrderRequest>(bfsApiClientName);
 
             request.Entities = depositCashOrders;
 
-            var response = await GetClient(bfsApiClientName).CreateDepositCashOrdersAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.CreateDepositCashOrdersAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -509,13 +525,14 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<CreateDirectBankWithdrawalOrderResponse> CreateDirectBankWithdrawalOrdersAsync(
-            DirectBankWithdrawalOrder[] directBankWithdrawalOrders, string bfsApiClientName = null)
+            DirectBankWithdrawalOrder[] directBankWithdrawalOrders, string? bfsApiClientName = null)
         {
-            var request = GetRequest<CreateDirectBankWithdrawalOrderRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<CreateDirectBankWithdrawalOrderRequest>(bfsApiClientName);
 
             request.Entities = directBankWithdrawalOrders;
 
-            var response = await GetClient(bfsApiClientName).CreateDirectBankWithdrawalOrdersAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.CreateDirectBankWithdrawalOrdersAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -537,15 +554,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<GetCurrencyExchangeOrderResponse> GetCurrencyExchangeOrderAsync(
-            GetCurrencyExchangeOrderArgs filters, string bfsApiClientName = null)
+            GetCurrencyExchangeOrderArgs filters, string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetCurrencyExchangeOrderRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetCurrencyExchangeOrderRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetCurrencyExchangeOrderFields>();
 
-            var response = await GetClient(bfsApiClientName).GetCurrencyExchangeOrdersAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetCurrencyExchangeOrdersAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -561,13 +579,14 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="currencyExchangeOrders"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<CreateCurrencyExchangeOrderResponse> CreateCurrencyExchangeOrdersAsync(CurrencyExchangeOrder[] currencyExchangeOrders, string bfsApiClientName = null)
+        public async Task<CreateCurrencyExchangeOrderResponse> CreateCurrencyExchangeOrdersAsync(CurrencyExchangeOrder[] currencyExchangeOrders, string? bfsApiClientName = null)
         {
-            var request = GetRequest<CreateCurrencyExchangeOrderRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<CreateCurrencyExchangeOrderRequest>(bfsApiClientName);
 
             request.Entities = currencyExchangeOrders;
 
-            var response = await GetClient(bfsApiClientName).CreateCurrencyExchangeOrdersAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.CreateCurrencyExchangeOrdersAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -588,13 +607,14 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<CurrencyExchangeOrder_CancelResponse> CancelCurrencyExchangeOrder(
-            CurrencyExchangeOrder_Cancel currencyExchangeOrderNumber, string bfsApiClientName = null)
+            CurrencyExchangeOrder_Cancel currencyExchangeOrderNumber, string? bfsApiClientName = null)
         {
-            var request = GetRequest<CurrencyExchangeOrder_CancelRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<CurrencyExchangeOrder_CancelRequest>(bfsApiClientName);
 
             request.WorkflowTriggerDataEntity = currencyExchangeOrderNumber;
 
-            var response = await GetClient(bfsApiClientName).CurrencyExchangeOrder_CancelAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.CurrencyExchangeOrder_CancelAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -614,13 +634,14 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<DepositCashBatchOrder_BatchFillResponse> BatchFillDepositCashBatchOrder(
-            DepositCashBatchOrder_BatchFill depositCashBatchOrder, string bfsApiClientName = null)
+            DepositCashBatchOrder_BatchFill depositCashBatchOrder, string? bfsApiClientName = null)
         {
-            var request = GetRequest<DepositCashBatchOrder_BatchFillRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<DepositCashBatchOrder_BatchFillRequest>(bfsApiClientName);
 
             request.WorkflowTriggerDataEntity = depositCashBatchOrder;
 
-            var response = await GetClient(bfsApiClientName).DepositCashBatchOrder_BatchFillAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.DepositCashBatchOrder_BatchFillAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -636,13 +657,14 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<WithdrawalCashBatchOrder_FillResponse> BatchFillDepositCashBatchOrder(
-            WithdrawalCashBatchOrder_Fill withdrawalCashBatchOrderFill, string bfsApiClientName = null)
+            WithdrawalCashBatchOrder_Fill withdrawalCashBatchOrderFill, string? bfsApiClientName = null)
         {
-            var request = GetRequest<WithdrawalCashBatchOrder_FillRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<WithdrawalCashBatchOrder_FillRequest>(bfsApiClientName);
 
             request.WorkflowTriggerDataEntity = withdrawalCashBatchOrderFill;
 
-            var response = await GetClient(bfsApiClientName).WithdrawalCashBatchOrder_FillAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.WithdrawalCashBatchOrder_FillAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -661,15 +683,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<GetAllocationOrderResponse> GetAllocationOrdersAsync(GetAllocationOrderArgs filters, string bfsApiClientName = null)
+        public async Task<GetAllocationOrderResponse> GetAllocationOrdersAsync(GetAllocationOrderArgs filters, string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetAllocationOrderRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetAllocationOrderRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetAllocationOrderFields>();
 
-            var response = await GetClient(bfsApiClientName).GetAllocationOrdersAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetAllocationOrdersAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -685,15 +708,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         [Obsolete("This method has been replaced by another method with slightly different name GetAllocationOrde(r)sAsync.")]
-        public async Task<GetAllocationOrderResponse> GetAllocationOrdesAsync(GetAllocationOrderArgs filters, string bfsApiClientName = null)
+        public async Task<GetAllocationOrderResponse> GetAllocationOrdesAsync(GetAllocationOrderArgs filters, string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetAllocationOrderRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetAllocationOrderRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetAllocationOrderFields>();
 
-            var response = await GetClient(bfsApiClientName).GetAllocationOrdersAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetAllocationOrdersAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -709,13 +733,14 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<CreateSwitchOrdersResponse> CreateSwitchOrdersAsync(
-            SwitchOrder[] switchOrders, string bfsApiClientName = null)
+            SwitchOrder[] switchOrders, string? bfsApiClientName = null)
         {
-            var request = GetRequest<CreateSwitchOrdersRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<CreateSwitchOrdersRequest>(bfsApiClientName);
 
             request.Entities = switchOrders;
 
-            var response = await GetClient(bfsApiClientName).CreateSwitchOrdersAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.CreateSwitchOrdersAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -734,15 +759,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<GetSubscriptionOrderResponse> GetSubscriptionOrdersAsync(GetSubscriptionOrderArgs filters, string bfsApiClientName = null)
+        public async Task<GetSubscriptionOrderResponse> GetSubscriptionOrdersAsync(GetSubscriptionOrderArgs filters, string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetSubscriptionOrderRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetSubscriptionOrderRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetSubscriptionOrderFields>();
 
-            var response = await GetClient(bfsApiClientName).GetSubscriptionOrdersAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetSubscriptionOrdersAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -758,13 +784,14 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<CreateSubscriptionOrderResponse> CreateSubscriptionOrdersAsync(
-            SubscriptionOrder[] subscriptionOrders, string bfsApiClientName = null)
+            SubscriptionOrder[] subscriptionOrders, string? bfsApiClientName = null)
         {
-            var request = GetRequest<CreateSubscriptionOrderRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<CreateSubscriptionOrderRequest>(bfsApiClientName);
 
             request.Entities = subscriptionOrders;
 
-            var response = await GetClient(bfsApiClientName).CreateSubscriptionOrdersAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.CreateSubscriptionOrdersAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -781,15 +808,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<UpdateSubscriptionOrderResponse> UpdateSubscriptionOrdersAsync(
-            UpdateSubscriptionOrder[] accounts, UpdateSubscriptionOrderFields fieldsToUpdate, string bfsApiClientName = null)
+            UpdateSubscriptionOrder[] accounts, UpdateSubscriptionOrderFields fieldsToUpdate, string? bfsApiClientName = null)
         {
-            var request = GetRequest<UpdateSubscriptionOrderRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<UpdateSubscriptionOrderRequest>(bfsApiClientName);
 
             request.Entities = accounts;
 
             request.Fields = fieldsToUpdate;
 
-            var response = await GetClient(bfsApiClientName).UpdateSubscriptionOrdersAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.UpdateSubscriptionOrdersAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -809,13 +837,14 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<SubscriptionOrder_CancelResponse> CancelSubscriptionOrder(
-            SubscriptionOrder_Cancel subscriptionOrderNumber, string bfsApiClientName = null)
+            SubscriptionOrder_Cancel subscriptionOrderNumber, string? bfsApiClientName = null)
         {
-            var request = GetRequest<SubscriptionOrder_CancelRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<SubscriptionOrder_CancelRequest>(bfsApiClientName);
 
             request.WorkflowTriggerDataEntity = subscriptionOrderNumber;
 
-            var response = await GetClient(bfsApiClientName).SubscriptionOrder_CancelAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.SubscriptionOrder_CancelAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -831,13 +860,14 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<SubscriptionOrder_ProcessResponse> ProcessSubscriptionOrder(
-            SubscriptionOrder_Process subscriptionOrderProcess, string bfsApiClientName = null)
+            SubscriptionOrder_Process subscriptionOrderProcess, string? bfsApiClientName = null)
         {
-            var request = GetRequest<SubscriptionOrder_ProcessRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<SubscriptionOrder_ProcessRequest>(bfsApiClientName);
 
             request.WorkflowTriggerDataEntity = subscriptionOrderProcess;
 
-            var response = await GetClient(bfsApiClientName).SubscriptionOrder_ProcessAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.SubscriptionOrder_ProcessAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -856,15 +886,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<GetInternalCashTransferOrderResponse> GetInternalCashTransferOrdersAsync(GetInternalCashTransferOrderArgs filters, string bfsApiClientName = null)
+        public async Task<GetInternalCashTransferOrderResponse> GetInternalCashTransferOrdersAsync(GetInternalCashTransferOrderArgs filters, string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetInternalCashTransferOrderRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetInternalCashTransferOrderRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetInternalCashTransferOrderFields>();
 
-            var response = await GetClient(bfsApiClientName).GetInternalCashTransferOrdersAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetInternalCashTransferOrdersAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -879,13 +910,14 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="internalCashTransferOrder"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<CreateInternalCashTransferOrderResponse> CreateInternalCashTransferOrdersAsync(InternalCashTransferOrder[] internalCashTransferOrder, string bfsApiClientName = null)
+        public async Task<CreateInternalCashTransferOrderResponse> CreateInternalCashTransferOrdersAsync(InternalCashTransferOrder[] internalCashTransferOrder, string? bfsApiClientName = null)
         {
-            var request = GetRequest<CreateInternalCashTransferOrderRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<CreateInternalCashTransferOrderRequest>(bfsApiClientName);
 
             request.Entities = internalCashTransferOrder;
 
-            var response = await GetClient(bfsApiClientName).CreateInternalCashTransferOrdersAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.CreateInternalCashTransferOrdersAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -903,15 +935,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<GetInternalInstrumentTransferOrderResponse> GetInternalInstrumentTransferOrdersAsync(GetInternalInstrumentTransferOrderArgs filters, string bfsApiClientName = null)
+        public async Task<GetInternalInstrumentTransferOrderResponse> GetInternalInstrumentTransferOrdersAsync(GetInternalInstrumentTransferOrderArgs filters, string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetInternalInstrumentTransferOrderRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetInternalInstrumentTransferOrderRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetInternalInstrumentTransferOrderFields>();
 
-            var response = await GetClient(bfsApiClientName).GetInternalInstrumentTransferOrdersAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetInternalInstrumentTransferOrdersAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -926,13 +959,14 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="internalInstrumentTransferOrder"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<CreateInternalInstrumentTransferOrderResponse> CreateInternalInstrumentTransferOrdersAsync(InternalInstrumentTransferOrder[] internalInstrumentTransferOrder, string bfsApiClientName = null)
+        public async Task<CreateInternalInstrumentTransferOrderResponse> CreateInternalInstrumentTransferOrdersAsync(InternalInstrumentTransferOrder[] internalInstrumentTransferOrder, string? bfsApiClientName = null)
         {
-            var request = GetRequest<CreateInternalInstrumentTransferOrderRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<CreateInternalInstrumentTransferOrderRequest>(bfsApiClientName);
 
             request.Entities = internalInstrumentTransferOrder;
 
-            var response = await GetClient(bfsApiClientName).CreateInternalInstrumentTransferOrdersAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.CreateInternalInstrumentTransferOrdersAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -950,13 +984,14 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="internalTransferOrders"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<string> ExecuteInternalTransferOrdersAsync(ExecuteInternalTransferOrder[] internalTransferOrders, string bfsApiClientName = null)
+        public async Task<string> ExecuteInternalTransferOrdersAsync(ExecuteInternalTransferOrder[] internalTransferOrders, string? bfsApiClientName = null)
         {
-            var request = GetRequest<ExecuteInternalTransferOrderRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<ExecuteInternalTransferOrderRequest>(bfsApiClientName);
 
             request.Entities = internalTransferOrders;
 
-            var response = await GetClient(bfsApiClientName).ExecuteInternalTransferOrdersAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.ExecuteInternalTransferOrdersAsync(request);
 
             if (ValidateResponse(response)) return response.Message;
 
@@ -971,13 +1006,14 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="internalTransferOrders"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<string> DeleteInternalTransferOrdersAsync(DeleteInternalTransferOrder[] internalTransferOrders, string bfsApiClientName = null)
+        public async Task<string> DeleteInternalTransferOrdersAsync(DeleteInternalTransferOrder[] internalTransferOrders, string? bfsApiClientName = null)
         {
-            var request = GetRequest<DeleteInternalTransferOrderRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<DeleteInternalTransferOrderRequest>(bfsApiClientName);
 
             request.Entities = internalTransferOrders;
 
-            var response = await GetClient(bfsApiClientName).DeleteInternalTransferOrdersAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.DeleteInternalTransferOrdersAsync(request);
 
             if (ValidateResponse(response)) return response.Message;
 
@@ -995,13 +1031,14 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="orderExecutions"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<ExecuteOrderResponse> ExecuteOrdersAsync(OrderExecuteBase[] orderExecutions, string bfsApiClientName = null)
+        public async Task<ExecuteOrderResponse> ExecuteOrdersAsync(OrderExecuteBase[] orderExecutions, string? bfsApiClientName = null)
         {
-            var request = GetRequest<ExecuteOrderRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<ExecuteOrderRequest>(bfsApiClientName);
 
             request.Entities = orderExecutions;
 
-            var response = await GetClient(bfsApiClientName).ExecuteOrdersAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.ExecuteOrdersAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -1016,13 +1053,14 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="orderSettlements"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<SettleOrderResponse> SettleOrdersAsync(OrderSettleBase[] orderSettlements, string bfsApiClientName = null)
+        public async Task<SettleOrderResponse> SettleOrdersAsync(OrderSettleBase[] orderSettlements, string? bfsApiClientName = null)
         {
-            var request = GetRequest<SettleOrderRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<SettleOrderRequest>(bfsApiClientName);
 
             request.Entities = orderSettlements;
 
-            var response = await GetClient(bfsApiClientName).SettleOrdersAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.SettleOrdersAsync(request);
 
             if (ValidateResponse(response)) return response;
 

@@ -1,10 +1,7 @@
-﻿using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using BfsApi;
-using Bricknode.Soap.Sdk.Configuration;
 using Bricknode.Soap.Sdk.Services.Bases;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 
 namespace Bricknode.Soap.Sdk.Services
 {
@@ -12,12 +9,10 @@ namespace Bricknode.Soap.Sdk.Services
 
     public class BfsPriceService : BfsServiceBase, IBfsPriceService
     {
-        private readonly bfsapiSoap _client;
-
-        public BfsPriceService(IOptions<BfsApiConfiguration> bfsApiConfiguration, ILogger logger, bfsapiSoap client, IBfsApiClientFactory bfsApiClientFactory) :
-            base(bfsApiConfiguration, logger, bfsApiClientFactory, client)
+        public BfsPriceService(IBfsApiClientFactory bfsApiClientFactory, ILogger logger)
+            : base(bfsApiClientFactory, logger)
         {
-            _client = client;
+            // no operation
         }
 
         /// <summary>
@@ -26,15 +21,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<GetHistoricPricesResponse> GetHistoricPricesAsync(GetHistoricPricesArgs filters, string bfsApiClientName = null)
+        public async Task<GetHistoricPricesResponse> GetHistoricPricesAsync(GetHistoricPricesArgs filters, string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetHistoricPricesRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetHistoricPricesRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetHistoricPricesFields>();
 
-            var response = await GetClient(bfsApiClientName).GetHistoricPricesAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetHistoricPricesAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -58,9 +54,9 @@ namespace Bricknode.Soap.Sdk.Services
             bool clearPreviousDataByRange = false,
             bool updateCurrentPriceFromLastPrice = false,
             bool clearAllsubsequentData = false,
-            string bfsApiClientName = null)
+            string? bfsApiClientName = null)
         {
-            var request = GetRequest<SetHistoricPricesRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<SetHistoricPricesRequest>(bfsApiClientName);
 
             request.PriceDateEntries = priceDateEntries;
             request.ClearAllPreviousData = clearAllPreviousData;
@@ -68,7 +64,8 @@ namespace Bricknode.Soap.Sdk.Services
             request.UpdateCurrentPriceFromLastPrice = updateCurrentPriceFromLastPrice;
             request.ClearAllsubsequentData = clearAllsubsequentData;
 
-            var response = await GetClient(bfsApiClientName).SetHistoricPricesAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.SetHistoricPricesAsync(request);
 
             if (ValidateResponse(response)) return response;
 

@@ -1,10 +1,7 @@
-﻿using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using BfsApi;
-using Bricknode.Soap.Sdk.Configuration;
 using Bricknode.Soap.Sdk.Services.Bases;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 
 namespace Bricknode.Soap.Sdk.Services
 {
@@ -12,13 +9,10 @@ namespace Bricknode.Soap.Sdk.Services
 
     public class BfsWebhookService : BfsServiceBase, IBfsWebhookService
     {
-        private readonly bfsapiSoap _client;
-
-        public BfsWebhookService(IOptions<BfsApiConfiguration> bfsApiConfiguration, ILogger logger,
-            bfsapiSoap client, IBfsApiClientFactory bfsApiClientFactory) :
-            base(bfsApiConfiguration, logger, bfsApiClientFactory, client)
+        public BfsWebhookService(IBfsApiClientFactory bfsApiClientFactory, ILogger logger)
+            : base(bfsApiClientFactory, logger)
         {
-            _client = client;
+            // no operation
         }
 
         /// <summary>
@@ -27,15 +21,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<GetAvailableWebhookEventResponse> GetAvailableWebhookEventsAsync(GetAvailableWebhookEventArgs filters, string bfsApiClientName = null)
+        public async Task<GetAvailableWebhookEventResponse> GetAvailableWebhookEventsAsync(GetAvailableWebhookEventArgs filters, string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetAvailableWebhookEventRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetAvailableWebhookEventRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetAvailableWebhookEventFields>();
 
-            var response = await GetClient(bfsApiClientName).GetAvailableWebhookEventsAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetAvailableWebhookEventsAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -50,15 +45,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<GetFailedWebhookResponse> GetFailedWebhooksAsync(GetFailedWebhookArgs filters, string bfsApiClientName = null)
+        public async Task<GetFailedWebhookResponse> GetFailedWebhooksAsync(GetFailedWebhookArgs filters, string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetFailedWebhookRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetFailedWebhookRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetFailedWebhookFields>();
 
-            var response = await GetClient(bfsApiClientName).GetFailedWebhooksAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetFailedWebhooksAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -73,15 +69,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<GetWebhookSubscriptionResponse> GetWebhookSubscriptionsAsync(GetWebhookSubscriptionArgs filters, string bfsApiClientName = null)
+        public async Task<GetWebhookSubscriptionResponse> GetWebhookSubscriptionsAsync(GetWebhookSubscriptionArgs filters, string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetWebhookSubscriptionRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetWebhookSubscriptionRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetWebhookSubscriptionFields>();
 
-            var response = await GetClient(bfsApiClientName).GetWebhookSubscriptionsAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetWebhookSubscriptionsAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -96,13 +93,14 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="webhookSubscriptions"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<DeleteWebhookSubscriptionResponse> DeleteWebhookSubscriptionsAsync(DeleteWebhookSubscription[] webhookSubscriptions, string bfsApiClientName = null)
+        public async Task<DeleteWebhookSubscriptionResponse> DeleteWebhookSubscriptionsAsync(DeleteWebhookSubscription[] webhookSubscriptions, string? bfsApiClientName = null)
         {
-            var request = GetRequest<DeleteWebhookSubscriptionRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<DeleteWebhookSubscriptionRequest>(bfsApiClientName);
 
             request.Entities = webhookSubscriptions;
 
-            var response = await GetClient(bfsApiClientName).DeleteWebhookSubscriptionsAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.DeleteWebhookSubscriptionsAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -117,13 +115,14 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="webhookSubscriptions"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<CreateWebhookSubscriptionResponse> CreateWebhookSubscriptionsAsync(CreateWebhookSubscription[] webhookSubscriptions, string bfsApiClientName = null)
+        public async Task<CreateWebhookSubscriptionResponse> CreateWebhookSubscriptionsAsync(CreateWebhookSubscription[] webhookSubscriptions, string? bfsApiClientName = null)
         {
-            var request = GetRequest<CreateWebhookSubscriptionRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<CreateWebhookSubscriptionRequest>(bfsApiClientName);
 
             request.Entities = webhookSubscriptions;
 
-            var response = await GetClient(bfsApiClientName).CreateWebhookSubscriptionsAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.CreateWebhookSubscriptionsAsync(request);
 
             if (ValidateResponse(response)) return response;
 

@@ -1,9 +1,7 @@
 ﻿using System.Threading.Tasks;
 using BfsApi;
-using Bricknode.Soap.Sdk.Configuration;
 using Bricknode.Soap.Sdk.Services.Bases;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 
 namespace Bricknode.Soap.Sdk.Services
 {
@@ -11,12 +9,10 @@ namespace Bricknode.Soap.Sdk.Services
 
     public class BfsBankIdService : BfsServiceBase, IBfsBankIdService
     {
-        private readonly bfsapiSoap _client;
-
-        public BfsBankIdService(IOptions<BfsApiConfiguration> bfsApiConfiguration, ILogger logger, bfsapiSoap client, IBfsApiClientFactory bfsApiClientFactory) :
-            base(bfsApiConfiguration, logger, bfsApiClientFactory, client)
+        public BfsBankIdService(IBfsApiClientFactory bfsApiClientFactory, ILogger logger)
+            : base(bfsApiClientFactory, logger)
         {
-            _client = client;
+            // no operation
         }
 
         /// <summary>
@@ -30,16 +26,17 @@ namespace Bricknode.Soap.Sdk.Services
         /// <returns></returns>
         public async Task<BankIdAuthenticateResponse> InitiateBankIdAuthenticationAsync(string ssn,
             BankIdType bankIdType,
-            Domain domain, bool authenticatePerson = false, string bfsApiClientName = null)
+            Domain domain, bool authenticatePerson = false, string? bfsApiClientName = null)
         {
-            var request = GetRequest<BankIdAuthenticateRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<BankIdAuthenticateRequest>(bfsApiClientName);
 
             request.Domain = domain;
             request.AuthenticatePerson = authenticatePerson;
             request.BankIdType = bankIdType;
             request.PersonalNumber = ssn.Replace("-", "");
 
-            var response = await GetClient(bfsApiClientName).BankIdAuthenticationAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.BankIdAuthenticationAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -59,9 +56,9 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<BankIdSignResponse> InitiateBankIdSignature(BankIdType bankIdType, Domain domain, string ssn,
-            string signingText, bool authenticatePerson = false, string bfsApiClientName = null)
+            string signingText, bool authenticatePerson = false, string? bfsApiClientName = null)
         {
-            var request = GetRequest<BankIdSignRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<BankIdSignRequest>(bfsApiClientName);
 
             request.Domain = domain;
             request.AuthenticatePerson = authenticatePerson;
@@ -69,7 +66,8 @@ namespace Bricknode.Soap.Sdk.Services
             request.PersonalNumber = ssn.Replace("-", "");
             request.SigningText = signingText;
 
-            var response = await GetClient(bfsApiClientName).BankIdSignAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.BankIdSignAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -85,14 +83,15 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bankIdType"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<GetBankIdStatusResponse> GetBankIdStatus(string orderReference, BankIdType bankIdType, string bfsApiClientName = null)
+        public async Task<GetBankIdStatusResponse> GetBankIdStatus(string orderReference, BankIdType bankIdType, string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetBankIdStatusRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetBankIdStatusRequest>(bfsApiClientName);
 
             request.BankIdType = bankIdType;
             request.OrderReference = orderReference;
 
-            var response = await GetClient(bfsApiClientName).GetBankIdStatusAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetBankIdStatusAsync(request);
 
             if (ValidateResponse(response)) return response;
 

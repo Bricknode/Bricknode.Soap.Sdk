@@ -1,20 +1,17 @@
-﻿using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using BfsApi;
-using Bricknode.Soap.Sdk.Configuration;
 using Bricknode.Soap.Sdk.Factories;
 using Bricknode.Soap.Sdk.Services.Bases;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 
 namespace Bricknode.Soap.Sdk.Services
 {
     public class BfsTransactionNoteService : BfsServiceBase, IBfsTransactionNoteService
     {
-        public BfsTransactionNoteService(IOptions<BfsApiConfiguration> bfsApiConfiguration, ILogger logger,
-            bfsapiSoap client, IBfsApiClientFactory bfsApiClientFactory) :
-            base(bfsApiConfiguration, logger, bfsApiClientFactory, client)
+        public BfsTransactionNoteService(IBfsApiClientFactory bfsApiClientFactory, ILogger logger)
+            : base(bfsApiClientFactory, logger)
         {
+            // no operation
         }
 
         /// <summary>
@@ -24,15 +21,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<GetTransactionNoteResponse> GetTransactionNotesAsync(GetTransactionNoteArgs filters,
-            string bfsApiClientName = null)
+            string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetTransactionNoteRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetTransactionNoteRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetTransactionNoteFields>();
 
-            var response = await GetClient(bfsApiClientName).GetTransactionNotesAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetTransactionNotesAsync(request);
 
             if (ValidateResponse(response)) return response;
 

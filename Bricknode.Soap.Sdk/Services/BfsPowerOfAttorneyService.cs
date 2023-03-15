@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Linq;
 using System.Threading.Tasks;
 using BfsApi;
-using Bricknode.Soap.Sdk.Configuration;
 using Bricknode.Soap.Sdk.Services.Bases;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 
 namespace Bricknode.Soap.Sdk.Services
 {
@@ -13,13 +10,10 @@ namespace Bricknode.Soap.Sdk.Services
 
     public class BfsPowerOfAttorneyService : BfsServiceBase, IBfsPowerOfAttorneyService
     {
-        private readonly bfsapiSoap _client;
-
-        public BfsPowerOfAttorneyService(IOptions<BfsApiConfiguration> bfsApiConfiguration, ILogger logger,
-            bfsapiSoap client, IBfsApiClientFactory bfsApiClientFactory) :
-            base(bfsApiConfiguration, logger, bfsApiClientFactory, client)
+        public BfsPowerOfAttorneyService(IBfsApiClientFactory bfsApiClientFactory, ILogger logger)
+            : base(bfsApiClientFactory, logger)
         {
-            _client = client;
+            // no operation
         }
 
         /// <summary>
@@ -28,15 +22,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<GetPOAResponse> GetPowerOfAttorneys(GetPOAArgs filters, string bfsApiClientName = null)
+        public async Task<GetPOAResponse> GetPowerOfAttorneys(GetPOAArgs filters, string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetPOARequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetPOARequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetPOAFields>();
 
-            var response = await GetClient(bfsApiClientName).GetPOASAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetPOASAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -51,15 +46,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<GetPOATypeResponse> GetPowerOfAttorneyTypesAsync(GetPOATypeArgs filters, string bfsApiClientName = null)
+        public async Task<GetPOATypeResponse> GetPowerOfAttorneyTypesAsync(GetPOATypeArgs filters, string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetPOATypeRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetPOATypeRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetPOATypeFields>();
 
-            var response = await GetClient(bfsApiClientName).GetPOATypesAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetPOATypesAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -74,13 +70,14 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="powerOfAttorneys"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<CreatePOAResponse> CreatePowerOfAttorneysAsync(POA[] powerOfAttorneys, string bfsApiClientName = null)
+        public async Task<CreatePOAResponse> CreatePowerOfAttorneysAsync(POA[] powerOfAttorneys, string? bfsApiClientName = null)
         {
-            var request = GetRequest<CreatePOARequest>(bfsApiClientName);
+            var request = await GetRequestAsync<CreatePOARequest>(bfsApiClientName);
 
             request.Entities = powerOfAttorneys;
 
-            var response = await GetClient(bfsApiClientName).CreatePOAsAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.CreatePOAsAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -95,13 +92,14 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="powerOfAttorneyIds"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<string> DeletePowerOfAttorneysAsync(Guid[] powerOfAttorneyIds, string bfsApiClientName = null)
+        public async Task<string> DeletePowerOfAttorneysAsync(Guid[] powerOfAttorneyIds, string? bfsApiClientName = null)
         {
-            var request = GetRequest<DeletePoaRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<DeletePoaRequest>(bfsApiClientName);
 
             request.BrickIds = powerOfAttorneyIds;
 
-            var response = await GetClient(bfsApiClientName).DeletePOAsAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.DeletePOAsAsync(request);
 
             if (ValidateResponse(response)) return response.Message;
 

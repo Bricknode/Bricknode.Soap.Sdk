@@ -1,10 +1,7 @@
-﻿using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using BfsApi;
-using Bricknode.Soap.Sdk.Configuration;
 using Bricknode.Soap.Sdk.Services.Bases;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 
 namespace Bricknode.Soap.Sdk.Services
 {
@@ -12,12 +9,10 @@ namespace Bricknode.Soap.Sdk.Services
 
     public class BfsInsuranceService : BfsServiceBase, IBfsInsuranceService
     {
-        private readonly bfsapiSoap _client;
-
-        public BfsInsuranceService(IOptions<BfsApiConfiguration> bfsApiConfiguration, ILogger logger, bfsapiSoap client, IBfsApiClientFactory bfsApiClientFactory) :
-            base(bfsApiConfiguration, logger, bfsApiClientFactory, client)
+        public BfsInsuranceService(IBfsApiClientFactory bfsApiClientFactory, ILogger logger)
+            : base(bfsApiClientFactory, logger)
         {
-            _client = client;
+            // no operation
         }
 
         #region Covers
@@ -28,15 +23,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<GetInsuranceCoversResponse> GetInsuranceCoversAsync(GetInsuranceCoversArgs filters, string bfsApiClientName = null)
+        public async Task<GetInsuranceCoversResponse> GetInsuranceCoversAsync(GetInsuranceCoversArgs filters, string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetInsuranceCoversRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetInsuranceCoversRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetInsuranceCoversFields>();
 
-            var response = await GetClient(bfsApiClientName).GetInsuranceCoversAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetInsuranceCoversAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -55,15 +51,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<GetInsuranceProductsResponse> GetInsuranceProductsAsync(GetInsuranceProductsArgs filters, string bfsApiClientName = null)
+        public async Task<GetInsuranceProductsResponse> GetInsuranceProductsAsync(GetInsuranceProductsArgs filters, string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetInsuranceProductsRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetInsuranceProductsRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetInsuranceProductsFields>();
 
-            var response = await GetClient(bfsApiClientName).GetInsuranceProductsAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetInsuranceProductsAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -79,13 +76,14 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<CreateInsuranceProductsResponse> CreateInsuranceProductsAsync(
-            InsuranceProduct[] insuranceProducts, string bfsApiClientName = null)
+            InsuranceProduct[] insuranceProducts, string? bfsApiClientName = null)
         {
-            var request = GetRequest<CreateInsuranceProductsRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<CreateInsuranceProductsRequest>(bfsApiClientName);
 
             request.Entities = insuranceProducts;
 
-            var response = await GetClient(bfsApiClientName).CreateInsuranceProductsAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.CreateInsuranceProductsAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -102,15 +100,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<UpdateInsuranceProductsResponse> UpdateInsuranceProductsAsync(
-            UpdateInsuranceProduct[] insuranceProducts, UpdateInsuranceProductFields fieldsToUpdate, string bfsApiClientName = null)
+            UpdateInsuranceProduct[] insuranceProducts, UpdateInsuranceProductFields fieldsToUpdate, string? bfsApiClientName = null)
         {
-            var request = GetRequest<UpdateInsuranceProductsRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<UpdateInsuranceProductsRequest>(bfsApiClientName);
 
             request.Entities = insuranceProducts;
 
             request.Fields = fieldsToUpdate;
 
-            var response = await GetClient(bfsApiClientName).UpdateInsuranceProductsAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.UpdateInsuranceProductsAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -129,15 +128,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<GetInsurancePolicyResponse> GetInsurancePoliciesAsync(GetInsurancePolicyArgs filters, string bfsApiClientName = null)
+        public async Task<GetInsurancePolicyResponse> GetInsurancePoliciesAsync(GetInsurancePolicyArgs filters, string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetInsurancePolicyRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetInsurancePolicyRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetInsurancePolicyFields>();
 
-            var response = await GetClient(bfsApiClientName).GetInsurancePoliciesAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetInsurancePoliciesAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -153,13 +153,14 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<CreateInsurancePolicyResponse> CreateInsurancePoliciesAsync(
-            InsurancePolicy[] insurancePolicies, string bfsApiClientName = null)
+            InsurancePolicy[] insurancePolicies, string? bfsApiClientName = null)
         {
-            var request = GetRequest<CreateInsurancePolicyRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<CreateInsurancePolicyRequest>(bfsApiClientName);
 
             request.Entities = insurancePolicies;
 
-            var response = await GetClient(bfsApiClientName).CreateInsurancePolicyAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.CreateInsurancePolicyAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -176,15 +177,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<UpdateInsurancePoliciesResponse> UpdateInsurancePoliciesAsync(
-            UpdateInsurancePolicy[] insurancePolicies, UpdateInsurancePolicyFields fieldsToUpdate, string bfsApiClientName = null)
+            UpdateInsurancePolicy[] insurancePolicies, UpdateInsurancePolicyFields fieldsToUpdate, string? bfsApiClientName = null)
         {
-            var request = GetRequest<UpdateInsurancePoliciesRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<UpdateInsurancePoliciesRequest>(bfsApiClientName);
 
             request.Entities = insurancePolicies;
 
             request.Fields = fieldsToUpdate;
 
-            var response = await GetClient(bfsApiClientName).UpdateInsurancePoliciesAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.UpdateInsurancePoliciesAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -203,15 +205,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<GetInsuranceClaimsResponse> GetInsuranceClaimsAsync(GetInsuranceClaimsArgs filters, string bfsApiClientName = null)
+        public async Task<GetInsuranceClaimsResponse> GetInsuranceClaimsAsync(GetInsuranceClaimsArgs filters, string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetInsuranceClaimsRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetInsuranceClaimsRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetInsuranceClaimsFields>();
 
-            var response = await GetClient(bfsApiClientName).GetInsuranceClaimsAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetInsuranceClaimsAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -226,13 +229,14 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="insuranceClaims"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<CreateInsuranceClaimsResponse> CreateInsuranceClaimsAsync(InsuranceClaim[] insuranceClaims, string bfsApiClientName = null)
+        public async Task<CreateInsuranceClaimsResponse> CreateInsuranceClaimsAsync(InsuranceClaim[] insuranceClaims, string? bfsApiClientName = null)
         {
-            var request = GetRequest<CreateInsuranceClaimsRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<CreateInsuranceClaimsRequest>(bfsApiClientName);
 
             request.Entities = insuranceClaims;
 
-            var response = await GetClient(bfsApiClientName).CreateInsuranceClaimsAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.CreateInsuranceClaimsAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -249,15 +253,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<UpdateInsuranceClaimsResponse> UpdateInsuranceClaimsAsync(
-            UpdateInsuranceClaim[] insuranceClaims, UpdateInsuranceClaimsFields fieldsToUpdate, string bfsApiClientName = null)
+            UpdateInsuranceClaim[] insuranceClaims, UpdateInsuranceClaimsFields fieldsToUpdate, string? bfsApiClientName = null)
         {
-            var request = GetRequest<UpdateInsuranceClaimsRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<UpdateInsuranceClaimsRequest>(bfsApiClientName);
 
             request.Entities = insuranceClaims;
 
             request.Fields = fieldsToUpdate;
 
-            var response = await GetClient(bfsApiClientName).UpdateInsuranceClaimsAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.UpdateInsuranceClaimsAsync(request);
 
             if (ValidateResponse(response)) return response;
 

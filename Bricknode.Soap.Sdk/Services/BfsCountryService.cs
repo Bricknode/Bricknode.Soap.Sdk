@@ -1,34 +1,29 @@
-﻿using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using BfsApi;
-using Bricknode.Soap.Sdk.Configuration;
 using Bricknode.Soap.Sdk.Factories;
 using Bricknode.Soap.Sdk.Services.Bases;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 
 namespace Bricknode.Soap.Sdk.Services
 {
     public class BfsCountryService : BfsServiceBase, IBfsCountryService
     {
-        private readonly bfsapiSoap _client;
-
-        public BfsCountryService(IOptions<BfsApiConfiguration> bfsApiConfiguration, ILogger logger,
-            IBfsApiClientFactory bfsApiClientFactory, bfsapiSoap client) : base(bfsApiConfiguration, logger,
-            bfsApiClientFactory, client)
+        public BfsCountryService(IBfsApiClientFactory bfsApiClientFactory, ILogger logger)
+            : base(bfsApiClientFactory, logger)
         {
-            _client = client;
+            // no operation
         }
 
-        public async Task<GetCountryResponse> GetCountries(GetCountryArgs filters, string bfsApiClientName = null)
+        public async Task<GetCountryResponse> GetCountries(GetCountryArgs filters, string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetCountryRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetCountryRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetCountryFields>();
 
-            var response = await GetClient(bfsApiClientName).GetCountriesAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetCountriesAsync(request);
 
             if (ValidateResponse(response)) return response;
 

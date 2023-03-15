@@ -1,10 +1,7 @@
-﻿using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using BfsApi;
-using Bricknode.Soap.Sdk.Configuration;
 using Bricknode.Soap.Sdk.Services.Bases;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 
 namespace Bricknode.Soap.Sdk.Services
 {
@@ -12,13 +9,10 @@ namespace Bricknode.Soap.Sdk.Services
 
     public class BfsTransactionService : BfsServiceBase, IBfsTransactionService
     {
-        private readonly bfsapiSoap _client;
-
-        public BfsTransactionService(IOptions<BfsApiConfiguration> bfsApiConfiguration, ILogger logger,
-            bfsapiSoap client, IBfsApiClientFactory bfsApiClientFactory) :
-            base(bfsApiConfiguration, logger, bfsApiClientFactory, client)
+        public BfsTransactionService(IBfsApiClientFactory bfsApiClientFactory, ILogger logger)
+            : base(bfsApiClientFactory, logger)
         {
-            _client = client;
+            // no operation
         }
 
         /// <summary>
@@ -28,15 +22,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<GetBusinessTransactionsResponse> GetBusinessTransactionsAsync(
-            GetBusinessTransactionArgs filters, string bfsApiClientName = null)
+            GetBusinessTransactionArgs filters, string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetBusinessTransactionsRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetBusinessTransactionsRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetBusinessTransactionFields>();
 
-            var response = await GetClient(bfsApiClientName).GetBusinessTransactionsAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetBusinessTransactionsAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -52,15 +47,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<GetBusinessTransactionTypeResponse> GetBusinessTransactionTypesAsync(
-            GetBusinessTransactionTypeArgs filters, string bfsApiClientName = null)
+            GetBusinessTransactionTypeArgs filters, string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetBusinessTransactionTypeRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetBusinessTransactionTypeRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetBusinessTransactionTypeFields>();
 
-            var response = await GetClient(bfsApiClientName).GetBusinessTransactionTypesAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetBusinessTransactionTypesAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -76,13 +72,14 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<CreateBusinessTransactionResponse> CreateBusinessTransactionsAsync(
-            SuperTransaction[] superTransactions, string bfsApiClientName = null)
+            SuperTransaction[] superTransactions, string? bfsApiClientName = null)
         {
-            var request = GetRequest<CreateBusinessTransactionRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<CreateBusinessTransactionRequest>(bfsApiClientName);
 
             request.Entities = superTransactions;
 
-            var response = await GetClient(bfsApiClientName).CreateBusinessTransactionsAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.CreateBusinessTransactionsAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -98,15 +95,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<CorrectBusinessTransactionsResponse> CorrectBusinessTransactionsAsync(
-            CorrectionBusinessTransaction[] correctionBusinessTransactions, string bfsApiClientName = null)
+            CorrectionBusinessTransaction[] correctionBusinessTransactions, string? bfsApiClientName = null)
         {
-            var request = GetRequest<CorrectBusinessTransactionRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<CorrectBusinessTransactionRequest>(bfsApiClientName);
 
             request.Entities = correctionBusinessTransactions;
 
             request.Fields = GetFields<CorrectionBusinessTransactionFields>();
 
-            var response = await GetClient(bfsApiClientName).CorrectBusinessTransactionsAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.CorrectBusinessTransactionsAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -123,15 +121,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<UpdateBusinessTransactionsResponse> UpdateBusinessTransactionsAsync(UpdateBusinessTransaction[] businessTransactions, 
-            UpdateBusinessTransactionFields fieldsToUpdate, string bfsApiClientName = null)
+            UpdateBusinessTransactionFields fieldsToUpdate, string? bfsApiClientName = null)
         {
-            var request = GetRequest<UpdateBusinessTransactionsRequest> (bfsApiClientName);
+            var request = await GetRequestAsync<UpdateBusinessTransactionsRequest> (bfsApiClientName);
 
             request.Entities = businessTransactions;
 
             request.Fields = fieldsToUpdate;
 
-            var response = await GetClient(bfsApiClientName).UpdateBusinessTransactionsAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.UpdateBusinessTransactionsAsync(request);
 
             if (ValidateResponse(response)) return response;
 

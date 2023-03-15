@@ -1,21 +1,18 @@
 ﻿using System;
-using System.Linq;
 using System.Threading.Tasks;
 using BfsApi;
-using Bricknode.Soap.Sdk.Configuration;
 using Bricknode.Soap.Sdk.Factories;
 using Bricknode.Soap.Sdk.Services.Bases;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 
 namespace Bricknode.Soap.Sdk.Services
 {
     public class BfsReservationService : BfsServiceBase, IBfsReservationService
     {
-        public BfsReservationService(IOptions<BfsApiConfiguration> bfsApiConfiguration, ILogger logger,
-            bfsapiSoap client, IBfsApiClientFactory bfsApiClientFactory) :
-            base(bfsApiConfiguration, logger, bfsApiClientFactory, client)
+        public BfsReservationService(IBfsApiClientFactory bfsApiClientFactory, ILogger logger)
+            : base(bfsApiClientFactory, logger)
         {
+            // no operation
         }
 
         /// <summary>
@@ -25,15 +22,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<GetReservationResponse> GetReservationsAsync(GetReservationArgs filters,
-            string bfsApiClientName = null)
+            string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetReservationRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetReservationRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetReservationFields>();
 
-            var response = await GetClient(bfsApiClientName).GetReservationsAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetReservationsAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -49,13 +47,14 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         public async Task<CreateReservationResponse> CreateReservationAsync(Reservation[] reservations,
-            string bfsApiClientName = null)
+            string? bfsApiClientName = null)
         {
-            var request = GetRequest<CreateReservationRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<CreateReservationRequest>(bfsApiClientName);
 
             request.Entities = reservations;
 
-            var response = await GetClient(bfsApiClientName).CreateReservationsAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.CreateReservationsAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -70,13 +69,14 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="reservationIds"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<string> DeleteReservationsAsync(Guid[] reservationIds, string bfsApiClientName = null)
+        public async Task<string> DeleteReservationsAsync(Guid[] reservationIds, string? bfsApiClientName = null)
         {
-            var request = GetRequest<DeleteReservationRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<DeleteReservationRequest>(bfsApiClientName);
 
             request.BrickIds = reservationIds;
 
-            var response = await GetClient(bfsApiClientName).DeleteReservationsAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.DeleteReservationsAsync(request);
 
             if (ValidateResponse(response)) return response.Message;
 

@@ -1,9 +1,7 @@
 ﻿using System.Threading.Tasks;
 using BfsApi;
-using Bricknode.Soap.Sdk.Configuration;
 using Bricknode.Soap.Sdk.Services.Bases;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 
 namespace Bricknode.Soap.Sdk.Services
 {
@@ -11,12 +9,10 @@ namespace Bricknode.Soap.Sdk.Services
 
     public class BfsPositionService : BfsServiceBase, IBfsPositionService
     {
-        private readonly bfsapiSoap _client;
-
-        public BfsPositionService(IOptions<BfsApiConfiguration> bfsApiConfiguration, ILogger logger, bfsapiSoap client, IBfsApiClientFactory bfsApiClientFactory) :
-            base(bfsApiConfiguration, logger, bfsApiClientFactory, client)
+        public BfsPositionService(IBfsApiClientFactory bfsApiClientFactory, ILogger logger)
+            : base(bfsApiClientFactory, logger)
         {
-            _client = client;
+            // no operation
         }
 
         /// <summary>
@@ -25,15 +21,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<GetPositionResponse> GetPositionsAsync(GetPositionArgs filters, string bfsApiClientName = null)
+        public async Task<GetPositionResponse> GetPositionsAsync(GetPositionArgs filters, string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetPositionRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetPositionRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetPositionFields>();
 
-            var response = await GetClient(bfsApiClientName).GetPositionsAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetPositionsAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -48,15 +45,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<GetHistoricPositionResponse> GetHistoricPositionsAsync(GetHistoricPositionArgs filters, string bfsApiClientName = null)
+        public async Task<GetHistoricPositionResponse> GetHistoricPositionsAsync(GetHistoricPositionArgs filters, string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetHistoricPositionRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetHistoricPositionRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetHistoricPositionFields>();
 
-            var response = await GetClient(bfsApiClientName).GetHistoricPositionsAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetHistoricPositionsAsync(request);
 
             if (ValidateResponse(response)) return response;
 
@@ -71,15 +69,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<GetHoldingsOverTimeResponse> GetHoldingsOverTimeAsync(GetHoldingsOverTimeArgs filters, string bfsApiClientName = null)
+        public async Task<GetHoldingsOverTimeResponse> GetHoldingsOverTimeAsync(GetHoldingsOverTimeArgs filters, string? bfsApiClientName = null)
         {
-            var request = GetRequest<GetHoldingsOverTimeRequest>(bfsApiClientName);
+            var request = await GetRequestAsync<GetHoldingsOverTimeRequest>(bfsApiClientName);
 
             request.Args = filters;
 
             request.Fields = GetFields<GetHoldingsOverTimeResponseFields>();
 
-            var response = await GetClient(bfsApiClientName).GetHoldingsOverTimeAsync(request);
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetHoldingsOverTimeAsync(request);
 
             if (ValidateResponse(response)) return response;
 
