@@ -9,7 +9,7 @@ namespace Bricknode.Soap.Sdk.Services
 
     public class BfsAssetService : BfsServiceBase, IBfsAssetService
     {
-        public BfsAssetService(IBfsApiClientFactory bfsApiClientFactory, ILogger logger)
+        public BfsAssetService(IBfsApiClientFactory bfsApiClientFactory, ILogger<BfsService>? logger)
             : base(bfsApiClientFactory, logger)
         {
             // no operation

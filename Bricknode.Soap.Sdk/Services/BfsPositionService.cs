@@ -9,7 +9,7 @@ namespace Bricknode.Soap.Sdk.Services
 
     public class BfsPositionService : BfsServiceBase, IBfsPositionService
     {
-        public BfsPositionService(IBfsApiClientFactory bfsApiClientFactory, ILogger logger)
+        public BfsPositionService(IBfsApiClientFactory bfsApiClientFactory, ILogger<BfsService>? logger)
             : base(bfsApiClientFactory, logger)
         {
             // no operation

@@ -8,7 +8,7 @@ namespace Bricknode.Soap.Sdk.Services
 {
     public class BfsCountryService : BfsServiceBase, IBfsCountryService
     {
-        public BfsCountryService(IBfsApiClientFactory bfsApiClientFactory, ILogger logger)
+        public BfsCountryService(IBfsApiClientFactory bfsApiClientFactory, ILogger<BfsService>? logger)
             : base(bfsApiClientFactory, logger)
         {
             // no operation
