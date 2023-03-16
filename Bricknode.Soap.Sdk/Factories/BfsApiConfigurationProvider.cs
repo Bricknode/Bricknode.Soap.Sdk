@@ -7,7 +7,7 @@ using Bricknode.Soap.Sdk.Configuration;
 
 public class BfsApiConfigurationProvider : IBfsApiConfigurationProvider
 {
-    private IDictionary<string, BfsApiConfiguration> _bfsApiConfigurations;
+    private IReadOnlyDictionary<string, BfsApiConfiguration> _bfsApiConfigurations;
 
     public BfsApiConfigurationProvider()
     {
@@ -19,12 +19,7 @@ public class BfsApiConfigurationProvider : IBfsApiConfigurationProvider
         _bfsApiConfigurations = new Dictionary<string, BfsApiConfiguration>(configurations, StringComparer.OrdinalIgnoreCase);
     }
 
-    public void AddConfiguration(string name, BfsApiConfiguration configuration)
-    {
-        _bfsApiConfigurations[name] = configuration;
-    }
-
-    public void AddConfigurations(IDictionary<string, BfsApiConfiguration> configurations)
+    public void AddConfigurations(Dictionary<string, BfsApiConfiguration> configurations)
     {
         _bfsApiConfigurations = configurations;
     }

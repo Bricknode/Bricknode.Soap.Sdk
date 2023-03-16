@@ -1,7 +1,7 @@
 ﻿namespace Bricknode.Soap.Sdk.Factories;
 
 using System;
-using System.Collections.Generic;
+using System.Collections.Concurrent;
 using System.ServiceModel;
 using System.Threading.Tasks;
 using BfsApi;
@@ -11,14 +11,14 @@ using Helpers;
 public class BfsApiClientFactory : IBfsApiClientFactory
 {
     private readonly IBfsApiConfigurationProvider _configurationProvider;
-    private readonly Dictionary<string, BfsApiConfiguration> _cacheConfigurations;
-    private readonly Dictionary<string, bfsapiSoapClient> _cacheClients;
+    private readonly ConcurrentDictionary<string, BfsApiConfiguration> _cacheConfigurations;
+    private readonly ConcurrentDictionary<string, bfsapiSoapClient> _cacheClients;
 
     public BfsApiClientFactory(IBfsApiConfigurationProvider configurationProvider)
     {
         _configurationProvider = configurationProvider;
-        _cacheConfigurations = new Dictionary<string, BfsApiConfiguration>(StringComparer.OrdinalIgnoreCase);
-        _cacheClients = new Dictionary<string, bfsapiSoapClient>(StringComparer.OrdinalIgnoreCase);
+        _cacheConfigurations = new ConcurrentDictionary<string, BfsApiConfiguration>(StringComparer.OrdinalIgnoreCase);
+        _cacheClients = new ConcurrentDictionary<string, bfsapiSoapClient>(StringComparer.OrdinalIgnoreCase);
     }
 
     public async ValueTask<BfsApiConfiguration> GetConfigurationAsync(string? bfsApiClientName = null)
@@ -28,7 +28,7 @@ public class BfsApiClientFactory : IBfsApiClientFactory
         if (!_cacheConfigurations.TryGetValue(bfsApiClientName, out var configuration))
         {
             configuration = await _configurationProvider.GetConfigurationAsync(bfsApiClientName);
-            _cacheConfigurations[bfsApiClientName] = configuration;
+            _cacheConfigurations.TryAdd(bfsApiClientName, configuration);
         }
 
         return configuration;
@@ -42,7 +42,7 @@ public class BfsApiClientFactory : IBfsApiClientFactory
         {
             var configuration = await GetConfigurationAsync(bfsApiClientName);
             client = CreateSoapClient(configuration);
-            _cacheClients[bfsApiClientName] = client;
+            _cacheClients.TryAdd(bfsApiClientName, client);
         }
 
         return client;
@@ -55,9 +55,27 @@ public class BfsApiClientFactory : IBfsApiClientFactory
     {
         foreach (var client in _cacheClients.Values)
         {
-            ((IDisposable)client).Dispose();
+            DisposeClientSafely(client);
         }
 
         _cacheClients.Clear();
+    }
+
+    private void DisposeClientSafely(bfsapiSoapClient client)
+    {
+        try
+        {
+            if (client.State != CommunicationState.Faulted)
+            {
+                client.Close();
+            }
+        }
+        finally
+        {
+            if (client.State != CommunicationState.Closed)
+            {
+                client.Abort();
+            }
+        }
     }
 }
