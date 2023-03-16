@@ -12,7 +12,7 @@ namespace Bricknode.Soap.Sdk.Services
     public class BfsOrderService : BfsServiceBase, IBfsOrderService
     {
 
-        public BfsOrderService(IBfsApiClientFactory bfsApiClientFactory, ILogger logger)
+        public BfsOrderService(IBfsApiClientFactory bfsApiClientFactory, ILogger<BfsService>? logger)
             : base(bfsApiClientFactory, logger)
         {
             // no operation

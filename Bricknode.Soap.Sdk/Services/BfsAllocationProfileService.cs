@@ -10,7 +10,7 @@ namespace Bricknode.Soap.Sdk.Services
 
     public class BfsAllocationProfileService : BfsServiceBase, IBfsAllocationProfileService
     {
-        public BfsAllocationProfileService(IBfsApiClientFactory bfsApiClientFactory, ILogger logger)
+        public BfsAllocationProfileService(IBfsApiClientFactory bfsApiClientFactory, ILogger<BfsService>? logger)
             : base(bfsApiClientFactory, logger)
         {
             // no operation

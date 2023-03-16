@@ -9,7 +9,7 @@ namespace Bricknode.Soap.Sdk.Services
 
     public class BfsPriceService : BfsServiceBase, IBfsPriceService
     {
-        public BfsPriceService(IBfsApiClientFactory bfsApiClientFactory, ILogger logger)
+        public BfsPriceService(IBfsApiClientFactory bfsApiClientFactory, ILogger<BfsService>? logger)
             : base(bfsApiClientFactory, logger)
         {
             // no operation

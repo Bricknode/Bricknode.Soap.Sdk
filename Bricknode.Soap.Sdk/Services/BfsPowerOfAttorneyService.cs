@@ -10,7 +10,7 @@ namespace Bricknode.Soap.Sdk.Services
 
     public class BfsPowerOfAttorneyService : BfsServiceBase, IBfsPowerOfAttorneyService
     {
-        public BfsPowerOfAttorneyService(IBfsApiClientFactory bfsApiClientFactory, ILogger logger)
+        public BfsPowerOfAttorneyService(IBfsApiClientFactory bfsApiClientFactory, ILogger<BfsService>? logger)
             : base(bfsApiClientFactory, logger)
         {
             // no operation

@@ -9,7 +9,7 @@ namespace Bricknode.Soap.Sdk.Services
 
     public class BfsWhiteLabelService : BfsServiceBase, IBfsWhiteLabelService
     {
-        public BfsWhiteLabelService(IBfsApiClientFactory bfsApiClientFactory, ILogger logger)
+        public BfsWhiteLabelService(IBfsApiClientFactory bfsApiClientFactory, ILogger<BfsService>? logger)
             : base(bfsApiClientFactory, logger)
         {
             // no operation

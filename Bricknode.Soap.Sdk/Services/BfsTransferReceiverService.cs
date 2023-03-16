@@ -9,7 +9,7 @@ namespace Bricknode.Soap.Sdk.Services
 
     public class BfsTransferReceiverService : BfsServiceBase, IBfsTransferReceiverService
     {
-        public BfsTransferReceiverService(IBfsApiClientFactory bfsApiClientFactory, ILogger logger)
+        public BfsTransferReceiverService(IBfsApiClientFactory bfsApiClientFactory, ILogger<BfsService>? logger)
             : base(bfsApiClientFactory, logger)
         {
             // no operation

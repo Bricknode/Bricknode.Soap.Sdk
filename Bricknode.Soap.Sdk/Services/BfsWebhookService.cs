@@ -9,7 +9,7 @@ namespace Bricknode.Soap.Sdk.Services
 
     public class BfsWebhookService : BfsServiceBase, IBfsWebhookService
     {
-        public BfsWebhookService(IBfsApiClientFactory bfsApiClientFactory, ILogger logger)
+        public BfsWebhookService(IBfsApiClientFactory bfsApiClientFactory, ILogger<BfsService>? logger)
             : base(bfsApiClientFactory, logger)
         {
             // no operation
