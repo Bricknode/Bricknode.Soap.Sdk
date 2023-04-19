@@ -2396,6 +2396,23 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
         System.Threading.Tasks.Task<BfsApi.DeleteFileResponse> DeleteFileAsync(BfsApi.DeleteFileRequest req);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DeleteFiles", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfCreateCustomFieldDto))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfUpdateCustomFieldDto))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomFieldDto))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DtoBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
+        System.Threading.Tasks.Task<BfsApi.DeleteFilesResponse> DeleteFilesAsync(BfsApi.DeleteFilesRequest req);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetFeeGroups", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfCreateCustomFieldDto))]
@@ -35705,6 +35722,7 @@ namespace BfsApi
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetTradingVenueResponse))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchResponseOfGetFeeGroupResponseRowGetFeeGroupFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetFeeGroupResponse))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DeleteFilesResponse))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(DeleteFileResponse))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchResponseOfGetFileInfoResponseRowGetFileInfoFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetFileListResponse))]
@@ -49808,6 +49826,14 @@ namespace BfsApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
     public partial class GetFeeGroupResponse : APISearchResponseOfGetFeeGroupResponseRowGetFeeGroupFields
+    {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class DeleteFilesResponse : Response
     {
     }
     
@@ -75059,6 +75085,7 @@ namespace BfsApi
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetTradingVenueRequest))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchRequestOfGetFeeGroupArgsGetFeeGroupFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetFeeGroupRequest))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DeleteFilesRequest))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(DeleteFileRequest))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchRequestOfGetFileInfoArgsGetFileInfoFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetFileListRequest))]
@@ -76154,6 +76181,30 @@ namespace BfsApi
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
     public partial class GetFeeGroupRequest : APISearchRequestOfGetFeeGroupArgsGetFeeGroupFields
     {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class DeleteFilesRequest : Request
+    {
+        
+        private FileInfoGeneral[] fileInfoDeletesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public FileInfoGeneral[] FileInfoDeletes
+        {
+            get
+            {
+                return this.fileInfoDeletesField;
+            }
+            set
+            {
+                this.fileInfoDeletesField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -84539,6 +84590,11 @@ namespace BfsApi
         public System.Threading.Tasks.Task<BfsApi.DeleteFileResponse> DeleteFileAsync(BfsApi.DeleteFileRequest req)
         {
             return base.Channel.DeleteFileAsync(req);
+        }
+        
+        public System.Threading.Tasks.Task<BfsApi.DeleteFilesResponse> DeleteFilesAsync(BfsApi.DeleteFilesRequest req)
+        {
+            return base.Channel.DeleteFilesAsync(req);
         }
         
         public System.Threading.Tasks.Task<BfsApi.GetFeeGroupResponse> GetFeeGroupsAsync(BfsApi.GetFeeGroupRequest req)
