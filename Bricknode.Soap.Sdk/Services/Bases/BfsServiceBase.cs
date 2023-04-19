@@ -107,5 +107,28 @@ namespace Bricknode.Soap.Sdk.Services.Bases
         {
             return string.Join(", ", entities.SelectMany(e => e.Errors));
         }
+
+        /// <summary>
+        /// https://bricknode.atlassian.net/wiki/spaces/API/pages/3353083905/DeleteFiles
+        /// </summary>
+        /// <param name="fileInfos"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        public async Task<DeleteFilesResponse> DeleteFilesAsync(FileInfoGeneral[] fileInfos,
+            string? bfsApiClientName = null)
+        {
+            var request = await GetRequestAsync<DeleteFilesRequest>(bfsApiClientName);
+
+            request.FileInfoDeletes = fileInfos;
+
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.DeleteFilesAsync(request);
+
+            if (ValidateResponse(response)) return response;
+
+            LogErrors(response.Message);
+
+            return response;
+        }
     }
 }
