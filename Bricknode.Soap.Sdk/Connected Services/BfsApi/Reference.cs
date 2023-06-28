@@ -8136,6 +8136,7 @@ namespace BfsApi
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TransferReceiverExtraInfoSecuritiesAccount))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TransferReceiverExtraInfoSecurities))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TransferReceiverExtraInfoPlusGiro))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TransferReceiverExtraInfoBicIban))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
@@ -8451,6 +8452,46 @@ namespace BfsApi
             set
             {
                 this.accountNoField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class TransferReceiverExtraInfoBicIban : TransferReceiverExtraInfo
+    {
+        
+        private string bICField;
+        
+        private string iBANField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string BIC
+        {
+            get
+            {
+                return this.bICField;
+            }
+            set
+            {
+                this.bICField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string IBAN
+        {
+            get
+            {
+                return this.iBANField;
+            }
+            set
+            {
+                this.iBANField = value;
             }
         }
     }
