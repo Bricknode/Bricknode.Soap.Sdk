@@ -107,54 +107,5 @@ namespace Bricknode.Soap.Sdk.Services.Bases
         {
             return string.Join(", ", entities.SelectMany(e => e.Errors));
         }
-
-        /// <summary>
-        /// https://bricknode.atlassian.net/wiki/spaces/API/pages/3353083905/DeleteFiles
-        /// </summary>
-        /// <param name="fileInfos"></param>
-        /// <param name="bfsApiClientName"></param>
-        /// <returns></returns>
-        public async Task<DeleteFilesResponse> DeleteFilesAsync(FileInfoGeneral[] fileInfos,
-            string? bfsApiClientName = null)
-        {
-            var request = await GetRequestAsync<DeleteFilesRequest>(bfsApiClientName);
-
-            request.FileInfoDeletes = fileInfos;
-
-            var client = await GetClientAsync(bfsApiClientName);
-            var response = await client.DeleteFilesAsync(request);
-
-            if (ValidateResponse(response)) return response;
-
-            LogErrors(response.Message);
-
-            return response;
-        }
-
-        /// <summary>
-        ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/3462824085/UpdateSuperTransactions
-        /// </summary>
-        /// <param name="superTransactions"></param>
-        /// <param name="fieldsToUpdate"></param>
-        /// <param name="bfsApiClientName"></param>
-        /// <returns></returns>
-        public async Task<UpdateSuperTransactionsResponse> UpdateBusinessTransactionsAsync(UpdateSuperTransaction[] superTransactions,
-            UpdateSuperTransactionFields fieldsToUpdate, string? bfsApiClientName = null)
-        {
-            var request = await GetRequestAsync<UpdateSuperTransactionsRequest>(bfsApiClientName);
-
-            request.Entities = superTransactions;
-
-            request.Fields = fieldsToUpdate;
-
-            var client = await GetClientAsync(bfsApiClientName);
-            var response = await client.UpdateSuperTransactionsAsync(request);
-
-            if (ValidateResponse(response)) return response;
-
-            LogErrors(response.Entities);
-
-            return response;
-        }
     }
 }
