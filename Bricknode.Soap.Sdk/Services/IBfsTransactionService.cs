@@ -47,5 +47,24 @@ namespace Bricknode.Soap.Sdk.Services
         /// <returns></returns>
         Task<UpdateBusinessTransactionsResponse> UpdateBusinessTransactionsAsync(UpdateBusinessTransaction[] businessTransactions,
             UpdateBusinessTransactionFields fieldsToUpdate, string? bfsApiClientName = null);
+
+        /// <summary>
+        ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/3462824085/UpdateSuperTransactions
+        /// </summary>
+        /// <param name="superTransactions"></param>
+        /// <param name="fieldsToUpdate"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        Task<UpdateSuperTransactionsResponse> UpdateSuperTransactionsAsync(UpdateSuperTransaction[] superTransactions,
+            UpdateSuperTransactionFields fieldsToUpdate, string? bfsApiClientName = null);
+
+        /// <summary>
+        ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/3462758502/GetSuperTransactions
+        /// </summary>
+        /// <param name="filters"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        Task<GetSuperTransactionsResponse> GetSuperTransactionsAsync(
+            GetSuperTransactionArgs filters, string? bfsApiClientName = null);
     }
 }
