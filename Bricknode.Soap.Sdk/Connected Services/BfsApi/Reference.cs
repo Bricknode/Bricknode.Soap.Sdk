@@ -8745,6 +8745,8 @@ namespace BfsApi
         
         private bool custodianBrickIdField;
         
+        private bool discountGroupIdField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public bool OwnerAccountLabel
@@ -9066,6 +9068,20 @@ namespace BfsApi
                 this.custodianBrickIdField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=23)]
+        public bool DiscountGroupId
+        {
+            get
+            {
+                return this.discountGroupIdField;
+            }
+            set
+            {
+                this.discountGroupIdField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -9136,6 +9152,8 @@ namespace BfsApi
         private bool custodianBrickIdField;
         
         private bool counterpartyAccountTypeField;
+        
+        private bool discountGroupIdField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -9568,6 +9586,20 @@ namespace BfsApi
             set
             {
                 this.counterpartyAccountTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=31)]
+        public bool DiscountGroupId
+        {
+            get
+            {
+                return this.discountGroupIdField;
+            }
+            set
+            {
+                this.discountGroupIdField = value;
             }
         }
     }
@@ -31766,6 +31798,8 @@ namespace BfsApi
         
         private System.Nullable<System.Guid> custodianBrickIdField;
         
+        private System.Nullable<System.Guid> discountGroupIdField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public string OwnerAccountLabel
@@ -32087,6 +32121,20 @@ namespace BfsApi
                 this.custodianBrickIdField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=23)]
+        public System.Nullable<System.Guid> DiscountGroupId
+        {
+            get
+            {
+                return this.discountGroupIdField;
+            }
+            set
+            {
+                this.discountGroupIdField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -32197,6 +32245,8 @@ namespace BfsApi
         private System.Nullable<System.Guid> custodianBrickIdField;
         
         private System.Nullable<CounterpartyAccountType> counterpartyAccountTypeField;
+        
+        private System.Nullable<System.Guid> discountGroupIdField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -32589,6 +32639,20 @@ namespace BfsApi
                 this.counterpartyAccountTypeField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=28)]
+        public System.Nullable<System.Guid> DiscountGroupId
+        {
+            get
+            {
+                return this.discountGroupIdField;
+            }
+            set
+            {
+                this.discountGroupIdField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -32704,6 +32768,8 @@ namespace BfsApi
         private System.Guid custodianBrickIdField;
         
         private System.Nullable<CounterpartyAccountType> counterpartyAccountTypeField;
+        
+        private System.Guid discountGroupIdField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -33108,6 +33174,20 @@ namespace BfsApi
             set
             {
                 this.counterpartyAccountTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=29)]
+        public System.Guid DiscountGroupId
+        {
+            get
+            {
+                return this.discountGroupIdField;
+            }
+            set
+            {
+                this.discountGroupIdField = value;
             }
         }
     }
@@ -66508,6 +66588,8 @@ namespace BfsApi
         
         private CounterpartyAccountType[] counterpartyAccountTypesField;
         
+        private System.Guid[] discountGroupIdsField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
         public System.Guid[] BrickIds
@@ -66939,6 +67021,20 @@ namespace BfsApi
             set
             {
                 this.counterpartyAccountTypesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=31)]
+        public System.Guid[] DiscountGroupIds
+        {
+            get
+            {
+                return this.discountGroupIdsField;
+            }
+            set
+            {
+                this.discountGroupIdsField = value;
             }
         }
     }
