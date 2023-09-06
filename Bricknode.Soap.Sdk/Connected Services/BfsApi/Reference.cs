@@ -13509,6 +13509,8 @@ namespace BfsApi
         
         private bool excludeFromFeeRelatedSellingField;
         
+        private bool fundClassField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public bool Symbol
@@ -14082,6 +14084,20 @@ namespace BfsApi
                 this.excludeFromFeeRelatedSellingField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=41)]
+        public bool FundClass
+        {
+            get
+            {
+                return this.fundClassField;
+            }
+            set
+            {
+                this.fundClassField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -14198,6 +14214,8 @@ namespace BfsApi
         private bool lastUpdatedDateField;
         
         private bool excludeFromFeeRelatedSellingField;
+        
+        private bool fundClassField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -14952,6 +14970,20 @@ namespace BfsApi
             set
             {
                 this.excludeFromFeeRelatedSellingField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=54)]
+        public bool FundClass
+        {
+            get
+            {
+                return this.fundClassField;
+            }
+            set
+            {
+                this.fundClassField = value;
             }
         }
     }
@@ -48097,6 +48129,54 @@ namespace BfsApi
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
     public partial class ExternalFundExecutionInterface : ExecutionInterface
     {
+        
+        private System.Nullable<System.Guid> exceptionAccountField;
+        
+        private System.Nullable<System.DateTime> firstTradeDateField;
+        
+        private System.Nullable<System.DateTime> lastTradeDateField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
+        public System.Nullable<System.Guid> ExceptionAccount
+        {
+            get
+            {
+                return this.exceptionAccountField;
+            }
+            set
+            {
+                this.exceptionAccountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
+        public System.Nullable<System.DateTime> FirstTradeDate
+        {
+            get
+            {
+                return this.firstTradeDateField;
+            }
+            set
+            {
+                this.firstTradeDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
+        public System.Nullable<System.DateTime> LastTradeDate
+        {
+            get
+            {
+                return this.lastTradeDateField;
+            }
+            set
+            {
+                this.lastTradeDateField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -48218,6 +48298,8 @@ namespace BfsApi
         private string defaultExecutionInterfaceField;
         
         private bool excludeFromFeeRelatedSellingField;
+        
+        private string fundClassField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -48776,6 +48858,20 @@ namespace BfsApi
             set
             {
                 this.excludeFromFeeRelatedSellingField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=40)]
+        public string FundClass
+        {
+            get
+            {
+                return this.fundClassField;
+            }
+            set
+            {
+                this.fundClassField = value;
             }
         }
     }
@@ -49370,6 +49466,54 @@ namespace BfsApi
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
     public partial class ExternalFundExecutionInterfaceFields : ExecutionInterfaceFields
     {
+        
+        private bool exceptionAccountField;
+        
+        private bool firstTradeDateField;
+        
+        private bool lastTradeDateField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public bool ExceptionAccount
+        {
+            get
+            {
+                return this.exceptionAccountField;
+            }
+            set
+            {
+                this.exceptionAccountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public bool FirstTradeDate
+        {
+            get
+            {
+                return this.firstTradeDateField;
+            }
+            set
+            {
+                this.firstTradeDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public bool LastTradeDate
+        {
+            get
+            {
+                return this.lastTradeDateField;
+            }
+            set
+            {
+                this.lastTradeDateField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -49477,6 +49621,12 @@ namespace BfsApi
         
         private ExternalFundExecutionInterfaceFields updateFieldsField;
         
+        private System.Nullable<System.Guid> exceptionAccountField;
+        
+        private System.Nullable<System.DateTime> firstTradeDateField;
+        
+        private System.Nullable<System.DateTime> lastTradeDateField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public ExternalFundExecutionInterfaceFields UpdateFields
@@ -49488,6 +49638,48 @@ namespace BfsApi
             set
             {
                 this.updateFieldsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
+        public System.Nullable<System.Guid> ExceptionAccount
+        {
+            get
+            {
+                return this.exceptionAccountField;
+            }
+            set
+            {
+                this.exceptionAccountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
+        public System.Nullable<System.DateTime> FirstTradeDate
+        {
+            get
+            {
+                return this.firstTradeDateField;
+            }
+            set
+            {
+                this.firstTradeDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
+        public System.Nullable<System.DateTime> LastTradeDate
+        {
+            get
+            {
+                return this.lastTradeDateField;
+            }
+            set
+            {
+                this.lastTradeDateField = value;
             }
         }
     }
@@ -49833,6 +50025,8 @@ namespace BfsApi
         private string defaultExecutionInterfaceField;
         
         private bool excludeFromFeeRelatedSellingField;
+        
+        private string fundClassField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -50533,6 +50727,20 @@ namespace BfsApi
                 this.excludeFromFeeRelatedSellingField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=50)]
+        public string FundClass
+        {
+            get
+            {
+                return this.fundClassField;
+            }
+            set
+            {
+                this.fundClassField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -50695,6 +50903,8 @@ namespace BfsApi
         private System.Nullable<System.DateTime> lastUpdatedDateField;
         
         private bool excludeFromFeeRelatedSellingField;
+        
+        private string fundClassField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -51421,6 +51631,20 @@ namespace BfsApi
             set
             {
                 this.excludeFromFeeRelatedSellingField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=52)]
+        public string FundClass
+        {
+            get
+            {
+                return this.fundClassField;
+            }
+            set
+            {
+                this.fundClassField = value;
             }
         }
     }
@@ -72508,6 +72732,8 @@ namespace BfsApi
         
         private System.Nullable<bool> excludeFromFeeRelatedSellingField;
         
+        private string fundClassField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
         public System.Guid[] BrickIds
@@ -73023,6 +73249,20 @@ namespace BfsApi
             set
             {
                 this.excludeFromFeeRelatedSellingField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=37)]
+        public string FundClass
+        {
+            get
+            {
+                return this.fundClassField;
+            }
+            set
+            {
+                this.fundClassField = value;
             }
         }
     }
@@ -85706,11 +85946,6 @@ namespace BfsApi
         public virtual System.Threading.Tasks.Task OpenAsync()
         {
             return System.Threading.Tasks.Task.Factory.FromAsync(((System.ServiceModel.ICommunicationObject)(this)).BeginOpen(null, null), new System.Action<System.IAsyncResult>(((System.ServiceModel.ICommunicationObject)(this)).EndOpen));
-        }
-        
-        public virtual System.Threading.Tasks.Task CloseAsync()
-        {
-            return System.Threading.Tasks.Task.Factory.FromAsync(((System.ServiceModel.ICommunicationObject)(this)).BeginClose(null, null), new System.Action<System.IAsyncResult>(((System.ServiceModel.ICommunicationObject)(this)).EndClose));
         }
         
         private static System.ServiceModel.Channels.Binding GetBindingForEndpoint(EndpointConfiguration endpointConfiguration)
