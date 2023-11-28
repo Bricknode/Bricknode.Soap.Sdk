@@ -48041,26 +48041,11 @@ namespace BfsApi
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
     public partial class ManualExecutionInterface : ExecutionInterface
     {
-        private System.Guid defaultCustodyAccountCashField;
-
+        
         private string feeCategoryField;
-
+        
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order = 0)]
-        public System.Guid DefaultCustodyAccountCash
-        {
-            get
-            {
-                return this.defaultCustodyAccountCashField;
-            }
-            set
-            {
-                this.defaultCustodyAccountCashField = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public string FeeCategory
         {
             get
@@ -49183,9 +49168,7 @@ namespace BfsApi
     {
         
         private ManualExecutionInterfaceFields updateFieldsField;
-
-        private System.Guid defaultCustodyAccountCashField;
-
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public ManualExecutionInterfaceFields UpdateFields
@@ -49199,20 +49182,6 @@ namespace BfsApi
                 this.updateFieldsField = value;
             }
         }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order = 1)]
-        public System.Guid DefaultCustodyAccountCash
-        {
-            get
-            {
-                return this.defaultCustodyAccountCashField;
-            }
-            set
-            {
-                this.defaultCustodyAccountCashField = value;
-            }
-        }
     }
     
     /// <remarks/>
@@ -49221,21 +49190,6 @@ namespace BfsApi
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
     public partial class ManualExecutionInterfaceFields : ExecutionInterfaceFields
     {
-        private bool defaultCustodyAccountCashField;
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order = 0)]
-        public bool DefaultCustodyAccountCash
-        {
-            get
-            {
-                return this.defaultCustodyAccountCashField;
-            }
-            set
-            {
-                this.defaultCustodyAccountCashField = value;
-            }
-        }
     }
     
     /// <remarks/>
