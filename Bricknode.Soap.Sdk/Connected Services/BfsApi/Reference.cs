@@ -7719,6 +7719,8 @@ namespace BfsApi
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TransferReceiverExtraInfoSecurities))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TransferReceiverExtraInfoPlusGiro))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TransferReceiverExtraInfoBicIban))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TransferReceiverExtraInfoNorwegianPostGiro))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TransferReceiverExtraInfoNorwegianBankAccount))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
@@ -8074,6 +8076,70 @@ namespace BfsApi
             set
             {
                 this.iBANField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class TransferReceiverExtraInfoNorwegianPostGiro : TransferReceiverExtraInfo
+    {
+        
+        private string accountNoField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string AccountNo
+        {
+            get
+            {
+                return this.accountNoField;
+            }
+            set
+            {
+                this.accountNoField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class TransferReceiverExtraInfoNorwegianBankAccount : TransferReceiverExtraInfo
+    {
+        
+        private string accountNoField;
+        
+        private string bankNameField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string AccountNo
+        {
+            get
+            {
+                return this.accountNoField;
+            }
+            set
+            {
+                this.accountNoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string BankName
+        {
+            get
+            {
+                return this.bankNameField;
+            }
+            set
+            {
+                this.bankNameField = value;
             }
         }
     }
@@ -22237,6 +22303,8 @@ namespace BfsApi
     public partial class UpdateExternalFundExecutionInterface : UpdateExecutionInterface
     {
         
+        private System.Nullable<TradeRoute> tradeRouteField;
+        
         private ExternalFundExecutionInterfaceFields updateFieldsField;
         
         private System.Nullable<System.Guid> exceptionAccountField;
@@ -22246,7 +22314,21 @@ namespace BfsApi
         private System.Nullable<System.DateTime> lastTradeDateField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
+        public System.Nullable<TradeRoute> TradeRoute
+        {
+            get
+            {
+                return this.tradeRouteField;
+            }
+            set
+            {
+                this.tradeRouteField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         public ExternalFundExecutionInterfaceFields UpdateFields
         {
             get
@@ -22260,7 +22342,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
         public System.Nullable<System.Guid> ExceptionAccount
         {
             get
@@ -22274,7 +22356,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
         public System.Nullable<System.DateTime> FirstTradeDate
         {
             get
@@ -22288,7 +22370,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=4)]
         public System.Nullable<System.DateTime> LastTradeDate
         {
             get
@@ -22300,6 +22382,22 @@ namespace BfsApi
                 this.lastTradeDateField = value;
             }
         }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public enum TradeRoute
+    {
+        
+        /// <remarks/>
+        ExternalFund,
+        
+        /// <remarks/>
+        Allfunds,
+        
+        /// <remarks/>
+        Fax,
     }
     
     /// <remarks/>
@@ -23224,15 +23322,15 @@ namespace BfsApi
         
         private System.Guid counterPartyField;
         
-        private bool buyAmountAllowedField;
+        private System.Nullable<bool> buyAmountAllowedField;
         
-        private bool buyUnitAllowedField;
+        private System.Nullable<bool> buyUnitAllowedField;
         
-        private bool sellAmountAllowedField;
+        private System.Nullable<bool> sellAmountAllowedField;
         
-        private bool sellUnitAllowedField;
+        private System.Nullable<bool> sellUnitAllowedField;
         
-        private bool isNominalValueOrderEntryField;
+        private System.Nullable<bool> isNominalValueOrderEntryField;
         
         private System.Nullable<int> quantityDecimalsField;
         
@@ -23285,8 +23383,8 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
-        public bool BuyAmountAllowed
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
+        public System.Nullable<bool> BuyAmountAllowed
         {
             get
             {
@@ -23299,8 +23397,8 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
-        public bool BuyUnitAllowed
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=4)]
+        public System.Nullable<bool> BuyUnitAllowed
         {
             get
             {
@@ -23313,8 +23411,8 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
-        public bool SellAmountAllowed
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=5)]
+        public System.Nullable<bool> SellAmountAllowed
         {
             get
             {
@@ -23327,8 +23425,8 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
-        public bool SellUnitAllowed
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=6)]
+        public System.Nullable<bool> SellUnitAllowed
         {
             get
             {
@@ -23341,8 +23439,8 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
-        public bool IsNominalValueOrderEntry
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=7)]
+        public System.Nullable<bool> IsNominalValueOrderEntry
         {
             get
             {
@@ -23594,6 +23692,8 @@ namespace BfsApi
     public partial class ExternalFundExecutionInterface : ExecutionInterface
     {
         
+        private TradeRoute tradeRouteField;
+        
         private System.Nullable<System.Guid> exceptionAccountField;
         
         private System.Nullable<System.DateTime> firstTradeDateField;
@@ -23601,7 +23701,21 @@ namespace BfsApi
         private System.Nullable<System.DateTime> lastTradeDateField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public TradeRoute TradeRoute
+        {
+            get
+            {
+                return this.tradeRouteField;
+            }
+            set
+            {
+                this.tradeRouteField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
         public System.Nullable<System.Guid> ExceptionAccount
         {
             get
@@ -23615,7 +23729,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
         public System.Nullable<System.DateTime> FirstTradeDate
         {
             get
@@ -23629,7 +23743,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
         public System.Nullable<System.DateTime> LastTradeDate
         {
             get
