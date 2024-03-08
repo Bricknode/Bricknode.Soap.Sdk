@@ -23322,15 +23322,15 @@ namespace BfsApi
         
         private System.Guid counterPartyField;
         
-        private System.Nullable<bool> buyAmountAllowedField;
+        private bool buyAmountAllowedField;
         
-        private System.Nullable<bool> buyUnitAllowedField;
+        private bool buyUnitAllowedField;
         
-        private System.Nullable<bool> sellAmountAllowedField;
+        private bool sellAmountAllowedField;
         
-        private System.Nullable<bool> sellUnitAllowedField;
+        private bool sellUnitAllowedField;
         
-        private System.Nullable<bool> isNominalValueOrderEntryField;
+        private bool isNominalValueOrderEntryField;
         
         private System.Nullable<int> quantityDecimalsField;
         
@@ -23383,8 +23383,8 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
-        public System.Nullable<bool> BuyAmountAllowed
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public bool BuyAmountAllowed
         {
             get
             {
@@ -23397,8 +23397,8 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=4)]
-        public System.Nullable<bool> BuyUnitAllowed
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public bool BuyUnitAllowed
         {
             get
             {
@@ -23411,8 +23411,8 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=5)]
-        public System.Nullable<bool> SellAmountAllowed
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public bool SellAmountAllowed
         {
             get
             {
@@ -23425,8 +23425,8 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=6)]
-        public System.Nullable<bool> SellUnitAllowed
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public bool SellUnitAllowed
         {
             get
             {
@@ -23439,8 +23439,8 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=7)]
-        public System.Nullable<bool> IsNominalValueOrderEntry
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public bool IsNominalValueOrderEntry
         {
             get
             {
