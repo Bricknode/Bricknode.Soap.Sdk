@@ -7719,6 +7719,7 @@ namespace BfsApi
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TransferReceiverExtraInfoSecurities))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TransferReceiverExtraInfoPlusGiro))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TransferReceiverExtraInfoBicIban))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TransferReceiverExtraInfoAvtaleGiro))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TransferReceiverExtraInfoNorwegianPostGiro))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TransferReceiverExtraInfoNorwegianBankAccount))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
@@ -8084,6 +8085,62 @@ namespace BfsApi
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class TransferReceiverExtraInfoAvtaleGiro : TransferReceiverExtraInfo
+    {
+        
+        private string accountNoField;
+        
+        private string bankNameField;
+        
+        private string kIDField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string AccountNo
+        {
+            get
+            {
+                return this.accountNoField;
+            }
+            set
+            {
+                this.accountNoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string BankName
+        {
+            get
+            {
+                return this.bankNameField;
+            }
+            set
+            {
+                this.bankNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string KID
+        {
+            get
+            {
+                return this.kIDField;
+            }
+            set
+            {
+                this.kIDField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
     public partial class TransferReceiverExtraInfoNorwegianPostGiro : TransferReceiverExtraInfo
     {
         
@@ -8270,6 +8327,8 @@ namespace BfsApi
         private string stateField;
         
         private string bankGiroNumberField;
+        
+        private string kIDField;
         
         private string statusField;
         
@@ -8499,6 +8558,20 @@ namespace BfsApi
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=16)]
+        public string KID
+        {
+            get
+            {
+                return this.kIDField;
+            }
+            set
+            {
+                this.kIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=17)]
         public string Status
         {
             get
@@ -39802,6 +39875,8 @@ namespace BfsApi
         
         private bool bankGiroNumberField;
         
+        private bool kIDField;
+        
         private bool statusField;
         
         /// <remarks/>
@@ -40058,6 +40133,20 @@ namespace BfsApi
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=18)]
+        public bool KID
+        {
+            get
+            {
+                return this.kIDField;
+            }
+            set
+            {
+                this.kIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=19)]
         public bool Status
         {
             get
@@ -86625,6 +86714,11 @@ namespace BfsApi
         public virtual System.Threading.Tasks.Task OpenAsync()
         {
             return System.Threading.Tasks.Task.Factory.FromAsync(((System.ServiceModel.ICommunicationObject)(this)).BeginOpen(null, null), new System.Action<System.IAsyncResult>(((System.ServiceModel.ICommunicationObject)(this)).EndOpen));
+        }
+        
+        public virtual System.Threading.Tasks.Task CloseAsync()
+        {
+            return System.Threading.Tasks.Task.Factory.FromAsync(((System.ServiceModel.ICommunicationObject)(this)).BeginClose(null, null), new System.Action<System.IAsyncResult>(((System.ServiceModel.ICommunicationObject)(this)).EndClose));
         }
         
         private static System.ServiceModel.Channels.Binding GetBindingForEndpoint(EndpointConfiguration endpointConfiguration)
