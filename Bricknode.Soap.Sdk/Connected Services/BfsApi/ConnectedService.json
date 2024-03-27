@@ -1,7 +1,7 @@
 {
   "ExtendedData": {
     "inputs": [
-      "https://nonprod-bfs-feat-bb-2515-wa.azurewebsites.net/api/bfsapi.asmx"
+      "http://localhost:20010/bfsapi.asmx"
     ],
     "collectionTypes": [
       "System.Array",
