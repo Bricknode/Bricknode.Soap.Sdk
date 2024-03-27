@@ -62,9 +62,33 @@ namespace Bricknode.Soap.Sdk.Services
             var client = await GetClientAsync(bfsApiClientName);
             var response = await client.GetRecurringOrderTemplatesAsync(request);
 
-            if (ValidateResponse(response)) return response;
+            if (ValidateResponse(response)) 
+                return response;
 
             LogErrors(response.Result);
+
+            return response;
+        }
+
+        /// <summary>
+        ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/3729227777/in+progress+CreateRecurringOrderTemplateAvtaleGiro
+        /// </summary>
+        /// <param name="recurringOrders"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        public async Task<CreateRecurringOrderTemplateAvtaleGiroResponse> CreateRecurringOrderTemplateAvtaleGiroAsync(
+            RecurringOrderTemplateAvtaleGiro[] recurringOrders, string? bfsApiClientName = null)
+        {
+            var request = await GetRequestAsync<CreateRecurringOrderTemplateAvtaleGiroRequest>(bfsApiClientName);
+            request.Entities = recurringOrders;
+
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.CreateRecurringOrderTemplatesAvtaleGiroAsync(request);
+
+            if (ValidateResponse(response))
+                return response;
+
+            LogErrors(response.Entities);
 
             return response;
         }
@@ -370,7 +394,90 @@ namespace Bricknode.Soap.Sdk.Services
 
         #endregion
 
+        #region AvtaleGiroOrders
+
+        /// <summary>
+        /// TODO Pata: Change to AvtaleGiroOrders
+        /// https://bricknode.atlassian.net/wiki/spaces/API/pages/1951499222/GetAutoGiroOrders
+        /// </summary>
+        /// <param name="filters"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        public async Task<GetAvtaleGiroOrdersResponse> GetAvtaleGiroOrdersAsync(GetAvtaleGiroOrdersArgs filters, string? bfsApiClientName = null)
+        {
+            var request = await GetRequestAsync<GetAvtaleGiroOrdersRequest>(bfsApiClientName);
+
+            request.Args = filters;
+
+            request.Fields = GetFields<GetAvtaleGiroOrdersFields>();
+
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetAvtaleGiroOrdersAsync(request);
+
+            if (ValidateResponse(response)) 
+                return response;
+
+            LogErrors(response.Result);
+
+            return response;
+        }
+
+        #endregion
+
         #region TransferOrders
+
+        /// <summary>
+        /// TODO Pata: Target right Documentation
+        ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/81100944/GetWithdrawalTransferOrders
+        /// </summary>
+        /// <param name="filters"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        public async Task<GetTransferOrdersResponse> GetTransferOrdersAsync(
+            GetTransferOrdersArgs filters, string? bfsApiClientName = null)
+        {
+            var request = await GetRequestAsync<GetTransferOrdersRequest>(bfsApiClientName);
+
+            request.Args = filters;
+
+            request.Fields = GetFields<GetTransferOrdersFields>();
+
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetTransferOrdersAsync(request);
+
+            if (ValidateResponse(response)) 
+                return response;
+
+            LogErrors(response.Result);
+
+            return response;
+        }
+
+        /// <summary>
+        /// TODO Pata: Update Documentation
+        ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/
+        /// </summary>
+        /// <param name="updateTransferOrders"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        public async Task<UpdateTransferOrderResponse> UpdateTransferOrderAsync(UpdateTransferOrder[] updateTransferOrders, string? bfsApiClientName = null)
+        {
+            var request = await GetRequestAsync<UpdateTransferOrderRequest>(bfsApiClientName);
+
+            request.Entities = updateTransferOrders;
+
+            request.Fields = GetFields<UpdateTransferOrderFields>();
+
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.UpdateTransferOrdersAsync(request);
+
+            if (ValidateResponse(response)) 
+                return response;
+
+            LogErrors(response.Entities);
+
+            return response;
+        }
 
         /// <summary>
         ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/81100944/GetWithdrawalTransferOrders

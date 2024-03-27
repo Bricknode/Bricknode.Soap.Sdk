@@ -63,6 +63,25 @@ namespace Bricknode.Soap.Sdk.Services
         Task<GetExternalFundBatchOrdersResponse> GetExternalFundBatchOrdersAsync(GetExternalFundBatchOrdersArgs filters, string? bfsApiClientName = null);
 
         /// <summary>
+        /// TODO Pata: Target right Documentation
+        ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/81100944/GetWithdrawalTransferOrders
+        /// </summary>
+        /// <param name="filters"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        Task<GetTransferOrdersResponse> GetTransferOrdersAsync(
+            GetTransferOrdersArgs filters, string? bfsApiClientName = null);
+
+        /// <summary>
+        /// TODO Pata: Update Documentation
+        ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/
+        /// </summary>
+        /// <param name="updateTransferOrders"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        Task<UpdateTransferOrderResponse> UpdateTransferOrderAsync(UpdateTransferOrder[] updateTransferOrders, string? bfsApiClientName = null);
+
+        /// <summary>
         /// https://bricknode.atlassian.net/wiki/spaces/API/pages/81100944/GetWithdrawalTransferOrders
         /// </summary>
         /// <param name="filters"></param>
@@ -201,6 +220,15 @@ namespace Bricknode.Soap.Sdk.Services
         Task<GetRecurringOrderTemplatesResponse> GetRecurringOrderTemplatesAsync(GetRecurringOrderTemplatesArgs filters, string? bfsApiClientName = null);
 
         /// <summary>
+        ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/3729227777/in+progress+CreateRecurringOrderTemplateAvtaleGiro
+        /// </summary>
+        /// <param name="recurringOrders"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        Task<CreateRecurringOrderTemplateAvtaleGiroResponse> CreateRecurringOrderTemplateAvtaleGiroAsync(
+            RecurringOrderTemplateAvtaleGiro[] recurringOrders, string? bfsApiClientName = null);
+
+        /// <summary>
         ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/958922769/CreateRecurringOrderTemplatesAutogiro
         /// </summary>
         /// <param name="recurringOrders"></param>
@@ -317,6 +345,15 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         Task<GetAutoGiroOrdersResponse> GetAutoGiroOrdersAsync(GetAutoGiroOrdersArgs filters, string? bfsApiClientName = null);
+
+        /// <summary>
+        /// TODO Pata: Change to AvtaleGiroOrders
+        /// https://bricknode.atlassian.net/wiki/spaces/API/pages/1951499222/GetAutoGiroOrders
+        /// </summary>
+        /// <param name="filters"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        Task<GetAvtaleGiroOrdersResponse> GetAvtaleGiroOrdersAsync(GetAvtaleGiroOrdersArgs filters, string? bfsApiClientName = null);
 
         /// <summary>
         /// https://bricknode.atlassian.net/wiki/spaces/API/pages/2183299109/CreateAutoGiroDepositOrders
