@@ -735,29 +735,6 @@ namespace Bricknode.Soap.Sdk.Services
         #region TransferOrders Transitions
 
         /// <summary>
-        ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/83132535/DepositCashBatchOrder+BatchFill
-        /// </summary>
-        /// <param name="depositCashBatchOrder"></param>
-        /// <param name="bfsApiClientName"></param>
-        /// <returns></returns>
-        public async Task<DepositCashBatchOrder_BatchFillResponse> BatchFillDepositCashBatchOrder(
-            DepositCashBatchOrder_BatchFill depositCashBatchOrder, string? bfsApiClientName = null)
-        {
-            var request = await GetRequestAsync<DepositCashBatchOrder_BatchFillRequest>(bfsApiClientName);
-
-            request.WorkflowTriggerDataEntity = depositCashBatchOrder;
-
-            var client = await GetClientAsync(bfsApiClientName);
-            var response = await client.DepositCashBatchOrder_BatchFillAsync(request);
-
-            if (ValidateResponse(response)) return response;
-
-            LogErrors(response.Message);
-
-            return response;
-        }
-
-        /// <summary>
         ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/83132541/WithdrawalCashBatchOrder+Fill
         /// </summary>
         /// <param name="withdrawalCashBatchOrderFill"></param>
