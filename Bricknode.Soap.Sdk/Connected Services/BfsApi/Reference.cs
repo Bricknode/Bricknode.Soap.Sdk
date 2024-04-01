@@ -18241,6 +18241,8 @@ namespace BfsApi
         
         private bool transferReceiverField;
         
+        private bool businessDateField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public bool BrickId
@@ -18406,6 +18408,20 @@ namespace BfsApi
             set
             {
                 this.transferReceiverField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=12)]
+        public bool BusinessDate
+        {
+            get
+            {
+                return this.businessDateField;
+            }
+            set
+            {
+                this.businessDateField = value;
             }
         }
     }
@@ -59257,6 +59273,8 @@ namespace BfsApi
         
         private System.Guid transferReceiverField;
         
+        private System.DateTime businessDateField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public string TransferOrderType
@@ -59394,6 +59412,20 @@ namespace BfsApi
             set
             {
                 this.transferReceiverField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
+        public System.DateTime BusinessDate
+        {
+            get
+            {
+                return this.businessDateField;
+            }
+            set
+            {
+                this.businessDateField = value;
             }
         }
     }
@@ -75770,6 +75802,10 @@ namespace BfsApi
         
         private System.Guid[] batchOrdersField;
         
+        private System.Nullable<System.DateTime> businessDateFromField;
+        
+        private System.Nullable<System.DateTime> businessDateToField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
         public System.Guid[] BrickIds
@@ -75935,6 +75971,34 @@ namespace BfsApi
             set
             {
                 this.batchOrdersField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=12)]
+        public System.Nullable<System.DateTime> BusinessDateFrom
+        {
+            get
+            {
+                return this.businessDateFromField;
+            }
+            set
+            {
+                this.businessDateFromField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=13)]
+        public System.Nullable<System.DateTime> BusinessDateTo
+        {
+            get
+            {
+                return this.businessDateToField;
+            }
+            set
+            {
+                this.businessDateToField = value;
             }
         }
     }
