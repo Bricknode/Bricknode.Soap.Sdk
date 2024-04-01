@@ -79,7 +79,7 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="updateTransferOrders"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        Task<UpdateTransferOrderResponse> UpdateTransferOrderAsync(UpdateTransferOrder[] updateTransferOrders, string? bfsApiClientName = null);
+        Task<UpdateTransferOrderResponse> UpdateTransferOrdersAsync(UpdateTransferOrder[] updateTransferOrders, string? bfsApiClientName = null);
 
         /// <summary>
         /// https://bricknode.atlassian.net/wiki/spaces/API/pages/81100944/GetWithdrawalTransferOrders

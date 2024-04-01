@@ -460,7 +460,7 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="updateTransferOrders"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<UpdateTransferOrderResponse> UpdateTransferOrderAsync(UpdateTransferOrder[] updateTransferOrders, string? bfsApiClientName = null)
+        public async Task<UpdateTransferOrderResponse> UpdateTransferOrdersAsync(UpdateTransferOrder[] updateTransferOrders, string? bfsApiClientName = null)
         {
             var request = await GetRequestAsync<UpdateTransferOrderRequest>(bfsApiClientName);
 
