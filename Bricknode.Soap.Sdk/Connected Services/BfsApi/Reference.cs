@@ -7526,6 +7526,7 @@ namespace BfsApi
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetAccountFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetDecisionMakerFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetBusinessEventFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetExternalFundBatchOrderFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetAvtaleGiroOrdersFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetAutoGiroOrdersFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetDepositTransferOrdersFields))]
@@ -17550,6 +17551,318 @@ namespace BfsApi
             set
             {
                 this.commentField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetExternalFundBatchOrderFields : FieldBase
+    {
+        
+        private bool brickIdField;
+        
+        private bool createdDateField;
+        
+        private bool cashAmountField;
+        
+        private bool instrumentAmountField;
+        
+        private bool tradeOrderDirectionKeyField;
+        
+        private bool instrumentField;
+        
+        private bool cashField;
+        
+        private bool priceField;
+        
+        private bool stateField;
+        
+        private bool executionInterfaceField;
+        
+        private bool executionInterfaceKeyField;
+        
+        private bool isUnitOrderField;
+        
+        private bool orderNoField;
+        
+        private bool isPrePayedField;
+        
+        private bool sentDateField;
+        
+        private bool settledAmountField;
+        
+        private bool externalReferenceField;
+        
+        private bool tradeDateField;
+        
+        private bool settlementDateField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public bool BrickId
+        {
+            get
+            {
+                return this.brickIdField;
+            }
+            set
+            {
+                this.brickIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public bool CreatedDate
+        {
+            get
+            {
+                return this.createdDateField;
+            }
+            set
+            {
+                this.createdDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public bool CashAmount
+        {
+            get
+            {
+                return this.cashAmountField;
+            }
+            set
+            {
+                this.cashAmountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public bool InstrumentAmount
+        {
+            get
+            {
+                return this.instrumentAmountField;
+            }
+            set
+            {
+                this.instrumentAmountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public bool TradeOrderDirectionKey
+        {
+            get
+            {
+                return this.tradeOrderDirectionKeyField;
+            }
+            set
+            {
+                this.tradeOrderDirectionKeyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public bool Instrument
+        {
+            get
+            {
+                return this.instrumentField;
+            }
+            set
+            {
+                this.instrumentField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public bool Cash
+        {
+            get
+            {
+                return this.cashField;
+            }
+            set
+            {
+                this.cashField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public bool Price
+        {
+            get
+            {
+                return this.priceField;
+            }
+            set
+            {
+                this.priceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+        public bool State
+        {
+            get
+            {
+                return this.stateField;
+            }
+            set
+            {
+                this.stateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
+        public bool ExecutionInterface
+        {
+            get
+            {
+                return this.executionInterfaceField;
+            }
+            set
+            {
+                this.executionInterfaceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
+        public bool ExecutionInterfaceKey
+        {
+            get
+            {
+                return this.executionInterfaceKeyField;
+            }
+            set
+            {
+                this.executionInterfaceKeyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
+        public bool IsUnitOrder
+        {
+            get
+            {
+                return this.isUnitOrderField;
+            }
+            set
+            {
+                this.isUnitOrderField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=12)]
+        public bool OrderNo
+        {
+            get
+            {
+                return this.orderNoField;
+            }
+            set
+            {
+                this.orderNoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=13)]
+        public bool IsPrePayed
+        {
+            get
+            {
+                return this.isPrePayedField;
+            }
+            set
+            {
+                this.isPrePayedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=14)]
+        public bool SentDate
+        {
+            get
+            {
+                return this.sentDateField;
+            }
+            set
+            {
+                this.sentDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=15)]
+        public bool SettledAmount
+        {
+            get
+            {
+                return this.settledAmountField;
+            }
+            set
+            {
+                this.settledAmountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=16)]
+        public bool ExternalReference
+        {
+            get
+            {
+                return this.externalReferenceField;
+            }
+            set
+            {
+                this.externalReferenceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=17)]
+        public bool TradeDate
+        {
+            get
+            {
+                return this.tradeDateField;
+            }
+            set
+            {
+                this.tradeDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=18)]
+        public bool SettlementDate
+        {
+            get
+            {
+                return this.settlementDateField;
+            }
+            set
+            {
+                this.settlementDateField = value;
             }
         }
     }
@@ -28144,6 +28457,22 @@ namespace BfsApi
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
     public partial class MfexExecutionInterface : ExecutionInterface
     {
+        
+        private bool prePaidWorkflowField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public bool PrePaidWorkflow
+        {
+            get
+            {
+                return this.prePaidWorkflowField;
+            }
+            set
+            {
+                this.prePaidWorkflowField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -28160,6 +28489,8 @@ namespace BfsApi
         private System.Nullable<System.DateTime> firstTradeDateField;
         
         private System.Nullable<System.DateTime> lastTradeDateField;
+        
+        private bool prePaidWorkflowField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -28214,6 +28545,20 @@ namespace BfsApi
             set
             {
                 this.lastTradeDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public bool PrePaidWorkflow
+        {
+            get
+            {
+                return this.prePaidWorkflowField;
+            }
+            set
+            {
+                this.prePaidWorkflowField = value;
             }
         }
     }
@@ -56047,318 +56392,6 @@ namespace BfsApi
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=16)]
         public System.DateTime SettlementDate
-        {
-            get
-            {
-                return this.settlementDateField;
-            }
-            set
-            {
-                this.settlementDateField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class GetExternalFundBatchOrderFields
-    {
-        
-        private bool brickIdField;
-        
-        private bool createdDateField;
-        
-        private bool cashAmountField;
-        
-        private bool instrumentAmountField;
-        
-        private bool tradeOrderDirectionKeyField;
-        
-        private bool instrumentField;
-        
-        private bool cashField;
-        
-        private bool priceField;
-        
-        private bool stateField;
-        
-        private bool executionInterfaceField;
-        
-        private bool executionInterfaceKeyField;
-        
-        private bool isUnitOrderField;
-        
-        private bool orderNoField;
-        
-        private bool isPrePayedField;
-        
-        private bool sentDateField;
-        
-        private bool settledAmountField;
-        
-        private bool externalReferenceField;
-        
-        private bool tradeDateField;
-        
-        private bool settlementDateField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public bool BrickId
-        {
-            get
-            {
-                return this.brickIdField;
-            }
-            set
-            {
-                this.brickIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public bool CreatedDate
-        {
-            get
-            {
-                return this.createdDateField;
-            }
-            set
-            {
-                this.createdDateField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public bool CashAmount
-        {
-            get
-            {
-                return this.cashAmountField;
-            }
-            set
-            {
-                this.cashAmountField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
-        public bool InstrumentAmount
-        {
-            get
-            {
-                return this.instrumentAmountField;
-            }
-            set
-            {
-                this.instrumentAmountField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
-        public bool TradeOrderDirectionKey
-        {
-            get
-            {
-                return this.tradeOrderDirectionKeyField;
-            }
-            set
-            {
-                this.tradeOrderDirectionKeyField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
-        public bool Instrument
-        {
-            get
-            {
-                return this.instrumentField;
-            }
-            set
-            {
-                this.instrumentField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
-        public bool Cash
-        {
-            get
-            {
-                return this.cashField;
-            }
-            set
-            {
-                this.cashField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
-        public bool Price
-        {
-            get
-            {
-                return this.priceField;
-            }
-            set
-            {
-                this.priceField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
-        public bool State
-        {
-            get
-            {
-                return this.stateField;
-            }
-            set
-            {
-                this.stateField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
-        public bool ExecutionInterface
-        {
-            get
-            {
-                return this.executionInterfaceField;
-            }
-            set
-            {
-                this.executionInterfaceField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
-        public bool ExecutionInterfaceKey
-        {
-            get
-            {
-                return this.executionInterfaceKeyField;
-            }
-            set
-            {
-                this.executionInterfaceKeyField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
-        public bool IsUnitOrder
-        {
-            get
-            {
-                return this.isUnitOrderField;
-            }
-            set
-            {
-                this.isUnitOrderField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=12)]
-        public bool OrderNo
-        {
-            get
-            {
-                return this.orderNoField;
-            }
-            set
-            {
-                this.orderNoField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=13)]
-        public bool IsPrePayed
-        {
-            get
-            {
-                return this.isPrePayedField;
-            }
-            set
-            {
-                this.isPrePayedField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=14)]
-        public bool SentDate
-        {
-            get
-            {
-                return this.sentDateField;
-            }
-            set
-            {
-                this.sentDateField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=15)]
-        public bool SettledAmount
-        {
-            get
-            {
-                return this.settledAmountField;
-            }
-            set
-            {
-                this.settledAmountField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=16)]
-        public bool ExternalReference
-        {
-            get
-            {
-                return this.externalReferenceField;
-            }
-            set
-            {
-                this.externalReferenceField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=17)]
-        public bool TradeDate
-        {
-            get
-            {
-                return this.tradeDateField;
-            }
-            set
-            {
-                this.tradeDateField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=18)]
-        public bool SettlementDate
         {
             get
             {
