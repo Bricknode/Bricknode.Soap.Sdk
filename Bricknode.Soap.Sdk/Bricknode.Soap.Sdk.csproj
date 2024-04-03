@@ -7,7 +7,7 @@
     <ApplicationIcon />
 
     <!--Nuget metadata starts here-->
-    <PackageVersion>10.9.0-betastack6</PackageVersion>
+    <PackageVersion>10.8.0</PackageVersion>
     <PackageId>Bricknode.Soap.Sdk</PackageId>
     <Title>Bricknode SOAP SDK</Title>
     <Authors>Bricknode</Authors>
@@ -39,10 +39,6 @@
 
   <ItemGroup>
     <WCFMetadata Include="Connected Services" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Connected Services\" />
   </ItemGroup>
 
 </Project>
