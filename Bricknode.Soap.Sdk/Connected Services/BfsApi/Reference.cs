@@ -24829,6 +24829,8 @@ namespace BfsApi
         
         private bool isTerminatedField;
         
+        private bool forcePasswordResetField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public bool IsApproved
@@ -25724,6 +25726,20 @@ namespace BfsApi
                 this.isTerminatedField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=64)]
+        public bool ForcePasswordReset
+        {
+            get
+            {
+                return this.forcePasswordResetField;
+            }
+            set
+            {
+                this.forcePasswordResetField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -25912,6 +25928,8 @@ namespace BfsApi
         private bool isCustodianField;
         
         private TIN[] tINsField;
+        
+        private bool forcePasswordResetField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -26890,6 +26908,20 @@ namespace BfsApi
             set
             {
                 this.tINsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=70)]
+        public bool ForcePasswordReset
+        {
+            get
+            {
+                return this.forcePasswordResetField;
+            }
+            set
+            {
+                this.forcePasswordResetField = value;
             }
         }
     }
@@ -28210,6 +28242,8 @@ namespace BfsApi
         
         private TIN[] tINsField;
         
+        private bool forcePasswordResetField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public string FirstName
@@ -29243,6 +29277,20 @@ namespace BfsApi
             set
             {
                 this.tINsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=74)]
+        public bool ForcePasswordReset
+        {
+            get
+            {
+                return this.forcePasswordResetField;
+            }
+            set
+            {
+                this.forcePasswordResetField = value;
             }
         }
     }
@@ -46701,6 +46749,8 @@ namespace BfsApi
         
         private bool isTerminatedField;
         
+        private bool forcePasswordResetField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public bool IsApproved
@@ -47582,6 +47632,20 @@ namespace BfsApi
                 this.isTerminatedField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=63)]
+        public bool ForcePasswordReset
+        {
+            get
+            {
+                return this.forcePasswordResetField;
+            }
+            set
+            {
+                this.forcePasswordResetField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -48112,6 +48176,8 @@ namespace BfsApi
         private bool lastUpdatedDateField;
         
         private bool tINsField;
+        
+        private bool forcePasswordResetField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -49174,6 +49240,20 @@ namespace BfsApi
             set
             {
                 this.tINsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=76)]
+        public bool ForcePasswordReset
+        {
+            get
+            {
+                return this.forcePasswordResetField;
+            }
+            set
+            {
+                this.forcePasswordResetField = value;
             }
         }
     }
@@ -74420,6 +74500,8 @@ namespace BfsApi
         
         private System.Nullable<bool> isNaturalPersonField;
         
+        private System.Nullable<bool> forcePasswordResetField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
         public System.Guid[] BrickIds
@@ -75145,6 +75227,20 @@ namespace BfsApi
             set
             {
                 this.isNaturalPersonField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=52)]
+        public System.Nullable<bool> ForcePasswordReset
+        {
+            get
+            {
+                return this.forcePasswordResetField;
+            }
+            set
+            {
+                this.forcePasswordResetField = value;
             }
         }
     }
