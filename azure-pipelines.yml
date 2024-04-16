@@ -8,6 +8,7 @@ pool:
 
 variables:
   isMain: $[eq(variables['Build.SourceBranch'], 'refs/heads/main')]
+  isFeature: $[startsWith(variables['Build.SourceBranch'], 'refs/heads/feature/')]
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
@@ -32,7 +33,7 @@ steps:
     configuration: '$(buildConfiguration)'
 
 - task: DotNetCoreCLI@2
-  condition: and(succeeded(), eq(variables.isMain, 'true'))
+  condition: and(succeeded(), or(eq(variables.isMain, 'true'), eq(variables.isFeature, 'true')))
   inputs:
     command: 'pack'
     packagesToPack: '**/*.csproj'
@@ -40,7 +41,7 @@ steps:
     packDirectory: '$(Build.ArtifactStagingDirectory)'
 
 - task: NuGetCommand@2
-  condition: and(succeeded(), eq(variables.isMain, 'true'))
+  condition: and(succeeded(), or(eq(variables.isMain, 'true'), eq(variables.isFeature, 'true')))
   inputs:
     command: 'custom'
     arguments: 'push -Source https://api.nuget.org/v3/index.json -ApiKey $(bricknode-soap-sdk-nuget-org-api-key) $(System.ArtifactsDirectory)/**/*.nupkg -SkipDuplicate -NoSymbols'
