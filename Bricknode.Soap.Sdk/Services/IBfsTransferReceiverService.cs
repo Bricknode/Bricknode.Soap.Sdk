@@ -29,5 +29,15 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         Task<UpdateTransferReceiversResponse> UpdateTransferReceiversAsync(UpdateTransferReceiver[] updateTransferReceivers, UpdateTransferReceiverFields fieldsToUpdate, string? bfsApiClientName = null);
+
+        /// <summary>
+        ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/175800361/UpdateTransferReceiverStates
+        /// </summary>
+        /// <param name="updateTransferReceiverStates"></param>
+        /// <param name="fieldsToUpdate"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        Task<UpdateTransferReceiverStatesResponse> UpdateTransferReceiverStatesAsync(
+            UpdateTransferReceiverState[] updateTransferReceiverStates, UpdateTransferReceiverStatesFields fieldsToUpdate, string? bfsApiClientName = null);
     }
 }

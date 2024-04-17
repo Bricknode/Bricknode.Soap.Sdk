@@ -1,7 +1,7 @@
 {
   "ExtendedData": {
     "inputs": [
-      "https://qa.bricknode.com/api/bfsapi.asmx"
+      "http://localhost:20010/bfsapi.asmx"
     ],
     "collectionTypes": [
       "System.Array",
