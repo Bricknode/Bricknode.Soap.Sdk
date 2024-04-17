@@ -63,6 +63,26 @@ namespace Bricknode.Soap.Sdk.Services
         Task<GetExternalFundBatchOrdersResponse> GetExternalFundBatchOrdersAsync(GetExternalFundBatchOrdersArgs filters, string? bfsApiClientName = null);
 
         /// <summary>
+        /// TODO Pata: Target right Documentation
+        ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/81100944/GetWithdrawalTransferOrders
+        /// </summary>
+        /// <param name="filters"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        Task<GetTransferOrdersResponse> GetTransferOrdersAsync(
+            GetTransferOrdersArgs filters, string? bfsApiClientName = null);
+
+        /// <summary>
+        /// TODO Pata: Update Documentation
+        ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/
+        /// </summary>
+        /// <param name="updateTransferOrders"></param>
+        /// <param name="updateTransferOrderFields"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        Task<UpdateTransferOrderStatesResponse> UpdateTransferOrdersAsync(UpdateTransferOrderState[] updateTransferOrders, UpdateTransferOrderStatesFields updateTransferOrderFields, string? bfsApiClientName = null);
+
+        /// <summary>
         /// https://bricknode.atlassian.net/wiki/spaces/API/pages/81100944/GetWithdrawalTransferOrders
         /// </summary>
         /// <param name="filters"></param>
@@ -125,14 +145,6 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         Task<CreateAutoGiroWithdrawalOrderResponse> CreateAutoGiroWithdrawalOrderAsync(AutoGiroWithdrawalOrder[] autoGiroWithdrawalOrders, string? bfsApiClientName = null);
-
-        /// <summary>
-        /// https://bricknode.atlassian.net/wiki/spaces/API/pages/83132535/DepositCashBatchOrder+BatchFill
-        /// </summary>
-        /// <param name="depositCashBatchOrder"></param>
-        /// <param name="bfsApiClientName"></param>
-        /// <returns></returns>
-        Task<DepositCashBatchOrder_BatchFillResponse> BatchFillDepositCashBatchOrder(DepositCashBatchOrder_BatchFill depositCashBatchOrder, string? bfsApiClientName = null);
 
         /// <summary>
         /// https://bricknode.atlassian.net/wiki/spaces/API/pages/83132541/WithdrawalCashBatchOrder+Fill
@@ -199,6 +211,15 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         Task<GetRecurringOrderTemplatesResponse> GetRecurringOrderTemplatesAsync(GetRecurringOrderTemplatesArgs filters, string? bfsApiClientName = null);
+
+        /// <summary>
+        ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/3729227777/in+progress+CreateRecurringOrderTemplateAvtaleGiro
+        /// </summary>
+        /// <param name="recurringOrders"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        Task<CreateRecurringOrderTemplateAvtaleGiroResponse> CreateRecurringOrderTemplateAvtaleGiroAsync(
+            RecurringOrderTemplateAvtaleGiro[] recurringOrders, string? bfsApiClientName = null);
 
         /// <summary>
         ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/958922769/CreateRecurringOrderTemplatesAutogiro
@@ -317,6 +338,15 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         Task<GetAutoGiroOrdersResponse> GetAutoGiroOrdersAsync(GetAutoGiroOrdersArgs filters, string? bfsApiClientName = null);
+
+        /// <summary>
+        /// TODO Pata: Change to AvtaleGiroOrders
+        /// https://bricknode.atlassian.net/wiki/spaces/API/pages/1951499222/GetAutoGiroOrders
+        /// </summary>
+        /// <param name="filters"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        Task<GetAvtaleGiroOrdersResponse> GetAvtaleGiroOrdersAsync(GetAvtaleGiroOrdersArgs filters, string? bfsApiClientName = null);
 
         /// <summary>
         /// https://bricknode.atlassian.net/wiki/spaces/API/pages/2183299109/CreateAutoGiroDepositOrders
