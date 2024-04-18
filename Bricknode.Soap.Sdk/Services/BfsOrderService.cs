@@ -373,6 +373,32 @@ namespace Bricknode.Soap.Sdk.Services
         #region TransferOrders
 
         /// <summary>
+        ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/3749871617/GetTransferOrders
+        /// </summary>
+        /// <param name="filters"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        public async Task<GetTransferOrdersResponse> GetTransferOrdersAsync(
+            GetTransferOrdersArgs filters, string? bfsApiClientName = null)
+        {
+            var request = await GetRequestAsync<GetTransferOrdersRequest>(bfsApiClientName);
+
+            request.Args = filters;
+
+            request.Fields = GetFields<GetTransferOrdersFields>();
+
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetTransferOrdersAsync(request);
+
+            if (ValidateResponse(response))
+                return response;
+
+            LogErrors(response.Result);
+
+            return response;
+        }
+
+        /// <summary>
         ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/81100944/GetWithdrawalTransferOrders
         /// </summary>
         /// <param name="filters"></param>
@@ -541,7 +567,7 @@ namespace Bricknode.Soap.Sdk.Services
             return response;
         }
 
-        
+
 
         #endregion
 
@@ -594,9 +620,9 @@ namespace Bricknode.Soap.Sdk.Services
 
             return response;
         }
-        
+
         #endregion
-        
+
         #region CurrencyExchangeOrders Transitions
 
         /// <summary>

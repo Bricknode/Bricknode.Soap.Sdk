@@ -63,6 +63,14 @@ namespace Bricknode.Soap.Sdk.Services
         Task<GetExternalFundBatchOrdersResponse> GetExternalFundBatchOrdersAsync(GetExternalFundBatchOrdersArgs filters, string? bfsApiClientName = null);
 
         /// <summary>
+        /// https://bricknode.atlassian.net/wiki/spaces/API/pages/3749871617/GetTransferOrders
+        /// </summary>
+        /// <param name="filters"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        Task<GetTransferOrdersResponse> GetTransferOrdersAsync(GetTransferOrdersArgs filters, string? bfsApiClientName = null);
+
+        /// <summary>
         /// https://bricknode.atlassian.net/wiki/spaces/API/pages/81100944/GetWithdrawalTransferOrders
         /// </summary>
         /// <param name="filters"></param>
