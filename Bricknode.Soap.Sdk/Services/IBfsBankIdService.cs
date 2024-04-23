@@ -14,7 +14,7 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="authenticatePerson"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        Task<BankIdAuthenticateResponse> InitiateBankIdAuthenticationAsync(string ssn, BankIdType bankIdType,
+        Task<BankIdAuthenticateResponse> InitiateBankIdAuthenticationAsync(BankIdType bankIdType,
             Domain domain, bool authenticatePerson = false, string? bfsApiClientName = null);
 
         /// <summary>
@@ -27,8 +27,7 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="authenticatePerson"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        Task<BankIdSignResponse> InitiateBankIdSignature(BankIdType bankIdType, Domain domain, string ssn,
-            string signingText, bool authenticatePerson = false, string? bfsApiClientName = null);
+        Task<BankIdSignResponse> InitiateBankIdSignature(BankIdType bankIdType, Domain domain, string signingText, bool authenticatePerson = false, string? bfsApiClientName = null);
 
         /// <summary>
         /// https://bricknode.atlassian.net/wiki/spaces/API/pages/53674418/GetBankIdStatus
