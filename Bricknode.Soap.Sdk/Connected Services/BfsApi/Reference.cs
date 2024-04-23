@@ -5864,6 +5864,46 @@ namespace BfsApi
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class QRCode
+    {
+        
+        private string codeField;
+        
+        private int timeField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string Code
+        {
+            get
+            {
+                return this.codeField;
+            }
+            set
+            {
+                this.codeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public int Time
+        {
+            get
+            {
+                return this.timeField;
+            }
+            set
+            {
+                this.timeField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
     public partial class GetHistoricPositionResponseRow
     {
         
@@ -46538,6 +46578,8 @@ namespace BfsApi
         
         private CompletionData completionDataField;
         
+        private QRCode[] qRCodesField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public string PersonalNumber
@@ -46621,6 +46663,20 @@ namespace BfsApi
                 this.completionDataField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=6)]
+        public QRCode[] QRCodes
+        {
+            get
+            {
+                return this.qRCodesField;
+            }
+            set
+            {
+                this.qRCodesField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -46643,30 +46699,18 @@ namespace BfsApi
     public partial class BankIdSignResponse : Response
     {
         
-        private string personalNumberField;
-        
         private BankIdType bankIdTypeField;
         
         private string orderReferenceField;
         
         private string authTokenField;
         
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string PersonalNumber
-        {
-            get
-            {
-                return this.personalNumberField;
-            }
-            set
-            {
-                this.personalNumberField = value;
-            }
-        }
+        private QRCode[] qRCodesField;
+        
+        private System.DateTime startTimeField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public BankIdType BankIdType
         {
             get
@@ -46680,7 +46724,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         public string OrderReference
         {
             get
@@ -46694,7 +46738,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
         public string AuthToken
         {
             get
@@ -46704,6 +46748,34 @@ namespace BfsApi
             set
             {
                 this.authTokenField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=3)]
+        public QRCode[] QRCodes
+        {
+            get
+            {
+                return this.qRCodesField;
+            }
+            set
+            {
+                this.qRCodesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public System.DateTime StartTime
+        {
+            get
+            {
+                return this.startTimeField;
+            }
+            set
+            {
+                this.startTimeField = value;
             }
         }
     }
@@ -46779,30 +46851,18 @@ namespace BfsApi
     public partial class BankIdAuthenticateResponse : Response
     {
         
-        private string personalNumberField;
-        
         private BankIdType bankIdTypeField;
         
         private string orderReferenceField;
         
         private string authTokenField;
         
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string PersonalNumber
-        {
-            get
-            {
-                return this.personalNumberField;
-            }
-            set
-            {
-                this.personalNumberField = value;
-            }
-        }
+        private QRCode[] qRCodesField;
+        
+        private System.DateTime startTimeField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public BankIdType BankIdType
         {
             get
@@ -46816,7 +46876,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         public string OrderReference
         {
             get
@@ -46830,7 +46890,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
         public string AuthToken
         {
             get
@@ -46840,6 +46900,34 @@ namespace BfsApi
             set
             {
                 this.authTokenField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=3)]
+        public QRCode[] QRCodes
+        {
+            get
+            {
+                return this.qRCodesField;
+            }
+            set
+            {
+                this.qRCodesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public System.DateTime StartTime
+        {
+            get
+            {
+                return this.startTimeField;
+            }
+            set
+            {
+                this.startTimeField = value;
             }
         }
     }
@@ -83070,6 +83158,8 @@ namespace BfsApi
         
         private string orderReferenceField;
         
+        private System.Nullable<bool> authenticatePersonField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public BankIdType BankIdType
@@ -83097,6 +83187,20 @@ namespace BfsApi
                 this.orderReferenceField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
+        public System.Nullable<bool> AuthenticatePerson
+        {
+            get
+            {
+                return this.authenticatePersonField;
+            }
+            set
+            {
+                this.authenticatePersonField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -83106,8 +83210,6 @@ namespace BfsApi
     public partial class BankIdSignRequest : AuthenticateRequest
     {
         
-        private string personalNumberField;
-        
         private string signingTextField;
         
         private BankIdType bankIdTypeField;
@@ -83116,20 +83218,6 @@ namespace BfsApi
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string PersonalNumber
-        {
-            get
-            {
-                return this.personalNumberField;
-            }
-            set
-            {
-                this.personalNumberField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         public string SigningText
         {
             get
@@ -83143,7 +83231,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         public BankIdType BankIdType
         {
             get
@@ -83157,7 +83245,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
         public System.Nullable<bool> AuthenticatePerson
         {
             get
@@ -83218,28 +83306,12 @@ namespace BfsApi
     public partial class BankIdAuthenticateRequest : AuthenticateRequest
     {
         
-        private string personalNumberField;
-        
         private BankIdType bankIdTypeField;
         
         private System.Nullable<bool> authenticatePersonField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public string PersonalNumber
-        {
-            get
-            {
-                return this.personalNumberField;
-            }
-            set
-            {
-                this.personalNumberField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         public BankIdType BankIdType
         {
             get
@@ -83253,7 +83325,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
         public System.Nullable<bool> AuthenticatePerson
         {
             get
@@ -87610,6 +87682,11 @@ namespace BfsApi
         public virtual System.Threading.Tasks.Task OpenAsync()
         {
             return System.Threading.Tasks.Task.Factory.FromAsync(((System.ServiceModel.ICommunicationObject)(this)).BeginOpen(null, null), new System.Action<System.IAsyncResult>(((System.ServiceModel.ICommunicationObject)(this)).EndOpen));
+        }
+        
+        public virtual System.Threading.Tasks.Task CloseAsync()
+        {
+            return System.Threading.Tasks.Task.Factory.FromAsync(((System.ServiceModel.ICommunicationObject)(this)).BeginClose(null, null), new System.Action<System.IAsyncResult>(((System.ServiceModel.ICommunicationObject)(this)).EndClose));
         }
         
         private static System.ServiceModel.Channels.Binding GetBindingForEndpoint(EndpointConfiguration endpointConfiguration)
