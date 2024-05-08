@@ -40695,6 +40695,12 @@ namespace BfsApi
         
         private System.Guid orderIdField;
         
+        private System.Guid cancelBatchField;
+        
+        private string cancelCommentField;
+        
+        private bool cancelLinkedOrdersField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public System.Guid OrderId
@@ -40706,6 +40712,48 @@ namespace BfsApi
             set
             {
                 this.orderIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public System.Guid CancelBatch
+        {
+            get
+            {
+                return this.cancelBatchField;
+            }
+            set
+            {
+                this.cancelBatchField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string CancelComment
+        {
+            get
+            {
+                return this.cancelCommentField;
+            }
+            set
+            {
+                this.cancelCommentField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public bool CancelLinkedOrders
+        {
+            get
+            {
+                return this.cancelLinkedOrdersField;
+            }
+            set
+            {
+                this.cancelLinkedOrdersField = value;
             }
         }
     }
