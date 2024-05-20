@@ -16,6 +16,23 @@ namespace BfsApi
     public interface bfsapiSoap
     {
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateInsuranceProducts", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfCreateCustomFieldDto))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfUpdateCustomFieldDto))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomFieldDto))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DtoBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
+        System.Threading.Tasks.Task<BfsApi.CreateInsuranceProductsResponse> CreateInsuranceProductsAsync(BfsApi.CreateInsuranceProductsRequest req);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateInsuranceProducts", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfCreateCustomFieldDto))]
@@ -2447,6 +2464,23 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
         System.Threading.Tasks.Task<BfsApi.UpdateRecurringOrderTemplateAutoGiroResponse> UpdateRecurringOrderTemplateAutoGiroAsync(BfsApi.UpdateRecurringOrderTemplateAutoGiroRequest req);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateRecurringOrderTemplatesAvtaleGiro", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfCreateCustomFieldDto))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfUpdateCustomFieldDto))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomFieldDto))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DtoBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
+        System.Threading.Tasks.Task<BfsApi.CreateRecurringOrderTemplateAvtaleGiroResponse> CreateRecurringOrderTemplatesAvtaleGiroAsync(BfsApi.CreateRecurringOrderTemplateAvtaleGiroRequest req);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetRecurringOrderTemplates", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfCreateCustomFieldDto))]
@@ -2718,48 +2752,29 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
         System.Threading.Tasks.Task<BfsApi.GetInsuranceProductsResponse> GetInsuranceProductsAsync(BfsApi.GetInsuranceProductsRequest req);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateInsuranceProducts", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfCreateCustomFieldDto))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfUpdateCustomFieldDto))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomFieldDto))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DtoBase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
-        System.Threading.Tasks.Task<BfsApi.CreateInsuranceProductsResponse> CreateInsuranceProductsAsync(BfsApi.CreateInsuranceProductsRequest req);
     }
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class UpdateInsuranceProductsRequest : APIUpdateRequestOfUpdateInsuranceProductBetterActionBrickUpdateInsuranceProductFields
+    public partial class CreateInsuranceProductsRequest : APICreateRequestOfInsuranceProductInsuranceProductBrick
     {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateInsuranceProductsRequest))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateInsuranceProductsRequest))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public abstract partial class APIUpdateRequestOfUpdateInsuranceProductBetterActionBrickUpdateInsuranceProductFields : Request
+    public abstract partial class APICreateRequestOfInsuranceProductInsuranceProductBrick : Request
     {
         
-        private UpdateInsuranceProduct[] entitiesField;
-        
-        private UpdateInsuranceProductFields fieldsField;
+        private InsuranceProduct[] entitiesField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
-        public UpdateInsuranceProduct[] Entities
+        public InsuranceProduct[] Entities
         {
             get
             {
@@ -2770,34 +2785,20 @@ namespace BfsApi
                 this.entitiesField = value;
             }
         }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public UpdateInsuranceProductFields Fields
-        {
-            get
-            {
-                return this.fieldsField;
-            }
-            set
-            {
-                this.fieldsField = value;
-            }
-        }
     }
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class UpdateInsuranceProduct : EntityBase
+    public partial class InsuranceProduct : EntityBase
     {
         
         private System.Guid insuranceProductSupplierIdField;
         
         private System.Guid resellerIdField;
         
-        private System.Guid brokerIdField;
+        private System.Guid brookerIdField;
         
         private System.Guid administratorIdField;
         
@@ -2827,7 +2828,7 @@ namespace BfsApi
         
         private decimal ruleOf78Field;
         
-        private System.Guid currencyField;
+        private string currencyCodeField;
         
         private decimal insuranceCommissionField;
         
@@ -2903,15 +2904,15 @@ namespace BfsApi
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public System.Guid BrokerId
+        public System.Guid BrookerId
         {
             get
             {
-                return this.brokerIdField;
+                return this.brookerIdField;
             }
             set
             {
-                this.brokerIdField = value;
+                this.brookerIdField = value;
             }
         }
         
@@ -3113,15 +3114,15 @@ namespace BfsApi
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=17)]
-        public System.Guid Currency
+        public string CurrencyCode
         {
             get
             {
-                return this.currencyField;
+                return this.currencyCodeField;
             }
             set
             {
-                this.currencyField = value;
+                this.currencyCodeField = value;
             }
         }
         
@@ -3435,7 +3436,6 @@ namespace BfsApi
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(InsuranceProduct))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetInsuranceProductsResponseRow))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateInsuranceClaim))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(InsuranceClaim))]
@@ -3447,6 +3447,7 @@ namespace BfsApi
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetFileInfoResponseRow))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetHistoricPricesResponseRow))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetRecurringOrderTemplatesResponseRow))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RecurringOrderTemplateAvtaleGiro))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateRecurringOrderTemplateAutoGiro))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(RecurringOrderTemplateAutoGiro))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateWorkflowInstance))]
@@ -3561,6 +3562,7 @@ namespace BfsApi
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateInsurancePolicy))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(InsurancePolicy))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetInsurancePolicyResponseRow))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateInsuranceProduct))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ExecutionInterface))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ManualExecutionInterfaceOld))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ManualExecutionInterface))]
@@ -3586,7 +3588,7 @@ namespace BfsApi
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(InternalOrderSettle))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ExternalFundBatchOrderSettle))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(FundBatchOrderSettle))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateInsuranceProduct))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(InsuranceProduct))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CustomField))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -6821,8 +6823,6 @@ namespace BfsApi
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APICreateResponseOfInsuranceProduct))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateInsuranceProductsResponse))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchResponseOfGetInsuranceProductsResponseRowGetInsuranceProductsFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetInsuranceProductsResponse))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APIUpdateResponseOfUpdateInsuranceClaim))]
@@ -6851,6 +6851,8 @@ namespace BfsApi
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetHistoricPricesResponse))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchResponseOfGetRecurringOrderTemplatesResponseRowGetRecurringOrderTemplatesFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetRecurringOrderTemplatesResponse))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APICreateResponseOfRecurringOrderTemplateAvtaleGiro))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateRecurringOrderTemplateAvtaleGiroResponse))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APIUpdateResponseOfUpdateRecurringOrderTemplateAutoGiro))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateRecurringOrderTemplateAutoGiroResponse))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APICreateResponseOfRecurringOrderTemplateAutoGiro))]
@@ -7109,6 +7111,8 @@ namespace BfsApi
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetInsurancePolicyResponse))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APIUpdateResponseOfUpdateInsuranceProduct))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateInsuranceProductsResponse))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APICreateResponseOfInsuranceProduct))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateInsuranceProductsResponse))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
@@ -7130,687 +7134,6 @@ namespace BfsApi
                 this.messageField = value;
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateInsuranceProductsResponse))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public abstract partial class APICreateResponseOfInsuranceProduct : Response
-    {
-        
-        private InsuranceProduct[] entitiesField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
-        public InsuranceProduct[] Entities
-        {
-            get
-            {
-                return this.entitiesField;
-            }
-            set
-            {
-                this.entitiesField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class InsuranceProduct : EntityBase
-    {
-        
-        private System.Guid insuranceProductSupplierIdField;
-        
-        private System.Guid resellerIdField;
-        
-        private System.Guid brookerIdField;
-        
-        private System.Guid administratorIdField;
-        
-        private System.Guid accountManagerIdField;
-        
-        private System.Guid claimsAdjusterIdField;
-        
-        private string insuranceProductTypeKeyField;
-        
-        private string insuranceCategoryKeyField;
-        
-        private string keyField;
-        
-        private string nameField;
-        
-        private string descriptionStringField;
-        
-        private string productCodeField;
-        
-        private string statusKeyField;
-        
-        private string countryField;
-        
-        private decimal ruleOf12Field;
-        
-        private decimal ruleOf45Field;
-        
-        private decimal ruleOf78Field;
-        
-        private string currencyCodeField;
-        
-        private decimal insuranceCommissionField;
-        
-        private decimal retentionField;
-        
-        private double profitShareField;
-        
-        private string termsNoField;
-        
-        private string termsURLField;
-        
-        private string productVersionField;
-        
-        private System.DateTime startDateField;
-        
-        private System.DateTime endDateField;
-        
-        private string maxTermField;
-        
-        private string insurableInterestField;
-        
-        private decimal grossPriceField;
-        
-        private string premiumBasedOnField;
-        
-        private decimal netPriceField;
-        
-        private int chargeIntervalField;
-        
-        private string saleMethodField;
-        
-        private string externalReferenceField;
-        
-        private string parametersField;
-        
-        private string commentField;
-        
-        private string dealTypeKeyField;
-        
-        private int periodOfNoticeField;
-        
-        private System.DateTime rAFApprovedDateField;
-        
-        private decimal insuranceTaxField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public System.Guid InsuranceProductSupplierId
-        {
-            get
-            {
-                return this.insuranceProductSupplierIdField;
-            }
-            set
-            {
-                this.insuranceProductSupplierIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public System.Guid ResellerId
-        {
-            get
-            {
-                return this.resellerIdField;
-            }
-            set
-            {
-                this.resellerIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public System.Guid BrookerId
-        {
-            get
-            {
-                return this.brookerIdField;
-            }
-            set
-            {
-                this.brookerIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
-        public System.Guid AdministratorId
-        {
-            get
-            {
-                return this.administratorIdField;
-            }
-            set
-            {
-                this.administratorIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
-        public System.Guid AccountManagerId
-        {
-            get
-            {
-                return this.accountManagerIdField;
-            }
-            set
-            {
-                this.accountManagerIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
-        public System.Guid ClaimsAdjusterId
-        {
-            get
-            {
-                return this.claimsAdjusterIdField;
-            }
-            set
-            {
-                this.claimsAdjusterIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
-        public string InsuranceProductTypeKey
-        {
-            get
-            {
-                return this.insuranceProductTypeKeyField;
-            }
-            set
-            {
-                this.insuranceProductTypeKeyField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
-        public string InsuranceCategoryKey
-        {
-            get
-            {
-                return this.insuranceCategoryKeyField;
-            }
-            set
-            {
-                this.insuranceCategoryKeyField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
-        public string Key
-        {
-            get
-            {
-                return this.keyField;
-            }
-            set
-            {
-                this.keyField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
-        public string Name
-        {
-            get
-            {
-                return this.nameField;
-            }
-            set
-            {
-                this.nameField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
-        public string DescriptionString
-        {
-            get
-            {
-                return this.descriptionStringField;
-            }
-            set
-            {
-                this.descriptionStringField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
-        public string ProductCode
-        {
-            get
-            {
-                return this.productCodeField;
-            }
-            set
-            {
-                this.productCodeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=12)]
-        public string StatusKey
-        {
-            get
-            {
-                return this.statusKeyField;
-            }
-            set
-            {
-                this.statusKeyField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=13)]
-        public string Country
-        {
-            get
-            {
-                return this.countryField;
-            }
-            set
-            {
-                this.countryField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=14)]
-        public decimal RuleOf12
-        {
-            get
-            {
-                return this.ruleOf12Field;
-            }
-            set
-            {
-                this.ruleOf12Field = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=15)]
-        public decimal RuleOf45
-        {
-            get
-            {
-                return this.ruleOf45Field;
-            }
-            set
-            {
-                this.ruleOf45Field = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=16)]
-        public decimal RuleOf78
-        {
-            get
-            {
-                return this.ruleOf78Field;
-            }
-            set
-            {
-                this.ruleOf78Field = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=17)]
-        public string CurrencyCode
-        {
-            get
-            {
-                return this.currencyCodeField;
-            }
-            set
-            {
-                this.currencyCodeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=18)]
-        public decimal InsuranceCommission
-        {
-            get
-            {
-                return this.insuranceCommissionField;
-            }
-            set
-            {
-                this.insuranceCommissionField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=19)]
-        public decimal Retention
-        {
-            get
-            {
-                return this.retentionField;
-            }
-            set
-            {
-                this.retentionField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=20)]
-        public double ProfitShare
-        {
-            get
-            {
-                return this.profitShareField;
-            }
-            set
-            {
-                this.profitShareField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=21)]
-        public string TermsNo
-        {
-            get
-            {
-                return this.termsNoField;
-            }
-            set
-            {
-                this.termsNoField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=22)]
-        public string TermsURL
-        {
-            get
-            {
-                return this.termsURLField;
-            }
-            set
-            {
-                this.termsURLField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=23)]
-        public string ProductVersion
-        {
-            get
-            {
-                return this.productVersionField;
-            }
-            set
-            {
-                this.productVersionField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=24)]
-        public System.DateTime StartDate
-        {
-            get
-            {
-                return this.startDateField;
-            }
-            set
-            {
-                this.startDateField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=25)]
-        public System.DateTime EndDate
-        {
-            get
-            {
-                return this.endDateField;
-            }
-            set
-            {
-                this.endDateField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=26)]
-        public string MaxTerm
-        {
-            get
-            {
-                return this.maxTermField;
-            }
-            set
-            {
-                this.maxTermField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=27)]
-        public string InsurableInterest
-        {
-            get
-            {
-                return this.insurableInterestField;
-            }
-            set
-            {
-                this.insurableInterestField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=28)]
-        public decimal GrossPrice
-        {
-            get
-            {
-                return this.grossPriceField;
-            }
-            set
-            {
-                this.grossPriceField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=29)]
-        public string PremiumBasedOn
-        {
-            get
-            {
-                return this.premiumBasedOnField;
-            }
-            set
-            {
-                this.premiumBasedOnField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=30)]
-        public decimal NetPrice
-        {
-            get
-            {
-                return this.netPriceField;
-            }
-            set
-            {
-                this.netPriceField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=31)]
-        public int ChargeInterval
-        {
-            get
-            {
-                return this.chargeIntervalField;
-            }
-            set
-            {
-                this.chargeIntervalField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=32)]
-        public string SaleMethod
-        {
-            get
-            {
-                return this.saleMethodField;
-            }
-            set
-            {
-                this.saleMethodField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=33)]
-        public string ExternalReference
-        {
-            get
-            {
-                return this.externalReferenceField;
-            }
-            set
-            {
-                this.externalReferenceField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=34)]
-        public string Parameters
-        {
-            get
-            {
-                return this.parametersField;
-            }
-            set
-            {
-                this.parametersField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=35)]
-        public string Comment
-        {
-            get
-            {
-                return this.commentField;
-            }
-            set
-            {
-                this.commentField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=36)]
-        public string DealTypeKey
-        {
-            get
-            {
-                return this.dealTypeKeyField;
-            }
-            set
-            {
-                this.dealTypeKeyField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=37)]
-        public int PeriodOfNotice
-        {
-            get
-            {
-                return this.periodOfNoticeField;
-            }
-            set
-            {
-                this.periodOfNoticeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=38)]
-        public System.DateTime RAFApprovedDate
-        {
-            get
-            {
-                return this.rAFApprovedDateField;
-            }
-            set
-            {
-                this.rAFApprovedDateField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=39)]
-        public decimal InsuranceTax
-        {
-            get
-            {
-                return this.insuranceTaxField;
-            }
-            set
-            {
-                this.insuranceTaxField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class CreateInsuranceProductsResponse : APICreateResponseOfInsuranceProduct
-    {
     }
     
     /// <remarks/>
@@ -24373,6 +23696,223 @@ namespace BfsApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
     public partial class GetRecurringOrderTemplatesResponse : APISearchResponseOfGetRecurringOrderTemplatesResponseRowGetRecurringOrderTemplatesFields
+    {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateRecurringOrderTemplateAvtaleGiroResponse))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class APICreateResponseOfRecurringOrderTemplateAvtaleGiro : Response
+    {
+        
+        private RecurringOrderTemplateAvtaleGiro[] entitiesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public RecurringOrderTemplateAvtaleGiro[] Entities
+        {
+            get
+            {
+                return this.entitiesField;
+            }
+            set
+            {
+                this.entitiesField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class RecurringOrderTemplateAvtaleGiro : EntityBase
+    {
+        
+        private System.Guid accountIdField;
+        
+        private System.Nullable<decimal> cashAmountField;
+        
+        private System.Guid transferReceiverIdField;
+        
+        private int paymentPeriodField;
+        
+        private System.DateTime businessDateField;
+        
+        private string commentField;
+        
+        private System.Guid instrumentIdField;
+        
+        private System.Nullable<System.DateTime> sendDateField;
+        
+        private System.Nullable<int> monthField;
+        
+        private System.Nullable<int> dayField;
+        
+        private System.Guid allocationProfileIdField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public System.Guid AccountId
+        {
+            get
+            {
+                return this.accountIdField;
+            }
+            set
+            {
+                this.accountIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
+        public System.Nullable<decimal> CashAmount
+        {
+            get
+            {
+                return this.cashAmountField;
+            }
+            set
+            {
+                this.cashAmountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public System.Guid TransferReceiverId
+        {
+            get
+            {
+                return this.transferReceiverIdField;
+            }
+            set
+            {
+                this.transferReceiverIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public int PaymentPeriod
+        {
+            get
+            {
+                return this.paymentPeriodField;
+            }
+            set
+            {
+                this.paymentPeriodField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public System.DateTime BusinessDate
+        {
+            get
+            {
+                return this.businessDateField;
+            }
+            set
+            {
+                this.businessDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public string Comment
+        {
+            get
+            {
+                return this.commentField;
+            }
+            set
+            {
+                this.commentField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public System.Guid InstrumentId
+        {
+            get
+            {
+                return this.instrumentIdField;
+            }
+            set
+            {
+                this.instrumentIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=7)]
+        public System.Nullable<System.DateTime> SendDate
+        {
+            get
+            {
+                return this.sendDateField;
+            }
+            set
+            {
+                this.sendDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=8)]
+        public System.Nullable<int> Month
+        {
+            get
+            {
+                return this.monthField;
+            }
+            set
+            {
+                this.monthField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=9)]
+        public System.Nullable<int> Day
+        {
+            get
+            {
+                return this.dayField;
+            }
+            set
+            {
+                this.dayField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
+        public System.Guid AllocationProfileId
+        {
+            get
+            {
+                return this.allocationProfileIdField;
+            }
+            set
+            {
+                this.allocationProfileIdField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class CreateRecurringOrderTemplateAvtaleGiroResponse : APICreateResponseOfRecurringOrderTemplateAvtaleGiro
     {
     }
     
@@ -62769,7 +62309,688 @@ namespace BfsApi
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class UpdateInsuranceProduct : EntityBase
+    {
+        
+        private System.Guid insuranceProductSupplierIdField;
+        
+        private System.Guid resellerIdField;
+        
+        private System.Guid brokerIdField;
+        
+        private System.Guid administratorIdField;
+        
+        private System.Guid accountManagerIdField;
+        
+        private System.Guid claimsAdjusterIdField;
+        
+        private string insuranceProductTypeKeyField;
+        
+        private string insuranceCategoryKeyField;
+        
+        private string keyField;
+        
+        private string nameField;
+        
+        private string descriptionStringField;
+        
+        private string productCodeField;
+        
+        private string statusKeyField;
+        
+        private string countryField;
+        
+        private decimal ruleOf12Field;
+        
+        private decimal ruleOf45Field;
+        
+        private decimal ruleOf78Field;
+        
+        private System.Guid currencyField;
+        
+        private decimal insuranceCommissionField;
+        
+        private decimal retentionField;
+        
+        private double profitShareField;
+        
+        private string termsNoField;
+        
+        private string termsURLField;
+        
+        private string productVersionField;
+        
+        private System.DateTime startDateField;
+        
+        private System.DateTime endDateField;
+        
+        private string maxTermField;
+        
+        private string insurableInterestField;
+        
+        private decimal grossPriceField;
+        
+        private string premiumBasedOnField;
+        
+        private decimal netPriceField;
+        
+        private int chargeIntervalField;
+        
+        private string saleMethodField;
+        
+        private string externalReferenceField;
+        
+        private string parametersField;
+        
+        private string commentField;
+        
+        private string dealTypeKeyField;
+        
+        private int periodOfNoticeField;
+        
+        private System.DateTime rAFApprovedDateField;
+        
+        private decimal insuranceTaxField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public System.Guid InsuranceProductSupplierId
+        {
+            get
+            {
+                return this.insuranceProductSupplierIdField;
+            }
+            set
+            {
+                this.insuranceProductSupplierIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public System.Guid ResellerId
+        {
+            get
+            {
+                return this.resellerIdField;
+            }
+            set
+            {
+                this.resellerIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public System.Guid BrokerId
+        {
+            get
+            {
+                return this.brokerIdField;
+            }
+            set
+            {
+                this.brokerIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public System.Guid AdministratorId
+        {
+            get
+            {
+                return this.administratorIdField;
+            }
+            set
+            {
+                this.administratorIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public System.Guid AccountManagerId
+        {
+            get
+            {
+                return this.accountManagerIdField;
+            }
+            set
+            {
+                this.accountManagerIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public System.Guid ClaimsAdjusterId
+        {
+            get
+            {
+                return this.claimsAdjusterIdField;
+            }
+            set
+            {
+                this.claimsAdjusterIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public string InsuranceProductTypeKey
+        {
+            get
+            {
+                return this.insuranceProductTypeKeyField;
+            }
+            set
+            {
+                this.insuranceProductTypeKeyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public string InsuranceCategoryKey
+        {
+            get
+            {
+                return this.insuranceCategoryKeyField;
+            }
+            set
+            {
+                this.insuranceCategoryKeyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+        public string Key
+        {
+            get
+            {
+                return this.keyField;
+            }
+            set
+            {
+                this.keyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
+        public string Name
+        {
+            get
+            {
+                return this.nameField;
+            }
+            set
+            {
+                this.nameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
+        public string DescriptionString
+        {
+            get
+            {
+                return this.descriptionStringField;
+            }
+            set
+            {
+                this.descriptionStringField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
+        public string ProductCode
+        {
+            get
+            {
+                return this.productCodeField;
+            }
+            set
+            {
+                this.productCodeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=12)]
+        public string StatusKey
+        {
+            get
+            {
+                return this.statusKeyField;
+            }
+            set
+            {
+                this.statusKeyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=13)]
+        public string Country
+        {
+            get
+            {
+                return this.countryField;
+            }
+            set
+            {
+                this.countryField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=14)]
+        public decimal RuleOf12
+        {
+            get
+            {
+                return this.ruleOf12Field;
+            }
+            set
+            {
+                this.ruleOf12Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=15)]
+        public decimal RuleOf45
+        {
+            get
+            {
+                return this.ruleOf45Field;
+            }
+            set
+            {
+                this.ruleOf45Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=16)]
+        public decimal RuleOf78
+        {
+            get
+            {
+                return this.ruleOf78Field;
+            }
+            set
+            {
+                this.ruleOf78Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=17)]
+        public System.Guid Currency
+        {
+            get
+            {
+                return this.currencyField;
+            }
+            set
+            {
+                this.currencyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=18)]
+        public decimal InsuranceCommission
+        {
+            get
+            {
+                return this.insuranceCommissionField;
+            }
+            set
+            {
+                this.insuranceCommissionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=19)]
+        public decimal Retention
+        {
+            get
+            {
+                return this.retentionField;
+            }
+            set
+            {
+                this.retentionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=20)]
+        public double ProfitShare
+        {
+            get
+            {
+                return this.profitShareField;
+            }
+            set
+            {
+                this.profitShareField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=21)]
+        public string TermsNo
+        {
+            get
+            {
+                return this.termsNoField;
+            }
+            set
+            {
+                this.termsNoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=22)]
+        public string TermsURL
+        {
+            get
+            {
+                return this.termsURLField;
+            }
+            set
+            {
+                this.termsURLField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=23)]
+        public string ProductVersion
+        {
+            get
+            {
+                return this.productVersionField;
+            }
+            set
+            {
+                this.productVersionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=24)]
+        public System.DateTime StartDate
+        {
+            get
+            {
+                return this.startDateField;
+            }
+            set
+            {
+                this.startDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=25)]
+        public System.DateTime EndDate
+        {
+            get
+            {
+                return this.endDateField;
+            }
+            set
+            {
+                this.endDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=26)]
+        public string MaxTerm
+        {
+            get
+            {
+                return this.maxTermField;
+            }
+            set
+            {
+                this.maxTermField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=27)]
+        public string InsurableInterest
+        {
+            get
+            {
+                return this.insurableInterestField;
+            }
+            set
+            {
+                this.insurableInterestField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=28)]
+        public decimal GrossPrice
+        {
+            get
+            {
+                return this.grossPriceField;
+            }
+            set
+            {
+                this.grossPriceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=29)]
+        public string PremiumBasedOn
+        {
+            get
+            {
+                return this.premiumBasedOnField;
+            }
+            set
+            {
+                this.premiumBasedOnField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=30)]
+        public decimal NetPrice
+        {
+            get
+            {
+                return this.netPriceField;
+            }
+            set
+            {
+                this.netPriceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=31)]
+        public int ChargeInterval
+        {
+            get
+            {
+                return this.chargeIntervalField;
+            }
+            set
+            {
+                this.chargeIntervalField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=32)]
+        public string SaleMethod
+        {
+            get
+            {
+                return this.saleMethodField;
+            }
+            set
+            {
+                this.saleMethodField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=33)]
+        public string ExternalReference
+        {
+            get
+            {
+                return this.externalReferenceField;
+            }
+            set
+            {
+                this.externalReferenceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=34)]
+        public string Parameters
+        {
+            get
+            {
+                return this.parametersField;
+            }
+            set
+            {
+                this.parametersField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=35)]
+        public string Comment
+        {
+            get
+            {
+                return this.commentField;
+            }
+            set
+            {
+                this.commentField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=36)]
+        public string DealTypeKey
+        {
+            get
+            {
+                return this.dealTypeKeyField;
+            }
+            set
+            {
+                this.dealTypeKeyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=37)]
+        public int PeriodOfNotice
+        {
+            get
+            {
+                return this.periodOfNoticeField;
+            }
+            set
+            {
+                this.periodOfNoticeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=38)]
+        public System.DateTime RAFApprovedDate
+        {
+            get
+            {
+                return this.rAFApprovedDateField;
+            }
+            set
+            {
+                this.rAFApprovedDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=39)]
+        public decimal InsuranceTax
+        {
+            get
+            {
+                return this.insuranceTaxField;
+            }
+            set
+            {
+                this.insuranceTaxField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
     public partial class UpdateInsuranceProductsResponse : APIUpdateResponseOfUpdateInsuranceProduct
+    {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateInsuranceProductsResponse))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class APICreateResponseOfInsuranceProduct : Response
+    {
+        
+        private InsuranceProduct[] entitiesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public InsuranceProduct[] Entities
+        {
+            get
+            {
+                return this.entitiesField;
+            }
+            set
+            {
+                this.entitiesField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class CreateInsuranceProductsResponse : APICreateResponseOfInsuranceProduct
     {
     }
     
@@ -77709,8 +77930,6 @@ namespace BfsApi
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APICreateRequestOfInsuranceProductInsuranceProductBrick))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateInsuranceProductsRequest))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchRequestOfGetInsuranceProductsArgsGetInsuranceProductsFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetInsuranceProductsRequest))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APIUpdateRequestOfUpdateInsuranceClaimBetterActionBrickUpdateInsuranceClaimsFields))]
@@ -77739,6 +77958,8 @@ namespace BfsApi
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetHistoricPricesRequest))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchRequestOfGetRecurringOrderTemplatesArgsGetRecurringOrderTemplatesFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetRecurringOrderTemplatesRequest))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APICreateRequestOfRecurringOrderTemplateAvtaleGiroBetterActionBrick))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateRecurringOrderTemplateAvtaleGiroRequest))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APIUpdateRequestOfUpdateRecurringOrderTemplateAutoGiroRecurringOrderTemplateBrickUpdateRecurringOrderTemplateAutoGiroFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateRecurringOrderTemplateAutoGiroRequest))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APICreateRequestOfRecurringOrderTemplateAutoGiroBetterActionBrick))]
@@ -78008,6 +78229,8 @@ namespace BfsApi
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetInsurancePolicyRequest))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APIUpdateRequestOfUpdateInsuranceProductBetterActionBrickUpdateInsuranceProductFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateInsuranceProductsRequest))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APICreateRequestOfInsuranceProductInsuranceProductBrick))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateInsuranceProductsRequest))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
@@ -78045,39 +78268,6 @@ namespace BfsApi
                 this.identifyField = value;
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateInsuranceProductsRequest))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public abstract partial class APICreateRequestOfInsuranceProductInsuranceProductBrick : Request
-    {
-        
-        private InsuranceProduct[] entitiesField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
-        public InsuranceProduct[] Entities
-        {
-            get
-            {
-                return this.entitiesField;
-            }
-            set
-            {
-                this.entitiesField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class CreateInsuranceProductsRequest : APICreateRequestOfInsuranceProductInsuranceProductBrick
-    {
     }
     
     /// <remarks/>
@@ -78969,6 +79159,39 @@ namespace BfsApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
     public partial class GetRecurringOrderTemplatesRequest : APISearchRequestOfGetRecurringOrderTemplatesArgsGetRecurringOrderTemplatesFields
+    {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateRecurringOrderTemplateAvtaleGiroRequest))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class APICreateRequestOfRecurringOrderTemplateAvtaleGiroBetterActionBrick : Request
+    {
+        
+        private RecurringOrderTemplateAvtaleGiro[] entitiesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public RecurringOrderTemplateAvtaleGiro[] Entities
+        {
+            get
+            {
+                return this.entitiesField;
+            }
+            set
+            {
+                this.entitiesField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class CreateRecurringOrderTemplateAvtaleGiroRequest : APICreateRequestOfRecurringOrderTemplateAvtaleGiroBetterActionBrick
     {
     }
     
@@ -86884,6 +87107,55 @@ namespace BfsApi
     {
     }
     
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateInsuranceProductsRequest))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class APIUpdateRequestOfUpdateInsuranceProductBetterActionBrickUpdateInsuranceProductFields : Request
+    {
+        
+        private UpdateInsuranceProduct[] entitiesField;
+        
+        private UpdateInsuranceProductFields fieldsField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public UpdateInsuranceProduct[] Entities
+        {
+            get
+            {
+                return this.entitiesField;
+            }
+            set
+            {
+                this.entitiesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public UpdateInsuranceProductFields Fields
+        {
+            get
+            {
+                return this.fieldsField;
+            }
+            set
+            {
+                this.fieldsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class UpdateInsuranceProductsRequest : APIUpdateRequestOfUpdateInsuranceProductBetterActionBrickUpdateInsuranceProductFields
+    {
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     public interface bfsapiSoapChannel : BfsApi.bfsapiSoap, System.ServiceModel.IClientChannel
     {
@@ -86925,6 +87197,11 @@ namespace BfsApi
         public bfsapiSoapClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress)
         {
+        }
+        
+        public System.Threading.Tasks.Task<BfsApi.CreateInsuranceProductsResponse> CreateInsuranceProductsAsync(BfsApi.CreateInsuranceProductsRequest req)
+        {
+            return base.Channel.CreateInsuranceProductsAsync(req);
         }
         
         public System.Threading.Tasks.Task<BfsApi.UpdateInsuranceProductsResponse> UpdateInsuranceProductsAsync(BfsApi.UpdateInsuranceProductsRequest req)
@@ -87642,6 +87919,11 @@ namespace BfsApi
             return base.Channel.UpdateRecurringOrderTemplateAutoGiroAsync(req);
         }
         
+        public System.Threading.Tasks.Task<BfsApi.CreateRecurringOrderTemplateAvtaleGiroResponse> CreateRecurringOrderTemplatesAvtaleGiroAsync(BfsApi.CreateRecurringOrderTemplateAvtaleGiroRequest req)
+        {
+            return base.Channel.CreateRecurringOrderTemplatesAvtaleGiroAsync(req);
+        }
+        
         public System.Threading.Tasks.Task<BfsApi.GetRecurringOrderTemplatesResponse> GetRecurringOrderTemplatesAsync(BfsApi.GetRecurringOrderTemplatesRequest req)
         {
             return base.Channel.GetRecurringOrderTemplatesAsync(req);
@@ -87722,19 +88004,9 @@ namespace BfsApi
             return base.Channel.GetInsuranceProductsAsync(req);
         }
         
-        public System.Threading.Tasks.Task<BfsApi.CreateInsuranceProductsResponse> CreateInsuranceProductsAsync(BfsApi.CreateInsuranceProductsRequest req)
-        {
-            return base.Channel.CreateInsuranceProductsAsync(req);
-        }
-        
         public virtual System.Threading.Tasks.Task OpenAsync()
         {
             return System.Threading.Tasks.Task.Factory.FromAsync(((System.ServiceModel.ICommunicationObject)(this)).BeginOpen(null, null), new System.Action<System.IAsyncResult>(((System.ServiceModel.ICommunicationObject)(this)).EndOpen));
-        }
-        
-        public virtual System.Threading.Tasks.Task CloseAsync()
-        {
-            return System.Threading.Tasks.Task.Factory.FromAsync(((System.ServiceModel.ICommunicationObject)(this)).BeginClose(null, null), new System.Action<System.IAsyncResult>(((System.ServiceModel.ICommunicationObject)(this)).EndClose));
         }
         
         private static System.ServiceModel.Channels.Binding GetBindingForEndpoint(EndpointConfiguration endpointConfiguration)
