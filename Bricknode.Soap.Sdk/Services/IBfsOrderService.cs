@@ -135,14 +135,6 @@ namespace Bricknode.Soap.Sdk.Services
         Task<CreateAutoGiroWithdrawalOrderResponse> CreateAutoGiroWithdrawalOrderAsync(AutoGiroWithdrawalOrder[] autoGiroWithdrawalOrders, string? bfsApiClientName = null);
 
         /// <summary>
-        /// https://bricknode.atlassian.net/wiki/spaces/API/pages/83132535/DepositCashBatchOrder+BatchFill
-        /// </summary>
-        /// <param name="depositCashBatchOrder"></param>
-        /// <param name="bfsApiClientName"></param>
-        /// <returns></returns>
-        Task<DepositCashBatchOrder_BatchFillResponse> BatchFillDepositCashBatchOrder(DepositCashBatchOrder_BatchFill depositCashBatchOrder, string? bfsApiClientName = null);
-
-        /// <summary>
         /// https://bricknode.atlassian.net/wiki/spaces/API/pages/83132541/WithdrawalCashBatchOrder+Fill
         /// </summary>
         /// <param name="withdrawalCashBatchOrderFill"></param>
