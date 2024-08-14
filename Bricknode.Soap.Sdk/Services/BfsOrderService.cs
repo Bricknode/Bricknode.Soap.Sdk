@@ -370,6 +370,34 @@ namespace Bricknode.Soap.Sdk.Services
 
         #endregion
 
+        #region AvtaleGiro
+
+        /// <summary>
+        /// https://bricknode.atlassian.net/wiki/spaces/API/pages/3948150878/GetAvtaleGiroOrders
+        /// </summary>
+        /// <param name="filters"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        public async Task<GetAvtaleGiroOrdersResponse> GetAvtaleGiroOrdersAsync(GetAvtaleGiroOrdersArgs filters, string? bfsApiClientName = null)
+        {
+            var request = await GetRequestAsync<GetAvtaleGiroOrdersRequest>(bfsApiClientName);
+
+            request.Args = filters;
+
+            request.Fields = GetFields<GetAvtaleGiroOrdersFields>();
+
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetAvtaleGiroOrdersAsync(request);
+
+            if (ValidateResponse(response)) return response;
+
+            LogErrors(response.Result);
+
+            return response;
+        }
+
+        #endregion
+
         #region TransferOrders
 
         /// <summary>
@@ -567,6 +595,28 @@ namespace Bricknode.Soap.Sdk.Services
             return response;
         }
 
+        /// <summary>
+        /// https://bricknode.atlassian.net/wiki/spaces/API/pages/3760062478/UpdateTransferOrderStates
+        /// </summary>
+        /// <param name="transferOrderStates"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        public async Task<UpdateTransferOrderStatesResponse> UpdateTransferOrderStates(
+            UpdateTransferOrderState[] transferOrderStates, string? bfsApiClientName = null)
+        {
+            var request = await GetRequestAsync<UpdateTransferOrderStatesRequest>(bfsApiClientName);
+
+            request.Entities = transferOrderStates;
+
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.UpdateTransferOrderStatesAsync(request);
+
+            if (ValidateResponse(response)) return response;
+
+            LogErrors(response.Entities);
+
+            return response;
+        }
 
 
         #endregion
