@@ -21748,6 +21748,8 @@ namespace BfsApi
         
         private bool targetStateField;
         
+        private bool settleAmountField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public bool TargetState
@@ -21759,6 +21761,20 @@ namespace BfsApi
             set
             {
                 this.targetStateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public bool SettleAmount
+        {
+            get
+            {
+                return this.settleAmountField;
+            }
+            set
+            {
+                this.settleAmountField = value;
             }
         }
     }
@@ -42007,6 +42023,22 @@ namespace BfsApi
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
     public partial class ExternalFundBatchOrderExecute : OrderExecuteBase
     {
+        
+        private decimal currencyExchangeRateField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public decimal CurrencyExchangeRate
+        {
+            get
+            {
+                return this.currencyExchangeRateField;
+            }
+            set
+            {
+                this.currencyExchangeRateField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -59151,6 +59183,8 @@ namespace BfsApi
         
         private System.Guid custodyAccountField;
         
+        private decimal settleAmountField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public TransferOrderState TargetState
@@ -59190,6 +59224,20 @@ namespace BfsApi
             set
             {
                 this.custodyAccountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public decimal SettleAmount
+        {
+            get
+            {
+                return this.settleAmountField;
+            }
+            set
+            {
+                this.settleAmountField = value;
             }
         }
     }
