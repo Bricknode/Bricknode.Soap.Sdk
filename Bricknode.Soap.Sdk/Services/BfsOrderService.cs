@@ -598,27 +598,27 @@ namespace Bricknode.Soap.Sdk.Services
         /// <summary>
         /// https://bricknode.atlassian.net/wiki/spaces/API/pages/3760062478/UpdateTransferOrderStates
         /// </summary>
-        /// <param name="transferOrderStates"></param>
+        /// <param name="updateTransferOrders"></param>
+        /// <param name="updateTransferOrderFields"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        public async Task<UpdateTransferOrderStatesResponse> UpdateTransferOrderStates(
-            UpdateTransferOrderState[] transferOrderStates, string? bfsApiClientName = null)
+        public async Task<UpdateTransferOrderStatesResponse> UpdateTransferOrderStatesAsync(UpdateTransferOrderState[] updateTransferOrders, UpdateTransferOrderStatesFields updateTransferOrderFields, string? bfsApiClientName = null)
         {
             var request = await GetRequestAsync<UpdateTransferOrderStatesRequest>(bfsApiClientName);
 
-            request.Entities = transferOrderStates;
+            request.Entities = updateTransferOrders;
+            request.Fields = updateTransferOrderFields;
 
             var client = await GetClientAsync(bfsApiClientName);
             var response = await client.UpdateTransferOrderStatesAsync(request);
 
-            if (ValidateResponse(response)) return response;
+            if (ValidateResponse(response)) 
+                return response;
 
             LogErrors(response.Entities);
 
             return response;
         }
-
-
         #endregion
 
         #region CurrencyExchangeOrders
