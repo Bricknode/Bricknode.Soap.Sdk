@@ -129,10 +129,11 @@ namespace Bricknode.Soap.Sdk.Services
         /// <summary>
         /// https://bricknode.atlassian.net/wiki/spaces/API/pages/3760062478/UpdateTransferOrderStates
         /// </summary>
-        /// <param name="transferOrderStates"></param>
+        /// <param name="updateTransferOrders"></param>
+        /// <param name="updateTransferOrderFields"></param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        Task<UpdateTransferOrderStatesResponse> UpdateTransferOrderStates(UpdateTransferOrderState[] transferOrderStates, string? bfsApiClientName = null);
+        Task<UpdateTransferOrderStatesResponse> UpdateTransferOrderStatesAsync(UpdateTransferOrderState[] updateTransferOrders, UpdateTransferOrderStatesFields updateTransferOrderFields, string? bfsApiClientName = null);
 
         /// <summary>
         /// https://bricknode.atlassian.net/wiki/spaces/API/pages/636452882/CreateAutoGiroWithdrawalOrders
