@@ -23776,6 +23776,8 @@ namespace BfsApi
         
         private bool forcePasswordResetField;
         
+        private double taxRateField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public bool IsApproved
@@ -24685,6 +24687,20 @@ namespace BfsApi
                 this.forcePasswordResetField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=65)]
+        public double TaxRate
+        {
+            get
+            {
+                return this.taxRateField;
+            }
+            set
+            {
+                this.taxRateField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -24875,6 +24891,8 @@ namespace BfsApi
         private TIN[] tINsField;
         
         private bool forcePasswordResetField;
+        
+        private System.Nullable<double> taxRateField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -25867,6 +25885,20 @@ namespace BfsApi
             set
             {
                 this.forcePasswordResetField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=71)]
+        public System.Nullable<double> TaxRate
+        {
+            get
+            {
+                return this.taxRateField;
+            }
+            set
+            {
+                this.taxRateField = value;
             }
         }
     }
@@ -27189,6 +27221,8 @@ namespace BfsApi
         
         private bool forcePasswordResetField;
         
+        private double taxRateField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public string FirstName
@@ -28238,6 +28272,20 @@ namespace BfsApi
                 this.forcePasswordResetField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=75)]
+        public double TaxRate
+        {
+            get
+            {
+                return this.taxRateField;
+            }
+            set
+            {
+                this.taxRateField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -28933,6 +28981,8 @@ namespace BfsApi
         
         private System.DateTime businessDateField;
         
+        private int retryAttemptsField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public string TransferOrderType
@@ -29084,6 +29134,20 @@ namespace BfsApi
             set
             {
                 this.businessDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
+        public int RetryAttempts
+        {
+            get
+            {
+                return this.retryAttemptsField;
+            }
+            set
+            {
+                this.retryAttemptsField = value;
             }
         }
     }
@@ -47519,6 +47583,8 @@ namespace BfsApi
         
         private bool forcePasswordResetField;
         
+        private bool taxRateField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public bool IsApproved
@@ -48428,6 +48494,20 @@ namespace BfsApi
                 this.forcePasswordResetField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=65)]
+        public bool TaxRate
+        {
+            get
+            {
+                return this.taxRateField;
+            }
+            set
+            {
+                this.taxRateField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -48960,6 +49040,8 @@ namespace BfsApi
         private bool tINsField;
         
         private bool forcePasswordResetField;
+        
+        private bool taxRateField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -50038,6 +50120,20 @@ namespace BfsApi
                 this.forcePasswordResetField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=77)]
+        public bool TaxRate
+        {
+            get
+            {
+                return this.taxRateField;
+            }
+            set
+            {
+                this.taxRateField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -50649,6 +50745,8 @@ namespace BfsApi
         
         private bool businessDateField;
         
+        private bool retryAttemptsField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public bool BrickId
@@ -50828,6 +50926,20 @@ namespace BfsApi
             set
             {
                 this.businessDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=13)]
+        public bool RetryAttempts
+        {
+            get
+            {
+                return this.retryAttemptsField;
+            }
+            set
+            {
+                this.retryAttemptsField = value;
             }
         }
     }
@@ -75332,6 +75444,10 @@ namespace BfsApi
         
         private System.Nullable<bool> forcePasswordResetField;
         
+        private System.Nullable<double> taxRateFromField;
+        
+        private System.Nullable<double> taxRateToField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
         public System.Guid[] BrickIds
@@ -76073,6 +76189,34 @@ namespace BfsApi
                 this.forcePasswordResetField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=53)]
+        public System.Nullable<double> TaxRateFrom
+        {
+            get
+            {
+                return this.taxRateFromField;
+            }
+            set
+            {
+                this.taxRateFromField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=54)]
+        public System.Nullable<double> TaxRateTo
+        {
+            get
+            {
+                return this.taxRateToField;
+            }
+            set
+            {
+                this.taxRateToField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -76575,6 +76719,10 @@ namespace BfsApi
         
         private System.Nullable<System.DateTime> businessDateToField;
         
+        private System.Nullable<int> minRetryAttemptsField;
+        
+        private System.Nullable<int> maxRetryAttemptsField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
         public System.Guid[] BrickIds
@@ -76768,6 +76916,34 @@ namespace BfsApi
             set
             {
                 this.businessDateToField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=14)]
+        public System.Nullable<int> MinRetryAttempts
+        {
+            get
+            {
+                return this.minRetryAttemptsField;
+            }
+            set
+            {
+                this.minRetryAttemptsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=15)]
+        public System.Nullable<int> MaxRetryAttempts
+        {
+            get
+            {
+                return this.maxRetryAttemptsField;
+            }
+            set
+            {
+                this.maxRetryAttemptsField = value;
             }
         }
     }
