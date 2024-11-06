@@ -20597,14 +20597,6 @@ namespace BfsApi
         
         private bool isUnitOrderField;
         
-        private decimal minimumSubscriptionCashAmountField;
-        
-        private string minimumSubscriptionCashCurrencyCodeField;
-        
-        private decimal minimumMonthlySubscriptionCashAmountField;
-        
-        private string minimumMonthlySubscriptionCashCurrencyCodeField;
-        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public System.Guid CustodyAccount
@@ -20772,62 +20764,6 @@ namespace BfsApi
                 this.isUnitOrderField = value;
             }
         }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=12)]
-        public decimal MinimumSubscriptionCashAmount
-        {
-            get
-            {
-                return this.minimumSubscriptionCashAmountField;
-            }
-            set
-            {
-                this.minimumSubscriptionCashAmountField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=13)]
-        public string MinimumSubscriptionCashCurrencyCode
-        {
-            get
-            {
-                return this.minimumSubscriptionCashCurrencyCodeField;
-            }
-            set
-            {
-                this.minimumSubscriptionCashCurrencyCodeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=14)]
-        public decimal MinimumMonthlySubscriptionCashAmount
-        {
-            get
-            {
-                return this.minimumMonthlySubscriptionCashAmountField;
-            }
-            set
-            {
-                this.minimumMonthlySubscriptionCashAmountField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=15)]
-        public string MinimumMonthlySubscriptionCashCurrencyCode
-        {
-            get
-            {
-                return this.minimumMonthlySubscriptionCashCurrencyCodeField;
-            }
-            set
-            {
-                this.minimumMonthlySubscriptionCashCurrencyCodeField = value;
-            }
-        }
     }
     
     /// <remarks/>
@@ -20928,14 +20864,6 @@ namespace BfsApi
         private bool enabledField;
         
         private bool isUnitOrderField;
-        
-        private bool minimumSubscriptionCashAmountField;
-        
-        private bool minimumSubscriptionCashCurrencyCodeField;
-        
-        private bool minimumMonthlySubscriptionCashAmountField;
-        
-        private bool minimumMonthlySubscriptionCashCurrencyCodeField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -21102,62 +21030,6 @@ namespace BfsApi
             set
             {
                 this.isUnitOrderField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=12)]
-        public bool MinimumSubscriptionCashAmount
-        {
-            get
-            {
-                return this.minimumSubscriptionCashAmountField;
-            }
-            set
-            {
-                this.minimumSubscriptionCashAmountField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=13)]
-        public bool MinimumSubscriptionCashCurrencyCode
-        {
-            get
-            {
-                return this.minimumSubscriptionCashCurrencyCodeField;
-            }
-            set
-            {
-                this.minimumSubscriptionCashCurrencyCodeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=14)]
-        public bool MinimumMonthlySubscriptionCashAmount
-        {
-            get
-            {
-                return this.minimumMonthlySubscriptionCashAmountField;
-            }
-            set
-            {
-                this.minimumMonthlySubscriptionCashAmountField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=15)]
-        public bool MinimumMonthlySubscriptionCashCurrencyCode
-        {
-            get
-            {
-                return this.minimumMonthlySubscriptionCashCurrencyCodeField;
-            }
-            set
-            {
-                this.minimumMonthlySubscriptionCashCurrencyCodeField = value;
             }
         }
     }
@@ -22486,14 +22358,6 @@ namespace BfsApi
         
         private bool isUnitOrderField;
         
-        private decimal minimumSubscriptionCashAmountField;
-        
-        private string minimumSubscriptionCashCurrencyCodeField;
-        
-        private decimal minimumMonthlySubscriptionCashAmountField;
-        
-        private string minimumMonthlySubscriptionCashCurrencyCodeField;
-        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public System.Guid DefaultCustodyAccount
@@ -22659,62 +22523,6 @@ namespace BfsApi
             set
             {
                 this.isUnitOrderField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=12)]
-        public decimal MinimumSubscriptionCashAmount
-        {
-            get
-            {
-                return this.minimumSubscriptionCashAmountField;
-            }
-            set
-            {
-                this.minimumSubscriptionCashAmountField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=13)]
-        public string MinimumSubscriptionCashCurrencyCode
-        {
-            get
-            {
-                return this.minimumSubscriptionCashCurrencyCodeField;
-            }
-            set
-            {
-                this.minimumSubscriptionCashCurrencyCodeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=14)]
-        public decimal MinimumMonthlySubscriptionCashAmount
-        {
-            get
-            {
-                return this.minimumMonthlySubscriptionCashAmountField;
-            }
-            set
-            {
-                this.minimumMonthlySubscriptionCashAmountField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=15)]
-        public string MinimumMonthlySubscriptionCashCurrencyCode
-        {
-            get
-            {
-                return this.minimumMonthlySubscriptionCashCurrencyCodeField;
-            }
-            set
-            {
-                this.minimumMonthlySubscriptionCashCurrencyCodeField = value;
             }
         }
     }
@@ -89982,6 +89790,11 @@ namespace BfsApi
         public virtual System.Threading.Tasks.Task OpenAsync()
         {
             return System.Threading.Tasks.Task.Factory.FromAsync(((System.ServiceModel.ICommunicationObject)(this)).BeginOpen(null, null), new System.Action<System.IAsyncResult>(((System.ServiceModel.ICommunicationObject)(this)).EndOpen));
+        }
+        
+        public virtual System.Threading.Tasks.Task CloseAsync()
+        {
+            return System.Threading.Tasks.Task.Factory.FromAsync(((System.ServiceModel.ICommunicationObject)(this)).BeginClose(null, null), new System.Action<System.IAsyncResult>(((System.ServiceModel.ICommunicationObject)(this)).EndClose));
         }
         
         private static System.ServiceModel.Channels.Binding GetBindingForEndpoint(EndpointConfiguration endpointConfiguration)
