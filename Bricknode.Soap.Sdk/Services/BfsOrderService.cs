@@ -251,6 +251,25 @@ namespace Bricknode.Soap.Sdk.Services
         }
 
         /// <summary>
+        /// https://bricknode.atlassian.net/wiki/spaces/API/pages/1930133509/CancelTradeOrders
+        /// </summary>
+        public async Task<CancelTradeOrderResponse> CancelTradeOrdersAsync(CancelTradeOrder[] orders, string? bfsApiClientName = null)
+        {
+            var request = await GetRequestAsync<CancelTradeOrderRequest>(bfsApiClientName);
+
+            request.Entities = orders;
+
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.CancelTradeOrdersAsync(request);
+
+            if (ValidateResponse(response)) return response;
+
+            LogErrors(response.Message);
+
+            return response;
+        }
+
+        /// <summary>
         /// https://bricknode.atlassian.net/wiki/spaces/API/pages/2507440145/CreateTradeBuyOrdersFromAutogiro
         /// </summary>
         /// <param name="tradeBuyOrdersFromAutogiro"></param>
@@ -364,6 +383,54 @@ namespace Bricknode.Soap.Sdk.Services
             if (ValidateResponse(response)) return response;
 
             LogErrors(response.Entities);
+
+            return response;
+        }
+
+        /// <summary>
+        /// https://bricknode.atlassian.net/wiki/spaces/API/pages/3744595969/CancelAutoGiroOrders
+        /// </summary>
+        public async Task<CancelAutoGiroOrderResponse> CancelAutoGiroOrdersAsync(Guid[] orderIds, string? bfsApiClientName = null)
+        {
+            var request = await GetRequestAsync<CancelAutoGiroOrderRequest>(bfsApiClientName);
+
+            var listOfCancelTradeOrder = new List<CancelAutoGiroOrder>();
+
+            foreach (var tradeOrderId in orderIds)
+            {
+                listOfCancelTradeOrder.Add(new CancelAutoGiroOrder
+                {
+                    OrderId = tradeOrderId
+                });
+            }
+
+            request.Entities = listOfCancelTradeOrder.ToArray();
+
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.CancelAutoGiroOrdersAsync(request);
+
+            if (ValidateResponse(response)) return response;
+
+            LogErrors(response.Message);
+
+            return response;
+        }
+
+        /// <summary>
+        /// https://bricknode.atlassian.net/wiki/spaces/API/pages/3744595969/CancelAutoGiroOrders
+        /// </summary>
+        public async Task<CancelAutoGiroOrderResponse> CancelAutoGiroOrdersAsync(CancelAutoGiroOrder[] orders, string? bfsApiClientName = null)
+        {
+            var request = await GetRequestAsync<CancelAutoGiroOrderRequest>(bfsApiClientName);
+
+            request.Entities = orders;
+
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.CancelAutoGiroOrdersAsync(request);
+
+            if (ValidateResponse(response)) return response;
+
+            LogErrors(response.Message);
 
             return response;
         }
@@ -612,7 +679,7 @@ namespace Bricknode.Soap.Sdk.Services
             var client = await GetClientAsync(bfsApiClientName);
             var response = await client.UpdateTransferOrderStatesAsync(request);
 
-            if (ValidateResponse(response)) 
+            if (ValidateResponse(response))
                 return response;
 
             LogErrors(response.Entities);
