@@ -320,6 +320,21 @@ namespace Bricknode.Soap.Sdk.Services
             string? bfsApiClientName = null);
 
         /// <summary>
+        /// https://bricknode.atlassian.net/wiki/spaces/API/pages/1930133509/CancelTradeOrders
+        /// </summary>
+        Task<CancelTradeOrderResponse> CancelTradeOrdersAsync(CancelTradeOrder[] orders, string? bfsApiClientName = null);
+
+        /// <summary>
+        /// https://bricknode.atlassian.net/wiki/spaces/API/pages/3744595969/CancelAutoGiroOrders
+        /// </summary>
+        Task<CancelAutoGiroOrderResponse> CancelAutoGiroOrdersAsync(Guid[] orderIds, string? bfsApiClientName = null);
+
+        /// <summary>
+        /// https://bricknode.atlassian.net/wiki/spaces/API/pages/3744595969/CancelAutoGiroOrders
+        /// </summary>
+        Task<CancelAutoGiroOrderResponse> CancelAutoGiroOrdersAsync(CancelAutoGiroOrder[] orders, string? bfsApiClientName = null);
+
+        /// <summary>
         /// https://bricknode.atlassian.net/wiki/spaces/API/pages/1951499222/GetAutoGiroOrders
         /// </summary>
         /// <param name="filters"></param>
