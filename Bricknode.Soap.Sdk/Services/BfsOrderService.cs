@@ -394,17 +394,17 @@ namespace Bricknode.Soap.Sdk.Services
         {
             var request = await GetRequestAsync<CancelAutoGiroOrderRequest>(bfsApiClientName);
 
-            var listOfCancelTradeOrder = new List<CancelAutoGiroOrder>();
+            var listOfCancelOrders = new List<CancelAutoGiroOrder>();
 
-            foreach (var tradeOrderId in orderIds)
+            foreach (var orderId in orderIds)
             {
-                listOfCancelTradeOrder.Add(new CancelAutoGiroOrder
+                listOfCancelOrders.Add(new CancelAutoGiroOrder
                 {
-                    OrderId = tradeOrderId
+                    OrderId = orderId
                 });
             }
 
-            request.Entities = listOfCancelTradeOrder.ToArray();
+            request.Entities = listOfCancelOrders.ToArray();
 
             var client = await GetClientAsync(bfsApiClientName);
             var response = await client.CancelAutoGiroOrdersAsync(request);
