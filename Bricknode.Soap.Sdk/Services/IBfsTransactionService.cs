@@ -66,5 +66,13 @@ namespace Bricknode.Soap.Sdk.Services
         /// <returns></returns>
         Task<GetSuperTransactionsResponse> GetSuperTransactionsAsync(
             GetSuperTransactionArgs filters, string? bfsApiClientName = null);
+
+        /// <summary>
+        ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/4242931723/GetRelatedFifoLots
+        /// </summary>
+        /// <param name="filters"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        Task<GetRelatedFifoLotsResponse> GetRelatedFifoLots(GetRelatedFifoLotsArgs filters, string? bfsApiClientName = null);
     }
 }
