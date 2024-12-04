@@ -6,6 +6,7 @@ using Microsoft.Extensions.Logging;
 namespace Bricknode.Soap.Sdk.Services
 {
     using Factories;
+    using System.ComponentModel;
 
     public class BfsTransactionService : BfsServiceBase, IBfsTransactionService
     {
@@ -188,6 +189,28 @@ namespace Bricknode.Soap.Sdk.Services
             LogErrors(response.Result);
 
             return response;
+        }
+
+        /// <summary>
+        ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/4242931723/GetRelatedFifoLots
+        /// </summary>
+        /// <param name="filters"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        public async Task<GetRelatedFifoLotsResponse> GetRelatedFifoLots(GetRelatedFifoLotsArgs filters, string? bfsApiClientName = null)
+        {
+            var request = await GetRequestAsync<GetRelatedFifoLotsRequest>(bfsApiClientName);
+
+            request.Args = filters;
+
+            request.Fields = GetFields<GetRelatedFifoLotsFields>();
+            var client = await GetClientAsync(bfsApiClientName);
+            var response = await client.GetRelatedFifoLotsAsync(request);
+            if (ValidateResponse(response)) return response;
+
+            LogErrors(response.Message);
+            return response;
+
         }
     }
 }
