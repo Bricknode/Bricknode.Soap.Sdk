@@ -645,6 +645,23 @@ namespace BfsApi
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
         System.Threading.Tasks.Task<BfsApi.GetAvtaleGiroOrdersResponse> GetAvtaleGiroOrdersAsync(BfsApi.GetAvtaleGiroOrdersRequest req);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetRelatedFifoLots", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfCreateCustomFieldDto))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfUpdateCustomFieldDto))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfDeleteCustomFieldDto))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfFeeRecordDto))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Response))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ActionTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(WorkflowTriggerDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceActionDataEntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(DtoBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FieldBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ExecutionInterfaceFields))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(EntityBase))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Request))]
+        System.Threading.Tasks.Task<BfsApi.GetRelatedFifoLotsResponse> GetRelatedFifoLotsAsync(BfsApi.GetRelatedFifoLotsRequest req);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetBackgroundJobs", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ResponseBaseOfCreateCustomFieldDto))]
@@ -38531,6 +38548,78 @@ namespace BfsApi
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetRelatedFifoLotsResponseRow
+    {
+        
+        private System.Guid exitBusinessTransactionField;
+        
+        private System.Guid entryBusinessTransactionField;
+        
+        private double acquisitionValueField;
+        
+        private decimal quantityField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public System.Guid ExitBusinessTransaction
+        {
+            get
+            {
+                return this.exitBusinessTransactionField;
+            }
+            set
+            {
+                this.exitBusinessTransactionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public System.Guid EntryBusinessTransaction
+        {
+            get
+            {
+                return this.entryBusinessTransactionField;
+            }
+            set
+            {
+                this.entryBusinessTransactionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public double AcquisitionValue
+        {
+            get
+            {
+                return this.acquisitionValueField;
+            }
+            set
+            {
+                this.acquisitionValueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public decimal Quantity
+        {
+            get
+            {
+                return this.quantityField;
+            }
+            set
+            {
+                this.quantityField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
     public partial class GetHoldingsOverTimeResponseRow
     {
         
@@ -38805,6 +38894,8 @@ namespace BfsApi
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetHouseInformationResponse))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchResponseOfGetBackgroundJobsResponseRowGetBackgroundJobsFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetBackgroundJobsResponse))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchResponseOfGetRelatedFifoLotsResponseRowGetRelatedFifoLotsFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetRelatedFifoLotsResponse))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchResponseOfGetAvtaleGiroOrdersResponseRowGetAvtaleGiroOrdersFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetAvtaleGiroOrdersResponse))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchResponseOfGetTransferOrdersResponseRowGetTransferOrdersFields))]
@@ -63128,6 +63219,127 @@ namespace BfsApi
     }
     
     /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetRelatedFifoLotsResponse))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class APISearchResponseOfGetRelatedFifoLotsResponseRowGetRelatedFifoLotsFields : Response
+    {
+        
+        private GetRelatedFifoLotsResponseRow[] resultField;
+        
+        private GetRelatedFifoLotsFields fieldsField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public GetRelatedFifoLotsResponseRow[] Result
+        {
+            get
+            {
+                return this.resultField;
+            }
+            set
+            {
+                this.resultField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public GetRelatedFifoLotsFields Fields
+        {
+            get
+            {
+                return this.fieldsField;
+            }
+            set
+            {
+                this.fieldsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetRelatedFifoLotsFields
+    {
+        
+        private bool exitBusinessTransactionField;
+        
+        private bool entryBusinessTransactionField;
+        
+        private bool acquisitionValueField;
+        
+        private bool quantityField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public bool ExitBusinessTransaction
+        {
+            get
+            {
+                return this.exitBusinessTransactionField;
+            }
+            set
+            {
+                this.exitBusinessTransactionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public bool EntryBusinessTransaction
+        {
+            get
+            {
+                return this.entryBusinessTransactionField;
+            }
+            set
+            {
+                this.entryBusinessTransactionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public bool AcquisitionValue
+        {
+            get
+            {
+                return this.acquisitionValueField;
+            }
+            set
+            {
+                this.acquisitionValueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public bool Quantity
+        {
+            get
+            {
+                return this.quantityField;
+            }
+            set
+            {
+                this.quantityField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetRelatedFifoLotsResponse : APISearchResponseOfGetRelatedFifoLotsResponseRowGetRelatedFifoLotsFields
+    {
+    }
+    
+    /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetAvtaleGiroOrdersResponse))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -76520,6 +76732,46 @@ namespace BfsApi
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetRelatedFifoLotsArgs
+    {
+        
+        private System.Guid[] brickIdsField;
+        
+        private System.Guid[] exitBusinessTransactionsField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        public System.Guid[] BrickIds
+        {
+            get
+            {
+                return this.brickIdsField;
+            }
+            set
+            {
+                this.brickIdsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=1)]
+        public System.Guid[] ExitBusinessTransactions
+        {
+            get
+            {
+                return this.exitBusinessTransactionsField;
+            }
+            set
+            {
+                this.exitBusinessTransactionsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
     public partial class GetAvtaleGiroOrdersArgs
     {
         
@@ -79809,6 +80061,8 @@ namespace BfsApi
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetHouseInformationRequest))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchRequestOfGetBackgroundJobsArgsGetBackgroundJobsFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetBackgroundJobsRequest))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchRequestOfGetRelatedFifoLotsArgsGetRelatedFifoLotsFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetRelatedFifoLotsRequest))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchRequestOfGetAvtaleGiroOrdersArgsGetAvtaleGiroOrdersFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetAvtaleGiroOrdersRequest))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchRequestOfGetTransferOrdersArgsGetTransferOrdersFields))]
@@ -84966,6 +85220,12 @@ namespace BfsApi
         
         private string newPasswordField;
         
+        private bool autogeneratePasswordField;
+        
+        private bool sendEmailField;
+        
+        private bool forcePasswordChangeOnFirstLogInField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public System.Guid PersonId
@@ -84991,6 +85251,48 @@ namespace BfsApi
             set
             {
                 this.newPasswordField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public bool AutogeneratePassword
+        {
+            get
+            {
+                return this.autogeneratePasswordField;
+            }
+            set
+            {
+                this.autogeneratePasswordField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public bool SendEmail
+        {
+            get
+            {
+                return this.sendEmailField;
+            }
+            set
+            {
+                this.sendEmailField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public bool ForcePasswordChangeOnFirstLogIn
+        {
+            get
+            {
+                return this.forcePasswordChangeOnFirstLogInField;
+            }
+            set
+            {
+                this.forcePasswordChangeOnFirstLogInField = value;
             }
         }
     }
@@ -86971,6 +87273,87 @@ namespace BfsApi
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
     public partial class GetBackgroundJobsRequest : APISearchRequestOfGetBackgroundJobsArgsGetBackgroundJobsFields
+    {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetRelatedFifoLotsRequest))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class APISearchRequestOfGetRelatedFifoLotsArgsGetRelatedFifoLotsFields : Request
+    {
+        
+        private GetRelatedFifoLotsArgs argsField;
+        
+        private GetRelatedFifoLotsFields fieldsField;
+        
+        private string predefinedSearchNameField;
+        
+        private string[] typesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public GetRelatedFifoLotsArgs Args
+        {
+            get
+            {
+                return this.argsField;
+            }
+            set
+            {
+                this.argsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public GetRelatedFifoLotsFields Fields
+        {
+            get
+            {
+                return this.fieldsField;
+            }
+            set
+            {
+                this.fieldsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string PredefinedSearchName
+        {
+            get
+            {
+                return this.predefinedSearchNameField;
+            }
+            set
+            {
+                this.predefinedSearchNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=3)]
+        public string[] Types
+        {
+            get
+            {
+                return this.typesField;
+            }
+            set
+            {
+                this.typesField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetRelatedFifoLotsRequest : APISearchRequestOfGetRelatedFifoLotsArgsGetRelatedFifoLotsFields
     {
     }
     
@@ -89150,6 +89533,11 @@ namespace BfsApi
         public System.Threading.Tasks.Task<BfsApi.GetAvtaleGiroOrdersResponse> GetAvtaleGiroOrdersAsync(BfsApi.GetAvtaleGiroOrdersRequest req)
         {
             return base.Channel.GetAvtaleGiroOrdersAsync(req);
+        }
+        
+        public System.Threading.Tasks.Task<BfsApi.GetRelatedFifoLotsResponse> GetRelatedFifoLotsAsync(BfsApi.GetRelatedFifoLotsRequest req)
+        {
+            return base.Channel.GetRelatedFifoLotsAsync(req);
         }
         
         public System.Threading.Tasks.Task<BfsApi.GetBackgroundJobsResponse> GetBackgroundJobsAsync(BfsApi.GetBackgroundJobsRequest req)
