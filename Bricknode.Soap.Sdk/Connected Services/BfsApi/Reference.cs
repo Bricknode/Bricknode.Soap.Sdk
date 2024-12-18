@@ -21116,6 +21116,8 @@ namespace BfsApi
         
         private bool prePaidWorkflowField;
         
+        private bool minimumSubscriptionCashAmountField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public bool PrePaidWorkflow
@@ -21127,6 +21129,20 @@ namespace BfsApi
             set
             {
                 this.prePaidWorkflowField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public bool MinimumSubscriptionCashAmount
+        {
+            get
+            {
+                return this.minimumSubscriptionCashAmountField;
+            }
+            set
+            {
+                this.minimumSubscriptionCashAmountField = value;
             }
         }
     }
@@ -21286,6 +21302,8 @@ namespace BfsApi
         
         private bool prePaidWorkflowField;
         
+        private decimal minimumSubscriptionCashAmountField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public MFEXExecutionInterfaceFields UpdateFields
@@ -21311,6 +21329,20 @@ namespace BfsApi
             set
             {
                 this.prePaidWorkflowField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public decimal MinimumSubscriptionCashAmount
+        {
+            get
+            {
+                return this.minimumSubscriptionCashAmountField;
+            }
+            set
+            {
+                this.minimumSubscriptionCashAmountField = value;
             }
         }
     }
@@ -22721,6 +22753,8 @@ namespace BfsApi
         
         private bool prePaidWorkflowField;
         
+        private decimal minimumSubscriptionCashAmountField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public bool PrePaidWorkflow
@@ -22732,6 +22766,20 @@ namespace BfsApi
             set
             {
                 this.prePaidWorkflowField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public decimal MinimumSubscriptionCashAmount
+        {
+            get
+            {
+                return this.minimumSubscriptionCashAmountField;
+            }
+            set
+            {
+                this.minimumSubscriptionCashAmountField = value;
             }
         }
     }
