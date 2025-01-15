@@ -23,11 +23,23 @@ namespace Bricknode.Soap.Sdk.Services
         /// <returns></returns>
         public async Task<GetAccountsResponse> GetAccountsAsync(GetAccountsArgs filters, string? bfsApiClientName = null)
         {
+            var fields = GetFields<GetAccountFields>();
+            return await GetAccountsAsync(filters, fields, bfsApiClientName);
+        }
+
+        /// <summary>
+        ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/52002947/GetAccounts
+        /// </summary>
+        /// <param name="filters"></param>
+        /// <param name="fields"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        public async Task<GetAccountsResponse> GetAccountsAsync(GetAccountsArgs filters, GetAccountFields fields, string? bfsApiClientName = null)
+        {
             var request = await GetRequestAsync<GetAccountsRequest>(bfsApiClientName);
 
             request.Args = filters;
-
-            request.Fields = GetFields<GetAccountFields>();
+            request.Fields = fields;
 
             var client = await GetClientAsync(bfsApiClientName);
             var response = await client.GetAccountsAsync(request);
