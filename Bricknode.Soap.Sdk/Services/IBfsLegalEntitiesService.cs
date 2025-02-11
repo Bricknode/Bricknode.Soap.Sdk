@@ -20,9 +20,10 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="filters"></param>
         /// <param name="fields"></param>
         /// <param name="pageSize">Size of each page, supported range is 1 to 5000. The default size is 2000.</param>
+        /// <param name="pageStartIndex">Index of the start page. Can be used to skip specific number of pages in enumeration.</param>
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
-        IAsyncEnumerable<GetPersonResponse> GetLegalEntitiesInPagesAsync(GetPersonArgs filters, GetPersonFields? fields = null, int pageSize = 2000, string? bfsApiClientName = null);
+        IAsyncEnumerable<GetPersonResponse> GetLegalEntitiesInPagesAsync(GetPersonArgs filters, GetPersonFields? fields = null, int pageSize = 2000, int pageStartIndex = 0, string? bfsApiClientName = null);
         /// <summary>
         /// https://bricknode.atlassian.net/wiki/spaces/API/pages/57639004/CreatePersons
         /// </summary>

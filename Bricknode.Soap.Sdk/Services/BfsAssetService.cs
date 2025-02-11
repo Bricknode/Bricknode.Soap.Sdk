@@ -147,11 +147,11 @@ namespace Bricknode.Soap.Sdk.Services
             return response;
         }
 
-        public async IAsyncEnumerable<GetInstrumentsResponse> GetInstrumentsInPagesAsync(GetInstrumentsArgs filters, GetInstrumentsFields? fields = null, int pageSize = 2000, string? bfsApiClientName = null)
+        public async IAsyncEnumerable<GetInstrumentsResponse> GetInstrumentsInPagesAsync(GetInstrumentsArgs filters, GetInstrumentsFields? fields = null, int pageSize = 2000, int pageStartIndex = 0, string? bfsApiClientName = null)
         {
             GetInstrumentsResponse response;
             bool isValidResponse;
-            var pageIndex = 0;
+            var pageIndex = pageStartIndex;
             var client = await GetClientAsync(bfsApiClientName);
             var request = await GetRequestAsync<GetInstrumentsRequest>(bfsApiClientName);
 

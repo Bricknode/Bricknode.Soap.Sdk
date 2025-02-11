@@ -52,11 +52,11 @@ namespace Bricknode.Soap.Sdk.Services
             return response;
         }
 
-        public async IAsyncEnumerable<GetAccountsResponse> GetAccountsInPagesAsync(GetAccountsArgs filters, GetAccountFields? fields = null, int pageSize = 2000, string? bfsApiClientName = null)
+        public async IAsyncEnumerable<GetAccountsResponse> GetAccountsInPagesAsync(GetAccountsArgs filters, GetAccountFields? fields = null, int pageSize = 2000, int pageStartIndex = 0, string? bfsApiClientName = null)
         {
             GetAccountsResponse response;
             bool isValidResponse;
-            var pageIndex = 0;
+            var pageIndex = pageStartIndex;
             var client = await GetClientAsync(bfsApiClientName);
             var request = await GetRequestAsync<GetAccountsRequest>(bfsApiClientName);
 

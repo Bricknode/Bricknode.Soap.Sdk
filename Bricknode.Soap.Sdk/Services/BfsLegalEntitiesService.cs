@@ -41,11 +41,11 @@ namespace Bricknode.Soap.Sdk.Services
             return response;
         }
 
-        public async IAsyncEnumerable<GetPersonResponse> GetLegalEntitiesInPagesAsync(GetPersonArgs filters, GetPersonFields? fields = null, int pageSize = 2000, string? bfsApiClientName = null)
+        public async IAsyncEnumerable<GetPersonResponse> GetLegalEntitiesInPagesAsync(GetPersonArgs filters, GetPersonFields? fields = null, int pageSize = 2000, int pageStartIndex = 0, string? bfsApiClientName = null)
         {
             GetPersonResponse response;
             bool isValidResponse;
-            var pageIndex = 0;
+            var pageIndex = pageStartIndex;
             var client = await GetClientAsync(bfsApiClientName);
             var request = await GetRequestAsync<GetPersonRequest>(bfsApiClientName);
 
