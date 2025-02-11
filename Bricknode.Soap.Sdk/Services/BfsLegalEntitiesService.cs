@@ -5,6 +5,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Bricknode.Soap.Sdk.Services
 {
+    using System.Collections.Generic;
     using Factories;
 
     public class BfsLegalEntitiesService : BfsServiceBase, IBfsLegalEntitiesService
@@ -38,6 +39,34 @@ namespace Bricknode.Soap.Sdk.Services
             LogErrors(response.Result);
 
             return response;
+        }
+
+        public async IAsyncEnumerable<GetPersonResponse> GetLegalEntitiesInPagesAsync(GetPersonArgs filters, GetPersonFields? fields = null, int pageSize = 2000, string? bfsApiClientName = null)
+        {
+            GetPersonResponse response;
+            bool isValidResponse;
+            var pageIndex = 0;
+            var client = await GetClientAsync(bfsApiClientName);
+            var request = await GetRequestAsync<GetPersonRequest>(bfsApiClientName);
+
+            request.Args = filters;
+            request.Fields = fields ?? GetFields<GetPersonFields>();
+            request.EnablePagination = true;
+            request.PageSize = pageSize;
+
+            do
+            {
+                request.PageIndex = pageIndex++;
+                response = await client.GetPersonsAsync(request);
+                isValidResponse = ValidateResponse(response);
+
+                if (!isValidResponse)
+                {
+                    LogErrors(response.Result);
+                }
+
+                yield return response;
+            } while (isValidResponse && response.Result.Length >= pageSize);
         }
 
         /// <summary>

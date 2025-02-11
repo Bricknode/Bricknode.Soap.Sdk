@@ -3,6 +3,8 @@ using BfsApi;
 
 namespace Bricknode.Soap.Sdk.Services
 {
+    using System.Collections.Generic;
+
     public interface IBfsLegalEntitiesService
     {
         /// <summary>
@@ -12,6 +14,15 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         Task<GetPersonResponse> GetLegalEntitiesAsync(GetPersonArgs filters, string? bfsApiClientName = null);
+        /// <summary>
+        /// https://bricknode.atlassian.net/wiki/spaces/API/pages/57639002/GetPersons
+        /// </summary>
+        /// <param name="filters"></param>
+        /// <param name="fields"></param>
+        /// <param name="pageSize">Size of each page, supported range is 1 to 5000. The default size is 2000.</param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        IAsyncEnumerable<GetPersonResponse> GetLegalEntitiesInPagesAsync(GetPersonArgs filters, GetPersonFields? fields = null, int pageSize = 2000, string? bfsApiClientName = null);
         /// <summary>
         /// https://bricknode.atlassian.net/wiki/spaces/API/pages/57639004/CreatePersons
         /// </summary>

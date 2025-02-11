@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using BfsApi;
 
 namespace Bricknode.Soap.Sdk.Services
@@ -21,6 +22,16 @@ namespace Bricknode.Soap.Sdk.Services
         /// <param name="bfsApiClientName"></param>
         /// <returns></returns>
         Task<GetAccountsResponse> GetAccountsAsync(GetAccountsArgs filters, GetAccountFields fields, string? bfsApiClientName = null);
+
+        /// <summary>
+        /// https://bricknode.atlassian.net/wiki/spaces/API/pages/52002947/GetAccounts
+        /// </summary>
+        /// <param name="filters"></param>
+        /// <param name="fields"></param>
+        /// <param name="pageSize">Size of each page, supported range is 1 to 5000. The default size is 2000.</param>
+        /// <param name="bfsApiClientName"></param>
+        /// <returns></returns>
+        IAsyncEnumerable<GetAccountsResponse> GetAccountsInPagesAsync(GetAccountsArgs filters, GetAccountFields? fields = null, int pageSize = 2000, string? bfsApiClientName = null);
 
         /// <summary>
         /// https://bricknode.atlassian.net/wiki/spaces/API/pages/52003249/CreateAccounts
