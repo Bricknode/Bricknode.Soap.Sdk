@@ -9950,6 +9950,10 @@ namespace BfsApi
         
         private System.Nullable<int> accountStatusField;
         
+        private System.Nullable<System.DateTime> closeDateField;
+        
+        private string closeCommentField;
+        
         private System.Nullable<System.Guid> allocationProfileField;
         
         private string externalReferenceField;
@@ -10024,6 +10028,34 @@ namespace BfsApi
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
+        public System.Nullable<System.DateTime> CloseDate
+        {
+            get
+            {
+                return this.closeDateField;
+            }
+            set
+            {
+                this.closeDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public string CloseComment
+        {
+            get
+            {
+                return this.closeCommentField;
+            }
+            set
+            {
+                this.closeCommentField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=4)]
         public System.Nullable<System.Guid> AllocationProfile
         {
             get
@@ -10037,7 +10069,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
         public string ExternalReference
         {
             get
@@ -10051,7 +10083,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
         public string AccountComment
         {
             get
@@ -10065,7 +10097,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=7)]
         public System.Nullable<System.Guid> InsuranceOwner
         {
             get
@@ -10079,7 +10111,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=8)]
         public System.Nullable<System.Guid> Insured
         {
             get
@@ -10093,7 +10125,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=9)]
         public System.Nullable<System.Guid> InsurancePayer
         {
             get
@@ -10107,7 +10139,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=10)]
         public System.Nullable<System.Guid> ContactLegalEntity
         {
             get
@@ -10121,7 +10153,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
         public string IBAN
         {
             get
@@ -10135,7 +10167,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=10)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=12)]
         public System.Nullable<int> FirstPaymentAge
         {
             get
@@ -10149,7 +10181,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=13)]
         public string PaymentIntervalKey
         {
             get
@@ -10163,7 +10195,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=12)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=14)]
         public System.Nullable<int> PaymentLength
         {
             get
@@ -10177,7 +10209,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=13)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=15)]
         public System.Nullable<int> Payouts
         {
             get
@@ -10191,7 +10223,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=14)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=16)]
         public System.Nullable<int> PayoutsLeft
         {
             get
@@ -10205,7 +10237,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=15)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=17)]
         public System.Nullable<System.DateTime> FirstPaymentDate
         {
             get
@@ -10219,7 +10251,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=16)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=18)]
         public System.Nullable<decimal> HighWaterMark
         {
             get
@@ -10233,7 +10265,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=17)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=19)]
         public string ResellerNo
         {
             get
@@ -10247,7 +10279,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=18)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=20)]
         public System.Nullable<System.Guid> DecisionMaker
         {
             get
@@ -10261,7 +10293,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=19)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=21)]
         public string LockedStatusKey
         {
             get
@@ -10275,7 +10307,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=20)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=22)]
         public System.Nullable<bool> IsSubjectToContinuousInvestmentAdvice
         {
             get
@@ -10289,7 +10321,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=21)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=23)]
         public System.Nullable<CounterpartyAccountType> CounterpartyAccountType
         {
             get
@@ -10303,7 +10335,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=22)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=24)]
         public System.Nullable<System.Guid> CustodianBrickId
         {
             get
@@ -10317,7 +10349,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=23)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=25)]
         public System.Nullable<System.Guid> DiscountGroupId
         {
             get
@@ -10408,6 +10440,10 @@ namespace BfsApi
         private System.Nullable<CounterpartyAccountType> counterpartyAccountTypeField;
         
         private System.Nullable<System.Guid> discountGroupIdField;
+        
+        private System.Nullable<System.DateTime> closeDateField;
+        
+        private string closeCommentField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -10814,6 +10850,34 @@ namespace BfsApi
                 this.discountGroupIdField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=29)]
+        public System.Nullable<System.DateTime> CloseDate
+        {
+            get
+            {
+                return this.closeDateField;
+            }
+            set
+            {
+                this.closeDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=30)]
+        public string CloseComment
+        {
+            get
+            {
+                return this.closeCommentField;
+            }
+            set
+            {
+                this.closeCommentField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -10882,6 +10946,10 @@ namespace BfsApi
         private System.Nullable<CounterpartyAccountType> counterpartyAccountTypeField;
         
         private System.Guid discountGroupIdField;
+        
+        private System.DateTime closeDateField;
+        
+        private string closeCommentField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -11300,6 +11368,34 @@ namespace BfsApi
             set
             {
                 this.discountGroupIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=30)]
+        public System.DateTime CloseDate
+        {
+            get
+            {
+                return this.closeDateField;
+            }
+            set
+            {
+                this.closeDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=31)]
+        public string CloseComment
+        {
+            get
+            {
+                return this.closeCommentField;
+            }
+            set
+            {
+                this.closeCommentField = value;
             }
         }
     }
@@ -41380,6 +41476,10 @@ namespace BfsApi
         
         private bool accountStatusField;
         
+        private bool closeDateField;
+        
+        private bool closeCommentField;
+        
         private bool externalReferenceField;
         
         private bool allocationProfileField;
@@ -41454,6 +41554,34 @@ namespace BfsApi
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public bool CloseDate
+        {
+            get
+            {
+                return this.closeDateField;
+            }
+            set
+            {
+                this.closeDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public bool CloseComment
+        {
+            get
+            {
+                return this.closeCommentField;
+            }
+            set
+            {
+                this.closeCommentField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
         public bool ExternalReference
         {
             get
@@ -41467,7 +41595,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
         public bool AllocationProfile
         {
             get
@@ -41481,7 +41609,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
         public bool AccountComment
         {
             get
@@ -41495,7 +41623,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
         public bool InsuranceOwner
         {
             get
@@ -41509,7 +41637,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
         public bool Insured
         {
             get
@@ -41523,7 +41651,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
         public bool InsurancePayer
         {
             get
@@ -41537,7 +41665,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
         public bool ContactLegalEntity
         {
             get
@@ -41551,7 +41679,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
         public bool IBAN
         {
             get
@@ -41565,7 +41693,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=12)]
         public bool FirstPaymentAge
         {
             get
@@ -41579,7 +41707,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=13)]
         public bool PaymentIntervalKey
         {
             get
@@ -41593,7 +41721,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=12)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=14)]
         public bool PaymentLength
         {
             get
@@ -41607,7 +41735,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=13)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=15)]
         public bool Payouts
         {
             get
@@ -41621,7 +41749,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=14)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=16)]
         public bool PayoutsLeft
         {
             get
@@ -41635,7 +41763,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=15)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=17)]
         public bool FirstPaymentDate
         {
             get
@@ -41649,7 +41777,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=16)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=18)]
         public bool HighWaterMark
         {
             get
@@ -41663,7 +41791,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=17)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=19)]
         public bool ResellerNo
         {
             get
@@ -41677,7 +41805,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=18)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=20)]
         public bool DecisionMaker
         {
             get
@@ -41691,7 +41819,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=19)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=21)]
         public bool LockedStatusKey
         {
             get
@@ -41705,7 +41833,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=20)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=22)]
         public bool IsSubjectToContinuousInvestmentAdvice
         {
             get
@@ -41719,7 +41847,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=21)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=23)]
         public bool CounterpartyAccountType
         {
             get
@@ -41733,7 +41861,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=22)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=24)]
         public bool CustodianBrickId
         {
             get
@@ -41747,7 +41875,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=23)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=25)]
         public bool DiscountGroupId
         {
             get
@@ -41831,6 +41959,10 @@ namespace BfsApi
         private bool counterpartyAccountTypeField;
         
         private bool discountGroupIdField;
+        
+        private bool closeDateField;
+        
+        private bool closeCommentField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -42277,6 +42409,34 @@ namespace BfsApi
             set
             {
                 this.discountGroupIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=32)]
+        public bool CloseDate
+        {
+            get
+            {
+                return this.closeDateField;
+            }
+            set
+            {
+                this.closeDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=33)]
+        public bool CloseComment
+        {
+            get
+            {
+                return this.closeCommentField;
+            }
+            set
+            {
+                this.closeCommentField = value;
             }
         }
     }
@@ -90483,6 +90643,11 @@ namespace BfsApi
         public virtual System.Threading.Tasks.Task OpenAsync()
         {
             return System.Threading.Tasks.Task.Factory.FromAsync(((System.ServiceModel.ICommunicationObject)(this)).BeginOpen(null, null), new System.Action<System.IAsyncResult>(((System.ServiceModel.ICommunicationObject)(this)).EndOpen));
+        }
+        
+        public virtual System.Threading.Tasks.Task CloseAsync()
+        {
+            return System.Threading.Tasks.Task.Factory.FromAsync(((System.ServiceModel.ICommunicationObject)(this)).BeginClose(null, null), new System.Action<System.IAsyncResult>(((System.ServiceModel.ICommunicationObject)(this)).EndClose));
         }
         
         private static System.ServiceModel.Channels.Binding GetBindingForEndpoint(EndpointConfiguration endpointConfiguration)
