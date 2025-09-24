@@ -60,7 +60,7 @@ namespace Bricknode.Soap.Sdk.Services
                 isValidResponse = ValidateResponse(response);
                 if (isValidResponse)
                 {
-                    LogErrors(response.Result);
+                    LogErrors(response.Message);
                 }
 
                 yield return response;
