@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using BfsApi;
 
 namespace Bricknode.Soap.Sdk.Services
@@ -13,6 +14,18 @@ namespace Bricknode.Soap.Sdk.Services
         /// <returns></returns>
         Task<GetBusinessTransactionsResponse> GetBusinessTransactionsAsync(GetBusinessTransactionArgs filters, string? bfsApiClientName = null);
 
+        /// <summary>
+        /// https://bricknode.atlassian.net/wiki/spaces/API/pages/58916910/GetBusinessTransactions
+        /// </summary>
+        /// <param name="filters"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <param name="pageSize">Size of each page, supported range is 1 to 5000. The default size is 2000.</param>
+        /// <param name="pageStartIndex">Index of the start page. Can be used to skip specific number of pages in enumeration.</param>
+        /// <returns></returns>
+        IAsyncEnumerable<GetBusinessTransactionsResponse> GetBusinessTransactionsInPagesAsync(
+            GetBusinessTransactionArgs filters, int pageSize = 2000, int pageStartIndex = 0,
+            string? bfsApiClientName = null);
+        
         /// <summary>
         /// https://bricknode.atlassian.net/wiki/spaces/API/pages/58916915/GetBusinessTransactionTypes
         /// </summary>
@@ -67,6 +80,18 @@ namespace Bricknode.Soap.Sdk.Services
         Task<GetSuperTransactionsResponse> GetSuperTransactionsAsync(
             GetSuperTransactionArgs filters, string? bfsApiClientName = null);
 
+        /// <summary>
+        ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/3462758502/GetSuperTransactions
+        /// </summary>
+        /// <param name="filters"></param>
+        /// <param name="bfsApiClientName"></param>
+        /// <param name="pageSize">Size of each page, supported range is 1 to 5000. The default size is 2000.</param>
+        /// <param name="pageStartIndex">Index of the start page. Can be used to skip specific number of pages in enumeration.</param>
+        /// <returns></returns>
+        IAsyncEnumerable<GetSuperTransactionsResponse> GetSuperTransactionsInPagesAsync(
+            GetSuperTransactionArgs filters, int pageSize = 2000, int pageStartIndex = 0,
+            string? bfsApiClientName = null);
+        
         /// <summary>
         ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/4242931723/GetRelatedFifoLots
         /// </summary>
