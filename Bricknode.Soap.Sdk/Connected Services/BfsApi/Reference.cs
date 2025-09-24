@@ -80180,8 +80180,10 @@ namespace BfsApi
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APICreateRequestOfSuperTransactionBetterActionBrick))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateBusinessTransactionRequest))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchRequestOfGetBusinessTransactionArgsGetBusinessTransactionFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchWithPaginationRequestOfGetBusinessTransactionArgsGetBusinessTransactionFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetBusinessTransactionsRequest))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchRequestOfGetSuperTransactionArgsGetSuperTransactionFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchWithPaginationRequestOfGetSuperTransactionArgsGetSuperTransactionFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetSuperTransactionsRequest))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APIUpdateRequestOfUpdateWhiteLabelWhiteLabelInstanceBrickUpdateWhiteLabelFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdateWhiteLabelsRequest))]
@@ -80320,6 +80322,7 @@ namespace BfsApi
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchRequestOfGetHistoricPositionArgsGetHistoricPositionFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetHistoricPositionRequest))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchRequestOfGetPositionArgsGetPositionFields))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchWithPaginationRequestOfGetPositionArgsGetPositionFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetPositionRequest))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(APIUpdateRequestOfInactivatePersonBetterActionBrickInactivatePersonFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(InactivatePersonsRequest))]
@@ -82557,6 +82560,7 @@ namespace BfsApi
     }
     
     /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchWithPaginationRequestOfGetBusinessTransactionArgsGetBusinessTransactionFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetBusinessTransactionsRequest))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -82630,14 +82634,72 @@ namespace BfsApi
     }
     
     /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetBusinessTransactionsRequest))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class GetBusinessTransactionsRequest : APISearchRequestOfGetBusinessTransactionArgsGetBusinessTransactionFields
+    public abstract partial class APISearchWithPaginationRequestOfGetBusinessTransactionArgsGetBusinessTransactionFields : APISearchRequestOfGetBusinessTransactionArgsGetBusinessTransactionFields
+    {
+        
+        private System.Nullable<bool> enablePaginationField;
+        
+        private System.Nullable<int> pageIndexField;
+        
+        private System.Nullable<int> pageSizeField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
+        public System.Nullable<bool> EnablePagination
+        {
+            get
+            {
+                return this.enablePaginationField;
+            }
+            set
+            {
+                this.enablePaginationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
+        public System.Nullable<int> PageIndex
+        {
+            get
+            {
+                return this.pageIndexField;
+            }
+            set
+            {
+                this.pageIndexField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
+        public System.Nullable<int> PageSize
+        {
+            get
+            {
+                return this.pageSizeField;
+            }
+            set
+            {
+                this.pageSizeField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetBusinessTransactionsRequest : APISearchWithPaginationRequestOfGetBusinessTransactionArgsGetBusinessTransactionFields
     {
     }
     
     /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchWithPaginationRequestOfGetSuperTransactionArgsGetSuperTransactionFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetSuperTransactionsRequest))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -82711,10 +82773,67 @@ namespace BfsApi
     }
     
     /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetSuperTransactionsRequest))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class GetSuperTransactionsRequest : APISearchRequestOfGetSuperTransactionArgsGetSuperTransactionFields
+    public abstract partial class APISearchWithPaginationRequestOfGetSuperTransactionArgsGetSuperTransactionFields : APISearchRequestOfGetSuperTransactionArgsGetSuperTransactionFields
+    {
+        
+        private System.Nullable<bool> enablePaginationField;
+        
+        private System.Nullable<int> pageIndexField;
+        
+        private System.Nullable<int> pageSizeField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
+        public System.Nullable<bool> EnablePagination
+        {
+            get
+            {
+                return this.enablePaginationField;
+            }
+            set
+            {
+                this.enablePaginationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
+        public System.Nullable<int> PageIndex
+        {
+            get
+            {
+                return this.pageIndexField;
+            }
+            set
+            {
+                this.pageIndexField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
+        public System.Nullable<int> PageSize
+        {
+            get
+            {
+                return this.pageSizeField;
+            }
+            set
+            {
+                this.pageSizeField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetSuperTransactionsRequest : APISearchWithPaginationRequestOfGetSuperTransactionArgsGetSuperTransactionFields
     {
     }
     
@@ -86740,6 +86859,7 @@ namespace BfsApi
     }
     
     /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(APISearchWithPaginationRequestOfGetPositionArgsGetPositionFields))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetPositionRequest))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -86813,10 +86933,67 @@ namespace BfsApi
     }
     
     /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetPositionRequest))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
-    public partial class GetPositionRequest : APISearchRequestOfGetPositionArgsGetPositionFields
+    public abstract partial class APISearchWithPaginationRequestOfGetPositionArgsGetPositionFields : APISearchRequestOfGetPositionArgsGetPositionFields
+    {
+        
+        private System.Nullable<bool> enablePaginationField;
+        
+        private System.Nullable<int> pageIndexField;
+        
+        private System.Nullable<int> pageSizeField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
+        public System.Nullable<bool> EnablePagination
+        {
+            get
+            {
+                return this.enablePaginationField;
+            }
+            set
+            {
+                this.enablePaginationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
+        public System.Nullable<int> PageIndex
+        {
+            get
+            {
+                return this.pageIndexField;
+            }
+            set
+            {
+                this.pageIndexField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
+        public System.Nullable<int> PageSize
+        {
+            get
+            {
+                return this.pageSizeField;
+            }
+            set
+            {
+                this.pageSizeField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetPositionRequest : APISearchWithPaginationRequestOfGetPositionArgsGetPositionFields
     {
     }
     

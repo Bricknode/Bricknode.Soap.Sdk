@@ -6,6 +6,7 @@ using Microsoft.Extensions.Logging;
 namespace Bricknode.Soap.Sdk.Services
 {
     using Factories;
+    using System.Collections.Generic;
     using System.ComponentModel;
 
     public class BfsTransactionService : BfsServiceBase, IBfsTransactionService
@@ -39,6 +40,34 @@ namespace Bricknode.Soap.Sdk.Services
             LogErrors(response.Result);
 
             return response;
+        }
+
+        public async IAsyncEnumerable<GetBusinessTransactionsResponse> GetBusinessTransactionsInPagesAsync(
+            GetBusinessTransactionArgs filters, int pageSize = 2000, int pageStartIndex = 0,  string? bfsApiClientName = null)
+        {
+            GetBusinessTransactionsResponse response;
+            bool isValidResponse;
+            var pageIndex = pageStartIndex;
+            var client = await GetClientAsync(bfsApiClientName);
+            var request = await GetRequestAsync<GetBusinessTransactionsRequest>(bfsApiClientName);
+
+            request.Args = filters;
+
+            request.Fields = GetFields<GetBusinessTransactionFields>();
+            request.EnablePagination = true;
+            request.PageSize = pageSize;
+            do
+            {
+                request.PageIndex = pageIndex++;
+                response = await client.GetBusinessTransactionsAsync(request);
+                isValidResponse = ValidateResponse(response);
+                if (isValidResponse)
+                {
+                    LogErrors(response.Result);
+                }
+
+                yield return response;
+            } while (isValidResponse && response.Result.Length >= pageSize);
         }
 
         /// <summary>
@@ -166,6 +195,7 @@ namespace Bricknode.Soap.Sdk.Services
             return response;
         }
 
+
         /// <summary>
         ///     https://bricknode.atlassian.net/wiki/spaces/API/pages/3462758502/GetSuperTransactions
         /// </summary>
@@ -189,6 +219,34 @@ namespace Bricknode.Soap.Sdk.Services
             LogErrors(response.Result);
 
             return response;
+        }
+
+        public async IAsyncEnumerable<GetSuperTransactionsResponse> GetSuperTransactionsInPagesAsync(
+            GetSuperTransactionArgs filters, int pageSize = 2000, int pageStartIndex = 0, string? bfsApiClientName = null)
+        {
+            GetSuperTransactionsResponse response;
+            bool isValidResponse;
+            var pageIndex = pageStartIndex;
+            var client = await GetClientAsync(bfsApiClientName);
+            var request = await GetRequestAsync<GetSuperTransactionsRequest>(bfsApiClientName);
+
+            request.Args = filters;
+
+            request.Fields = GetFields<GetSuperTransactionFields>();
+            request.EnablePagination = true;
+            request.PageSize = pageSize;
+            do
+            {
+                request.PageIndex = pageIndex++;
+                response = await client.GetSuperTransactionsAsync(request);
+                isValidResponse = ValidateResponse(response);
+                if (isValidResponse)
+                {
+                    LogErrors(response.Result);
+                }
+
+                yield return response;
+            } while (isValidResponse && response.Result.Length >= pageSize);
         }
 
         /// <summary>
