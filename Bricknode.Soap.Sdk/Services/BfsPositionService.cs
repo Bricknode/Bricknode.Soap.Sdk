@@ -6,6 +6,7 @@ using Microsoft.Extensions.Logging;
 namespace Bricknode.Soap.Sdk.Services
 {
     using Factories;
+    using System.Collections.Generic;
 
     public class BfsPositionService : BfsServiceBase, IBfsPositionService
     {
@@ -37,6 +38,33 @@ namespace Bricknode.Soap.Sdk.Services
             LogErrors(response.Message);
 
             return response;
+        }
+
+        public async IAsyncEnumerable<GetPositionResponse> GetPositionsInPagesAsync(GetPositionArgs filters, int pageSize = 2000, int pageStartIndex = 0, string? bfsApiClientName = null)
+        {
+            GetPositionResponse response;
+            bool isValidResponse;
+            var pageIndex = pageStartIndex;
+            var client = await GetClientAsync(bfsApiClientName);
+            var request = await GetRequestAsync<GetPositionRequest>(bfsApiClientName);
+
+            request.Args = filters;
+
+            request.Fields = GetFields<GetPositionFields>();
+            request.EnablePagination = true;
+            request.PageSize = pageSize;
+            do
+            {
+                request.PageIndex = pageIndex++;
+                response = await client.GetPositionsAsync(request);
+                isValidResponse = ValidateResponse(response);
+                if (isValidResponse)
+                {
+                    LogErrors(response.Message);
+                }
+
+                yield return response;
+            } while (isValidResponse && response.Result.Length >= pageSize);
         }
 
         /// <summary>
