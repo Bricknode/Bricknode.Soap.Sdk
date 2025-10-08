@@ -3887,6 +3887,8 @@ namespace BfsApi
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetAssetAccountTypeLimitationResponseRow))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AssetAccountTypeLimitation))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Instrument))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FundStockProportion))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetFundStockProportion))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetInstrumentsResponseRow))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(InactivatePerson))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpdatePerson))]
@@ -9022,6 +9024,8 @@ namespace BfsApi
         
         private System.DateTime accountingDateField;
         
+        private System.DateTime fifoTradeDateField;
+        
         private bool isCorrectedField;
         
         private System.Nullable<System.DateTime> correctionDateField;
@@ -9366,6 +9370,20 @@ namespace BfsApi
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=22)]
+        public System.DateTime FifoTradeDate
+        {
+            get
+            {
+                return this.fifoTradeDateField;
+            }
+            set
+            {
+                this.fifoTradeDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=23)]
         public bool IsCorrected
         {
             get
@@ -9379,7 +9397,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=23)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=24)]
         public System.Nullable<System.DateTime> CorrectionDate
         {
             get
@@ -9393,7 +9411,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=24)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=25)]
         public string CorrectionComment
         {
             get
@@ -9407,7 +9425,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=25)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=26)]
         public double Price
         {
             get
@@ -9421,7 +9439,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=26)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=27)]
         public double AcquisitionValue
         {
             get
@@ -9435,7 +9453,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=27)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=28)]
         public double AcquisitionValueAccountCurrency
         {
             get
@@ -9449,7 +9467,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=28)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=29)]
         public string TransactionReference
         {
             get
@@ -9463,7 +9481,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=29)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=30)]
         public System.Guid SuperTransactionId
         {
             get
@@ -9477,7 +9495,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=30)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=31)]
         public System.Guid InsurancePolicy
         {
             get
@@ -9491,7 +9509,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=31)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=32)]
         public System.Guid InsuranceClaim
         {
             get
@@ -9505,7 +9523,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=32)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=33)]
         public System.Guid BatchId
         {
             get
@@ -9519,7 +9537,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=33)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=34)]
         public string AccountTypeKey
         {
             get
@@ -9533,7 +9551,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=34)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=35)]
         public System.Guid OrderId
         {
             get
@@ -9547,7 +9565,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=35)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=36)]
         public string ReportingType
         {
             get
@@ -9561,7 +9579,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=36)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=37)]
         public System.Guid SuperTransactionBusinessEventId
         {
             get
@@ -9575,7 +9593,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=37)]
+        [System.Xml.Serialization.XmlArrayAttribute(Order=38)]
         public CustomField[] SuperTransactionCustomFields
         {
             get
@@ -9589,7 +9607,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=38)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=39)]
         public System.Nullable<ReconciliationStatus> ReconciliationStatus
         {
             get
@@ -20020,6 +20038,8 @@ namespace BfsApi
         
         private string fundClassField;
         
+        private FundStockProportion[] fundStockProportionsField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public string Symbol
@@ -20591,6 +20611,20 @@ namespace BfsApi
             set
             {
                 this.fundClassField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=41)]
+        public FundStockProportion[] FundStockProportions
+        {
+            get
+            {
+                return this.fundStockProportionsField;
+            }
+            set
+            {
+                this.fundStockProportionsField = value;
             }
         }
     }
@@ -21564,6 +21598,71 @@ namespace BfsApi
     }
     
     /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetFundStockProportion))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class FundStockProportion : EntityBase
+    {
+        
+        private decimal stockPercentageField;
+        
+        private System.DateTime stockPercentageDateField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public decimal StockPercentage
+        {
+            get
+            {
+                return this.stockPercentageField;
+            }
+            set
+            {
+                this.stockPercentageField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public System.DateTime StockPercentageDate
+        {
+            get
+            {
+                return this.stockPercentageDateField;
+            }
+            set
+            {
+                this.stockPercentageDateField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetFundStockProportion : FundStockProportion
+    {
+        
+        private string stockProportionCategorizationField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string StockProportionCategorization
+        {
+            get
+            {
+                return this.stockProportionCategorizationField;
+            }
+            set
+            {
+                this.stockProportionCategorizationField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
@@ -21745,6 +21844,8 @@ namespace BfsApi
         private bool enableMifidIITenPercentAlertField;
         
         private ExecutionInterface[] executionInterfacesField;
+        
+        private FundStockProportion[] fundStockProportionsField;
         
         private string defaultExecutionInterfaceField;
         
@@ -22425,7 +22526,21 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=48)]
+        [System.Xml.Serialization.XmlArrayAttribute(Order=48)]
+        public FundStockProportion[] FundStockProportions
+        {
+            get
+            {
+                return this.fundStockProportionsField;
+            }
+            set
+            {
+                this.fundStockProportionsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=49)]
         public string DefaultExecutionInterface
         {
             get
@@ -22439,7 +22554,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=49)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=50)]
         public bool ExcludeFromFeeRelatedSelling
         {
             get
@@ -22453,7 +22568,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=50)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=51)]
         public string FundClass
         {
             get
@@ -23080,6 +23195,8 @@ namespace BfsApi
         private bool excludeFromFeeRelatedSellingField;
         
         private string fundClassField;
+        
+        private GetFundStockProportion[] fundStockProportionsField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -23820,6 +23937,20 @@ namespace BfsApi
             set
             {
                 this.fundClassField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=53)]
+        public GetFundStockProportion[] FundStockProportions
+        {
+            get
+            {
+                return this.fundStockProportionsField;
+            }
+            set
+            {
+                this.fundStockProportionsField = value;
             }
         }
     }
@@ -46364,6 +46495,8 @@ namespace BfsApi
         
         private bool fundClassField;
         
+        private bool fundStockProportionsField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public bool Symbol
@@ -46951,6 +47084,20 @@ namespace BfsApi
                 this.fundClassField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=42)]
+        public bool FundStockProportions
+        {
+            get
+            {
+                return this.fundStockProportionsField;
+            }
+            set
+            {
+                this.fundStockProportionsField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -47069,6 +47216,8 @@ namespace BfsApi
         private bool excludeFromFeeRelatedSellingField;
         
         private bool fundClassField;
+        
+        private bool fundStockProportionsField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -47837,6 +47986,20 @@ namespace BfsApi
             set
             {
                 this.fundClassField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=55)]
+        public bool FundStockProportions
+        {
+            get
+            {
+                return this.fundStockProportionsField;
+            }
+            set
+            {
+                this.fundStockProportionsField = value;
             }
         }
     }
@@ -55433,6 +55596,8 @@ namespace BfsApi
         
         private bool accountingDateField;
         
+        private bool fifoTradeDateField;
+        
         private bool isCorrectedField;
         
         private bool correctionDateField;
@@ -55795,6 +55960,20 @@ namespace BfsApi
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=23)]
+        public bool FifoTradeDate
+        {
+            get
+            {
+                return this.fifoTradeDateField;
+            }
+            set
+            {
+                this.fifoTradeDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=24)]
         public bool IsCorrected
         {
             get
@@ -55808,7 +55987,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=24)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=25)]
         public bool CorrectionDate
         {
             get
@@ -55822,7 +56001,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=25)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=26)]
         public bool CorrectionComment
         {
             get
@@ -55836,7 +56015,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=26)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=27)]
         public bool Price
         {
             get
@@ -55850,7 +56029,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=27)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=28)]
         public bool AcquisitionValue
         {
             get
@@ -55864,7 +56043,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=28)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=29)]
         public bool AcquisitionValueAccountCurrency
         {
             get
@@ -55878,7 +56057,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=29)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=30)]
         public bool CreatedDate
         {
             get
@@ -55892,7 +56071,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=30)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=31)]
         public bool TransactionReference
         {
             get
@@ -55906,7 +56085,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=31)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=32)]
         public bool SuperTransactionId
         {
             get
@@ -55920,7 +56099,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=32)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=33)]
         public bool InsurancePolicy
         {
             get
@@ -55934,7 +56113,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=33)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=34)]
         public bool InsuranceClaim
         {
             get
@@ -55948,7 +56127,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=34)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=35)]
         public bool BatchId
         {
             get
@@ -55962,7 +56141,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=35)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=36)]
         public bool AccountTypeKey
         {
             get
@@ -55976,7 +56155,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=36)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=37)]
         public bool OrderId
         {
             get
@@ -55990,7 +56169,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=37)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=38)]
         public bool ReportingType
         {
             get
@@ -56004,7 +56183,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=38)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=39)]
         public bool SuperTransactionBusinessEventId
         {
             get
@@ -56018,7 +56197,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=39)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=40)]
         public bool SuperTransactionCustomFields
         {
             get
@@ -56032,7 +56211,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=40)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=41)]
         public bool ReconciliationStatus
         {
             get
@@ -56046,7 +56225,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=41)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=42)]
         public bool CustomFields
         {
             get
