@@ -7,24 +7,28 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <LangVersion>latest</LangVersion>
         <RootNamespace>Bricknode.MigrationTestClient</RootNamespace>
+        <DefineConstants Condition="'$(UseRest)' == 'true'">$(DefineConstants);USE_REST</DefineConstants>
     </PropertyGroup>
 
     <!--
-      Both SDKs expose the SAME namespaces/types (Bricknode.Soap.Sdk.*, BfsApi.*).
-      To reference both in one process we give each an extern alias; the demo runners
-      pick one with `extern alias soapSdk;` / `extern alias restSdk;`.
-      In a real migration you reference only ONE package and need no alias.
+      The migration in one place: which package backs the (unchanged) application code.
+
+        dotnet run                    ->  Bricknode.Soap.Sdk       (original SOAP SDK)
+        dotnet run -p:UseRest=true    ->  Bricknode.Rest.CompatSdk (REST drop-in)
+
+      In a real application this is the <PackageReference> you swap.
     -->
-    <ItemGroup>
-        <ProjectReference Include="..\Bricknode.Soap.Sdk\Bricknode.Soap.Sdk.csproj">
-            <Aliases>soapSdk</Aliases>
-        </ProjectReference>
-        <ProjectReference Include="..\Bricknode.Rest.CompatSdk\Bricknode.Rest.CompatSdk.csproj">
-            <Aliases>restSdk</Aliases>
-        </ProjectReference>
+    <ItemGroup Condition="'$(UseRest)' != 'true'">
+        <ProjectReference Include="..\Bricknode.Soap.Sdk\Bricknode.Soap.Sdk.csproj" />
+    </ItemGroup>
+    <ItemGroup Condition="'$(UseRest)' == 'true'">
+        <ProjectReference Include="..\Bricknode.Rest.CompatSdk\Bricknode.Rest.CompatSdk.csproj" />
     </ItemGroup>
 
     <ItemGroup>
+        <!-- The SOAP SDK (netstandard2.0) was compiled against Bcl.AsyncInterfaces via DI 3.1;
+             with DI 8.0 in this app the assembly drops out of the graph unless referenced explicitly. -->
+        <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="8.0.0" />
         <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
         <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="8.0.0" />
         <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="8.0.0" />
@@ -37,9 +41,6 @@
     <ItemGroup>
         <None Update="appsettings.example.json" CopyToOutputDirectory="PreserveNewest" />
         <None Update="appsettings.json" CopyToOutputDirectory="PreserveNewest" Condition="Exists('appsettings.json')" />
-        <None Update="appsettings.json">
-          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </None>
     </ItemGroup>
 
 </Project>

@@ -1,14 +1,23 @@
 # Bricknode Migration Test Client
 
-A tiny console app for **local verification** of the SOAP → REST migration, doubling as a
-**migration example**. It runs the same read-only calls against either SDK and prints the results
-side by side so you can confirm the REST drop-in behaves like the original SOAP SDK.
+A small console app for **local verification** of the SOAP → REST migration, written exactly the
+way an SDK consumer writes code: `IBfsAccountService` is constructor-injected via DI, DTOs come
+from `BfsApi`. The same code runs against either package — the only thing that changes is the
+package reference.
 
-## Areas exercised (read-only)
+## Run
 
-- `IBfsAccountService.GetAccountsAsync`
-- `IBfsAccountService.GetAccountTypesAsync`
-- `IBfsCurrencyService.GetCurrenciesAsync`
+```bash
+dotnet run                    # original SOAP SDK (Bricknode.Soap.Sdk)
+dotnet run -p:UseRest=true    # REST drop-in     (Bricknode.Rest.CompatSdk)
+```
+
+The switch swaps the `<ProjectReference>` in the csproj. In a real application that is the
+`<PackageReference>` you change — `Program.cs` and `TestRunner.cs` are untouched. That is the
+whole migration.
+
+The only runtime difference: `EndpointAddress` must point at the REST base URL instead of the
+SOAP `.asmx` (this client reads `SoapEndpoint`/`RestEndpoint` from config accordingly).
 
 ## Configure credentials (never committed)
 
@@ -18,29 +27,10 @@ Copy the template and fill it in:
 cp appsettings.example.json appsettings.json
 ```
 
-`appsettings.json` (and `appsettings.local.json`) are git-ignored. Alternatively use environment
+`appsettings.json` and `appsettings.local.json` are git-ignored. Alternatively use environment
 variables: `BFS_Username`, `BFS_Password`, `BFS_Identifier`, `BFS_SoapEndpoint`, `BFS_RestEndpoint`.
 
-- `SoapEndpoint` — the SOAP `.asmx` URL.
-- `RestEndpoint` — the REST API **base** address (root), not the `.asmx`.
+## What it runs
 
-## Run
-
-```bash
-dotnet run             # SOAP SDK (default)
-dotnet run -- --rest   # REST drop-in (Bricknode.Rest.CompatSdk)
-```
-
-## What this proves about the migration
-
-`SoapDemoRunner.cs` and `RestDemoRunner.cs` are **byte-for-byte identical except one line** — the
-`extern alias` selecting the package (and which endpoint they read):
-
-```bash
-git diff --no-index SoapDemoRunner.cs RestDemoRunner.cs
-```
-
-In a real migration you reference only **one** package, so you don't even need the alias: you change
-the `<PackageReference>` from `Bricknode.Soap.Sdk` to `Bricknode.Rest.CompatSdk` and your code
-(`AddBfsApiClient`, `IBfs*Service`, `BfsApi.*` DTOs) stays the same. The only runtime change is
-pointing `EndpointAddress` at the REST base URL instead of the `.asmx`.
+One read-only case in `TestRunner.cs`: `IBfsAccountService.GetAccountsAsync` — prints the response
+message, result count and a small sample, so you can compare SOAP vs REST output side by side.
