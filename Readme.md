@@ -4,6 +4,10 @@
 
 Bricknode.Soap.Sdk is a wrapper for the Bricknode SOAP API described here: http://api.bricknode.com with some added documentation.
 
+## Rest migration 
+We are migrating to a REST variant of the API, it should be a 1-1 conversion and we will provide drop in replacment package once the time comes.
+As of right now 2026-06-04 this REST version is under internal evaluation, the endpoints and docs will not be publicly available yet.
+
 ## How to get started?
 
 Bricknode.Soap.Sdk is available as a NuGet package here: https://www.nuget.org/packages/Bricknode.Soap.Sdk/
