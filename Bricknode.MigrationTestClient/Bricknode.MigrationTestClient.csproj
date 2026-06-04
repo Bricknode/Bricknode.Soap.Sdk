@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <LangVersion>latest</LangVersion>
+        <RootNamespace>Bricknode.MigrationTestClient</RootNamespace>
+    </PropertyGroup>
+
+    <!--
+      Both SDKs expose the SAME namespaces/types (Bricknode.Soap.Sdk.*, BfsApi.*).
+      To reference both in one process we give each an extern alias; the demo runners
+      pick one with `extern alias soapSdk;` / `extern alias restSdk;`.
+      In a real migration you reference only ONE package and need no alias.
+    -->
+    <ItemGroup>
+        <ProjectReference Include="..\Bricknode.Soap.Sdk\Bricknode.Soap.Sdk.csproj">
+            <Aliases>soapSdk</Aliases>
+        </ProjectReference>
+        <ProjectReference Include="..\Bricknode.Rest.CompatSdk\Bricknode.Rest.CompatSdk.csproj">
+            <Aliases>restSdk</Aliases>
+        </ProjectReference>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="8.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="8.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="8.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Update="appsettings.example.json" CopyToOutputDirectory="PreserveNewest" />
+        <None Update="appsettings.json" CopyToOutputDirectory="PreserveNewest" Condition="Exists('appsettings.json')" />
+        <None Update="appsettings.json">
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+
+</Project>
