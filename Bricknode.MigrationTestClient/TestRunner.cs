@@ -24,7 +24,34 @@ internal sealed class TestRunner
         await GetAccounts();
         await GetAccountTypes();
         await GetCurrencies();
+        await GetAccountsCreatedSince();
     }
+
+    /// <summary>
+    /// Sends a date to the server (CreatedDateFrom filter) and shows the date sent and the dates
+    /// received back, so SOAP and REST date handling can be compared end to end.
+    /// </summary>
+    private async Task GetAccountsCreatedSince()
+    {
+        var from = new DateTime(2026, 5, 1, 0, 0, 0, DateTimeKind.Utc);
+
+        var response = await _accounts.GetAccountsAsync(new GetAccountsArgs { CreatedDateFrom = from });
+
+        Print("GetAccounts (CreatedDateFrom filter)", response.Message, response.Result?.Length ?? 0,
+            response.Result?.Take(3).Select(a => a.AccountNo));
+        Console.WriteLine($"      sent    : CreatedDateFrom = {Show(from)}");
+
+        if (response.Result is { Length: > 0 })
+        {
+            var oldest = response.Result.Min(a => a.CreatedDate);
+            var newest = response.Result.Max(a => a.CreatedDate);
+            Console.WriteLine($"      received: oldest CreatedDate = {Show(oldest)}");
+            Console.WriteLine($"      received: newest CreatedDate = {Show(newest)}");
+            Console.WriteLine($"      filter respected by server : {oldest >= from}");
+        }
+    }
+
+    private static string Show(DateTime value) => $"{value:yyyy-MM-dd HH:mm:ss.fff} (Kind={value.Kind})";
 
     private async Task GetAccounts()
     {

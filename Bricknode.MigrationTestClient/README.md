@@ -41,9 +41,12 @@ variables: `BFS_Username`, `BFS_Password`, `BFS_Identifier`, `BFS_SoapEndpoint`,
 
 ## What it runs
 
-Three read-only cases in `TestRunner.cs`, each printing the response message, result count and a
+Four read-only cases in `TestRunner.cs`, each printing the response message, result count and a
 small sample so you can compare SOAP vs REST output side by side:
 
 - `IBfsAccountService.GetAccountsAsync`
 - `IBfsAccountService.GetAccountTypesAsync`
 - `IBfsCurrencyService.GetCurrenciesAsync`
+- `IBfsAccountService.GetAccountsAsync` with a `CreatedDateFrom` filter — prints the date sent and
+  the dates received (value + `Kind`), proving the server applies the date and both SDKs see
+  identical values in both directions.
