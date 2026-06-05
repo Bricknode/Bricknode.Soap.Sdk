@@ -19,36 +19,65 @@ internal static class BfsJsonMapper
         PropertyNameCaseInsensitive = true,
         DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
         NumberHandling = JsonNumberHandling.AllowReadingFromString,
-        Converters = { new UtcDateTimeConverter() },
+        Converters = { new SoapCompatDateTimeConverter() },
     };
 
     /// <summary>
-    /// The SOAP side uses <see cref="DateTime"/> while the REST records use
-    /// <see cref="DateTimeOffset"/>. Without normalization a round-trip rebinds the value to the
-    /// machine's local offset (same instant, different <see cref="DateTime.Kind"/>/text). This
-    /// converter keeps <see cref="DateTime"/> values in UTC on both read and write so mappings are
-    /// lossless and deterministic across machines/time zones.
+    /// Makes <see cref="DateTime"/> values behave EXACTLY like the SOAP SDK so migrated consumer
+    /// code sees the same dates (no localization drift; enforced by SoapRestWireParityTests,
+    /// which compares against the real XmlSerializer behavior).
+    ///
+    /// Receive (REST response -> consumer), matching XmlSerializer on the same wire values:
+    ///  - UTC values ("Z" on the wire; zero offset after the DateTimeOffset hop) stay UTC
+    ///    (Kind=Utc, clock-face untouched),
+    ///  - non-zero offsets convert to machine-local (Kind=Local),
+    ///  - offset-less values keep their clock-face (Kind=Unspecified),
+    ///  - the MinValue instant maps to exactly <see cref="DateTime.MinValue"/>: the SOAP wire
+    ///    sends unset dates offset-less (Unspecified) while the REST server stamps them "Z" —
+    ///    this keeps == DateTime.MinValue checks working identically.
+    ///
+    /// Send (consumer -> REST request): always written as UTC — the same format the SDK receives,
+    /// so both sides of the wire carry the same representation. Utc/Local values convert
+    /// instant-exact; Unspecified values are stamped UTC without shifting the clock-face
+    /// (the SOAP wire carried them as a bare face).
     /// </summary>
-    private sealed class UtcDateTimeConverter : JsonConverter<DateTime>
+    private sealed class SoapCompatDateTimeConverter : JsonConverter<DateTime>
     {
         public override DateTime Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
         {
-            if (reader.TryGetDateTimeOffset(out var dto))
-                return dto.UtcDateTime;
+            var value = reader.GetString();
+            if (string.IsNullOrWhiteSpace(value))
+                return default;
 
-            var dateTime = reader.GetDateTime();
-            return dateTime.Kind == DateTimeKind.Unspecified
-                ? DateTime.SpecifyKind(dateTime, DateTimeKind.Utc)
-                : dateTime.ToUniversalTime();
+            if (!HasOffset(value))
+                return DateTime.Parse(value, CultureInfo.InvariantCulture, DateTimeStyles.None); // face kept, Kind=Unspecified
+
+            var instant = DateTimeOffset.Parse(value, CultureInfo.InvariantCulture, DateTimeStyles.None);
+
+            if (instant == DateTimeOffset.MinValue)
+                return DateTime.MinValue;
+
+            return instant.Offset == TimeSpan.Zero
+                ? instant.UtcDateTime      // wire "Z": XmlSerializer keeps UTC
+                : instant.LocalDateTime;   // explicit offset: XmlSerializer converts to local
         }
 
         public override void Write(Utf8JsonWriter writer, DateTime value, JsonSerializerOptions options)
         {
             var utc = value.Kind == DateTimeKind.Unspecified
-                ? DateTime.SpecifyKind(value, DateTimeKind.Utc)
-                : value.ToUniversalTime();
+                ? DateTime.SpecifyKind(value, DateTimeKind.Utc) // bare face -> same face as UTC
+                : value.ToUniversalTime();                      // instant-exact
 
             writer.WriteStringValue(utc.ToString("yyyy-MM-ddTHH:mm:ss.FFFFFFFK", CultureInfo.InvariantCulture));
+        }
+
+        private static bool HasOffset(string value)
+        {
+            if (value.EndsWith("Z", StringComparison.OrdinalIgnoreCase))
+                return true;
+
+            var timeStart = value.IndexOf('T');
+            return timeStart >= 0 && value.IndexOfAny(['+', '-'], timeStart) >= 0;
         }
     }
 

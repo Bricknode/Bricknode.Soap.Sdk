@@ -23,10 +23,10 @@ whole migration.
 
 - `EndpointAddress` must point at the REST base URL instead of the SOAP `.asmx`
   (this client reads `SoapEndpoint`/`RestEndpoint` from config accordingly).
-- **Dates:** the REST drop-in hands out `DateTime` values in UTC (`Kind=Utc`). The old SOAP SDK's
-  `XmlSerializer` converted the same wire values to machine-local time (`Kind=Local`). Same
-  instant, different clock-face — code that displays timestamps or assumes local time will see
-  the difference.
+- **Dates:** none — `DateTime` values (UTC `Kind=Utc`, unset dates as `DateTime.MinValue`) are
+  identical to what the SOAP SDK produces, guaranteed by `SoapRestWireParityTests` which runs the
+  same server data through the real `XmlSerializer` and the REST pipeline and requires
+  byte-identical results.
 
 ## Configure credentials (never committed)
 

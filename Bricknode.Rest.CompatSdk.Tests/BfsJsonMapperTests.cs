@@ -74,7 +74,10 @@ public class BfsJsonMapperTests
         Assert.NotNull(roundTripped);
         Assert.NotNull(original);
 
-        JsonEquivalence.AssertEquivalent(original, roundTripped);
+        // DateTimes are compared by instant: the mapper intentionally converts zoned values to
+        // machine-local Kind=Local (SOAP SDK parity — see SoapRestWireParityTests for the strict
+        // face/Kind guarantee against the legacy XmlSerializer behavior).
+        JsonEquivalence.AssertEquivalent(original, roundTripped, normalizeDateTimes: true);
         Assert.NotEqual(original, roundTripped);
     }
 
@@ -226,7 +229,7 @@ public class BfsJsonMapperTests
         Assert.NotNull(roundTripped);
         Assert.NotNull(original);
 
-        JsonEquivalence.AssertEquivalent(original, roundTripped);
+        JsonEquivalence.AssertEquivalent(original, roundTripped, normalizeDateTimes: true);
         Assert.NotEqual(original, roundTripped);
     }
 }
