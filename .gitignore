@@ -338,3 +338,7 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+
+# Migration test client local credentials (public repo — never commit real creds)
+Bricknode.MigrationTestClient/appsettings.json
+Bricknode.MigrationTestClient/appsettings.local.json
