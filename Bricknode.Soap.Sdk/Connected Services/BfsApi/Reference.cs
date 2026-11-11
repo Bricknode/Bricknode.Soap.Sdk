@@ -24088,6 +24088,8 @@ namespace BfsApi
         
         private decimal riskValueField;
         
+        private string riskLevelField;
+        
         private string legalJurisdictionField;
         
         private System.Guid parentCompanyField;
@@ -24930,6 +24932,20 @@ namespace BfsApi
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=59)]
+        public string RiskLevel
+        {
+            get
+            {
+                return this.riskLevelField;
+            }
+            set
+            {
+                this.riskLevelField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=60)]
         public string LegalJurisdiction
         {
             get
@@ -24943,7 +24959,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=60)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=61)]
         public System.Guid ParentCompany
         {
             get
@@ -24957,7 +24973,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=61)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=62)]
         public bool IsCustodian
         {
             get
@@ -24971,7 +24987,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=62)]
+        [System.Xml.Serialization.XmlArrayAttribute(Order=63)]
         public TIN[] TINs
         {
             get
@@ -24985,7 +25001,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=63)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=64)]
         public bool IsTerminated
         {
             get
@@ -24999,7 +25015,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=64)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=65)]
         public bool ForcePasswordReset
         {
             get
@@ -25013,7 +25029,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=65)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=66)]
         public double TaxRate
         {
             get
@@ -25205,6 +25221,8 @@ namespace BfsApi
         private System.Guid resellerAccountField;
         
         private decimal riskValueField;
+        
+        private string riskLevelField;
         
         private string legalJurisdictionField;
         
@@ -26144,6 +26162,20 @@ namespace BfsApi
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=66)]
+        public string RiskLevel
+        {
+            get
+            {
+                return this.riskLevelField;
+            }
+            set
+            {
+                this.riskLevelField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=67)]
         public string LegalJurisdiction
         {
             get
@@ -26157,7 +26189,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=67)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=68)]
         public System.Guid ParentCompany
         {
             get
@@ -26171,7 +26203,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=68)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=69)]
         public bool IsCustodian
         {
             get
@@ -26185,7 +26217,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=69)]
+        [System.Xml.Serialization.XmlArrayAttribute(Order=70)]
         public TIN[] TINs
         {
             get
@@ -26199,7 +26231,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=70)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=71)]
         public bool ForcePasswordReset
         {
             get
@@ -26213,7 +26245,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=71)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=72)]
         public System.Nullable<double> TaxRate
         {
             get
@@ -27535,6 +27567,8 @@ namespace BfsApi
         
         private decimal riskValueField;
         
+        private string riskLevelField;
+        
         private string legalJurisdictionField;
         
         private System.Guid parentCompanyField;
@@ -28529,6 +28563,20 @@ namespace BfsApi
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=70)]
+        public string RiskLevel
+        {
+            get
+            {
+                return this.riskLevelField;
+            }
+            set
+            {
+                this.riskLevelField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=71)]
         public string LegalJurisdiction
         {
             get
@@ -28542,7 +28590,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=71)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=72)]
         public System.Guid ParentCompany
         {
             get
@@ -28556,7 +28604,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=72)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=73)]
         public System.Nullable<System.DateTime> LastUpdatedDate
         {
             get
@@ -28570,7 +28618,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=73)]
+        [System.Xml.Serialization.XmlArrayAttribute(Order=74)]
         public TIN[] TINs
         {
             get
@@ -28584,7 +28632,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=74)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=75)]
         public bool ForcePasswordReset
         {
             get
@@ -28598,7 +28646,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=75)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=76)]
         public double TaxRate
         {
             get
@@ -48129,6 +48177,8 @@ namespace BfsApi
         
         private bool riskValueField;
         
+        private bool riskLevelField;
+        
         private bool legalJurisdictionField;
         
         private bool parentCompanyField;
@@ -48971,6 +49021,20 @@ namespace BfsApi
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=59)]
+        public bool RiskLevel
+        {
+            get
+            {
+                return this.riskLevelField;
+            }
+            set
+            {
+                this.riskLevelField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=60)]
         public bool LegalJurisdiction
         {
             get
@@ -48984,7 +49048,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=60)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=61)]
         public bool ParentCompany
         {
             get
@@ -48998,7 +49062,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=61)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=62)]
         public bool IsCustodian
         {
             get
@@ -49012,7 +49076,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=62)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=63)]
         public bool TINs
         {
             get
@@ -49026,7 +49090,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=63)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=64)]
         public bool IsTerminated
         {
             get
@@ -49040,7 +49104,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=64)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=65)]
         public bool ForcePasswordReset
         {
             get
@@ -49054,7 +49118,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=65)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=66)]
         public bool TaxRate
         {
             get
@@ -49588,6 +49652,8 @@ namespace BfsApi
         private bool resellerAccountField;
         
         private bool riskValueField;
+        
+        private bool riskLevelField;
         
         private bool legalJurisdictionField;
         
@@ -50611,6 +50677,20 @@ namespace BfsApi
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=72)]
+        public bool RiskLevel
+        {
+            get
+            {
+                return this.riskLevelField;
+            }
+            set
+            {
+                this.riskLevelField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=73)]
         public bool LegalJurisdiction
         {
             get
@@ -50624,7 +50704,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=73)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=74)]
         public bool ParentCompany
         {
             get
@@ -50638,7 +50718,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=74)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=75)]
         public bool LastUpdatedDate
         {
             get
@@ -50652,7 +50732,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=75)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=76)]
         public bool TINs
         {
             get
@@ -50666,7 +50746,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=76)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=77)]
         public bool ForcePasswordReset
         {
             get
@@ -50680,7 +50760,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=77)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=78)]
         public bool TaxRate
         {
             get
@@ -76157,6 +76237,8 @@ namespace BfsApi
         
         private System.Nullable<decimal> riskValueToField;
         
+        private string[] riskLevelsField;
+        
         private string[] legalJurisdictionsField;
         
         private System.Guid[] parentCompanyField;
@@ -76821,6 +76903,20 @@ namespace BfsApi
         
         /// <remarks/>
         [System.Xml.Serialization.XmlArrayAttribute(Order=46)]
+        public string[] RiskLevels
+        {
+            get
+            {
+                return this.riskLevelsField;
+            }
+            set
+            {
+                this.riskLevelsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=47)]
         public string[] LegalJurisdictions
         {
             get
@@ -76834,7 +76930,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=47)]
+        [System.Xml.Serialization.XmlArrayAttribute(Order=48)]
         public System.Guid[] ParentCompany
         {
             get
@@ -76848,7 +76944,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=48)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=49)]
         public System.Nullable<bool> IsCustodian
         {
             get
@@ -76862,7 +76958,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=49)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=50)]
         public System.Nullable<System.DateTime> LastUpdatedDateFrom
         {
             get
@@ -76876,7 +76972,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=50)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=51)]
         public System.Nullable<System.DateTime> LastUpdatedDateTo
         {
             get
@@ -76890,7 +76986,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=51)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=52)]
         public System.Nullable<bool> IsNaturalPerson
         {
             get
@@ -76904,7 +77000,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=52)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=53)]
         public System.Nullable<bool> ForcePasswordReset
         {
             get
@@ -76918,7 +77014,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=53)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=54)]
         public System.Nullable<double> TaxRateFrom
         {
             get
@@ -76932,7 +77028,7 @@ namespace BfsApi
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=54)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=55)]
         public System.Nullable<double> TaxRateTo
         {
             get
